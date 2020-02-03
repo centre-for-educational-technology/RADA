@@ -6,7 +6,7 @@ Vue.component('line-chart', {
     extends: VueChartJs.Line,
     props: ['type'],
     mounted () {
-        this.$http.get('/api/manage/google-analytics-rows?type=' + this.type).then(response => {
+        this.$http.get(window.Laravel.apiUrl + '/manage/google-analytics-rows?type=' + this.type).then(response => {
 
             let name = response.body.name;
             let rows = response.body.rows;
