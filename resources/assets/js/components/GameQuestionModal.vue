@@ -264,7 +264,7 @@
                 });
             },
             open() {
-                let url = '/api/games/' + this.gameId + '/start-question/' + this.question.id;
+                let url = this.baseUrl + '/api/games/' + this.gameId + '/start-question/' + this.question.id;
                 this.$http.get(url).then(response => {
                     this.isOpen = true;
                     this.generateMissingWords();

@@ -78,7 +78,7 @@
                 this.startStopExercise(id, false);
             },
             startStopExercise(id, active) {
-                this.$http.post('/api/games/' + this.game_id + '/start-stop-flash-exercise', {
+                this.$http.post(window.RADA.config.base_url + '/api/games/' + this.game_id + '/start-stop-flash-exercise', {
                     questionId: id,
                     active: active
                 }).then(response => {
@@ -88,7 +88,7 @@
                 });
             },
             getActiveFlashExercise(callback) {
-                this.$http.get('/api/games/' + this.game_id + '/get-active-flash-exercise').then(response => {
+                this.$http.get(window.RADA.config.base_url + '/api/games/' + this.game_id + '/get-active-flash-exercise').then(response => {
                     if (typeof response.body.id !== 'undefined') {
                         callback(response.body.id);
                     } else {

@@ -38,7 +38,7 @@ const stoppedGameApp = new Vue({
             window.location.href = this.exitUrl;
         },
         getGameData() {
-            this.$http.get('/api/games/' + this.game.id + '/get-game-data').then(response => {
+            this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/get-game-data').then(response => {
                 if (typeof response.body !== 'undefined') {
                     let data = response.body;
                     this.continueGame(data.start_stop);

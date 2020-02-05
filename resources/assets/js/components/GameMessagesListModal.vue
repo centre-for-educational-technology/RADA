@@ -65,13 +65,13 @@
                 return this.type === 'monitoring';
             },
             deleteMessage(e, id) {
-                this.$http.get('/api/games/' + this.game_id + '/delete-message/' + id).then(response => {
+                this.$http.get(window.RADA.config.base_url + '/api/games/' + this.game_id + '/delete-message/' + id).then(response => {
                     this.getMessages();
                 })
             },
             addNewMessage(e) {
                 if(this.newMessage.length > 0) {
-                    this.$http.post('/api/games/' + this.game_id + '/add-new-message', {
+                    this.$http.post(window.RADA.config.base_url + '/api/games/' + this.game_id + '/add-new-message', {
                         message: this.newMessage
                     }).then(response => {
                         this.newMessage = '';
@@ -80,7 +80,7 @@
                 }
             },
             getMessages() {
-                this.$http.get('/api/games/' + this.game_id + '/get-all-messages').then(response => {
+                this.$http.get(window.RADA.config.base_url + '/api/games/' + this.game_id + '/get-all-messages').then(response => {
                     this.messages = response.body || [];
                 })
             },

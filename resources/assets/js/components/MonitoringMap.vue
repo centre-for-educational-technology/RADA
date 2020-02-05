@@ -176,11 +176,11 @@
         adminControls.appendChild(gradingControlItem);
 
         gradingControlItem.addEventListener('click', function() {
-            window.open('/grading/' + vm.game.activity.id, '_blank');
+            window.open(vm.baseUrl + '/grading/' + vm.game.activity.id, '_blank');
         });
 
         function getCountOfUngradedAnswers() {
-            vm.$http.get('/api/games/' + vm.game.id + '/get-count-of-ungraded-answers').then(response => {
+            vm.$http.get(vm.baseUrl + '/api/games/' + vm.game.id + '/get-count-of-ungraded-answers').then(response => {
                 gradingControlItemBadge.innerText = response.body.count;
 
                 if (response.body.count !== null) {
@@ -208,7 +208,7 @@
         adminControls.appendChild(statisticsControlItem);
 
         statisticsControlItem.addEventListener('click', function () {
-            window.open('/manage/game-statistics/' + vm.game.id, '_blank');
+            window.open(vm.baseUrl + '/manage/game-statistics/' + vm.game.id, '_blank');
         });
 
         // -------------- START STOP --------------------------
@@ -223,7 +223,7 @@
 
         startStopControlItem.addEventListener('click', function () {
             let start = vm.game.activity.started === 1 ? 0 : 1;
-            vm.$http.get('/api/games/' + vm.game.id + '/start-stop-game?start=' + start).then(response => {
+            vm.$http.get(vm.baseUrl + '/api/games/' + vm.game.id + '/start-stop-game?start=' + start).then(response => {
                 vm.game.activity.started = start;
                 if (vm.game.activity.started === 1) {
                     startStopControlItem.className = 'mdi mdi-stop-circle-outline start-stop';

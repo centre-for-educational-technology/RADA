@@ -414,7 +414,7 @@
                 this.getActiveFlashExercise();
             },
             getActiveFlashExercise() {
-                this.$http.get('/api/games/' + this.game.id + '/get-active-flash-exercise').then(response => {
+                this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/get-active-flash-exercise').then(response => {
                     if (typeof response.body.id !== 'undefined') {
                         $('#user-flash-exercise-control-item').removeClass('hidden');
                         if (this.activeFlashExerciseId === null) {
@@ -441,7 +441,7 @@
                 });
             },
             getGameData() {
-                this.$http.get('/api/games/' + this.game.id + '/get-game-data').then(response => {
+                this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/get-game-data').then(response => {
                     if (typeof response.body !== 'undefined') {
                         let data = response.body;
                         this.showHideFlashExercises(data.flash_exercise);
