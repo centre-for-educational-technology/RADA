@@ -15,16 +15,6 @@
                         </div>
                     </div>
 
-                    <div class="sz-game-voucher" v-if="gotVoucher()">
-                        <h2>{{ $t('vouchers.heading')}}</h2>
-                        <p>{{ voucherTitle() }}</p>
-                        <a v-bind:href="getVoucherUrl()" class="sz-voucher-image" target="_blank">
-                            <img v-bind:src="getVoucherImageUrl()" class="img-responsive" alt="voucher">
-                        </a>
-                        <p>{{ $t('vouchers.details') }}</p>
-                        <a class="btn btn-default" v-bind:href="getVoucherUrl()" target="_blank">{{ $t('vouchers.button') }}</a>
-                    </div>
-
                     <h2 class="text-center">{{ $t('results-heading')}}</h2>
                     <div v-for="(question, index) in getResultQuestions">
                         <h3>{{ index + 1 }}. {{ question.title }}</h3>
@@ -115,21 +105,6 @@
     export default {
         props: ['game', 'baseUrl'],
         mixins: [MissingWordMixin],
-        mounted() {
-            const vm = this;
-            this.$http.get(vm.baseUrl + '/api/games/' + vm.game.id + '/voucher', {}).then(response => {
-                if ( response.body.hasVoucher ) {
-                    vm.voucher = response.body.voucher;
-                }
-            }, response => {
-                //console.error('Error', response);
-            });
-        },
-        data() {
-            return {
-                voucher: false
-            };
-        },
         computed: {
             totalQuestionsCount: function() {
                 return this.game.activity.questions.length;
@@ -309,18 +284,6 @@
             },
             showResults() {
                 this.resultsShown = !this.resultsShown;
-            },
-            getVoucherImageUrl() {
-                return this.baseUrl + '/img/vouchers/voucher.png';
-            },
-            getVoucherUrl() {
-                return this.baseUrl + '/discount_vouchers';
-            },
-            gotVoucher() {
-                return !!this.voucher;
-            },
-            voucherTitle() {
-                return this.gotVoucher() ? this.voucher.title : '';
             }
         }
     }
