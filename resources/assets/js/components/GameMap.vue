@@ -500,7 +500,7 @@
             showHideGameIsStopped(data) {
                 if ((typeof data.started !== 'undefined' && data.started === 1) === false) {
                     this.$parent.checkUnload = false;
-                    window.location.href = '/games/' + this.game.id + '/stopped'
+                    window.location.href = this.baseUrl + '/games/' + this.game.id + '/stopped'
                 }
             },
             showNotification(title, message) {

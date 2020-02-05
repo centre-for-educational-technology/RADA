@@ -50,7 +50,7 @@ const stoppedGameApp = new Vue({
         },
         continueGame(data) {
             if (typeof data.started !== 'undefined' && data.started === 1) {
-                window.location.href = '/games/' + this.game.id + '/play'
+                window.location.href = this.baseUrl + '/games/' + this.game.id + '/play'
             }
         }
     }

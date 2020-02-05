@@ -35,7 +35,7 @@
         },
         methods: {
             addRating(e, star) {
-                this.$http.get(vm.baseUrl + '/api/games/' + this.game.id + '/add-rating/' + star).then(response => {
+                this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/add-rating/' + star).then(response => {
                     this.close();
                 });
             },
