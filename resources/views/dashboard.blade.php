@@ -28,7 +28,7 @@
                                 @endif
                             </div>
                             <div class="col-xs-3 col-sm-2">
-                                @php ( $gameUrl = route('game.play', ['id' => $game->id, 'exit_url' => $gameExitUrl,]) )
+                                @php ( $gameUrl = route('game.play', ['game' => $game->id, 'exit_url' => $gameExitUrl,]) )
                                 @if ( $game->isComplete() )
                                     <a href="{!! $gameUrl !!}" class="btn btn-success btn-sm pull-right" title="{{ trans('pages.dashboard.btn.view-results' )}}">
                                         <i class="mdi mdi-map-marker-circle"></i>

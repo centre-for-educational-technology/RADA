@@ -11,8 +11,8 @@ This tool set includes:
 
 ## Requirements
 
-- Requirements are best determined using [Server Requirements page](https://laravel.com/docs/5.8/installation#server-requirements) of corresponding Laravel 5 version
-  - Currently used version is 5.8
+- Requirements are best determined using [Server Requirements page](https://laravel.com/docs/6.x/installation#server-requirements) of corresponding Laravel 5 version
+  - Currently used version is 6.x
 - PHP version 7.3 (some of the additional modules have strict requirements)
 - SSH access to the server (terminal access)
 - [Composer](https://getcomposer.org/) being installed
@@ -45,7 +45,7 @@ This tool set includes:
   - Running `php artisan serve` would serve the app in development (or configure the server of your choice)
 - Run `php artisan db:seed` to ensure that database is filled with required information
 - For xAPI integration (step 2)
-  - Run `php artisan queue:work &` from terminal to start the queue worker
+  - Run `php artisan queue:work --tries=0 &` from terminal to start the queue worker
 - Add private and public keys to the `storage/app/keys` directory (key length might be different)
 ```
 openssl genrsa -out private-key.pem 2048
@@ -53,7 +53,7 @@ openssl rsa -in private-key.pem -out public-key.pem -outform PEM -pubout
 ```
 - Setup scheduled jobs (Cron)
   - Those jobs should be run from Command-line interface (CLI) as those might require a longer period of time to run
-  - Please check the [documentation](https://laravel.com/docs/5.8/scheduling#introduction) for detailed instructions
+  - Please check the [documentation](https://laravel.com/docs/6.x/scheduling#introduction) for detailed instructions
 
 ## Set up Google Analytics integration for active users graph on statistics page
 - Create API Service account which can access desired Google Analytics project. [Documentation](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
@@ -84,21 +84,19 @@ The common septs for the process are as follows:
 
 ## Development
 
-**NB! Please note that non-production branch does not have the built assets provided**
-
 ### Working with compiled assets
 
-Working with JS and SASS requires [Node.js](https://nodejs.org) and [Gulp](http://gulpjs.com/) for compilation, generation and management purposes.
-More information could be found on [Laravel Elixir](https://laravel.com/docs/5.3/elixir) documentation pages.
+Working with JS and SASS requires [Node.js](https://nodejs.org) and [Webpack](https://webpack.js.org/) for compilation, generation and management purposes.
+More information could be found on [Laravel Mix](https://laravel.com/docs/6.x/mix) documentation pages.
 
-Tasks should run well enough with Node.js versions 6 and 8 (tested to run well enough with both versions). Other versions might be having certain compatibility issues.
+Tasks should run well enough with Node.js versions 10 and 12 (tested to run well enough with both versions). Other versions might be having certain compatibility issues.
 
-If all the dependencies are installed, then one would only need to run one of the tasks:
+If all the dependencies are installed (`npm install`), then one would only need to run one of the tasks:
 
- - `gulp` would run all tasks
- - `gulp --production` would run  all tasks and enforce minification and uglification
- - `gulp watch` would run the tasks and keep watching for changes (CTRL + C to cancel the task in terminal)
- - Same could be achieved by running `npm run prod` and `npm run dev`
+ - `npm run dev` would build assets for development purposes
+ - `npm run prod` would build assets for use in production
+ - `npm run watch` would build assets for development and keep watching for changes (CTRL + C to cancel the task in terminal)
+ - Look at `package.json` file for more details
 
 ### Merging into production
 
@@ -107,8 +105,8 @@ Once the code has reached a stable point and is ready to me run in production, t
   - Switch to local branch that is tracking upstream `production`
     - [This](https://stackoverflow.com/questions/520650/make-an-existing-git-branch-track-a-remote-branch#answer-2286030) should have enough instruction to setup the branch from the terminal
   - Merge the code from `master` by running `git merge --strategy-option=theirs master`
-    - The strategy is needed to make sure that no conflicts arise. The strategy does not matter too much as any of the static assets would be rebuilt. It is solely needed because generated/built files for static assets (JS and CSS) would have conflicts, as both branches are building their own versions of those files. The ones in production are minified and made ready for production use.
-  - Make sure to build the production assets by running `npm run prod`, which should add new files to the `public/build` directory and also generate new versions for some files within `public/js`.
+    - The strategy is needed to make sure that no conflicts arise. The strategy does not matter too much as any of the static assets would be rebuilt. It is solely needed because generated/built files for static assets (JS and CSS) would have conflicts, as both branches are building their own versions of those files. The ones in production are minified and made ready for production use
+  - Make sure to build the production assets by running `npm run prod`, which should add new files to the `public` directory and its subdirectories. Versioning information is kept with in `mix-manifest.json`
     - In case no changes were made to the base files for JS or CSS, there could be no changes to the static assets. Although, running the process just in case would be a good idea (unless one is absolutely sure that it is not necessary)
   - Add all the changes files, commit and push
 
@@ -130,7 +128,7 @@ If you need to be running in production mode, then please use the branch named `
 
 ## Vagrant + Homestead
 
-This is an example `Homestead.yaml` configuration file for running with `Vagrant` on `VirtualBox`. Please modify it to comply with your local system. Read [documentation](https://laravel.com/docs/5.8/homestead) for more information on how to use `Laravel Homestead`.
+This is an example `Homestead.yaml` configuration file for running with `Vagrant` on `VirtualBox`. Please modify it to comply with your local system. Read [documentation](https://laravel.com/docs/6.x/homestead) for more information on how to use `Laravel Homestead`.
 
 ```
 ip: 192.168.10.10

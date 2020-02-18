@@ -146,7 +146,7 @@
     export default {
         components: {
             draggable,
-            'game-question-modal': require('./GameQuestionModal.vue')
+            'game-question-modal': require('./GameQuestionModal.vue').default
         },
         props: ['baseUrl', 'apiUrl', 'canCreateActivityItem'],
         mounted() {

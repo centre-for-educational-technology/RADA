@@ -139,7 +139,7 @@ class UserController extends Controller
             $user->update($attributes);
         }
 
-        return redirect()->route('user.profile', [ 'id' => $user->id ]);
+        return redirect()->route('user.profile', [ 'user' => $user->id ]);
     }
 
     /**

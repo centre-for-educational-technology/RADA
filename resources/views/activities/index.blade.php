@@ -49,7 +49,7 @@
                         @foreach($activities as $activity)
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="{!! route('activity.show', [ 'id' => $activity->id ]) !!}">
+                                    <a href="{!! route('activity.show', [ 'activity' => $activity->id ]) !!}">
                                         <img class="media-object img-rounded sz-img-64x64" src="{{ $activity->getFeaturedImageUrl() }}" alt="featured-image">
                                     </a>
                                 </div>
@@ -60,7 +60,7 @@
                                             <i class="mdi mdi-star-circle promoted-activity" aria-hidden="true"></i>
                                         @endif
 
-                                        <a href="{!! route('activity.show', ['id' => $activity->id]) !!}">
+                                        <a href="{!! route('activity.show', ['activity' => $activity->id]) !!}">
                                             {{ $activity->title }}
                                         </a>
                                     </h4>
@@ -117,7 +117,7 @@
                         @foreach($templates as $activity)
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="{!! route('activity.show', [ 'id' => $activity->id ]) !!}">
+                                    <a href="{!! route('activity.show', [ 'activity' => $activity->id ]) !!}">
                                         <img class="media-object img-rounded sz-img-64x64" src="{{ $activity->getFeaturedImageUrl() }}" alt="featured-image">
                                     </a>
                                 </div>
@@ -128,7 +128,7 @@
                                             <i class="mdi mdi-star-circle promoted-activity" aria-hidden="true"></i>
                                         @endif
 
-                                        <a href="{!! route('activity.show', ['id' => $activity->id]) !!}">
+                                        <a href="{!! route('activity.show', ['activity' => $activity->id]) !!}">
                                             {{ $activity->title }}
                                         </a>
                                     </h4>

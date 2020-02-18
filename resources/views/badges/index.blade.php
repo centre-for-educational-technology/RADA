@@ -14,7 +14,7 @@
                         <p class="text-center">
                             {{ trans('pages.badges.introduction.general') }}
                             @if ( Auth::check() )
-                                {!! trans('pages.badges.introduction.authenticated', ['profileUrl' => route('user.profile', [ 'profile' => Auth::user()->id ]) . '#badges-earned' ]) !!}
+                                {!! trans('pages.badges.introduction.authenticated', ['profileUrl' => route('user.profile', [ 'user' => Auth::user()->id ]) . '#badges-earned' ]) !!}
                             @endif
                             @if ( Auth::guest() )
                                 {!! trans('pages.badges.introduction.guest', [ 'loginUrl' => url('/login') ]) !!}

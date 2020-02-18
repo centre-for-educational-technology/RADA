@@ -77,7 +77,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{!! route('user.profile', [ 'profile' => Auth::user()->id ]) !!}">
+                                <a href="{!! route('user.profile', [ 'user' => Auth::user()->id ]) !!}">
                                     <i class="mdi mdi-face-profile" aria-hidden="true"></i>
                                     {{ trans('pages.profile.title') }}
                                 </a>

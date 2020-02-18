@@ -71,11 +71,11 @@
                         <ul class="list-group">
                             @foreach( $activity->activityItems as $item )
                                 <li class="list-group-item" title="{{ $item->description }}">
-                                    <a href="{!! route('activity_item.show', ['id' => $item->id]) !!}">
+                                    <a href="{!! route('activity_item.show', ['activity_item' => $item->id]) !!}">
                                         <i class="mdi mdi-link pull-right"></i>
                                     </a>
                                     @can('update', $item)
-                                    <a href="{!! route('activity_item.edit', ['id' => $item->id]) !!}">
+                                    <a href="{!! route('activity_item.edit', ['activity_item' => $item->id]) !!}">
                                         <i class="mdi mdi-pencil pull-right"></i>
                                     </a>
                                     @endcan

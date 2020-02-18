@@ -7,16 +7,14 @@
             <script>
                 window.document.getElementById('start-monitoring-button').addEventListener('click', function (e) {
                     e.preventDefault();
-                    window.location.href = "{!! route('activity.start-monitoring', [
-                        'id' => $activity->id
-                    ]) !!}";
+                    window.location.href = "{!! route('activity.start-monitoring', $activity->id) !!}";
                     return false;
                 });
             </script>
         </form>
     @endif
 @else
-<form class="sz-play-action-form" action="{{ route('activity.start', ['id' => $activity->id]) }}" method="POST">
+<form class="sz-play-action-form" action="{{ route('activity.start', $activity->id) }}" method="POST">
     {{ csrf_field() }}
     {!! Form::hidden('exit_url', url()->full(), []) !!}
     <input type="hidden" name="nickname" id="hidden-nickname" />

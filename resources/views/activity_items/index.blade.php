@@ -35,13 +35,13 @@
                         @foreach($activity_items as $activity_item)
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="{!! route('activity_item.show', [ 'id' => $activity_item->id ]) !!}">
+                                    <a href="{!! route('activity_item.show', [ 'activity_item' => $activity_item->id ]) !!}">
                                         <img class="media-object img-rounded sz-img-52x60" src="{{ $activity_item->icon_url }}" alt="featured-image">
                                     </a>
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">
-                                        <a href="{!! route('activity_item.show', ['id' => $activity_item->id]) !!}">
+                                        <a href="{!! route('activity_item.show', ['activity_item' => $activity_item->id]) !!}">
                                             {{ $activity_item->title }}
                                         </a>
                                     </h4>

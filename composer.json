@@ -6,9 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=7.3",
-        "laravel/framework": "5.*",
-        "laravel/socialite": "3.*",
-        "laravelcollective/html": "5.*",
+        "laravel/framework": "^6.0",
+        "laravel/socialite": "^4.0",
+        "laravelcollective/html": "^6.0",
         "intervention/image": "2.*",
         "doctrine/dbal": "2.*",
         "webpatser/laravel-uuid": "3.*",
@@ -16,7 +16,7 @@
         "firebase/php-jwt": "^5.0",
         "spatie/laravel-activitylog": "3.*",
         "simplesoftwareio/simple-qrcode": "2.*",
-        "jrean/laravel-user-verification": "7.0.*",
+        "jrean/laravel-user-verification": "^8.0",
         "ext-json": "*",
         "phpoffice/phpspreadsheet": "^1.9",
         "google/apiclient": "^2.4"

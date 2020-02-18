@@ -319,7 +319,7 @@ class ActivityController extends Controller
     {
         $activity = $this->storeActivity($request, $imageService);
 
-        return redirect()->route('activity.show', [ 'id' => $activity->id ]);
+        return redirect()->route('activity.show', [ 'activity' => $activity->id ]);
     }
 
     /**
@@ -488,7 +488,7 @@ class ActivityController extends Controller
             $activity->activityItems()->detach();
         }
 
-        return redirect()->route('activity.show', [ 'id' => $activity->id ]);
+        return redirect()->route('activity.show', [ 'activity' => $activity->id ]);
     }
 
     /**
@@ -545,7 +545,7 @@ class ActivityController extends Controller
         }
 
         $routeParams = [
-            'id' => $game->id,
+            'game' => $game->id,
         ];
 
         if ( $request->has('exit_url') )
@@ -663,7 +663,7 @@ class ActivityController extends Controller
      */
     public function qrCode(Activity $activity)
     {
-        $url = route('activity.show', ['id' => $activity->id]);
+        $url = route('activity.show', ['activity' => $activity->id]);
         $qrCode = QrCode::size(500)->errorCorrection('H')->generate($url);
 
         return [
@@ -690,7 +690,7 @@ class ActivityController extends Controller
         {
             $handle = fopen('php://output', 'w');
 
-            $url = route('activity.show', ['id' => $activity->id]);
+            $url = route('activity.show', ['activity' => $activity->id]);
             $qrCode = QrCode::format('png')->size(500)->errorCorrection('H')->generate($url);
 
             fwrite($handle, $qrCode);
@@ -759,7 +759,7 @@ class ActivityController extends Controller
 
         $newActivity->save();
 
-        return redirect()->route('activity.show', [ 'id' => $newActivity->id ]);
+        return redirect()->route('activity.show', [ 'activity' => $newActivity->id ]);
     }
 
     protected function storeActivity(Request $request, ImageService $imageService)
@@ -880,7 +880,7 @@ class ActivityController extends Controller
         }
 
         return redirect()->route('activity.show', [
-            'id' => $activity->id
+            'activity' => $activity->id
         ]);
     }
 
@@ -892,7 +892,7 @@ class ActivityController extends Controller
         }
 
         return redirect()->route('activity.show', [
-            'id' => $activity->id
+            'activity' => $activity->id
         ]);
     }
 
@@ -953,7 +953,7 @@ class ActivityController extends Controller
                 }
 
                 $routeParams = [
-                    'id' => $game->id,
+                    'game' => $game->id,
                 ];
                 $response['url'] = route('game.play', $routeParams);
                 $response['id'] = (string) $game->id;
@@ -964,7 +964,7 @@ class ActivityController extends Controller
                 ])->first();
                 if ($game) {
                     $routeParams = [
-                        'id' => $game->id,
+                        'game' => $game->id,
                     ];
                     $response['url'] = route('game.play', $routeParams);
                     $response['id'] = (string) $game->id;
@@ -1016,7 +1016,7 @@ class ActivityController extends Controller
             }
 
             return redirect()->route('game.monitoring', [
-                'id' => $game->id
+                'game' => $game->id
             ]);
         }
 

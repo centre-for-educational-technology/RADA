@@ -34,6 +34,13 @@ class Game extends Model
     use LogsActivity;
 
     /**
+     * The "type" of the primary key ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+    /**
      * Define that model does not use increments
      * @var boolean
      */

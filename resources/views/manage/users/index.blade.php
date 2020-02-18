@@ -144,17 +144,17 @@
                                                 @endif
                                                 @if ( $user->id !== Auth::user()->id )
                                                     @if ( $user->blocked() )
-                                                        <button class="btn btn-warning btn-xs" title="{{ trans('pages.manage.users.index.unblock-account') }}" data-toggle="action" data-method="put" data-confirm="{{ trans('general.confirmations.unblock-account') }}" data-action="{!! route('user.unblock', ['id' => $user->id]) !!}">
+                                                        <button class="btn btn-warning btn-xs" title="{{ trans('pages.manage.users.index.unblock-account') }}" data-toggle="action" data-method="put" data-confirm="{{ trans('general.confirmations.unblock-account') }}" data-action="{!! route('user.unblock', ['user' => $user->id]) !!}">
                                                             <i class="mdi mdi-account"></i>
                                                         </button>
                                                     @else
-                                                        <button class="btn btn-warning btn-xs" title="{{ trans('pages.manage.users.index.block-account') }}" data-toggle="action" data-method="put" data-confirm="{{ trans('general.confirmations.block-account') }}" data-action="{!! route('user.block', ['id' => $user->id]) !!}">
+                                                        <button class="btn btn-warning btn-xs" title="{{ trans('pages.manage.users.index.block-account') }}" data-toggle="action" data-method="put" data-confirm="{{ trans('general.confirmations.block-account') }}" data-action="{!! route('user.block', ['user' => $user->id]) !!}">
                                                             <i class="mdi mdi-account-off"></i>
                                                         </button>
                                                     @endif
                                                 @endif
                                                 @can('delete', $user)
-                                                    <button class="btn btn-danger btn-xs" title="{{ trans('pages.manage.users.index.delete-account') }}" data-toggle="action" data-method="delete" data-confirm="{{ trans('general.confirmations.delete-account') }}" data-action="{!! route('user.delete', ['id' => $user->id]) !!}">
+                                                    <button class="btn btn-danger btn-xs" title="{{ trans('pages.manage.users.index.delete-account') }}" data-toggle="action" data-method="delete" data-confirm="{{ trans('general.confirmations.delete-account') }}" data-action="{!! route('user.delete', ['user' => $user->id]) !!}">
                                                         <i class="mdi mdi-delete-forever"></i>
                                                     </button>
                                                 @endcan

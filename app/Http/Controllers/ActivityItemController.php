@@ -319,7 +319,7 @@ class ActivityItemController extends Controller
       // create an ActivityItem
       $request->session()->flash('activityItemCreated', 'true');
 
-      return redirect()->route('activity_item.show', [ 'id' => $item->id ]);
+      return redirect()->route('activity_item.show', [ 'activity_item' => $item->id ]);
   }
 
     /**
@@ -682,7 +682,7 @@ class ActivityItemController extends Controller
           $activity_item->pairs()->saveMany($pairs);
       }
 
-      return redirect()->route('activity_item.show', [ 'id' => $activity_item->id ]);
+      return redirect()->route('activity_item.show', [ 'activity_item' => $activity_item->id ]);
   }
 
   /**
