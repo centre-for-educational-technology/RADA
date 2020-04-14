@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xs-12 col-lg-10">{{ @trans('general.structural-aid') }}</div>
                 <div class="col-xs-4 col-lg-2">
-                    <img src="{{ asset('img/logos/el-struct.jpg') }}" style="width: 100%;">
+                    <img src="{{ asset('img/logos/logo-mobilitas-and-eu.jpg') }}" alt="{{ @trans('general.structural-aid') }}" style="width: 100%;">
                 </div>
             </div>
         </div>

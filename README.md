@@ -9,6 +9,10 @@ This tool set includes:
 - an online repository of interactive assignments;
 - an online environment (Web platform + mobile clients) for composing and conducting location-based GPS adventure games, challenges and tournaments that utilise all these different types of interactive assignments. The platform uses Mozilla Open Badges framework for awarding the achievements of players.
 
+**Ellu viidud projekti Mobilitas Pluss MOBEC001 "Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel" tegevuskava raames.**
+
+![Ellu viidud projekti Mobilitas Pluss MOBEC001 "Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel" tegevuskava raames.](https://github.com/centre-for-educational-technology/RADA/tree/master/public/img/logos/logo-mobilitas-and-eu.jpg "Ellu viidud projekti Mobilitas Pluss MOBEC001 \"Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel\" tegevuskava raames.")
+
 ## Requirements
 
 - Requirements are best determined using [Server Requirements page](https://laravel.com/docs/6.x/installation#server-requirements) of corresponding Laravel 5 version
