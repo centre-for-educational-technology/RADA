@@ -11,7 +11,7 @@ This tool set includes:
 
 **Ellu viidud projekti Mobilitas Pluss MOBEC001 "Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel" tegevuskava raames.**
 
-![Ellu viidud projekti Mobilitas Pluss MOBEC001 "Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel" tegevuskava raames.](https://github.com/centre-for-educational-technology/RADA/tree/master/public/img/logos/logo-mobilitas-and-eu.jpg "Ellu viidud projekti Mobilitas Pluss MOBEC001 \"Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel\" tegevuskava raames.")
+![Ellu viidud projekti Mobilitas Pluss MOBEC001 "Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel" tegevuskava raames.](https://github.com/centre-for-educational-technology/RADA/blob/master/public/img/logos/logo-mobilitas-and-eu.jpg "Ellu viidud projekti Mobilitas Pluss MOBEC001 \"Piireületav haridusuuendus tehnoloogiapõhiste teadusuuringute toel\" tegevuskava raames.")
 
 ## Requirements
 
