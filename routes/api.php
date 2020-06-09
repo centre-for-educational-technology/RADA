@@ -78,3 +78,16 @@ Route::group(['prefix' => 'grading'], static function () {
     Route::get('get-question-data/{activityItem}', 'GradingController@getQuestionData');
     Route::get('get-other-graded-answers/{answer}', 'GradingController@getOtherGradedAnswers');
 });
+
+Route::group(['prefix' => 'dashboard'], static function() {
+  Route::get('/user', static function (Request $request) {
+      $user = $request->user();
+
+      return [
+          'id' => $user->id,
+          'name' => $user->name,
+          'email' => $user->email,
+      ];
+  })->middleware('auth:tokenapi');
+  Route::get('/all', 'DashboardApiController@all');
+});

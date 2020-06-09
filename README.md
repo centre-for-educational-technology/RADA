@@ -51,6 +51,9 @@ This tool set includes:
 - For xAPI integration (step 2)
   - Run `php artisan queue:work --tries=0 &` from terminal to start the queue worker
 - Add private and public keys to the `storage/app/keys` directory (key length might be different)
+- Make sure to deploy Passport as described in the [documentation](https://laravel.com/docs/6.x/passport#deploying-passport)
+  - Only keys would be needed by default
+  - Make sure to define API access in the `.env` file by specifying user identifiers
 ```
 openssl genrsa -out private-key.pem 2048
 openssl rsa -in private-key.pem -out public-key.pem -outform PEM -pubout

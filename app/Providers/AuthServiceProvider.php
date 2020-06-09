@@ -12,6 +12,7 @@ use App\Activity;
 use App\ActivityItem;
 use App\User;
 use App\DiscountVoucher;
+use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -35,5 +36,13 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        Passport::routes();
+
+        Passport::tokensExpireIn(now()->addMinutes(10));
+
+        Passport::refreshTokensExpireIn(now()->addHours(1));
+
+        Passport::personalAccessTokensExpireIn(now()->addHours(1));
     }
 }

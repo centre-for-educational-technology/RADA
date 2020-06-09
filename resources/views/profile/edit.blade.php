@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('footer-scripts')
+    <script src="{{ asset(mix('js/edit_profile.js')) }}"></script>
+@endsection
+
 @section('content')
 <div class="container">
     {!! Form::open([
@@ -90,5 +94,14 @@
             </div>
         </div>
     {!! Form::close() !!}
+
+    <div class="col-md-6 col-md-offset-4">
+        <passport-authorized-clients v-bind:base-url="baseUrl"></passport-authorized-clients>
+
+        @if ( Auth::user()->isAdmin() )
+            <passport-clients v-bind:base-url="baseUrl"></passport-clients>
+            <passport-personal-access-tokens v-bind:base-url="baseUrl"></passport-personal-access-tokens>
+        @endif
+    </div>
 </div>
 @endsection

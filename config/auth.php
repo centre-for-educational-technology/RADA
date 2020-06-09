@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'tokenapi' => [
+          'driver' => 'passport',
+          'provider' => 'users',
+        ],
     ],
 
     /*
@@ -97,6 +102,11 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+    ],
+
+    // API access configuration
+    'api_access' => [
+        'user_identifiers' => env('API_ACCESS_USER_IDENTIFIERS', null),
     ],
 
 ];

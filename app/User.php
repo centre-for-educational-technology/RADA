@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Event;
 use Carbon\Carbon;
 use App\Notifications\ResetPassword;
 use Jrean\UserVerification\Traits\UserVerification;
+use Laravel\Passport\HasApiTokens;
 
 /**
  * Class User
@@ -31,6 +32,7 @@ class User extends Authenticatable
     use Notifiable;
     use LogsActivity;
     use UserVerification;
+    use HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -274,5 +276,21 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPassword($token));
+    }
+
+    /**
+     * Determines if user is allowed to make API calls.
+     *
+     * @return boolean
+     */
+    public function canMakeApiCalls()
+    {
+        $identifiers = config('auth.api_access.user_identifiers') ?? [];
+
+        if (!is_array($identifiers)) {
+            $identifiers = explode(',', $identifiers);
+        }
+
+        return in_array($this->id, $identifiers);
     }
 }

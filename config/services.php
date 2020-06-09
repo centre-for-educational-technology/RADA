@@ -60,7 +60,7 @@ return [
         'dsn' => env('SENTRY_DSN', null),
     ],
     'activity' => [
-        'pin_length' => env('ACTIVITY_PIN_LENGTH', 5)
-    ]
+        'pin_length' => env('ACTIVITY_PIN_LENGTH', 5),
+    ],
 
 ];

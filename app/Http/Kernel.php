@@ -40,6 +40,11 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+
+        'tokenapi' => [
+          'throttle:60,1',
+          'bindings',
+        ],
     ];
 
     /**
@@ -58,5 +63,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'auth.admin' => \App\Http\Middleware\AuthenticateAdmin::class,
         'game.verify' => \App\Http\Middleware\VerifyGameAccessAndStatus::class,
+        'api.access.verify' => \App\Http\Middleware\VerifyApiAccess::class,
     ];
 }

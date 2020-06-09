@@ -26,6 +26,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/discount_vouchers.js', 'public/js')
     .js('resources/assets/js/manage_users.js', 'public/js')
     .js('resources/assets/js/grading.js', 'public/js')
+    .js('resources/assets/js/edit_profile.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .copy('node_modules/bootstrap-sass/assets/fonts', 'public/build/fonts')
     .copy('node_modules/mdi/fonts', 'public/build/fonts');

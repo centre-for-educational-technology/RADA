@@ -19,7 +19,8 @@
         "jrean/laravel-user-verification": "^8.0",
         "ext-json": "*",
         "phpoffice/phpspreadsheet": "^1.9",
-        "google/apiclient": "^2.4"
+        "google/apiclient": "^2.4",
+        "laravel/passport": "^9.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.8",

@@ -18,6 +18,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\AwardBadges::class,
         Commands\MigratePublicStorage::class,
+        Commands\ExportActivity::class,
     ];
 
     /**
