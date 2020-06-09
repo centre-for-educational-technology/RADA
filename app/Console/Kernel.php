@@ -51,6 +51,8 @@ class Kernel extends ConsoleKernel
                 }
             });
         })->daily()->name('removeUnverifiedUsers')->withoutOverlapping();
+
+        $schedule->command('passport:purge')->hourly();
     }
 
     /**
