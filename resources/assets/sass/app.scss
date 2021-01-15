@@ -6,7 +6,8 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$icon-font-path: "../../../assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
 
 // MaterialDesignIcons
 @import "mdi";

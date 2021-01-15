@@ -15,7 +15,7 @@ This tool set includes:
 
 ## Requirements
 
-- Requirements are best determined using [Server Requirements page](https://laravel.com/docs/6.x/installation#server-requirements) of corresponding Laravel 5 version
+- Requirements are best determined using [Server Requirements page](https://laravel.com/docs/6.x/installation#server-requirements) of corresponding Laravel 6 version
   - Currently used version is 6.x
 - PHP version 7.3 (some of the additional modules have strict requirements)
 - SSH access to the server (terminal access)
@@ -135,6 +135,8 @@ If you need to be running in production mode, then please use the branch named `
 
 ## Vagrant + Homestead
 
+**TODO: consider removing laravel/homestead dev dependency and adding some simple instructions of using [Laradock](https://laradock.io/) instead.**
+
 This is an example `Homestead.yaml` configuration file for running with `Vagrant` on `VirtualBox`. Please modify it to comply with your local system. Read [documentation](https://laravel.com/docs/6.x/homestead) for more information on how to use `Laravel Homestead`.
 
 ```
@@ -169,11 +171,82 @@ name: rada
 hostname: rada
 ```
 
+## Laradock
+
+[Laradock](https://laradock.io/) could be used to run in development.
+
+Below is a simple control script that could be added to the laradock directory (currently used with standalone instance per project, not running multiple different ones on the same set of containers).
+
+Please do check which containers are being used by default. It assumes that session condifuration is using filesystem and does not create a redis container and provide required configuration. Bash script is only meant to save time spent on typing commands for starting, stopping and creating a set of containers. Please note that you should also configure your instance to use mailhog instead of really sending any email messages.
+
+You are able and encouraged to extend the set of containers to your liking or to fit your requirements, just make sure that required configurations are being made to the `.env` file.
+
+Do note that **zsh** is set to be the defalt linux shell. Do change that to **bash** if you are not going to enable the other one.
+
+```
+#!/bin/sh
+
+commands=(up start stop ssh)
+base_containers=(workspace php-fpm docker-in-docker)
+containers=(mysql apache2 mailhog)
+user="laradock"
+shell="zsh"
+
+function print_supported_commands() {
+  local output="$1"
+  output+=" Supported commands are:"
+  last="${commands[@]: -1}"
+
+  for command in "${commands[@]}"
+  do
+    if [[ $command == $last ]] ; then
+      output+=" and"
+    fi
+
+    output+=" $command"
+
+    if [[ $command != $last ]] ; then
+      output+=","
+    fi
+  done
+
+  echo "$output"
+}
+
+if [[ $# -eq 0 ]] ; then
+  print_supported_commands "No command provided!"
+  exit 1
+fi
+
+case $1 in
+"up")
+  docker-compose up -d ${containers[@]}
+  ;;
+"start")
+  extended=(${base_containers[@]})
+  extended+=(${containers[@]})
+
+  docker-compose start ${extended[@]}
+  ;;
+"stop")
+  docker-compose stop
+  ;;
+"ssh")
+  docker-compose exec --user=$user workspace $shell
+  ;;
+*)
+  print_supported_commands "No supported commands given!"
+  ;;
+esac
+
+exit 0
+```
+
 ## License
 
 MIT License
 
-Copyright (c) 2018 RADA Project
+Copyright (c) 2021 RADA Project
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
