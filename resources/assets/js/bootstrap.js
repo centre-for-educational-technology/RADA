@@ -16,7 +16,9 @@ require('bootstrap-sass');
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = require('vue');
+import Vue from 'vue';
+
+window.Vue = Vue;
 require('vue-resource');
 
 /**

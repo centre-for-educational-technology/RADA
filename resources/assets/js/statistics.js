@@ -1,4 +1,5 @@
-window.Vue = require('vue');
+import Vue from 'vue';
+window.Vue = Vue;
 require('vue-resource');
 const VueChartJs = require('vue-chartjs');
 
