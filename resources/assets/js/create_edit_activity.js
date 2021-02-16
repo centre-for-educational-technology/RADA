@@ -1,7 +1,12 @@
-const VueI18n = require('vue-i18n');
-Vue.use(VueI18n);
-Vue.config.lang = window.Laravel.locale;
-Vue.locale(window.Laravel.locale, _.cloneDeep(window.Laravel.translations));
+import VueI18n from 'vue-i18n';
+
+const messages = {};
+messages[window.Laravel.locale] = _.cloneDeep(window.Laravel.translations);
+
+const i18n = new VueI18n({
+    locale: window.Laravel.locale,
+    messages: messages
+});
 
 // import Autocomplete from '@trevoreyre/autocomplete-vue'
 
@@ -11,6 +16,7 @@ Vue.component('autocomplete', require('./components/MultiAutocomplete.vue').defa
 Vue.component('instructor-search', require('./components/InstructorSearch.vue').default);
 
 const activityApp = new Vue({
+    i18n,
     el: 'form.activity-create,form.activity-edit',
     mounted() {
         const vm = this;

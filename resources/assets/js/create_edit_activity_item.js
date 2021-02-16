@@ -198,16 +198,22 @@ window.initMap = function() {
     });
 };
 
-const VueI18n = require('vue-i18n');
-Vue.use(VueI18n);
-Vue.config.lang = window.Laravel.locale;
-Vue.locale(window.Laravel.locale, _.cloneDeep(window.Laravel.translations));
+import VueI18n from 'vue-i18n';
+
+const messages = {};
+messages[window.Laravel.locale] = _.cloneDeep(window.Laravel.translations);
+
+const i18n = new VueI18n({
+    locale: window.Laravel.locale,
+    messages: messages
+});
 
 Vue.component('one-correct-answer', require('./components/OneCorrectAnswer.vue').default);
 Vue.component('multiple-correct-answers', require('./components/MultipleCorrectAnswers.vue').default);
 Vue.component('match-pairs', require('./components/MatchPairs.vue').default);
 
 const addActivityItemApp = new Vue({
+    i18n,
     el: 'form#' + window.Laravel.activityItemFormId,
     mounted() {
         const vm = this;

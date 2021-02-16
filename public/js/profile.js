@@ -1,1 +1,56 @@
-$((function(){var e=window.Laravel.apiUrl,n=!!window.ga;function a(){n&&ga.apply(this,arguments)}$('[data-toggle="popover"]').popover(),$('[data-toggle="tooltip"]').tooltip(),$("button#send-to-backpack").on("click",(function(){a("send","event","Badges","click","User initialized sending badges to Backpack"),$.getJSON(e+"/badges/mine",(function(n){if(_.size(n)>0){var o=_.map(n,(function(e){return e.assertion}));OpenBadges.issue(o,(function(t,s){if(a("send","event","Badges","issue","User sent badges to Backpack",o.length,{nonInteraction:!0}),s.length>0){a("send","event","Badges","issueSuccesses","Number of badges successfully issued",s.length,{nonInteraction:!0});var i=[];_.each(n,(function(e){-1!==_.indexOf(s,e.assertion)&&i.push(e.badge)})),$.post(e+"/badges/mine",{badges:i},null)}}))}}))})),$("button.openbadge-download").on("click",(function(){var e="http://backpack.openbadges.org/baker?assertion="+window.encodeURIComponent($(this).data("assertion-url"));window.open(e,"_blank","",!1)}))}));
+/******/ (() => { // webpackBootstrap
+/*!****************************************!*\
+  !*** ./resources/assets/js/profile.js ***!
+  \****************************************/
+$(function () {
+  var apiUrl = window.Laravel.apiUrl;
+  var hasAnalytics = !!window.ga;
+
+  function handleGa() {
+    if (hasAnalytics) {
+      ga.apply(this, arguments);
+    }
+  }
+
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
+  $('button#send-to-backpack').on('click', function () {
+    handleGa('send', 'event', 'Badges', 'click', 'User initialized sending badges to Backpack');
+    $.getJSON(apiUrl + '/badges/mine', function (data) {
+      if (_.size(data) > 0) {
+        var assertions = _.map(data, function (single) {
+          return single.assertion;
+        });
+
+        OpenBadges.issue(assertions, function (errors, successes) {
+          handleGa('send', 'event', 'Badges', 'issue', 'User sent badges to Backpack', assertions.length, {
+            nonInteraction: true
+          });
+
+          if (successes.length > 0) {
+            handleGa('send', 'event', 'Badges', 'issueSuccesses', 'Number of badges successfully issued', successes.length, {
+              nonInteraction: true
+            });
+            var badges = [];
+
+            _.each(data, function (single) {
+              if (_.indexOf(successes, single.assertion) !== -1) {
+                badges.push(single.badge);
+              }
+            });
+
+            $.post(apiUrl + '/badges/mine', {
+              badges: badges
+            }, null);
+          }
+        });
+      }
+    });
+  });
+  $('button.openbadge-download').on('click', function () {
+    var url = 'http://backpack.openbadges.org/baker?assertion=' + window.encodeURIComponent($(this).data('assertion-url'));
+    window.open(url, '_blank', '', false);
+  });
+});
+/******/ })()
+;

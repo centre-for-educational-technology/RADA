@@ -1,11 +1,15 @@
 //"use strict";
 
-const VueI18n = require('vue-i18n');
 import Hammer from 'hammerjs';
+import VueI18n from 'vue-i18n';
 
-Vue.use(VueI18n);
-Vue.config.lang = window.RADA.config.locale;
-Vue.locale(window.RADA.config.locale, _.cloneDeep(window.RADA.data.translations));
+const messages = {};
+messages[window.RADA.config.locale] = _.cloneDeep(window.RADA.data.translations);
+
+const i18n = new VueI18n({
+    locale: window.RADA.config.locale,
+    messages: messages
+});
 
 Vue.component('game-map', require('./components/GameMap.vue').default);
 Vue.component('game-tutorial-modal', require('./components/GameTutorialModal.vue').default);
@@ -15,6 +19,7 @@ Vue.component('game-rating-modal', require('./components/GameRatingModal.vue').d
 Vue.component('game-image-dialog', require('./components/GameImageDialog.vue').default);
 
 const playGameApp = new Vue({
+    i18n,
     el: '#sz-play-app',
     created: function() {
         var vm = this;

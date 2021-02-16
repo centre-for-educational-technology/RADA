@@ -1,14 +1,19 @@
 //"use strict";
 
-const VueI18n = require('vue-i18n');
+import VueI18n from 'vue-i18n';
 
-Vue.use(VueI18n);
-Vue.config.lang = window.RADA.config.locale;
-Vue.locale(window.RADA.config.locale, _.cloneDeep(window.RADA.data.translations));
+const messages = {};
+messages[window.RADA.config.locale] = _.cloneDeep(window.RADA.data.translations);
+
+const i18n = new VueI18n({
+    locale: window.RADA.config.locale,
+    messages: messages
+});
 
 Vue.component('game-map', require('./components/MonitoringMap.vue').default);
 
 const monitoringGameApp = new Vue({
+    i18n,
     el: '#sz-play-app',
     created: function() {
         var vm = this;

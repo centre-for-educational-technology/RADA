@@ -1,2 +1,12434 @@
-/*! For license information please see play.js.LICENSE.txt */
-(()=>{var t={3986:t=>{t.exports=function t(e){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.type=e.type,this.text=e.text,this.answer=e.answer,this.isCorrect=e.isCorrect}},5291:t=>{t.exports=function(t,e){var i=null;return function(){clearTimeout(i);var n=arguments,s=this;i=setTimeout((function(){t.apply(s,n)}),e)}}},3894:(t,e,i)=>{"use strict";i.d(e,{Z:()=>n});const n={methods:{getIconsBaseUrl:function(){return this.baseUrl+"/img/map/icons/"},getIconUrl:function(t,e,i){return this.getIconsBaseUrl()+(e&&1===e?"info_":"")+("active"!==t?t:"default")+(!0===i&&"inactive"===t?"_access":"")+".svg"}}}},6786:(t,e,i)=>{"use strict";i.d(e,{Z:()=>a});var n=i(3986),s=i.n(n);const a={methods:{missingWordsToArray:function(t){var e=[];if(void 0===t||t.length<=0)return e;var i=t.split("{");e.push(new(s())({type:"text",text:i.shift(),answer:"",isCorrect:!1}));for(var n=i.length,a=0;a<n;a++){var r=i[a].split("}");2===r.length&&(e.push(new(s())({type:"input",text:r.shift(),answer:"",isCorrect:!1})),e.push(new(s())({type:"text",text:r.shift(),answer:"",isCorrect:!1})))}return e},missingWordsToString:function(t){for(var e=t.length,i="",n=0;n<e;n++){var s=t[n];"input"===s.type?i+="{"+s.answer+"}":i+=s.text}return i}}}},1613:(t,e,i)=>{"use strict";i.d(e,{Z:()=>a});var n=i(3645),s=i.n(n)()((function(t){return t[1]}));s.push([t.id,".grading-control-item{position:relative}.grading-control-item .badge{position:absolute;top:0;right:-5px;background:#3097d1}.btn.mdi-flash{color:#000}.btn.mdi-flash:hover{color:#ff9800}",""]);const a=s},4002:(t,e,i)=>{"use strict";i.d(e,{Z:()=>a});var n=i(3645),s=i.n(n)()((function(t){return t[1]}));s.push([t.id,".flash-exercise[data-v-3e7fa61d]{margin-bottom:15px;height:36px;line-height:36px}.flash-exercise .name[data-v-3e7fa61d]{padding-left:15px}textarea[data-v-3e7fa61d]{margin-bottom:10px}.message[data-v-3e7fa61d]{border-bottom:1px dotted #ccc}.message td[data-v-3e7fa61d]{padding:10px}",""]);const a=s},3607:(t,e,i)=>{"use strict";i.d(e,{Z:()=>a});var n=i(3645),s=i.n(n)()((function(t){return t[1]}));s.push([t.id,".missing-word-container span[data-v-404d2c31]{line-height:24px;height:34px;display:inline;white-space:pre-line}.missing-word-container input[data-v-404d2c31]{margin:0 10px;padding:0 10px}.missing-word-container .incorrect[data-v-404d2c31]{color:red;font-weight:700;padding:0 5px}.missing-word-container .correct[data-v-404d2c31]{color:green;font-weight:700;padding:0 5px}",""]);const a=s},9230:(t,e,i)=>{"use strict";i.d(e,{Z:()=>a});var n=i(3645),s=i.n(n)()((function(t){return t[1]}));s.push([t.id,".modal-body.text-center,.modal-footer.text-center{text-align:center}.star{font-size:80px}",""]);const a=s},4195:(t,e,i)=>{"use strict";i.d(e,{Z:()=>a});var n=i(3645),s=i.n(n)()((function(t){return t[1]}));s.push([t.id,".missing-word-container .correct,.missing-word-container .incorrect{color:#2ab27b;font-weight:700;padding:0 5px}.missing-word-container .incorrect{color:red}",""]);const a=s},3645:t=>{"use strict";t.exports=function(t){var e=[];return e.toString=function(){return this.map((function(e){var i=t(e);return e[2]?"@media ".concat(e[2]," {").concat(i,"}"):i})).join("")},e.i=function(t,i,n){"string"==typeof t&&(t=[[null,t,""]]);var s={};if(n)for(var a=0;a<this.length;a++){var r=this[a][0];null!=r&&(s[r]=!0)}for(var o=0;o<t.length;o++){var c=[].concat(t[o]);n&&s[c[0]]||(i&&(c[2]?c[2]="".concat(i," and ").concat(c[2]):c[2]=i),e.push(c))}},e}},840:(t,e,i)=>{var n;!function(s,a,r,o){"use strict";var c,l=["","webkit","Moz","MS","ms","o"],u=a.createElement("div"),d=Math.round,h=Math.abs,m=Date.now;function p(t,e,i){return setTimeout(w(t,i),e)}function f(t,e,i){return!!Array.isArray(t)&&(g(t,i[e],i),!0)}function g(t,e,i){var n;if(t)if(t.forEach)t.forEach(e,i);else if(t.length!==o)for(n=0;n<t.length;)e.call(i,t[n],n,t),n++;else for(n in t)t.hasOwnProperty(n)&&e.call(i,t[n],n,t)}function v(t,e,i){var n="DEPRECATED METHOD: "+e+"\n"+i+" AT \n";return function(){var e=new Error("get-stack-trace"),i=e&&e.stack?e.stack.replace(/^[^\(]+?[\n$]/gm,"").replace(/^\s+at\s+/gm,"").replace(/^Object.<anonymous>\s*\(/gm,"{anonymous}()@"):"Unknown Stack Trace",a=s.console&&(s.console.warn||s.console.log);return a&&a.call(s.console,n,i),t.apply(this,arguments)}}c="function"!=typeof Object.assign?function(t){if(t===o||null===t)throw new TypeError("Cannot convert undefined or null to object");for(var e=Object(t),i=1;i<arguments.length;i++){var n=arguments[i];if(n!==o&&null!==n)for(var s in n)n.hasOwnProperty(s)&&(e[s]=n[s])}return e}:Object.assign;var _=v((function(t,e,i){for(var n=Object.keys(e),s=0;s<n.length;)(!i||i&&t[n[s]]===o)&&(t[n[s]]=e[n[s]]),s++;return t}),"extend","Use `assign`."),y=v((function(t,e){return _(t,e,!0)}),"merge","Use `assign`.");function C(t,e,i){var n,s=e.prototype;(n=t.prototype=Object.create(s)).constructor=t,n._super=s,i&&c(n,i)}function w(t,e){return function(){return t.apply(e,arguments)}}function b(t,e){return"function"==typeof t?t.apply(e&&e[0]||o,e):t}function k(t,e){return t===o?e:t}function x(t,e,i){g(M(e),(function(e){t.addEventListener(e,i,!1)}))}function T(t,e,i){g(M(e),(function(e){t.removeEventListener(e,i,!1)}))}function $(t,e){for(;t;){if(t==e)return!0;t=t.parentNode}return!1}function I(t,e){return t.indexOf(e)>-1}function M(t){return t.trim().split(/\s+/g)}function A(t,e,i){if(t.indexOf&&!i)return t.indexOf(e);for(var n=0;n<t.length;){if(i&&t[n][i]==e||!i&&t[n]===e)return n;n++}return-1}function E(t){return Array.prototype.slice.call(t,0)}function O(t,e,i){for(var n=[],s=[],a=0;a<t.length;){var r=e?t[a][e]:t[a];A(s,r)<0&&n.push(t[a]),s[a]=r,a++}return i&&(n=e?n.sort((function(t,i){return t[e]>i[e]})):n.sort()),n}function D(t,e){for(var i,n,s=e[0].toUpperCase()+e.slice(1),a=0;a<l.length;){if((n=(i=l[a])?i+s:e)in t)return n;a++}return o}var P=1;function S(t){var e=t.ownerDocument||t;return e.defaultView||e.parentWindow||s}var F="ontouchstart"in s,q=D(s,"PointerEvent")!==o,L=F&&/mobile|tablet|ip(ad|hone|od)|android/i.test(navigator.userAgent),N="touch",R="mouse",W=24,U=["x","y"],z=["clientX","clientY"];function j(t,e){var i=this;this.manager=t,this.callback=e,this.element=t.element,this.target=t.options.inputTarget,this.domHandler=function(e){b(t.options.enable,[t])&&i.handler(e)},this.init()}function Z(t,e,i){var n=i.pointers.length,s=i.changedPointers.length,a=1&e&&n-s==0,r=12&e&&n-s==0;i.isFirst=!!a,i.isFinal=!!r,a&&(t.session={}),i.eventType=e,function(t,e){var i=t.session,n=e.pointers,s=n.length;i.firstInput||(i.firstInput=H(e));s>1&&!i.firstMultiple?i.firstMultiple=H(e):1===s&&(i.firstMultiple=!1);var a=i.firstInput,r=i.firstMultiple,c=r?r.center:a.center,l=e.center=V(n);e.timeStamp=m(),e.deltaTime=e.timeStamp-a.timeStamp,e.angle=Q(c,l),e.distance=X(c,l),function(t,e){var i=e.center,n=t.offsetDelta||{},s=t.prevDelta||{},a=t.prevInput||{};1!==e.eventType&&4!==a.eventType||(s=t.prevDelta={x:a.deltaX||0,y:a.deltaY||0},n=t.offsetDelta={x:i.x,y:i.y});e.deltaX=s.x+(i.x-n.x),e.deltaY=s.y+(i.y-n.y)}(i,e),e.offsetDirection=G(e.deltaX,e.deltaY);var u=B(e.deltaTime,e.deltaX,e.deltaY);e.overallVelocityX=u.x,e.overallVelocityY=u.y,e.overallVelocity=h(u.x)>h(u.y)?u.x:u.y,e.scale=r?(d=r.pointers,p=n,X(p[0],p[1],z)/X(d[0],d[1],z)):1,e.rotation=r?function(t,e){return Q(e[1],e[0],z)+Q(t[1],t[0],z)}(r.pointers,n):0,e.maxPointers=i.prevInput?e.pointers.length>i.prevInput.maxPointers?e.pointers.length:i.prevInput.maxPointers:e.pointers.length,function(t,e){var i,n,s,a,r=t.lastInterval||e,c=e.timeStamp-r.timeStamp;if(8!=e.eventType&&(c>25||r.velocity===o)){var l=e.deltaX-r.deltaX,u=e.deltaY-r.deltaY,d=B(c,l,u);n=d.x,s=d.y,i=h(d.x)>h(d.y)?d.x:d.y,a=G(l,u),t.lastInterval=e}else i=r.velocity,n=r.velocityX,s=r.velocityY,a=r.direction;e.velocity=i,e.velocityX=n,e.velocityY=s,e.direction=a}(i,e);var d,p;var f=t.element;$(e.srcEvent.target,f)&&(f=e.srcEvent.target);e.target=f}(t,i),t.emit("hammer.input",i),t.recognize(i),t.session.prevInput=i}function H(t){for(var e=[],i=0;i<t.pointers.length;)e[i]={clientX:d(t.pointers[i].clientX),clientY:d(t.pointers[i].clientY)},i++;return{timeStamp:m(),pointers:e,center:V(e),deltaX:t.deltaX,deltaY:t.deltaY}}function V(t){var e=t.length;if(1===e)return{x:d(t[0].clientX),y:d(t[0].clientY)};for(var i=0,n=0,s=0;s<e;)i+=t[s].clientX,n+=t[s].clientY,s++;return{x:d(i/e),y:d(n/e)}}function B(t,e,i){return{x:e/t||0,y:i/t||0}}function G(t,e){return t===e?1:h(t)>=h(e)?t<0?2:4:e<0?8:16}function X(t,e,i){i||(i=U);var n=e[i[0]]-t[i[0]],s=e[i[1]]-t[i[1]];return Math.sqrt(n*n+s*s)}function Q(t,e,i){i||(i=U);var n=e[i[0]]-t[i[0]],s=e[i[1]]-t[i[1]];return 180*Math.atan2(s,n)/Math.PI}j.prototype={handler:function(){},init:function(){this.evEl&&x(this.element,this.evEl,this.domHandler),this.evTarget&&x(this.target,this.evTarget,this.domHandler),this.evWin&&x(S(this.element),this.evWin,this.domHandler)},destroy:function(){this.evEl&&T(this.element,this.evEl,this.domHandler),this.evTarget&&T(this.target,this.evTarget,this.domHandler),this.evWin&&T(S(this.element),this.evWin,this.domHandler)}};var Y={mousedown:1,mousemove:2,mouseup:4},J="mousedown",K="mousemove mouseup";function tt(){this.evEl=J,this.evWin=K,this.pressed=!1,j.apply(this,arguments)}C(tt,j,{handler:function(t){var e=Y[t.type];1&e&&0===t.button&&(this.pressed=!0),2&e&&1!==t.which&&(e=4),this.pressed&&(4&e&&(this.pressed=!1),this.callback(this.manager,e,{pointers:[t],changedPointers:[t],pointerType:R,srcEvent:t}))}});var et={pointerdown:1,pointermove:2,pointerup:4,pointercancel:8,pointerout:8},it={2:N,3:"pen",4:R,5:"kinect"},nt="pointerdown",st="pointermove pointerup pointercancel";function at(){this.evEl=nt,this.evWin=st,j.apply(this,arguments),this.store=this.manager.session.pointerEvents=[]}s.MSPointerEvent&&!s.PointerEvent&&(nt="MSPointerDown",st="MSPointerMove MSPointerUp MSPointerCancel"),C(at,j,{handler:function(t){var e=this.store,i=!1,n=t.type.toLowerCase().replace("ms",""),s=et[n],a=it[t.pointerType]||t.pointerType,r=a==N,o=A(e,t.pointerId,"pointerId");1&s&&(0===t.button||r)?o<0&&(e.push(t),o=e.length-1):12&s&&(i=!0),o<0||(e[o]=t,this.callback(this.manager,s,{pointers:e,changedPointers:[t],pointerType:a,srcEvent:t}),i&&e.splice(o,1))}});var rt={touchstart:1,touchmove:2,touchend:4,touchcancel:8},ot="touchstart",ct="touchstart touchmove touchend touchcancel";function lt(){this.evTarget=ot,this.evWin=ct,this.started=!1,j.apply(this,arguments)}function ut(t,e){var i=E(t.touches),n=E(t.changedTouches);return 12&e&&(i=O(i.concat(n),"identifier",!0)),[i,n]}C(lt,j,{handler:function(t){var e=rt[t.type];if(1===e&&(this.started=!0),this.started){var i=ut.call(this,t,e);12&e&&i[0].length-i[1].length==0&&(this.started=!1),this.callback(this.manager,e,{pointers:i[0],changedPointers:i[1],pointerType:N,srcEvent:t})}}});var dt={touchstart:1,touchmove:2,touchend:4,touchcancel:8},ht="touchstart touchmove touchend touchcancel";function mt(){this.evTarget=ht,this.targetIds={},j.apply(this,arguments)}function pt(t,e){var i=E(t.touches),n=this.targetIds;if(3&e&&1===i.length)return n[i[0].identifier]=!0,[i,i];var s,a,r=E(t.changedTouches),o=[],c=this.target;if(a=i.filter((function(t){return $(t.target,c)})),1===e)for(s=0;s<a.length;)n[a[s].identifier]=!0,s++;for(s=0;s<r.length;)n[r[s].identifier]&&o.push(r[s]),12&e&&delete n[r[s].identifier],s++;return o.length?[O(a.concat(o),"identifier",!0),o]:void 0}C(mt,j,{handler:function(t){var e=dt[t.type],i=pt.call(this,t,e);i&&this.callback(this.manager,e,{pointers:i[0],changedPointers:i[1],pointerType:N,srcEvent:t})}});function ft(){j.apply(this,arguments);var t=w(this.handler,this);this.touch=new mt(this.manager,t),this.mouse=new tt(this.manager,t),this.primaryTouch=null,this.lastTouches=[]}function gt(t,e){1&t?(this.primaryTouch=e.changedPointers[0].identifier,vt.call(this,e)):12&t&&vt.call(this,e)}function vt(t){var e=t.changedPointers[0];if(e.identifier===this.primaryTouch){var i={x:e.clientX,y:e.clientY};this.lastTouches.push(i);var n=this.lastTouches;setTimeout((function(){var t=n.indexOf(i);t>-1&&n.splice(t,1)}),2500)}}function _t(t){for(var e=t.srcEvent.clientX,i=t.srcEvent.clientY,n=0;n<this.lastTouches.length;n++){var s=this.lastTouches[n],a=Math.abs(e-s.x),r=Math.abs(i-s.y);if(a<=25&&r<=25)return!0}return!1}C(ft,j,{handler:function(t,e,i){var n=i.pointerType==N,s=i.pointerType==R;if(!(s&&i.sourceCapabilities&&i.sourceCapabilities.firesTouchEvents)){if(n)gt.call(this,e,i);else if(s&&_t.call(this,i))return;this.callback(t,e,i)}},destroy:function(){this.touch.destroy(),this.mouse.destroy()}});var yt=D(u.style,"touchAction"),Ct=yt!==o,wt="compute",bt="auto",kt="manipulation",xt="none",Tt="pan-x",$t="pan-y",It=function(){if(!Ct)return!1;var t={},e=s.CSS&&s.CSS.supports;return["auto","manipulation","pan-y","pan-x","pan-x pan-y","none"].forEach((function(i){t[i]=!e||s.CSS.supports("touch-action",i)})),t}();function Mt(t,e){this.manager=t,this.set(e)}Mt.prototype={set:function(t){t==wt&&(t=this.compute()),Ct&&this.manager.element.style&&It[t]&&(this.manager.element.style[yt]=t),this.actions=t.toLowerCase().trim()},update:function(){this.set(this.manager.options.touchAction)},compute:function(){var t=[];return g(this.manager.recognizers,(function(e){b(e.options.enable,[e])&&(t=t.concat(e.getTouchAction()))})),function(t){if(I(t,xt))return xt;var e=I(t,Tt),i=I(t,$t);if(e&&i)return xt;if(e||i)return e?Tt:$t;if(I(t,kt))return kt;return bt}(t.join(" "))},preventDefaults:function(t){var e=t.srcEvent,i=t.offsetDirection;if(this.manager.session.prevented)e.preventDefault();else{var n=this.actions,s=I(n,xt)&&!It.none,a=I(n,$t)&&!It["pan-y"],r=I(n,Tt)&&!It["pan-x"];if(s){var o=1===t.pointers.length,c=t.distance<2,l=t.deltaTime<250;if(o&&c&&l)return}if(!r||!a)return s||a&&6&i||r&&i&W?this.preventSrc(e):void 0}},preventSrc:function(t){this.manager.session.prevented=!0,t.preventDefault()}};var At=32;function Et(t){this.options=c({},this.defaults,t||{}),this.id=P++,this.manager=null,this.options.enable=k(this.options.enable,!0),this.state=1,this.simultaneous={},this.requireFail=[]}function Ot(t){return 16&t?"cancel":8&t?"end":4&t?"move":2&t?"start":""}function Dt(t){return 16==t?"down":8==t?"up":2==t?"left":4==t?"right":""}function Pt(t,e){var i=e.manager;return i?i.get(t):t}function St(){Et.apply(this,arguments)}function Ft(){St.apply(this,arguments),this.pX=null,this.pY=null}function qt(){St.apply(this,arguments)}function Lt(){Et.apply(this,arguments),this._timer=null,this._input=null}function Nt(){St.apply(this,arguments)}function Rt(){St.apply(this,arguments)}function Wt(){Et.apply(this,arguments),this.pTime=!1,this.pCenter=!1,this._timer=null,this._input=null,this.count=0}function Ut(t,e){return(e=e||{}).recognizers=k(e.recognizers,Ut.defaults.preset),new zt(t,e)}Et.prototype={defaults:{},set:function(t){return c(this.options,t),this.manager&&this.manager.touchAction.update(),this},recognizeWith:function(t){if(f(t,"recognizeWith",this))return this;var e=this.simultaneous;return e[(t=Pt(t,this)).id]||(e[t.id]=t,t.recognizeWith(this)),this},dropRecognizeWith:function(t){return f(t,"dropRecognizeWith",this)||(t=Pt(t,this),delete this.simultaneous[t.id]),this},requireFailure:function(t){if(f(t,"requireFailure",this))return this;var e=this.requireFail;return-1===A(e,t=Pt(t,this))&&(e.push(t),t.requireFailure(this)),this},dropRequireFailure:function(t){if(f(t,"dropRequireFailure",this))return this;t=Pt(t,this);var e=A(this.requireFail,t);return e>-1&&this.requireFail.splice(e,1),this},hasRequireFailures:function(){return this.requireFail.length>0},canRecognizeWith:function(t){return!!this.simultaneous[t.id]},emit:function(t){var e=this,i=this.state;function n(i){e.manager.emit(i,t)}i<8&&n(e.options.event+Ot(i)),n(e.options.event),t.additionalEvent&&n(t.additionalEvent),i>=8&&n(e.options.event+Ot(i))},tryEmit:function(t){if(this.canEmit())return this.emit(t);this.state=At},canEmit:function(){for(var t=0;t<this.requireFail.length;){if(!(33&this.requireFail[t].state))return!1;t++}return!0},recognize:function(t){var e=c({},t);if(!b(this.options.enable,[this,e]))return this.reset(),void(this.state=At);56&this.state&&(this.state=1),this.state=this.process(e),30&this.state&&this.tryEmit(e)},process:function(t){},getTouchAction:function(){},reset:function(){}},C(St,Et,{defaults:{pointers:1},attrTest:function(t){var e=this.options.pointers;return 0===e||t.pointers.length===e},process:function(t){var e=this.state,i=t.eventType,n=6&e,s=this.attrTest(t);return n&&(8&i||!s)?16|e:n||s?4&i?8|e:2&e?4|e:2:At}}),C(Ft,St,{defaults:{event:"pan",threshold:10,pointers:1,direction:30},getTouchAction:function(){var t=this.options.direction,e=[];return 6&t&&e.push($t),t&W&&e.push(Tt),e},directionTest:function(t){var e=this.options,i=!0,n=t.distance,s=t.direction,a=t.deltaX,r=t.deltaY;return s&e.direction||(6&e.direction?(s=0===a?1:a<0?2:4,i=a!=this.pX,n=Math.abs(t.deltaX)):(s=0===r?1:r<0?8:16,i=r!=this.pY,n=Math.abs(t.deltaY))),t.direction=s,i&&n>e.threshold&&s&e.direction},attrTest:function(t){return St.prototype.attrTest.call(this,t)&&(2&this.state||!(2&this.state)&&this.directionTest(t))},emit:function(t){this.pX=t.deltaX,this.pY=t.deltaY;var e=Dt(t.direction);e&&(t.additionalEvent=this.options.event+e),this._super.emit.call(this,t)}}),C(qt,St,{defaults:{event:"pinch",threshold:0,pointers:2},getTouchAction:function(){return[xt]},attrTest:function(t){return this._super.attrTest.call(this,t)&&(Math.abs(t.scale-1)>this.options.threshold||2&this.state)},emit:function(t){if(1!==t.scale){var e=t.scale<1?"in":"out";t.additionalEvent=this.options.event+e}this._super.emit.call(this,t)}}),C(Lt,Et,{defaults:{event:"press",pointers:1,time:251,threshold:9},getTouchAction:function(){return[bt]},process:function(t){var e=this.options,i=t.pointers.length===e.pointers,n=t.distance<e.threshold,s=t.deltaTime>e.time;if(this._input=t,!n||!i||12&t.eventType&&!s)this.reset();else if(1&t.eventType)this.reset(),this._timer=p((function(){this.state=8,this.tryEmit()}),e.time,this);else if(4&t.eventType)return 8;return At},reset:function(){clearTimeout(this._timer)},emit:function(t){8===this.state&&(t&&4&t.eventType?this.manager.emit(this.options.event+"up",t):(this._input.timeStamp=m(),this.manager.emit(this.options.event,this._input)))}}),C(Nt,St,{defaults:{event:"rotate",threshold:0,pointers:2},getTouchAction:function(){return[xt]},attrTest:function(t){return this._super.attrTest.call(this,t)&&(Math.abs(t.rotation)>this.options.threshold||2&this.state)}}),C(Rt,St,{defaults:{event:"swipe",threshold:10,velocity:.3,direction:30,pointers:1},getTouchAction:function(){return Ft.prototype.getTouchAction.call(this)},attrTest:function(t){var e,i=this.options.direction;return 30&i?e=t.overallVelocity:6&i?e=t.overallVelocityX:i&W&&(e=t.overallVelocityY),this._super.attrTest.call(this,t)&&i&t.offsetDirection&&t.distance>this.options.threshold&&t.maxPointers==this.options.pointers&&h(e)>this.options.velocity&&4&t.eventType},emit:function(t){var e=Dt(t.offsetDirection);e&&this.manager.emit(this.options.event+e,t),this.manager.emit(this.options.event,t)}}),C(Wt,Et,{defaults:{event:"tap",pointers:1,taps:1,interval:300,time:250,threshold:9,posThreshold:10},getTouchAction:function(){return[kt]},process:function(t){var e=this.options,i=t.pointers.length===e.pointers,n=t.distance<e.threshold,s=t.deltaTime<e.time;if(this.reset(),1&t.eventType&&0===this.count)return this.failTimeout();if(n&&s&&i){if(4!=t.eventType)return this.failTimeout();var a=!this.pTime||t.timeStamp-this.pTime<e.interval,r=!this.pCenter||X(this.pCenter,t.center)<e.posThreshold;if(this.pTime=t.timeStamp,this.pCenter=t.center,r&&a?this.count+=1:this.count=1,this._input=t,0===this.count%e.taps)return this.hasRequireFailures()?(this._timer=p((function(){this.state=8,this.tryEmit()}),e.interval,this),2):8}return At},failTimeout:function(){return this._timer=p((function(){this.state=At}),this.options.interval,this),At},reset:function(){clearTimeout(this._timer)},emit:function(){8==this.state&&(this._input.tapCount=this.count,this.manager.emit(this.options.event,this._input))}}),Ut.VERSION="2.0.7",Ut.defaults={domEvents:!1,touchAction:wt,enable:!0,inputTarget:null,inputClass:null,preset:[[Nt,{enable:!1}],[qt,{enable:!1},["rotate"]],[Rt,{direction:6}],[Ft,{direction:6},["swipe"]],[Wt],[Wt,{event:"doubletap",taps:2},["tap"]],[Lt]],cssProps:{userSelect:"none",touchSelect:"none",touchCallout:"none",contentZooming:"none",userDrag:"none",tapHighlightColor:"rgba(0,0,0,0)"}};function zt(t,e){var i;this.options=c({},Ut.defaults,e||{}),this.options.inputTarget=this.options.inputTarget||t,this.handlers={},this.session={},this.recognizers=[],this.oldCssProps={},this.element=t,this.input=new((i=this).options.inputClass||(q?at:L?mt:F?ft:tt))(i,Z),this.touchAction=new Mt(this,this.options.touchAction),jt(this,!0),g(this.options.recognizers,(function(t){var e=this.add(new t[0](t[1]));t[2]&&e.recognizeWith(t[2]),t[3]&&e.requireFailure(t[3])}),this)}function jt(t,e){var i,n=t.element;n.style&&(g(t.options.cssProps,(function(s,a){i=D(n.style,a),e?(t.oldCssProps[i]=n.style[i],n.style[i]=s):n.style[i]=t.oldCssProps[i]||""})),e||(t.oldCssProps={}))}zt.prototype={set:function(t){return c(this.options,t),t.touchAction&&this.touchAction.update(),t.inputTarget&&(this.input.destroy(),this.input.target=t.inputTarget,this.input.init()),this},stop:function(t){this.session.stopped=t?2:1},recognize:function(t){var e=this.session;if(!e.stopped){var i;this.touchAction.preventDefaults(t);var n=this.recognizers,s=e.curRecognizer;(!s||s&&8&s.state)&&(s=e.curRecognizer=null);for(var a=0;a<n.length;)i=n[a],2===e.stopped||s&&i!=s&&!i.canRecognizeWith(s)?i.reset():i.recognize(t),!s&&14&i.state&&(s=e.curRecognizer=i),a++}},get:function(t){if(t instanceof Et)return t;for(var e=this.recognizers,i=0;i<e.length;i++)if(e[i].options.event==t)return e[i];return null},add:function(t){if(f(t,"add",this))return this;var e=this.get(t.options.event);return e&&this.remove(e),this.recognizers.push(t),t.manager=this,this.touchAction.update(),t},remove:function(t){if(f(t,"remove",this))return this;if(t=this.get(t)){var e=this.recognizers,i=A(e,t);-1!==i&&(e.splice(i,1),this.touchAction.update())}return this},on:function(t,e){if(t!==o&&e!==o){var i=this.handlers;return g(M(t),(function(t){i[t]=i[t]||[],i[t].push(e)})),this}},off:function(t,e){if(t!==o){var i=this.handlers;return g(M(t),(function(t){e?i[t]&&i[t].splice(A(i[t],e),1):delete i[t]})),this}},emit:function(t,e){this.options.domEvents&&function(t,e){var i=a.createEvent("Event");i.initEvent(t,!0,!0),i.gesture=e,e.target.dispatchEvent(i)}(t,e);var i=this.handlers[t]&&this.handlers[t].slice();if(i&&i.length){e.type=t,e.preventDefault=function(){e.srcEvent.preventDefault()};for(var n=0;n<i.length;)i[n](e),n++}},destroy:function(){this.element&&jt(this,!1),this.handlers={},this.session={},this.input.destroy(),this.element=null}},c(Ut,{INPUT_START:1,INPUT_MOVE:2,INPUT_END:4,INPUT_CANCEL:8,STATE_POSSIBLE:1,STATE_BEGAN:2,STATE_CHANGED:4,STATE_ENDED:8,STATE_RECOGNIZED:8,STATE_CANCELLED:16,STATE_FAILED:At,DIRECTION_NONE:1,DIRECTION_LEFT:2,DIRECTION_RIGHT:4,DIRECTION_UP:8,DIRECTION_DOWN:16,DIRECTION_HORIZONTAL:6,DIRECTION_VERTICAL:W,DIRECTION_ALL:30,Manager:zt,Input:j,TouchAction:Mt,TouchInput:mt,MouseInput:tt,PointerEventInput:at,TouchMouseInput:ft,SingleTouchInput:lt,Recognizer:Et,AttrRecognizer:St,Tap:Wt,Pan:Ft,Swipe:Rt,Pinch:qt,Rotate:Nt,Press:Lt,on:x,off:T,each:g,merge:y,extend:_,assign:c,inherit:C,bindFn:w,prefixed:D}),(void 0!==s?s:"undefined"!=typeof self?self:{}).Hammer=Ut,(n=function(){return Ut}.call(e,i,e,t))===o||(t.exports=n)}(window,document)},3379:(t,e,i)=>{"use strict";var n,s=function(){return void 0===n&&(n=Boolean(window&&document&&document.all&&!window.atob)),n},a=function(){var t={};return function(e){if(void 0===t[e]){var i=document.querySelector(e);if(window.HTMLIFrameElement&&i instanceof window.HTMLIFrameElement)try{i=i.contentDocument.head}catch(t){i=null}t[e]=i}return t[e]}}(),r=[];function o(t){for(var e=-1,i=0;i<r.length;i++)if(r[i].identifier===t){e=i;break}return e}function c(t,e){for(var i={},n=[],s=0;s<t.length;s++){var a=t[s],c=e.base?a[0]+e.base:a[0],l=i[c]||0,u="".concat(c," ").concat(l);i[c]=l+1;var d=o(u),h={css:a[1],media:a[2],sourceMap:a[3]};-1!==d?(r[d].references++,r[d].updater(h)):r.push({identifier:u,updater:g(h,e),references:1}),n.push(u)}return n}function l(t){var e=document.createElement("style"),n=t.attributes||{};if(void 0===n.nonce){var s=i.nc;s&&(n.nonce=s)}if(Object.keys(n).forEach((function(t){e.setAttribute(t,n[t])})),"function"==typeof t.insert)t.insert(e);else{var r=a(t.insert||"head");if(!r)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");r.appendChild(e)}return e}var u,d=(u=[],function(t,e){return u[t]=e,u.filter(Boolean).join("\n")});function h(t,e,i,n){var s=i?"":n.media?"@media ".concat(n.media," {").concat(n.css,"}"):n.css;if(t.styleSheet)t.styleSheet.cssText=d(e,s);else{var a=document.createTextNode(s),r=t.childNodes;r[e]&&t.removeChild(r[e]),r.length?t.insertBefore(a,r[e]):t.appendChild(a)}}function m(t,e,i){var n=i.css,s=i.media,a=i.sourceMap;if(s?t.setAttribute("media",s):t.removeAttribute("media"),a&&"undefined"!=typeof btoa&&(n+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}var p=null,f=0;function g(t,e){var i,n,s;if(e.singleton){var a=f++;i=p||(p=l(e)),n=h.bind(null,i,a,!1),s=h.bind(null,i,a,!0)}else i=l(e),n=m.bind(null,i,e),s=function(){!function(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t)}(i)};return n(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;n(t=e)}else s()}}t.exports=function(t,e){(e=e||{}).singleton||"boolean"==typeof e.singleton||(e.singleton=s());var i=c(t=t||[],e);return function(t){if(t=t||[],"[object Array]"===Object.prototype.toString.call(t)){for(var n=0;n<i.length;n++){var s=o(i[n]);r[s].references--}for(var a=c(t,e),l=0;l<i.length;l++){var u=o(i[l]);0===r[u].references&&(r[u].updater(),r.splice(u,1))}i=a}}}},7152:(t,e,i)=>{"use strict";i.r(e),i.d(e,{default:()=>Y});var n=["compactDisplay","currency","currencyDisplay","currencySign","localeMatcher","notation","numberingSystem","signDisplay","style","unit","unitDisplay","useGrouping","minimumIntegerDigits","minimumFractionDigits","maximumFractionDigits","minimumSignificantDigits","maximumSignificantDigits"];function s(t,e){"undefined"!=typeof console&&(console.warn("[vue-i18n] "+t),e&&console.warn(e.stack))}var a=Array.isArray;function r(t){return null!==t&&"object"==typeof t}function o(t){return"string"==typeof t}var c=Object.prototype.toString;function l(t){return"[object Object]"===c.call(t)}function u(t){return null==t}function d(t){return"function"==typeof t}function h(){for(var t=[],e=arguments.length;e--;)t[e]=arguments[e];var i=null,n=null;return 1===t.length?r(t[0])||a(t[0])?n=t[0]:"string"==typeof t[0]&&(i=t[0]):2===t.length&&("string"==typeof t[0]&&(i=t[0]),(r(t[1])||a(t[1]))&&(n=t[1])),{locale:i,params:n}}function m(t){return JSON.parse(JSON.stringify(t))}function p(t,e){return!!~t.indexOf(e)}var f=Object.prototype.hasOwnProperty;function g(t,e){return f.call(t,e)}function v(t){for(var e=arguments,i=Object(t),n=1;n<arguments.length;n++){var s=e[n];if(null!=s){var a=void 0;for(a in s)g(s,a)&&(r(s[a])?i[a]=v(i[a],s[a]):i[a]=s[a])}}return i}function _(t,e){if(t===e)return!0;var i=r(t),n=r(e);if(!i||!n)return!i&&!n&&String(t)===String(e);try{var s=a(t),o=a(e);if(s&&o)return t.length===e.length&&t.every((function(t,i){return _(t,e[i])}));if(s||o)return!1;var c=Object.keys(t),l=Object.keys(e);return c.length===l.length&&c.every((function(i){return _(t[i],e[i])}))}catch(t){return!1}}function y(t){return null!=t&&Object.keys(t).forEach((function(e){"string"==typeof t[e]&&(t[e]=t[e].replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;"))})),t}var C={beforeCreate:function(){var t=this.$options;if(t.i18n=t.i18n||(t.__i18n?{}:null),t.i18n)if(t.i18n instanceof X){if(t.__i18n)try{var e=t.i18n&&t.i18n.messages?t.i18n.messages:{};t.__i18n.forEach((function(t){e=v(e,JSON.parse(t))})),Object.keys(e).forEach((function(i){t.i18n.mergeLocaleMessage(i,e[i])}))}catch(t){0}this._i18n=t.i18n,this._i18nWatcher=this._i18n.watchI18nData()}else if(l(t.i18n)){var i=this.$root&&this.$root.$i18n&&this.$root.$i18n instanceof X?this.$root.$i18n:null;if(i&&(t.i18n.root=this.$root,t.i18n.formatter=i.formatter,t.i18n.fallbackLocale=i.fallbackLocale,t.i18n.formatFallbackMessages=i.formatFallbackMessages,t.i18n.silentTranslationWarn=i.silentTranslationWarn,t.i18n.silentFallbackWarn=i.silentFallbackWarn,t.i18n.pluralizationRules=i.pluralizationRules,t.i18n.preserveDirectiveContent=i.preserveDirectiveContent),t.__i18n)try{var n=t.i18n&&t.i18n.messages?t.i18n.messages:{};t.__i18n.forEach((function(t){n=v(n,JSON.parse(t))})),t.i18n.messages=n}catch(t){0}var s=t.i18n.sharedMessages;s&&l(s)&&(t.i18n.messages=v(t.i18n.messages,s)),this._i18n=new X(t.i18n),this._i18nWatcher=this._i18n.watchI18nData(),(void 0===t.i18n.sync||t.i18n.sync)&&(this._localeWatcher=this.$i18n.watchLocale()),i&&i.onComponentInstanceCreated(this._i18n)}else 0;else this.$root&&this.$root.$i18n&&this.$root.$i18n instanceof X?this._i18n=this.$root.$i18n:t.parent&&t.parent.$i18n&&t.parent.$i18n instanceof X&&(this._i18n=t.parent.$i18n)},beforeMount:function(){var t=this.$options;t.i18n=t.i18n||(t.__i18n?{}:null),t.i18n?(t.i18n instanceof X||l(t.i18n))&&(this._i18n.subscribeDataChanging(this),this._subscribing=!0):(this.$root&&this.$root.$i18n&&this.$root.$i18n instanceof X||t.parent&&t.parent.$i18n&&t.parent.$i18n instanceof X)&&(this._i18n.subscribeDataChanging(this),this._subscribing=!0)},beforeDestroy:function(){if(this._i18n){var t=this;this.$nextTick((function(){t._subscribing&&(t._i18n.unsubscribeDataChanging(t),delete t._subscribing),t._i18nWatcher&&(t._i18nWatcher(),t._i18n.destroyVM(),delete t._i18nWatcher),t._localeWatcher&&(t._localeWatcher(),delete t._localeWatcher)}))}}},w={name:"i18n",functional:!0,props:{tag:{type:[String,Boolean,Object],default:"span"},path:{type:String,required:!0},locale:{type:String},places:{type:[Array,Object]}},render:function(t,e){var i=e.data,n=e.parent,s=e.props,a=e.slots,r=n.$i18n;if(r){var o=s.path,c=s.locale,l=s.places,u=a(),d=r.i(o,c,function(t){var e;for(e in t)if("default"!==e)return!1;return Boolean(e)}(u)||l?function(t,e){var i=e?function(t){0;return Array.isArray(t)?t.reduce(k,{}):Object.assign({},t)}(e):{};if(!t)return i;var n=(t=t.filter((function(t){return t.tag||""!==t.text.trim()}))).every(x);0;return t.reduce(n?b:k,i)}(u.default,l):u),h=s.tag&&!0!==s.tag||!1===s.tag?s.tag:"span";return h?t(h,i,d):d}}};function b(t,e){return e.data&&e.data.attrs&&e.data.attrs.place&&(t[e.data.attrs.place]=e),t}function k(t,e,i){return t[i]=e,t}function x(t){return Boolean(t.data&&t.data.attrs&&t.data.attrs.place)}var T,$={name:"i18n-n",functional:!0,props:{tag:{type:[String,Boolean,Object],default:"span"},value:{type:Number,required:!0},format:{type:[String,Object]},locale:{type:String}},render:function(t,e){var i=e.props,s=e.parent,a=e.data,c=s.$i18n;if(!c)return null;var l=null,u=null;o(i.format)?l=i.format:r(i.format)&&(i.format.key&&(l=i.format.key),u=Object.keys(i.format).reduce((function(t,e){var s;return p(n,e)?Object.assign({},t,((s={})[e]=i.format[e],s)):t}),null));var d=i.locale||c.locale,h=c._ntp(i.value,d,l,u),m=h.map((function(t,e){var i,n=a.scopedSlots&&a.scopedSlots[t.type];return n?n(((i={})[t.type]=t.value,i.index=e,i.parts=h,i)):t.value})),f=i.tag&&!0!==i.tag||!1===i.tag?i.tag:"span";return f?t(f,{attrs:a.attrs,class:a.class,staticClass:a.staticClass},m):m}};function I(t,e,i){E(t,i)&&O(t,e,i)}function M(t,e,i,n){if(E(t,i)){var s=i.context.$i18n;(function(t,e){var i=e.context;return t._locale===i.$i18n.locale})(t,i)&&_(e.value,e.oldValue)&&_(t._localeMessage,s.getLocaleMessage(s.locale))||O(t,e,i)}}function A(t,e,i,n){if(i.context){var a=i.context.$i18n||{};e.modifiers.preserve||a.preserveDirectiveContent||(t.textContent=""),t._vt=void 0,delete t._vt,t._locale=void 0,delete t._locale,t._localeMessage=void 0,delete t._localeMessage}else s("Vue instance does not exists in VNode context")}function E(t,e){var i=e.context;return i?!!i.$i18n||(s("VueI18n instance does not exists in Vue instance"),!1):(s("Vue instance does not exists in VNode context"),!1)}function O(t,e,i){var n,a,r=function(t){var e,i,n,s;o(t)?e=t:l(t)&&(e=t.path,i=t.locale,n=t.args,s=t.choice);return{path:e,locale:i,args:n,choice:s}}(e.value),c=r.path,u=r.locale,d=r.args,h=r.choice;if(c||u||d)if(c){var m=i.context;t._vt=t.textContent=null!=h?(n=m.$i18n).tc.apply(n,[c,h].concat(D(u,d))):(a=m.$i18n).t.apply(a,[c].concat(D(u,d))),t._locale=m.$i18n.locale,t._localeMessage=m.$i18n.getLocaleMessage(m.$i18n.locale)}else s("`path` is required in v-t directive");else s("value type not supported")}function D(t,e){var i=[];return t&&i.push(t),e&&(Array.isArray(e)||l(e))&&i.push(e),i}function P(t){P.installed=!0;(T=t).version&&Number(T.version.split(".")[0]);(function(t){t.prototype.hasOwnProperty("$i18n")||Object.defineProperty(t.prototype,"$i18n",{get:function(){return this._i18n}}),t.prototype.$t=function(t){for(var e=[],i=arguments.length-1;i-- >0;)e[i]=arguments[i+1];var n=this.$i18n;return n._t.apply(n,[t,n.locale,n._getMessages(),this].concat(e))},t.prototype.$tc=function(t,e){for(var i=[],n=arguments.length-2;n-- >0;)i[n]=arguments[n+2];var s=this.$i18n;return s._tc.apply(s,[t,s.locale,s._getMessages(),this,e].concat(i))},t.prototype.$te=function(t,e){var i=this.$i18n;return i._te(t,i.locale,i._getMessages(),e)},t.prototype.$d=function(t){for(var e,i=[],n=arguments.length-1;n-- >0;)i[n]=arguments[n+1];return(e=this.$i18n).d.apply(e,[t].concat(i))},t.prototype.$n=function(t){for(var e,i=[],n=arguments.length-1;n-- >0;)i[n]=arguments[n+1];return(e=this.$i18n).n.apply(e,[t].concat(i))}})(T),T.mixin(C),T.directive("t",{bind:I,update:M,unbind:A}),T.component(w.name,w),T.component($.name,$),T.config.optionMergeStrategies.i18n=function(t,e){return void 0===e?t:e}}var S=function(){this._caches=Object.create(null)};S.prototype.interpolate=function(t,e){if(!e)return[t];var i=this._caches[t];return i||(i=function(t){var e=[],i=0,n="";for(;i<t.length;){var s=t[i++];if("{"===s){n&&e.push({type:"text",value:n}),n="";var a="";for(s=t[i++];void 0!==s&&"}"!==s;)a+=s,s=t[i++];var r="}"===s,o=F.test(a)?"list":r&&q.test(a)?"named":"unknown";e.push({value:a,type:o})}else"%"===s?"{"!==t[i]&&(n+=s):n+=s}return n&&e.push({type:"text",value:n}),e}(t),this._caches[t]=i),function(t,e){var i=[],n=0,s=Array.isArray(e)?"list":r(e)?"named":"unknown";if("unknown"===s)return i;for(;n<t.length;){var a=t[n];switch(a.type){case"text":i.push(a.value);break;case"list":i.push(e[parseInt(a.value,10)]);break;case"named":"named"===s&&i.push(e[a.value]);break;case"unknown":0}n++}return i}(i,e)};var F=/^(?:\d)+/,q=/^(?:\w)+/;var L=[];L[0]={ws:[0],ident:[3,0],"[":[4],eof:[7]},L[1]={ws:[1],".":[2],"[":[4],eof:[7]},L[2]={ws:[2],ident:[3,0],0:[3,0],number:[3,0]},L[3]={ident:[3,0],0:[3,0],number:[3,0],ws:[1,1],".":[2,1],"[":[4,1],eof:[7,1]},L[4]={"'":[5,0],'"':[6,0],"[":[4,2],"]":[1,3],eof:8,else:[4,0]},L[5]={"'":[4,0],eof:8,else:[5,0]},L[6]={'"':[4,0],eof:8,else:[6,0]};var N=/^\s?(?:true|false|-?[\d.]+|'[^']*'|"[^"]*")\s?$/;function R(t){if(null==t)return"eof";switch(t.charCodeAt(0)){case 91:case 93:case 46:case 34:case 39:return t;case 95:case 36:case 45:return"ident";case 9:case 10:case 13:case 160:case 65279:case 8232:case 8233:return"ws"}return"ident"}function W(t){var e,i,n,s=t.trim();return("0"!==t.charAt(0)||!isNaN(t))&&(n=s,N.test(n)?(i=(e=s).charCodeAt(0))!==e.charCodeAt(e.length-1)||34!==i&&39!==i?e:e.slice(1,-1):"*"+s)}var U=function(){this._cache=Object.create(null)};U.prototype.parsePath=function(t){var e=this._cache[t];return e||(e=function(t){var e,i,n,s,a,r,o,c=[],l=-1,u=0,d=0,h=[];function m(){var e=t[l+1];if(5===u&&"'"===e||6===u&&'"'===e)return l++,n="\\"+e,h[0](),!0}for(h[1]=function(){void 0!==i&&(c.push(i),i=void 0)},h[0]=function(){void 0===i?i=n:i+=n},h[2]=function(){h[0](),d++},h[3]=function(){if(d>0)d--,u=4,h[0]();else{if(d=0,void 0===i)return!1;if(!1===(i=W(i)))return!1;h[1]()}};null!==u;)if(l++,"\\"!==(e=t[l])||!m()){if(s=R(e),8===(a=(o=L[u])[s]||o.else||8))return;if(u=a[0],(r=h[a[1]])&&(n=void 0===(n=a[2])?e:n,!1===r()))return;if(7===u)return c}}(t))&&(this._cache[t]=e),e||[]},U.prototype.getPathValue=function(t,e){if(!r(t))return null;var i=this.parsePath(e);if(0===i.length)return null;for(var n=i.length,s=t,a=0;a<n;){var o=s[i[a]];if(void 0===o)return null;s=o,a++}return s};var z,j=/<\/?[\w\s="/.':;#-\/]+>/,Z=/(?:@(?:\.[a-z]+)?:(?:[\w\-_|.]+|\([\w\-_|.]+\)))/g,H=/^@(?:\.([a-z]+))?:/,V=/[()]/g,B={upper:function(t){return t.toLocaleUpperCase()},lower:function(t){return t.toLocaleLowerCase()},capitalize:function(t){return""+t.charAt(0).toLocaleUpperCase()+t.substr(1)}},G=new S,X=function(t){var e=this;void 0===t&&(t={}),!T&&"undefined"!=typeof window&&window.Vue&&P(window.Vue);var i=t.locale||"en-US",n=!1!==t.fallbackLocale&&(t.fallbackLocale||"en-US"),s=t.messages||{},a=t.dateTimeFormats||{},r=t.numberFormats||{};this._vm=null,this._formatter=t.formatter||G,this._modifiers=t.modifiers||{},this._missing=t.missing||null,this._root=t.root||null,this._sync=void 0===t.sync||!!t.sync,this._fallbackRoot=void 0===t.fallbackRoot||!!t.fallbackRoot,this._formatFallbackMessages=void 0!==t.formatFallbackMessages&&!!t.formatFallbackMessages,this._silentTranslationWarn=void 0!==t.silentTranslationWarn&&t.silentTranslationWarn,this._silentFallbackWarn=void 0!==t.silentFallbackWarn&&!!t.silentFallbackWarn,this._dateTimeFormatters={},this._numberFormatters={},this._path=new U,this._dataListeners=[],this._componentInstanceCreatedListener=t.componentInstanceCreatedListener||null,this._preserveDirectiveContent=void 0!==t.preserveDirectiveContent&&!!t.preserveDirectiveContent,this.pluralizationRules=t.pluralizationRules||{},this._warnHtmlInMessage=t.warnHtmlInMessage||"off",this._postTranslation=t.postTranslation||null,this._escapeParameterHtml=t.escapeParameterHtml||!1,this.getChoiceIndex=function(t,i){var n=Object.getPrototypeOf(e);if(n&&n.getChoiceIndex)return n.getChoiceIndex.call(e,t,i);var s,a;return e.locale in e.pluralizationRules?e.pluralizationRules[e.locale].apply(e,[t,i]):(s=t,a=i,s=Math.abs(s),2===a?s?s>1?1:0:1:s?Math.min(s,2):0)},this._exist=function(t,i){return!(!t||!i)&&(!u(e._path.getPathValue(t,i))||!!t[i])},"warn"!==this._warnHtmlInMessage&&"error"!==this._warnHtmlInMessage||Object.keys(s).forEach((function(t){e._checkLocaleMessage(t,e._warnHtmlInMessage,s[t])})),this._initVM({locale:i,fallbackLocale:n,messages:s,dateTimeFormats:a,numberFormats:r})},Q={vm:{configurable:!0},messages:{configurable:!0},dateTimeFormats:{configurable:!0},numberFormats:{configurable:!0},availableLocales:{configurable:!0},locale:{configurable:!0},fallbackLocale:{configurable:!0},formatFallbackMessages:{configurable:!0},missing:{configurable:!0},formatter:{configurable:!0},silentTranslationWarn:{configurable:!0},silentFallbackWarn:{configurable:!0},preserveDirectiveContent:{configurable:!0},warnHtmlInMessage:{configurable:!0},postTranslation:{configurable:!0}};X.prototype._checkLocaleMessage=function(t,e,i){var n=function(t,e,i,r){if(l(i))Object.keys(i).forEach((function(s){var a=i[s];l(a)?(r.push(s),r.push("."),n(t,e,a,r),r.pop(),r.pop()):(r.push(s),n(t,e,a,r),r.pop())}));else if(a(i))i.forEach((function(i,s){l(i)?(r.push("["+s+"]"),r.push("."),n(t,e,i,r),r.pop(),r.pop()):(r.push("["+s+"]"),n(t,e,i,r),r.pop())}));else if(o(i)){if(j.test(i)){var c="Detected HTML in message '"+i+"' of keypath '"+r.join("")+"' at '"+e+"'. Consider component interpolation with '<i18n>' to avoid XSS. See https://bit.ly/2ZqJzkp";"warn"===t?s(c):"error"===t&&function(t,e){"undefined"!=typeof console&&(console.error("[vue-i18n] "+t),e&&console.error(e.stack))}(c)}}};n(e,t,i,[])},X.prototype._initVM=function(t){var e=T.config.silent;T.config.silent=!0,this._vm=new T({data:t}),T.config.silent=e},X.prototype.destroyVM=function(){this._vm.$destroy()},X.prototype.subscribeDataChanging=function(t){this._dataListeners.push(t)},X.prototype.unsubscribeDataChanging=function(t){!function(t,e){if(t.length){var i=t.indexOf(e);if(i>-1)t.splice(i,1)}}(this._dataListeners,t)},X.prototype.watchI18nData=function(){var t=this;return this._vm.$watch("$data",(function(){for(var e=t._dataListeners.length;e--;)T.nextTick((function(){t._dataListeners[e]&&t._dataListeners[e].$forceUpdate()}))}),{deep:!0})},X.prototype.watchLocale=function(){if(!this._sync||!this._root)return null;var t=this._vm;return this._root.$i18n.vm.$watch("locale",(function(e){t.$set(t,"locale",e),t.$forceUpdate()}),{immediate:!0})},X.prototype.onComponentInstanceCreated=function(t){this._componentInstanceCreatedListener&&this._componentInstanceCreatedListener(t,this)},Q.vm.get=function(){return this._vm},Q.messages.get=function(){return m(this._getMessages())},Q.dateTimeFormats.get=function(){return m(this._getDateTimeFormats())},Q.numberFormats.get=function(){return m(this._getNumberFormats())},Q.availableLocales.get=function(){return Object.keys(this.messages).sort()},Q.locale.get=function(){return this._vm.locale},Q.locale.set=function(t){this._vm.$set(this._vm,"locale",t)},Q.fallbackLocale.get=function(){return this._vm.fallbackLocale},Q.fallbackLocale.set=function(t){this._localeChainCache={},this._vm.$set(this._vm,"fallbackLocale",t)},Q.formatFallbackMessages.get=function(){return this._formatFallbackMessages},Q.formatFallbackMessages.set=function(t){this._formatFallbackMessages=t},Q.missing.get=function(){return this._missing},Q.missing.set=function(t){this._missing=t},Q.formatter.get=function(){return this._formatter},Q.formatter.set=function(t){this._formatter=t},Q.silentTranslationWarn.get=function(){return this._silentTranslationWarn},Q.silentTranslationWarn.set=function(t){this._silentTranslationWarn=t},Q.silentFallbackWarn.get=function(){return this._silentFallbackWarn},Q.silentFallbackWarn.set=function(t){this._silentFallbackWarn=t},Q.preserveDirectiveContent.get=function(){return this._preserveDirectiveContent},Q.preserveDirectiveContent.set=function(t){this._preserveDirectiveContent=t},Q.warnHtmlInMessage.get=function(){return this._warnHtmlInMessage},Q.warnHtmlInMessage.set=function(t){var e=this,i=this._warnHtmlInMessage;if(this._warnHtmlInMessage=t,i!==t&&("warn"===t||"error"===t)){var n=this._getMessages();Object.keys(n).forEach((function(t){e._checkLocaleMessage(t,e._warnHtmlInMessage,n[t])}))}},Q.postTranslation.get=function(){return this._postTranslation},Q.postTranslation.set=function(t){this._postTranslation=t},X.prototype._getMessages=function(){return this._vm.messages},X.prototype._getDateTimeFormats=function(){return this._vm.dateTimeFormats},X.prototype._getNumberFormats=function(){return this._vm.numberFormats},X.prototype._warnDefault=function(t,e,i,n,s,a){if(!u(i))return i;if(this._missing){var r=this._missing.apply(null,[t,e,n,s]);if(o(r))return r}else 0;if(this._formatFallbackMessages){var c=h.apply(void 0,s);return this._render(e,a,c.params,e)}return e},X.prototype._isFallbackRoot=function(t){return!t&&!u(this._root)&&this._fallbackRoot},X.prototype._isSilentFallbackWarn=function(t){return this._silentFallbackWarn instanceof RegExp?this._silentFallbackWarn.test(t):this._silentFallbackWarn},X.prototype._isSilentFallback=function(t,e){return this._isSilentFallbackWarn(e)&&(this._isFallbackRoot()||t!==this.fallbackLocale)},X.prototype._isSilentTranslationWarn=function(t){return this._silentTranslationWarn instanceof RegExp?this._silentTranslationWarn.test(t):this._silentTranslationWarn},X.prototype._interpolate=function(t,e,i,n,s,r,c){if(!e)return null;var h,m=this._path.getPathValue(e,i);if(a(m)||l(m))return m;if(u(m)){if(!l(e))return null;if(!o(h=e[i])&&!d(h))return null}else{if(!o(m)&&!d(m))return null;h=m}return o(h)&&(h.indexOf("@:")>=0||h.indexOf("@.")>=0)&&(h=this._link(t,e,h,n,"raw",r,c)),this._render(h,s,r,i)},X.prototype._link=function(t,e,i,n,s,r,o){var c=i,l=c.match(Z);for(var u in l)if(l.hasOwnProperty(u)){var d=l[u],h=d.match(H),m=h[0],f=h[1],g=d.replace(m,"").replace(V,"");if(p(o,g))return c;o.push(g);var v=this._interpolate(t,e,g,n,"raw"===s?"string":s,"raw"===s?void 0:r,o);if(this._isFallbackRoot(v)){if(!this._root)throw Error("unexpected error");var _=this._root.$i18n;v=_._translate(_._getMessages(),_.locale,_.fallbackLocale,g,n,s,r)}v=this._warnDefault(t,g,v,n,a(r)?r:[r],s),this._modifiers.hasOwnProperty(f)?v=this._modifiers[f](v):B.hasOwnProperty(f)&&(v=B[f](v)),o.pop(),c=v?c.replace(d,v):c}return c},X.prototype._createMessageContext=function(t){var e=a(t)?t:[],i=r(t)?t:{};return{list:function(t){return e[t]},named:function(t){return i[t]}}},X.prototype._render=function(t,e,i,n){if(d(t))return t(this._createMessageContext(i));var s=this._formatter.interpolate(t,i,n);return s||(s=G.interpolate(t,i,n)),"string"!==e||o(s)?s:s.join("")},X.prototype._appendItemToChain=function(t,e,i){var n=!1;return p(t,e)||(n=!0,e&&(n="!"!==e[e.length-1],e=e.replace(/!/g,""),t.push(e),i&&i[e]&&(n=i[e]))),n},X.prototype._appendLocaleToChain=function(t,e,i){var n,s=e.split("-");do{var a=s.join("-");n=this._appendItemToChain(t,a,i),s.splice(-1,1)}while(s.length&&!0===n);return n},X.prototype._appendBlockToChain=function(t,e,i){for(var n=!0,s=0;s<e.length&&"boolean"==typeof n;s++){var a=e[s];o(a)&&(n=this._appendLocaleToChain(t,a,i))}return n},X.prototype._getLocaleChain=function(t,e){if(""===t)return[];this._localeChainCache||(this._localeChainCache={});var i=this._localeChainCache[t];if(!i){e||(e=this.fallbackLocale),i=[];for(var n,s=[t];a(s);)s=this._appendBlockToChain(i,s,e);(s=o(n=a(e)?e:r(e)?e.default?e.default:null:e)?[n]:n)&&this._appendBlockToChain(i,s,null),this._localeChainCache[t]=i}return i},X.prototype._translate=function(t,e,i,n,s,a,r){for(var o,c=this._getLocaleChain(e,i),l=0;l<c.length;l++){var d=c[l];if(!u(o=this._interpolate(d,t[d],n,s,a,r,[n])))return o}return null},X.prototype._t=function(t,e,i,n){for(var s,a=[],r=arguments.length-4;r-- >0;)a[r]=arguments[r+4];if(!t)return"";var o=h.apply(void 0,a);this._escapeParameterHtml&&(o.params=y(o.params));var c=o.locale||e,l=this._translate(i,c,this.fallbackLocale,t,n,"string",o.params);if(this._isFallbackRoot(l)){if(!this._root)throw Error("unexpected error");return(s=this._root).$t.apply(s,[t].concat(a))}return l=this._warnDefault(c,t,l,n,a,"string"),this._postTranslation&&null!=l&&(l=this._postTranslation(l,t)),l},X.prototype.t=function(t){for(var e,i=[],n=arguments.length-1;n-- >0;)i[n]=arguments[n+1];return(e=this)._t.apply(e,[t,this.locale,this._getMessages(),null].concat(i))},X.prototype._i=function(t,e,i,n,s){var a=this._translate(i,e,this.fallbackLocale,t,n,"raw",s);if(this._isFallbackRoot(a)){if(!this._root)throw Error("unexpected error");return this._root.$i18n.i(t,e,s)}return this._warnDefault(e,t,a,n,[s],"raw")},X.prototype.i=function(t,e,i){return t?(o(e)||(e=this.locale),this._i(t,e,this._getMessages(),null,i)):""},X.prototype._tc=function(t,e,i,n,s){for(var a,r=[],o=arguments.length-5;o-- >0;)r[o]=arguments[o+5];if(!t)return"";void 0===s&&(s=1);var c={count:s,n:s},l=h.apply(void 0,r);return l.params=Object.assign(c,l.params),r=null===l.locale?[l.params]:[l.locale,l.params],this.fetchChoice((a=this)._t.apply(a,[t,e,i,n].concat(r)),s)},X.prototype.fetchChoice=function(t,e){if(!t||!o(t))return null;var i=t.split("|");return i[e=this.getChoiceIndex(e,i.length)]?i[e].trim():t},X.prototype.tc=function(t,e){for(var i,n=[],s=arguments.length-2;s-- >0;)n[s]=arguments[s+2];return(i=this)._tc.apply(i,[t,this.locale,this._getMessages(),null,e].concat(n))},X.prototype._te=function(t,e,i){for(var n=[],s=arguments.length-3;s-- >0;)n[s]=arguments[s+3];var a=h.apply(void 0,n).locale||e;return this._exist(i[a],t)},X.prototype.te=function(t,e){return this._te(t,this.locale,this._getMessages(),e)},X.prototype.getLocaleMessage=function(t){return m(this._vm.messages[t]||{})},X.prototype.setLocaleMessage=function(t,e){"warn"!==this._warnHtmlInMessage&&"error"!==this._warnHtmlInMessage||this._checkLocaleMessage(t,this._warnHtmlInMessage,e),this._vm.$set(this._vm.messages,t,e)},X.prototype.mergeLocaleMessage=function(t,e){"warn"!==this._warnHtmlInMessage&&"error"!==this._warnHtmlInMessage||this._checkLocaleMessage(t,this._warnHtmlInMessage,e),this._vm.$set(this._vm.messages,t,v(void 0!==this._vm.messages[t]&&Object.keys(this._vm.messages[t]).length?this._vm.messages[t]:{},e))},X.prototype.getDateTimeFormat=function(t){return m(this._vm.dateTimeFormats[t]||{})},X.prototype.setDateTimeFormat=function(t,e){this._vm.$set(this._vm.dateTimeFormats,t,e),this._clearDateTimeFormat(t,e)},X.prototype.mergeDateTimeFormat=function(t,e){this._vm.$set(this._vm.dateTimeFormats,t,v(this._vm.dateTimeFormats[t]||{},e)),this._clearDateTimeFormat(t,e)},X.prototype._clearDateTimeFormat=function(t,e){for(var i in e){var n=t+"__"+i;this._dateTimeFormatters.hasOwnProperty(n)&&delete this._dateTimeFormatters[n]}},X.prototype._localizeDateTime=function(t,e,i,n,s){for(var a=e,r=n[a],o=this._getLocaleChain(e,i),c=0;c<o.length;c++){var l=o[c];if(a=l,!u(r=n[l])&&!u(r[s]))break}if(u(r)||u(r[s]))return null;var d=r[s],h=a+"__"+s,m=this._dateTimeFormatters[h];return m||(m=this._dateTimeFormatters[h]=new Intl.DateTimeFormat(a,d)),m.format(t)},X.prototype._d=function(t,e,i){if(!i)return new Intl.DateTimeFormat(e).format(t);var n=this._localizeDateTime(t,e,this.fallbackLocale,this._getDateTimeFormats(),i);if(this._isFallbackRoot(n)){if(!this._root)throw Error("unexpected error");return this._root.$i18n.d(t,i,e)}return n||""},X.prototype.d=function(t){for(var e=[],i=arguments.length-1;i-- >0;)e[i]=arguments[i+1];var n=this.locale,s=null;return 1===e.length?o(e[0])?s=e[0]:r(e[0])&&(e[0].locale&&(n=e[0].locale),e[0].key&&(s=e[0].key)):2===e.length&&(o(e[0])&&(s=e[0]),o(e[1])&&(n=e[1])),this._d(t,n,s)},X.prototype.getNumberFormat=function(t){return m(this._vm.numberFormats[t]||{})},X.prototype.setNumberFormat=function(t,e){this._vm.$set(this._vm.numberFormats,t,e),this._clearNumberFormat(t,e)},X.prototype.mergeNumberFormat=function(t,e){this._vm.$set(this._vm.numberFormats,t,v(this._vm.numberFormats[t]||{},e)),this._clearNumberFormat(t,e)},X.prototype._clearNumberFormat=function(t,e){for(var i in e){var n=t+"__"+i;this._numberFormatters.hasOwnProperty(n)&&delete this._numberFormatters[n]}},X.prototype._getNumberFormatter=function(t,e,i,n,s,a){for(var r=e,o=n[r],c=this._getLocaleChain(e,i),l=0;l<c.length;l++){var d=c[l];if(r=d,!u(o=n[d])&&!u(o[s]))break}if(u(o)||u(o[s]))return null;var h,m=o[s];if(a)h=new Intl.NumberFormat(r,Object.assign({},m,a));else{var p=r+"__"+s;(h=this._numberFormatters[p])||(h=this._numberFormatters[p]=new Intl.NumberFormat(r,m))}return h},X.prototype._n=function(t,e,i,n){if(!X.availabilities.numberFormat)return"";if(!i)return(n?new Intl.NumberFormat(e,n):new Intl.NumberFormat(e)).format(t);var s=this._getNumberFormatter(t,e,this.fallbackLocale,this._getNumberFormats(),i,n),a=s&&s.format(t);if(this._isFallbackRoot(a)){if(!this._root)throw Error("unexpected error");return this._root.$i18n.n(t,Object.assign({},{key:i,locale:e},n))}return a||""},X.prototype.n=function(t){for(var e=[],i=arguments.length-1;i-- >0;)e[i]=arguments[i+1];var s=this.locale,a=null,c=null;return 1===e.length?o(e[0])?a=e[0]:r(e[0])&&(e[0].locale&&(s=e[0].locale),e[0].key&&(a=e[0].key),c=Object.keys(e[0]).reduce((function(t,i){var s;return p(n,i)?Object.assign({},t,((s={})[i]=e[0][i],s)):t}),null)):2===e.length&&(o(e[0])&&(a=e[0]),o(e[1])&&(s=e[1])),this._n(t,s,a,c)},X.prototype._ntp=function(t,e,i,n){if(!X.availabilities.numberFormat)return[];if(!i)return(n?new Intl.NumberFormat(e,n):new Intl.NumberFormat(e)).formatToParts(t);var s=this._getNumberFormatter(t,e,this.fallbackLocale,this._getNumberFormats(),i,n),a=s&&s.formatToParts(t);if(this._isFallbackRoot(a)){if(!this._root)throw Error("unexpected error");return this._root.$i18n._ntp(t,e,i,n)}return a||[]},Object.defineProperties(X.prototype,Q),Object.defineProperty(X,"availabilities",{get:function(){if(!z){var t="undefined"!=typeof Intl;z={dateTimeFormat:t&&void 0!==Intl.DateTimeFormat,numberFormat:t&&void 0!==Intl.NumberFormat}}return z}}),X.install=P,X.version="8.22.4";const Y=X},8571:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["question"],mounted:function(){var t=this;this.$nextTick((function(){var e=t;$(t.$refs.modal).on("hidden.bs.modal",(function(t){!0===e.correctCode?e.$nextTick((function(){e.$parent.$refs.questionModal.open()})):e.$parent.question=null,e.accessCode=null,e.correctCode=!1,e.animated=!1})),$(t.$refs.modal).on("shown.bs.modal",(function(i){e.$nextTick((function(){$(t.$refs.input).focus()}))}))}))},data:function(){return{accessCode:null,correctCode:!1,animated:!1}},methods:{open:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("show")}))},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide")}))},title:function(){return this.question&&this.question.title?this.question.title:""},hasAccessCodeClues:function(){var t=this.accessCodeClues();return!(!t||!t.trim())},accessCodeClues:function(){return this.question&&this.question.access_code_clues?this.question.access_code_clues:""},canCheck:function(){return!!this.accessCode},check:function(){if(this.canCheck()){var t=this;t.animated=!1,t.$nextTick((function(){t.accessCode.toLowerCase().trim()===t.question.access_code.toLowerCase().trim()?(t.correctCode=!0,t.close()):t.correctCode=!1,t.animated=!0}))}}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close"},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v(t._s(t.title()))])]),t._v(" "),i("div",{staticClass:"modal-body"},[t.hasAccessCodeClues()?i("p",[i("i",{staticClass:"mdi mdi-information-outline"}),t._v("\n                    "+t._s(t.accessCodeClues())+"\n                ")]):t._e(),t._v(" "),i("input",{directives:[{name:"model",rawName:"v-model",value:t.accessCode,expression:"accessCode"}],ref:"input",staticClass:"form-control",class:{animated:t.animated,shake:!t.correctCode&&t.animated},attrs:{type:"text",placeholder:t.$t("access-code-placeholder")},domProps:{value:t.accessCode},on:{keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"enter",13,e.key,"Enter")?null:t.check()},input:function(e){e.target.composing||(t.accessCode=e.target.value)}}})]),t._v(" "),i("div",{staticClass:"modal-footer"},[i("button",{staticClass:"btn btn-default",attrs:{type:"button",title:t.$t("close")},on:{click:function(e){return t.close()}}},[i("i",{staticClass:"mdi mdi-close"})]),t._v(" "),i("button",{staticClass:"btn btn-primary",attrs:{type:"button",disabled:!t.canCheck(),title:t.$t("submit")},on:{click:function(e){return t.check()}}},[i("i",{staticClass:"mdi mdi-compare"})])])])])])}),[],!1,null,null,null).exports},5909:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["question"],mixins:[],mounted:function(){},data:function(){return{inAjaxCall:!1,message:this.$t("items.answering_time.time_is_up")}},methods:{title:function(){return this.question?this.question.title:""},open:function(t){var e=this;return this.$nextTick((function(){$(e.$refs.modal).modal("show")})),void 0!==t&&(this.message=t),$(this.$refs.modal)},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide")}))}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg sz-game-question",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close",diabled:t.inAjaxCall},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v(t._s(t.title()))])]),t._v(" "),i("div",{staticClass:"modal-body"},[t._v("\n                "+t._s(t.message)+"\n            ")]),t._v(" "),i("div",{staticClass:"modal-footer"},[i("button",{staticClass:"btn btn-default",attrs:{type:"button",title:t.$t("close")},on:{click:function(e){return t.close()}}},[i("i",{staticClass:"mdi mdi-close"})])])])])])}),[],!1,null,null,null).exports},5783:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["question","gameId","baseUrl"],mixins:[],mounted:function(){},data:function(){return{inAjaxCall:!1}},methods:{startTimer:function(){var t=this,e={game_id:this.gameId,question_id:this.question.id};this.inAjaxCall=!0,this.$http.post(t.baseUrl+"/api/games/start-answering-timer",e).then((function(e){t.inAjaxCall=!1,t.$parent.markAnswered(t.question.id,e.body),t.$parent.openQuestionModal(t.question,t.$parent.getAnswer(t.question.id)),t.close()}),(function(e){t.inAjaxCall=!1,setTimeout((function(){t.startTimer()}),200)}))},title:function(){return this.question?this.question.title:""},open:function(){var t=this;return this.$nextTick((function(){$(t.$refs.modal).modal("show")})),$(this.$refs.modal)},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide")}))}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg sz-game-question",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close",diabled:t.inAjaxCall},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v(t._s(t.title()))])]),t._v(" "),i("div",{staticClass:"modal-body"},[t._v("\n                "+t._s(t.$t("items.answering_time.description"))+"\n            ")]),t._v(" "),i("div",{staticClass:"modal-footer"},[i("button",{staticClass:"btn btn-primary",attrs:{type:"button",title:t.$t("items.answering_time.start_timer")},on:{click:function(e){return t.startTimer()}}},[t._v("\n                    "+t._s(t.$t("items.answering_time.start_timer"))+" "),i("i",{staticClass:"mdi mdi-play-circle-outline"})])])])])])}),[],!1,null,null,null).exports},4644:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["baseUrl","image","inAnimationClass","outAnimationClass"],methods:{open:function(){var t=this;t.$emit("show:image:dialog"),t.$nextTick((function(){$(t.$refs.image).removeClass(t.outAnimationClass).addClass(t.inAnimationClass),$(t.$refs.dialog).show(0,(function(){t.$emit("shown:image:dialog"),t.timeoutId=setTimeout((function(){t.close()}),5e3)}))}))},close:function(){var t=this;t.timeoutId&&(clearTimeout(t.timeoutId),t.timeoutId=null),t.$emit("hide:image:dialog"),t.$nextTick((function(){$(t.$refs.image).removeClass(t.inAnimationClass).addClass(t.outAnimationClass),setTimeout((function(){$(t.$refs.dialog).hide(0,(function(){t.$emit("hidden:image:dialog")}))}),1e3)}))},imageUrl:function(){return this.baseUrl+"/img/dialogs/"+this.image}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"dialog",staticClass:"sz-image-dialog",on:{click:function(e){return t.close()}}},[i("div",{staticClass:"sz-image-dialog-backdrop"}),t._v(" "),i("img",{ref:"image",staticClass:"animated",attrs:{alt:"image",src:t.imageUrl()}})])}),[],!1,null,null,null).exports},5039:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["activity"],mixins:[i(3894).Z],mounted:function(){this.baseUrl=window.RADA.config.base_url},data:function(){return{icons:["active","inactive","correct","incorrect"],baseUrl:""}},methods:{open:function(){this.$nextTick((function(){$(this.$refs.modal).modal("show")}))},close:function(){this.$nextTick((function(){$(this.$refs.modal).modal("hide")}))},getIconText:function(t){return this.$t("icons."+t)}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close"},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title text-center"},[t._v(t._s(t.activity.title))])]),t._v(" "),i("div",{staticClass:"modal-body"},[t._m(0),t._v(" "),i("div",{staticClass:"collapse",attrs:{id:"iconCodes"}},[i("div",{staticClass:"well well-sm"},[i("p",{staticClass:"help-block"},[t._v(t._s(t.$t("icons.help")))]),t._v(" "),t._l(t.icons,(function(e){return i("div",{staticClass:"media"},[i("div",{staticClass:"media-left media-middle"},[i("img",{staticClass:"media-object",staticStyle:{width:"30px",height:"30px"},attrs:{alt:"icon",src:t.getIconUrl(e)}})]),t._v(" "),i("div",{staticClass:"media-body"},[i("p",[t._v(t._s(t.getIconText(e)))])])])}))],2)]),t._v(" "),t.activity.description?i("p",{staticClass:"sz-display-new-lines text-center"},[t._v("\n                    "+t._s(t.activity.description)+"\n                ")]):t._e(),t._v(" "),i("h4",[t._v(t._s(t.$t("number-of-questions")))]),t._v(" "),i("p",[t._v(t._s(t.activity.questions.length))]),t._v(" "),i("h4",[t._v(t._s(t.$t("playing-time")))]),t._v(" "),i("p",[t._v("\n                    "+t._s(t.activity.playing_time)+" "+t._s(t.$t("minutes"))+"\n                ")]),t._v(" "),i("p",[i("img",{staticClass:"img-responsive center-block",attrs:{src:t.activity.featured_image,alt:"featured-image"}})])]),t._v(" "),i("div",{staticClass:"modal-footer"},[i("button",{staticClass:"btn btn-lg center-block sz-go-btn",attrs:{type:"button"},on:{click:function(e){return t.close()}}},[t._v(t._s(t.$t("go")))])])])])])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("button",{staticClass:"btn btn-default btn-sm pull-right",attrs:{role:"button","data-toggle":"collapse","data-target":"#iconCodes","aria-expanded":"false","aria-controls":"iconCodes"}},[e("i",{staticClass:"mdi mdi-information-outline"})])}],!1,null,null,null).exports},6277:(t,e,i)=>{"use strict";i.d(e,{Z:()=>h});var n=i(3894);function s(t,e,i,n){var s=_.values(google.maps.MapTypeId),a=document.createElement("div");a.id="sz-map-controls",a.className="map-controls",t.appendChild(a);var r=document.createElement("i");r.className="label label-success",r.style.fontSize="20px",r.style.position="relative",r.style.top="-7px",r.style.marginLeft="5px",r.style.marginRight="5px",r.textContent=n.getAnsweredQuestionsCount()+"/"+_.size(n.game.activity.questions),a.appendChild(r),n.$watch("game.answers",(function(){r.textContent=n.getAnsweredQuestionsCount()+"/"+_.size(n.game.activity.questions)}));var o=document.createElement("i");o.className="mdi mdi-email-outline",a.appendChild(o),o.addEventListener("click",(function(){n.$refs.gameMessagesListModal.open()}));var c=document.createElement("i");c.className="mdi mdi-flash",null===n.activeFlashExerciseId&&(c.className+=" hidden"),c.id="user-flash-exercise-control-item",a.appendChild(c),function t(){setTimeout((function(){c.style="color: #ff9800",setTimeout((function(){c.style="color: #000000",t()}),2e3)}),1e3)}(),c.addEventListener("click",(function(){var t=n.game.activity.questions.filter((function(t){return t.id===n.activeFlashExerciseId}));if(t.length>0){var e=t[0],i=n.getAnswer(e.id);n.openQuestionModal(e,i)}}));var l=document.createElement("i");l.className="mdi",n.$parent.isLoggedIn?l.className+=" mdi-account":l.className+=" mdi-account-off",l.title=n.$parent.userName,a.appendChild(l);var u=!1;l.addEventListener("click",(function(){$(l).tooltip("toggle"),u=!u})),$(l).tooltip({container:"body",placement:"bottom",title:$(l).attr("title"),trigger:"manual"}),$(window).on("resize",(function(){u&&$(l).tooltip("show")}));var d=document.createElement("i");d.className="mdi mdi-information-outline",d.title=n.$t("info"),a.appendChild(d),d.addEventListener("click",(function(){n.$parent.$refs.informationModal.open()}));var h=document.createElement("i");h.className="mdi mdi-crosshairs",h.title=n.$t("position-tracking"),a.appendChild(h),h.addEventListener("click",(function(){e.szTrackingEnabled?(e.szTrackingEnabled=!1,h.className="mdi mdi-crosshairs"):(e.panTo(i.getPosition()),google.maps.event.trigger(i,"click"),e.szTrackingEnabled=!0,h.className="mdi mdi-crosshairs-gps active")}));var m=document.createElement("i");m.className="mdi mdi-map-marker-multiple",m.title=n.$t("apply-item-bounds"),a.appendChild(m),m.addEventListener("click",(function(){var t=n.getMarkerBounds();t.isEmpty()||e.fitBounds(t)}));var p=document.createElement("i");p.className="mdi mdi-exit-to-app",p.title=n.$t("exit"),a.appendChild(p),p.addEventListener("click",(function(){n.$parent.exit()}));var f=document.createElement("i");f.className="mdi mdi-layers",f.title=n.$t("change-map-type"),a.appendChild(f),f.addEventListener("click",(function(){var t=_.indexOf(s,e.mapTypeId)+1;t===s.length&&(t=0),e.setMapTypeId(s[t])}))}var a=window.RADA.config.connect_markers||!1,r=window.RADA.config.map.enableStreetView||!1;const o={components:{"game-question-modal":i(2125).Z,"game-answering-time-modal":i(5783).Z,"game-answering-time-is-up-modal":i(5909).Z,"game-access-code-modal":i(8571).Z,"game-image-dialog":i(4644).Z,"game-messages-list-modal":i(1270).Z,"notification-modal":i(3702).Z},props:["latitude","longitude","game","baseUrl"],mixins:[n.Z],mounted:function(){var t=this;this.mapData={},this.mapData.markers=[],this.mapData.mapOptions={center:{lat:this.latitude,lng:this.longitude},zoom:18,mapTypeId:google.maps.MapTypeId.ROADMAP,disableDefaultUI:!0,zoomControl:!0,streetViewControl:r,styles:[{featureType:"poi",stylers:[{visibility:"off"}]},{featureType:"transit.station",stylers:[{visibility:"off"}]}]},this.mapData.iconAnchor=new google.maps.Point(20,20),this.mapData.iconSize=new google.maps.Size(60,60),this.mapData.iconScaledSize=new google.maps.Size(40,40),this.$nextTick((function(){t.initMap(),t.getGameData()}))},data:function(){return{question:null,answer:null,gpsError:!1,position:null,flashExercises:[],activeFlashExerciseId:null,notificationTitle:null,notificationMessage:null,gameIsStopped:!1}},watch:{gpsError:function(t){if(document.getElementById("sz-map-controls")){var e=document.getElementById("sz-gps-error");!0===t?e?e.style.display="initial":this.initGpsErrorControl("sz-gps-error"):e&&(e.style.display="none")}}},methods:{initMap:function(){var t=this;if(this.mapData.map=new google.maps.Map(document.getElementById("map"),this.mapData.mapOptions),this.mapData.infoWindow=new google.maps.InfoWindow({disableAutoPan:!0}),this.initGroundOverlays(),this.initPlayerMarker(),this.initGameControls(),t.game.activity.questions){var e=t.mapData.map,i=t.mapData.markers,n=t.mapData.infoWindow,s=t.mapData.playerMarker;_.each(t.game.activity.questions,(function(a){if(a.is_flash)return t.flashExercises.push(a),setTimeout((function(){$("#admin-flash-exercises-control-item").removeClass("hidden")}),2500),!0;var r=new google.maps.Marker({title:a.title,position:{lat:Number(a.latitude),lng:Number(a.longitude)},map:e,animation:google.maps.Animation.DROP,questionId:a.id,questionType:a.type,hasAccessCode:t.hasAccessCode(a),optimized:!1});t.$nextTick((function(){t.detectAndSetMarkerIcon(r)})),i.push(r),r.addListener("click",(function(){var i=t.getAnswer(a.id);if(t.isAnswered(a.id))t.openQuestionModal(a,i);else{if(t.getEnforceItemsOrder()>0){var o=t.getNextUnansweredMarkers();if(!(o.length>0))return t.openNewInfoWindow(n,r,e);if(void 0===o.find((function(t){return r.questionId===t.questionId})))return t.openNewInfoWindow(n,r,e)}if(t.hasProximityCheck())google.maps.geometry.spherical.computeDistanceBetween(s.getPosition(),r.getPosition())<=t.getProximityRadius()?t.openQuestionModal(a,i):t.hasAccessCode(a)?t.openAccessCodeModal(a):t.openNewInfoWindow(n,r,e);else t.openQuestionModal(a,i)}}))})),a&&t.connectMarkers(),t.initUpdateClosestUnansweredMarkerArrow()}this.$parent.getGeoLocation((function(e){var i=t.mapData.map,n=t.mapData.playerMarker;t.gpsError=!1,n.setPosition({lat:e.coords.latitude,lng:e.coords.longitude}),!0===i.szTrackingEnabled&&i.panTo(n.getPosition()),t.initUpdateClosestUnansweredMarkerArrow(),t.hasProximityCheck()&&_.each(t.mapData.markers,(function(e){t.isAnswered(e.questionId)||t.detectAndSetMarkerIcon(e)})),t.setPosition(e),t.logPlayerPosition(t.getPosition()),t.initPlayerPositionLogging()}),!0,(function(e){t.gpsError=!0}))},initActiveFlashExercise:function(){this.getActiveFlashExercise()},getActiveFlashExercise:function(){var t=this;this.$http.get(this.baseUrl+"/api/games/"+this.game.id+"/get-active-flash-exercise").then((function(e){void 0!==e.body.id?($("#user-flash-exercise-control-item").removeClass("hidden"),null===t.activeFlashExerciseId&&(t.activeFlashExerciseId=parseInt(e.body.id),t.showNotification(t.$t("new-flash-exercise-title"),t.$t("new-flash-exercise-message")))):null!==t.activeFlashExerciseId&&(t.activeFlashExerciseId=null,$("#user-flash-exercise-control-item").addClass("hidden"),t.$refs.questionModal.closeQuestion(t.$t("flash-exercise-has-been-deactivated"))),setTimeout((function(){t.getActiveFlashExercise()}),5e3)}),(function(t){}))},getGameData:function(){var t=this;this.$http.get(this.baseUrl+"/api/games/"+this.game.id+"/get-game-data").then((function(e){if(void 0!==e.body){var i=e.body;t.showHideFlashExercises(i.flash_exercise),t.showHideGameIsStopped(i.start_stop),t.showNewMessages(i.messages)}})),setTimeout((function(){t.getGameData()}),5e3)},showNewMessages:function(t){this.showNextMessage(t,0)},showNextMessage:function(t,e){var i=this,n=t.length;e<n&&setTimeout((function(){var s=t[e];i.openNewMessageModal(s),e+1<n&&setTimeout((function(){i.showNextMessage(t,e+1)}),5e3)}),5e3)},openNewMessageModal:function(t){this.notificationTitle=this.$t("new-message"),this.notificationMessage=t.message,this.$refs.notificationModal.open()},showHideFlashExercises:function(t){void 0!==t.id?($("#user-flash-exercise-control-item").removeClass("hidden"),null===this.activeFlashExerciseId&&(this.activeFlashExerciseId=parseInt(t.id),this.showNotification(this.$t("new-flash-exercise-title"),this.$t("new-flash-exercise-message")))):null!==this.activeFlashExerciseId&&(this.activeFlashExerciseId=null,this.$refs.notificationModal.close(),$("#user-flash-exercise-control-item").addClass("hidden"),this.$refs.questionModal.closeQuestion(this.$t("flash-exercise-has-been-deactivated")))},showHideGameIsStopped:function(t){!1==(void 0!==t.started&&1===t.started)&&(this.$parent.checkUnload=!1,window.location.href=this.baseUrl+"/games/"+this.game.id+"/stopped")},showNotification:function(t,e){var i=this;this.$refs.notificationModal.close(),this.$nextTick((function(){i.notificationTitle=t,i.notificationMessage=e,i.$refs.notificationModal.open()}))},initGroundOverlays:function(){this.mapData.skansenGroundOverlay=new google.maps.GroundOverlay(this.baseUrl+"/img/map/overlays/skansen.png",{north:59.329167,south:59.324011,east:18.111242,west:18.099022},{clickable:!1,map:this.mapData.map})},initGameControls:function(){var t=this.mapData.map,e=this.mapData.playerMarker,i=document.createElement("div");new s(i,t,e,this).index=1,t.controls[google.maps.ControlPosition.TOP_RIGHT].push(i)},initGpsErrorControl:function(t){var e=document.createElement("div");e.id=t,e.innerHTML="<span>"+this.$t("gps-error")+"</span>",e.style["margin-top"]=document.getElementById("sz-map-controls").offsetHeight+"px",this.mapData.map.controls[google.maps.ControlPosition.TOP_LEFT].push(e)},closeInfoWindow:function(){var t=this.mapData.infoWindow;t&&t.getMap()&&t.close()},openNewInfoWindow:function(t,e,i){return this.closeInfoWindow(),t.setContent(e.title),t.open(i,e),!0},initPlayerMarker:function(){var t,e,i=this,n=this.mapData.map,s=this.mapData.infoWindow;(t={path:google.maps.SymbolPath.CIRCLE,fillColor:"red",fillOpacity:1,scale:4.5,strokeColor:"white",strokeWeight:1},(e=new google.maps.Marker({title:this.$t("its-you"),position:{lat:this.latitude,lng:this.longitude},map:n,icon:t})).addListener("click",(function(){i.closeInfoWindow(),s.setContent(this.title),s.open(n,this)})),this.hasProximityCheck())&&new google.maps.Circle({map:n,radius:this.getProximityRadius(),fillColor:"blue",fillOpacity:.25,strokeColor:"blue",strokeWeight:1,strokeOpacity:.5}).bindTo("center",e,"position");google.maps.event.trigger(e,"click"),this.mapData.playerMarker=e},findQuestionById:function(t){return _.find(this.game.activity.questions,["id",t])},isAnswered:function(t){var e=this.getAnswer(t);return null!==e&&e.is_answered>0},isCorrect:function(t){var e=this.getAnswer(t);return e&&!0===e.correct},hasAccessCode:function(t){return!(!t||!t.access_code)},markAnswered:function(t,e){this.$set(this.game.answers,t,e);var i=_.find(this.mapData.markers,(function(e){return e.questionId===t}));i&&this.detectAndSetMarkerIcon(i);var n=_.keys(this.game.answers).map((function(t){return _.toNumber(t)})),s=_.map(this.game.activity.questions,(function(t){return t.id}));this.initUpdateClosestUnansweredMarkerArrow(),_.intersection(s,n).length===s.length&&e.is_answered&&(this.game.complete=!0)},connectMarkers:function(){var t=this.mapData.map,e=this.mapData.markers;e.length>1&&_.each(e,(function(i,n){if(0!==n)new google.maps.Polyline({path:[e[n-1].getPosition(),e[n].getPosition()],strokeWeight:2,strokeOpacity:.5,icons:[{icon:{path:google.maps.SymbolPath.FORWARD_CLOSED_ARROW},offset:"100%"}],geodesic:!0,map:t})}))},hasProximityCheck:function(){return this.game.activity.proximity_check},getProximityRadius:function(){return this.game.activity.proximity_radius||25},getEnforceItemsOrder:function(){return parseInt(this.game.activity.enforce_items_order)||0},openAnsweringTimeModal:function(t){var e=this;this.question=t,this.$nextTick((function(){e.$refs.answeringTimeModal.open()}))},getAnswer:function(t,e){return void 0===e&&(e=null),_.get(this.game.answers,t,e)},isAnswering:function(t){var e=this.getAnswer(t);return!(null===e||e.is_answered>0)&&null!=e.answering_start_time},openAnsweringTimeIsUpModal:function(t){var e=this;this.$nextTick((function(){e.$refs.answeringTimeIsUpModal.open(t)}))},openQuestionModal:function(t,e){var i=this;t.answering_time_check&&!1===this.isAnswering(t.id)&&!1===this.isAnswered(t.id)?this.openAnsweringTimeModal(t):(this.question=t,this.answer=e||null,this.$nextTick((function(){i.$refs.questionModal.open()})))},openAccessCodeModal:function(t){var e=this;this.question=t,this.answer=null,this.$nextTick((function(){e.$refs.accessCodeModal.open()}))},detectMarkerIconState:function(t){var e=this.findQuestionById(t.questionId),i=google.maps.geometry.spherical.computeDistanceBetween(this.mapData.playerMarker.getPosition(),t.getPosition());if(e&&this.isAnswered(e.id))return this.isCorrect(e.id)?"correct":"incorrect";if(this.getEnforceItemsOrder()>0){var n=this.getNextUnansweredMarkers();if(n.length>0){for(var s in n){var a=n[s];if(t.questionId===a.questionId)return"active"}return"inactive"}return"inactive"}return this.hasProximityCheck()&&i>this.getProximityRadius()?"inactive":"active"},detectAndSetMarkerIcon:function(t){if(void 0!==t.isUser)return!1;var e=this.detectMarkerIconState(t),i=t.hasAccessCode;this.getEnforceItemsOrder()>0&&(i=!1),t.setIcon({anchor:this.mapData.iconAnchor,size:this.mapData.iconSize,scaledSize:this.mapData.iconScaledSize,url:this.getIconUrl(e,t.questionType,i)})},getMarkerBounds:function(){if(this.mapData.markerBounds)return this.mapData.markerBounds;if(this.mapData.markerBounds=new google.maps.LatLngBounds,this.mapData.markers.length>0){var t=this;_.each(this.mapData.markers,(function(e){t.mapData.markerBounds.extend(e.getPosition())}))}return this.mapData.markerBounds},getAnsweredQuestionsCount:function(){if(0===_.size(this.game.activity.questions)||0===_.size(this.game.answers))return 0;var t=_.map(this.game.activity.questions,(function(t){return t.id})),e=_.filter(this.game.answers,(function(e){return-1!==t.indexOf(e.question)}));return _.size(e)},getUnansweredMarkers:function(){var t=this;return _.filter(this.mapData.markers,(function(e){return void 0===e.isUser&&!t.isAnswered(e.questionId)}))},getClosestUnansweredMarker:function(){var t=this.getUnansweredMarkers(),e=this.mapData.playerMarker;return t.length>0?_.minBy(t,(function(t){return google.maps.geometry.spherical.computeDistanceBetween(e.getPosition(),t.getPosition())})):null},getNextUnansweredMarker:function(){var t=this,e=t.getUnansweredMarkers(),i=this.mapData.playerMarker;return e.length>0?_.minBy(e,(function(e){var n=t.findQuestionById(e.questionId);if(n){var s=parseInt(n.position),a=google.maps.geometry.spherical.computeDistanceBetween(i.getPosition(),e.getPosition());return parseFloat(s+"."+a)}return 1e4})):null},getNextUnansweredMarkers:function(){var t=this,e=t.getUnansweredMarkers(),i=[];if(e.length>0){var n=this.getNextUnansweredMarker();if(n&&n.questionId){var s=n.questionId,a=this.findQuestionById(s);if(void 0!==a){var r=a.position;_.each(e,(function(e){var n=t.findQuestionById(e.questionId);n&&n.position===r&&i.push(e)}))}}}return i},initUpdateClosestUnansweredMarkerArrow:function(){var t=this,e=null;(e=t.getEnforceItemsOrder()>0?t.getNextUnansweredMarker():t.getClosestUnansweredMarker())?(t.mapData.closestUnansweredMarkerArrow?t.mapData.closestUnansweredMarkerArrow.setPath([t.mapData.playerMarker.getPosition(),e.getPosition()]):t.mapData.closestUnansweredMarkerArrow=new google.maps.Polyline({path:[t.mapData.playerMarker.getPosition(),e.getPosition()],strokeColor:"red",strokeWeight:2,strokeOpacity:.4,icons:[{icon:{path:google.maps.SymbolPath.FORWARD_CLOSED_ARROW,fillColor:"red",strokeColor:"red",fillOpacity:.8,strokeOpacity:.8,scale:4},offset:"50px"}],geodesic:!0,map:t.mapData.map,zIndex:2}),this.detectAndSetMarkerIcon(e)):t.mapData.closestUnansweredMarkerArrow&&t.mapData.closestUnansweredMarkerArrow.setMap(null)},initPlayerPositionLogging:function(){if(!this.game.complete){var t=this,e=setInterval((function(){t.logPlayerPosition(t.getPosition())}),6e4);t.$watch("game.complete",(function(t,i){!0===t&&clearInterval(e)}))}},setPosition:function(t){this.position=t},getPosition:function(){return this.position},logPlayerPosition:function(t){if(t){var e={game_id:this.game.id,position:{coords:{latitude:t.coords.latitude,longitude:t.coords.longitude,altitude:t.coords.altitude,accuracy:t.coords.accuracy,altitudeAccuracy:t.coords.altitudeAccuracy,heading:t.coords.heading,speed:t.coords.speed},timestamp:t.timestamp}};this.$http.post(this.baseUrl+"/api/games/position",e).then((function(t){}),(function(t){}))}},openImageDialog:function(t,e){var i,n=this,s=this.findQuestionById(t);(i=2===s.type||3===s.type||8===s.type?!0===e.correct?this.$refs.correctImageDialog:this.$refs.incorrectImageDialog:this.$refs.submittedImageDialog).open(),i.$once("hidden:image:dialog",(function(){n.markAnswered(t,e)}))}}};var c=i(3379),l=i.n(c),u=i(1613),d={insert:"head",singleton:!1};l()(u.Z,d);u.Z.locals;const h=(0,i(1900).Z)(o,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{staticStyle:{height:"100%",width:"100%"}},[i("game-image-dialog",{ref:"correctImageDialog",attrs:{"base-url":t.baseUrl,image:"answer_correct.png","in-animation-class":"bounceInUp","out-animation-class":"bounceOut"}}),t._v(" "),i("game-image-dialog",{ref:"incorrectImageDialog",attrs:{"base-url":t.baseUrl,image:"answer_incorrect.png","in-animation-class":"bounceInDown","out-animation-class":"bounceOutDown"}}),t._v(" "),i("game-image-dialog",{ref:"submittedImageDialog",attrs:{"base-url":t.baseUrl,image:"answer_submitted.png","in-animation-class":"bounceInRight","out-animation-class":"bounceOutLeft"}}),t._v(" "),t.question?i("game-question-modal",{ref:"questionModal",attrs:{question:t.question,answer:t.answer,"game-id":t.game.id,"base-url":t.baseUrl}}):t._e(),t._v(" "),t.question?i("game-answering-time-modal",{ref:"answeringTimeModal",attrs:{question:t.question,"game-id":t.game.id,"base-url":t.baseUrl}}):t._e(),t._v(" "),i("game-answering-time-is-up-modal",{ref:"answeringTimeIsUpModal",attrs:{question:t.question}}),t._v(" "),i("game-access-code-modal",{ref:"accessCodeModal",attrs:{question:t.question}}),t._v(" "),i("notification-modal",{ref:"notificationModal",attrs:{title:t.notificationTitle,message:t.notificationMessage}}),t._v(" "),i("game-messages-list-modal",{ref:"gameMessagesListModal",attrs:{game_id:t.game.id,type:"play"}}),t._v(" "),i("div",{attrs:{id:"map"}}),t._v(" "),i("div",{attrs:{id:"messages-container"}})],1)}),[],!1,null,null,null).exports},1270:(t,e,i)=>{"use strict";i.d(e,{Z:()=>c});const n={props:["game_id","type"],mixins:[],mounted:function(){var t=this;this.$nextTick((function(){t.getMessages()}))},data:function(){return{messages:[],newMessage:"",inAjaxCall:!1,event:null}},methods:{isManager:function(){return"monitoring"===this.type},deleteMessage:function(t,e){var i=this;this.$http.get(window.RADA.config.base_url+"/api/games/"+this.game_id+"/delete-message/"+e).then((function(t){i.getMessages()}))},addNewMessage:function(t){var e=this;this.newMessage.length>0&&this.$http.post(window.RADA.config.base_url+"/api/games/"+this.game_id+"/add-new-message",{message:this.newMessage}).then((function(t){e.newMessage="",e.getMessages()}))},getMessages:function(){var t=this;this.$http.get(window.RADA.config.base_url+"/api/games/"+this.game_id+"/get-all-messages").then((function(e){t.messages=e.body||[]}))},open:function(){var t=this;return this.$nextTick((function(){$(t.$refs.modal).modal("show"),t.getMessages()})),$(this.$refs.modal)},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide")}))}}};var s=i(3379),a=i.n(s),r=i(4002),o={insert:"head",singleton:!1};a()(r.Z,o);r.Z.locals;const c=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close",diabled:t.inAjaxCall},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v(t._s(t.$t("game-messages")))])]),t._v(" "),i("div",{staticClass:"modal-body"},[i("table",{staticClass:"messages-container table"},t._l(t.messages,(function(e){return i("tr",{class:{message:!0===t.isManager()}},[!1===t.isManager()?i("td",[i("div",{staticClass:"panel panel-default"},[i("div",{staticClass:"panel-body"},[i("p",{staticStyle:{"white-space":"pre-line"}},[t._v(t._s(e.message))]),t._v(" "),i("small",[t._v(t._s(e.created_at))])])])]):t._e(),t._v(" "),!0===t.isManager()?i("td",{staticStyle:{"white-space":"pre-line"}},[t._v(t._s(e.message))]):t._e(),t._v(" "),!0===t.isManager()?i("td",[t._v(t._s(e.created_at))]):t._e(),t._v(" "),!0===t.isManager()?i("td",[i("button",{staticClass:"pull-right btn btn-danger",on:{click:function(i){return t.deleteMessage(t.event,e.id)}}},[t._v("\n                                "+t._s(t.$t("delete-message"))+"\n                            ")])]):t._e()])})),0),t._v(" "),!0===t.isManager()?i("div",{staticClass:"add-message-container"},[i("textarea",{directives:[{name:"model",rawName:"v-model",value:t.newMessage,expression:"newMessage"}],ref:"newMessageInput",staticClass:"form-control",domProps:{value:t.newMessage},on:{input:function(e){e.target.composing||(t.newMessage=e.target.value)}}}),t._v(" "),i("button",{staticClass:"btn btn-success",attrs:{type:"button"},on:{click:t.addNewMessage}},[t._v("\n                        "+t._s(t.$t("add-new-message"))+"\n                    ")])]):t._e()])])])])}),[],!1,null,"3e7fa61d",null).exports},2125:(t,e,i)=>{"use strict";i.d(e,{Z:()=>h});var n=i(6786),s=i(5291),a=i.n(s);function r(t){return(r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}const o={props:["question","answer","gameId","baseUrl","isPreview"],mixins:[{methods:{isValidImageFormat:function(t){return"image/jpg"===t.type||"image/jpeg"===t.type||"image/png"==t.type}}},n.Z],mounted:function(){var t=this,e=this;this.$nextTick((function(){$(t.$refs.modal).on("hide.bs.modal",(function(t){e.inAjaxCall&&t.preventDefault()}))}))},data:function(){return{isOpen:!1,selectedOptions:[],textualAnswer:"",hasImageSelected:!1,imageSrc:null,chosenPair:{option:null,match:null},matchedPairs:[],shuffledPairs:[],matchableStyles:{"min-height":"100px"},inAjaxCall:!1,incorrectImageFormat:!1,answeringTime:null,missingWords:[],isMissingWordFilled:!1}},methods:{calculateRemainingAnsweringTime:function(){var t=this;if(this.answer&&null!==this.answer.answering_start_time&&!1===this.$parent.isAnswered(this.question.id)){var e=this.answer.answering_start_time,i=new Date(e),n=new Date,s=1e3*this.question.answering_time,a=n.getTime()-i.getTime(),r=s-1e3*Math.round(a/1e3);if(r<0)return this.$nextTick((function(){t.closeQuestion()})),!1;var o=new Date(r);this.answeringTime="",o.getUTCHours()>0&&(this.answeringTime+=("0"+o.getUTCHours()).slice(-2),this.answeringTime+=":"),o.getUTCMinutes()>0?(this.answeringTime+=("0"+o.getUTCMinutes()).slice(-2),this.answeringTime+=":"):this.answeringTime+="00:",this.answeringTime+=("0"+o.getUTCSeconds()).slice(-2),setTimeout((function(){t.calculateRemainingAnsweringTime()}),1e3)}else this.answeringTime=null},closeQuestion:function(t){var e=this,i={game_id:this.gameId,question_id:this.question.id};this.inAjaxCall=!0,this.$http.post(e.baseUrl+"/api/games/close-question",i).then((function(i){var n=e.isOpen;e.inAjaxCall=!1,e.$parent.markAnswered(e.question.id,i.body),e.close(),$(".modal-backdrop").remove(),e.$parent.answer=null,!0===n&&e.$nextTick((function(){e.$parent.openAnsweringTimeIsUpModal(t)}))}),(function(t){e.inAjaxCall=!1,setTimeout((function(){e.closeQuestion()}),2e3)}))},open:function(){var t=this,e=this.baseUrl+"/api/games/"+this.gameId+"/start-question/"+this.question.id;return this.$http.get(e).then((function(e){t.isOpen=!0,t.generateMissingWords(),t.calculateRemainingAnsweringTime(),t.isMatchPairs()?(t.pairs().length>0&&(t.isAnswered()||(t.question.pairs=_.shuffle(t.pairs())),$(t.$refs.modal).one("shown.bs.modal",(function(e){var i=t,n=_.map(t.$refs.matchable,(function(t){return $(t).outerHeight(!0)})),s=_.max(n);s&&(i.matchableStyles["min-height"]=s+"px")}))),t.isAnswered()?t.shuffledPairs=t.pairs():t.shuffledPairs=_.shuffle(t.pairs())):(t.isOneCorrectAnswer()||t.isMultipleCorrectAnswers())&&t.options().length>0&&(t.question.options=_.shuffle(t.options())),$(t.$refs.modal).modal("show")})),$(this.$refs.modal)},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide"),t.isOpen=!1,t.selectedOptions=[],t.textualAnswer="",t.hasImageSelected=!1,t.imageSrc=null,t.chosenPair.option=null,t.chosenPair.mathc=null,t.matchedPairs=[],t.shuffledPairs=[],t.matchableStyles["min-height"]="100px",t.inAjaxCall=!1,$(t.$refs.image).val(""),t.incorrectImageFormat=!1,t.answeringTime=null,t.missingWords=[],t.isMissingWordFilled=!1}))},submit:function(){if(!this.inAjaxCall){var t=this;this.inAjaxCall=!0;var e={game_id:this.gameId,question_id:this.question.id};if(this.isOneCorrectAnswer()||this.isMultipleCorrectAnswers()?e.options=this.selectedOptions:(this.isFreeformAnswer()||this.isEmbeddedContent())&&(e.text=this.textualAnswer),this.isPhoto()){var i=new FormData;_.each(e,(function(t,e){i.append(e,t)})),i.append("image",this.$refs.image.files[0]),e=i}this.isMissingWord()&&(e.text=this.missingWordsToString(this.missingWords)),this.$http.post(t.baseUrl+"/api/games/answer",e).then((function(e){t.inAjaxCall=!1,t.$parent.openImageDialog(t.question.id,e.body),t.close()}),(function(e){t.inAjaxCall=!1,console.error("Error",e)}))}},title:function(){return this.question?this.question.title:""},description:function(){return this.question?this.question.description:""},hasImage:function(){return this.question&&this.question.image_url},image:function(){return this.question?this.question.image_url:""},embeddedContent:function(){return this.question?this.question.embedded_content:""},hasReadMore:function(){return this.question&&this.question.read_more},readMore:function(){return this.question?this.question.read_more:""},options:function(){return this.question&&this.question.options?this.question.options:[]},pairs:function(t){return!0===t?this.shuffledPairs:this.question&&this.question.pairs?this.question.pairs:[]},isInformation:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.INFORMATION},isOneCorrectAnswer:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.ONE_CORRECT_ANSWER},isMultipleCorrectAnswers:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.MULTIPLE_CORRECT_ANSWERS},isFreeformAnswer:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.FREEFORM_ANSWER},isMatchPairs:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.MATCH_PAIRS},isEmbeddedContent:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.EMBEDDED_CONTENT},isPhoto:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.PHOTO},isMissingWord:function(){return!!this.question&&this.question.type==window.Laravel.questionTypeConstants.MISSING_WORD},onMissingWordChange:a()((function(t){var e=t.target,i=e.getAttribute("data-index");this.$set(this.missingWords[i],"answer",e.value),this.$set(this.missingWords[i],"isCorrect",e.value.trim().toLowerCase()===this.missingWords[i].text.trim().toLowerCase());var n=this.missingWords.filter((function(t){return"input"===t.type&&0===t.answer.trim().length}));this.isMissingWordFilled=0===n.length}),100),generateMissingWords:function(){if(!this.isMissingWord())return!1;var t=this.question.missing_word,e="",i=this.missingWordsToArray(t),n=[];if(this.isAnswered()){e=this.answer.answer.text,n=this.missingWordsToArray(e);var s=i.length;if(s===n.length)for(var a=0;a<s;a++)i[a].answer=n[a].text,i[a].isCorrect=i[a].text.trim().toLowerCase()===n[a].text.trim().toLowerCase()}this.missingWords=i},isSelectedOption:function(t){var e;return(e=this.isAnswered()?this.answer.answer.options:this.selectedOptions)&&"object"===r(e)?-1!==e.indexOf(t):e===t},triggerOptionClick:function(t){this.isAnswered()||$(this.$refs.option[t]).trigger("click")},triggerImageClick:function(){$(this.$refs.image).trigger("click")},imageSelected:function(t){if(t.target.files.length>0){var e=t.target.files[0];if(!this.isValidImageFormat(e))return $(t.target).val(""),this.hasImageSelected=!1,void(this.incorrectImageFormat=!0);if(window.FileReader){var i=new FileReader,n=this;i.onload=function(t){n.imageSrc=t.target.result},i.readAsDataURL(e)}this.hasImageSelected=!0,this.incorrectImageFormat=!1}},canSubmit:function(){return!!this.isInformation()||(this.isOneCorrectAnswer()||this.isMultipleCorrectAnswers()?"object"===r(this.selectedOptions)?this.selectedOptions.length>0:!!this.selectedOptions:this.isFreeformAnswer()||this.isEmbeddedContent()?!!this.textualAnswer.trim():this.isMatchPairs()?this.matchedPairs.length===this.pairs().length:this.isPhoto()?this.hasImageSelected:!!this.isMissingWord()&&this.isMissingWordFilled)},resetChosenPair:function(){var t=this;this.$nextTick((function(){var e=t;setTimeout((function(){e.chosenPair.option=null,e.chosenPair.match=null}),250)}))},choose:function(t,e){this.isMatchedPair(e)||(this.chosenPair[t]=e.id,this.chosenPair.option===this.chosenPair.match?(this.matchedPairs.push(e.id),this.resetChosenPair()):null!==this.chosenPair.option&&null!==this.chosenPair.match&&this.resetChosenPair())},choosePair:function(t){this.choose("option",t)},choosePairMatch:function(t){this.choose("match",t)},isOptionChosen:function(t){return this.chosenPair.option===t.id},isOptionMatchChosen:function(t){return this.chosenPair.match===t.id},isMatchedPair:function(t){return!!this.isAnswered()||-1!==this.matchedPairs.indexOf(t.id)},isAnswered:function(){return!!this.answer&&this.answer.is_answered},isCorrectOption:function(t){return!!t.correct},optionIconClass:function(t){var e=[],i=this.isCorrectOption(t);return this.isSelectedOption(t.id)&&(i?e.push("correct"):e.push("incorrect")),this.isOneCorrectAnswer()?i?e.push("mdi-checkbox-marked-circle-outline"):e.push("mdi-close-circle-outline"):this.isMultipleCorrectAnswers()&&(i?e.push("mdi-checkbox-marked-outline"):e.push("mdi-close-box-outline")),e}}};var c=i(3379),l=i.n(c),u=i(3607),d={insert:"head",singleton:!1};l()(u.Z,d);u.Z.locals;const h=(0,i(1900).Z)(o,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg sz-game-question",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close",diabled:t.inAjaxCall},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v("\n                    "+t._s(t.title())+"\n                    "),null!=t.answeringTime?i("span",{staticClass:"pull-right",staticStyle:{"padding-right":"15px"}},[t._v(t._s(t.$t("remaining_time"))+": "+t._s(t.answeringTime))]):t._e()])]),t._v(" "),i("div",{staticClass:"modal-body"},[t.hasImage()?i("div",[i("img",{staticClass:"img-responsive",attrs:{src:"",alt:"image",src:t.image()}})]):t._e(),t._v(" "),i("p",{staticClass:"sz-display-new-lines"},[t._v(t._s(t.description()))]),t._v(" "),t.isOneCorrectAnswer()?i("div",[i("ul",{staticClass:"media-list sz-one-correct-answer"},t._l(t.options(),(function(e,n){return i("li",{staticClass:"media",on:{click:function(e){return t.triggerOptionClick(n)}}},[e.image_url?i("div",{staticClass:"media-left"},[i("img",{staticClass:"media-object",attrs:{src:e.image_url,alt:"option-image"}})]):t._e(),t._v(" "),i("div",{staticClass:"media-body media-middle"},[i("h4",{staticClass:"media-heading",class:{selected:t.isAnswered()&&t.isSelectedOption(e.id)}},[t._v(t._s(e.option))])]),t._v(" "),i("div",{staticClass:"media-right media-middle"},[i("input",{directives:[{name:"model",rawName:"v-model",value:t.selectedOptions,expression:"selectedOptions"}],ref:"option",refInFor:!0,staticClass:"form-control",attrs:{type:"radio",name:"option"},domProps:{value:e.id,checked:t._q(t.selectedOptions,e.id)},on:{change:function(i){t.selectedOptions=e.id}}}),t._v(" "),t.isSelectedOption(e.id)||t.isAnswered()?t._e():i("i",{staticClass:"mdi mdi-radiobox-blank"}),t._v(" "),t.isSelectedOption(e.id)&&!t.isAnswered()?i("i",{staticClass:"mdi mdi-radiobox-marked"}):t._e(),t._v(" "),t.isAnswered()?i("i",{staticClass:"mdi",class:t.optionIconClass(e),attrs:{"aria-hidden":"true"}}):t._e()])])})),0)]):t._e(),t._v(" "),t.isMultipleCorrectAnswers()?i("div",[i("ul",{staticClass:"media-list sz-multiple-correct-answers"},t._l(t.options(),(function(e,n){return i("li",{staticClass:"media",on:{click:function(e){return t.triggerOptionClick(n)}}},[e.image_url?i("div",{staticClass:"media-left"},[i("img",{staticClass:"media-object",attrs:{src:e.image_url,alt:"option-image"}})]):t._e(),t._v(" "),i("div",{staticClass:"media-body media-middle"},[i("h4",{staticClass:"media-heading",class:{selected:t.isAnswered()&&t.isSelectedOption(e.id)}},[t._v(t._s(e.option))])]),t._v(" "),i("div",{staticClass:"media-right media-middle"},[i("input",{directives:[{name:"model",rawName:"v-model",value:t.selectedOptions,expression:"selectedOptions"}],ref:"option",refInFor:!0,staticClass:"form-control",attrs:{type:"checkbox",name:"options[]"},domProps:{value:e.id,checked:Array.isArray(t.selectedOptions)?t._i(t.selectedOptions,e.id)>-1:t.selectedOptions},on:{change:function(i){var n=t.selectedOptions,s=i.target,a=!!s.checked;if(Array.isArray(n)){var r=e.id,o=t._i(n,r);s.checked?o<0&&(t.selectedOptions=n.concat([r])):o>-1&&(t.selectedOptions=n.slice(0,o).concat(n.slice(o+1)))}else t.selectedOptions=a}}}),t._v(" "),t.isSelectedOption(e.id)||t.isAnswered()?t._e():i("i",{staticClass:"mdi mdi-checkbox-blank-outline"}),t._v(" "),t.isSelectedOption(e.id)&&!t.isAnswered()?i("i",{staticClass:"mdi mdi-checkbox-marked-outline"}):t._e(),t._v(" "),t.isAnswered()?i("i",{staticClass:"mdi",class:t.optionIconClass(e),attrs:{"aria-hidden":"true"}}):t._e()])])})),0)]):t._e(),t._v(" "),t.isFreeformAnswer()?i("div",[i("div",{staticClass:"form-group"},[t.isAnswered()?t._e():i("textarea",{directives:[{name:"model",rawName:"v-model",value:t.textualAnswer,expression:"textualAnswer"}],staticClass:"form-control",attrs:{placeholder:t.$t("textual-answer-placeholder")},domProps:{value:t.textualAnswer},on:{input:function(e){e.target.composing||(t.textualAnswer=e.target.value)}}}),t._v(" "),t.isAnswered()?i("textarea",{staticClass:"form-control",attrs:{placeholder:t.$t("textual-answer-placeholder"),readonly:"readonly"},domProps:{value:t.answer.answer.text}}):t._e()])]):t._e(),t._v(" "),t.isMatchPairs()?i("div",[i("div",{staticClass:"row sz-match-pairs"},[i("div",{staticClass:"col-xs-6"},t._l(t.pairs(),(function(e){return i("div",{staticClass:"row"},[i("div",{staticClass:"col-xs-12"},[i("div",{ref:"matchable",refInFor:!0,staticClass:"sz-matchable",class:{chosen:t.isOptionChosen(e),matched:t.isMatchedPair(e)},style:t.matchableStyles,on:{click:function(i){return t.choosePair(e)}}},[e.image_url?i("img",{staticClass:"media-object",attrs:{src:e.image_url,alt:"pair-image"}}):t._e(),t._v(" "),i("div",[t._v(t._s(e.option))])])])])})),0),t._v(" "),i("div",{staticClass:"col-xs-6"},t._l(t.pairs(!0),(function(e){return i("div",{staticClass:"row"},[i("div",{staticClass:"col-xs-12"},[i("div",{ref:"matchable",refInFor:!0,staticClass:"sz-matchable",class:{chosen:t.isOptionMatchChosen(e),matched:t.isMatchedPair(e)},style:t.matchableStyles,on:{click:function(i){return t.choosePairMatch(e)}}},[e.image_match_url?i("img",{staticClass:"media-object",attrs:{src:e.image_match_url,alt:"pair-image"}}):t._e(),t._v(" "),i("div",[t._v(t._s(e.option_match))])])])])})),0)])]):t._e(),t._v(" "),t.isEmbeddedContent()?i("div",[i("div",{staticClass:"embed-responsive embed-responsive-16by9",domProps:{innerHTML:t._s(t.embeddedContent())}}),t._v(" "),i("div",{staticClass:"form-group"},[t.isAnswered()?t._e():i("textarea",{directives:[{name:"model",rawName:"v-model",value:t.textualAnswer,expression:"textualAnswer"}],staticClass:"form-control",attrs:{placeholder:t.$t("textual-answer-placeholder")},domProps:{value:t.textualAnswer},on:{input:function(e){e.target.composing||(t.textualAnswer=e.target.value)}}}),t._v(" "),t.isAnswered()?i("textarea",{staticClass:"form-control",attrs:{placeholder:t.$t("textual-answer-placeholder"),readonly:"readonly"},domProps:{value:t.answer.answer.text}}):t._e()])]):t._e(),t._v(" "),t.isPhoto()&&!t.isAnswered()?i("div",{staticClass:"sz-photo"},[i("transition",{attrs:{name:"fade-in-down-out-up","enter-active-class":"animated fadeInDown","leave-active-class":"animated fadeOutUp"}},[i("div",{directives:[{name:"show",rawName:"v-show",value:t.incorrectImageFormat,expression:"incorrectImageFormat"}],staticClass:"alert alert-danger text-center",attrs:{role:"alert"}},[t._v("\n                            "+t._s(t.$t("image-format-hint"))+"\n                        ")])]),t._v(" "),i("div",{staticClass:"row text-center"},[i("a",{directives:[{name:"show",rawName:"v-show",value:!t.hasImageSelected,expression:"!hasImageSelected"}],staticClass:"btn sz-take-image",attrs:{href:"#",tabindex:"-1"},on:{click:function(e){return e.preventDefault(),t.triggerImageClick()}}},[i("i",{staticClass:"mdi mdi-camera",attrs:{"aria-hidden":"true"}})])]),t._v(" "),i("div",{directives:[{name:"show",rawName:"v-show",value:t.hasImageSelected,expression:"hasImageSelected"}],staticClass:"row"},[i("div",{staticClass:"col-xs-10 col-xs-offset-1"},[i("img",{staticClass:"img-responsive center-block sz-image-taken",attrs:{src:t.imageSrc,alt:"uploadable-image"},on:{click:function(e){return e.preventDefault(),t.triggerImageClick()}}})])]),t._v(" "),i("input",{ref:"image",attrs:{type:"file",accept:"image/jpeg, image/png",capture:"camera",name:"image"},on:{change:t.imageSelected}})],1):t._e(),t._v(" "),t.isPhoto()&&t.isAnswered()?i("div",{staticClass:"sz-photo"},[t.isAnswered()?i("img",{staticClass:"img-responsive center-block sz-image-taken",attrs:{src:t.answer.image,alt:"uploaded-image"}}):t._e()]):t._e(),t._v(" "),t.isMissingWord()?i("div",{staticClass:"missing-word-container"},[i("div",{staticClass:"form-group"},t._l(t.missingWords,(function(e,n){return i("span",["text"===e.type?i("span",[t._v(t._s(e.text))]):t._e(),t._v(" "),"input"!==e.type||t.isAnswered()?t._e():i("input",{attrs:{type:"text","data-index":n},on:{keyup:t.onMissingWordChange}}),t._v(" "),"input"===e.type&&t.isAnswered()?i("span",[!1===e.isCorrect?i("span",{staticClass:"incorrect"},[t._v(t._s(e.answer)+" "),i("span",{staticClass:"correct"},[t._v("("+t._s(e.text)+")")])]):t._e(),t._v(" "),!0===e.isCorrect?i("span",{staticClass:"correct"},[t._v(t._s(e.answer))]):t._e()]):t._e()])})),0)]):t._e()]),t._v(" "),i("div",{staticClass:"modal-footer"},[t.hasReadMore()?i("a",{staticClass:"btn btn-default",attrs:{href:"",href:t.readMore(),target:"_blank"}},[i("i",{staticClass:"mdi mdi-open-in-new",attrs:{"aria-hidden":"true"}}),t._v("\n                    "+t._s(t.$t("read-more-about"))+"\n                ")]):t._e(),t._v(" "),i("button",{staticClass:"btn btn-default",attrs:{type:"button",disabled:t.inAjaxCall,title:t.$t("close")},on:{click:function(e){return t.close()}}},[i("i",{staticClass:"mdi mdi-close"})]),t._v(" "),t.isPreview||t.isAnswered()?t._e():i("button",{staticClass:"btn btn-primary",attrs:{type:"button",disabled:!t.canSubmit()||t.inAjaxCall,title:t.$t("submit")},on:{click:function(e){return t.submit()}}},[i("i",{staticClass:"mdi mdi-send"})])])])])])}),[],!1,null,"404d2c31",null).exports},6126:(t,e,i)=>{"use strict";i.d(e,{Z:()=>c});const n={props:["game","baseUrl"],data:function(){return{stars:[1,2,3,4,5],callback:null,event:null}},methods:{addRating:function(t,e){var i=this;this.$http.get(this.baseUrl+"/api/games/"+this.game.id+"/add-rating/"+e).then((function(t){i.close()}))},mouseOverStar:function(t){for(var e=t.target.dataset.value,i=document.getElementsByClassName("star"),n=i.length,s=0;s<n;s++){var a=i[s];a.dataset.value<=e?(a.classList.remove("mdi-star-outline"),a.classList.add("mdi-star")):(a.classList.remove("mdi-star"),a.classList.add("mdi-star-outline"))}},open:function(t){var e=this;this.callback=t,this.$nextTick((function(){$(e.$refs.modal).modal("show")}))},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide"),t.callback()}))}}};var s=i(3379),a=i.n(s),r=i(9230),o={insert:"head",singleton:!1};a()(r.Z,o);r.Z.locals;const c=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog","data-backdrop":"static","data-keyboard":"false"}},[i("div",{staticClass:"modal-dialog modal-lg sz-game-results",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close"},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v(t._s(t.$t("rating-heading")))])]),t._v(" "),i("div",{staticClass:"modal-body text-center"},t._l(t.stars,(function(e){return i("a",{staticClass:"mdi mdi-star-outline star",attrs:{href:"#","data-value":e},on:{click:function(i){return t.addRating(t.event,e)},mouseover:t.mouseOverStar}})})),0),t._v(" "),i("div",{staticClass:"modal-footer text-center"},[i("button",{staticClass:"btn btn-primary",attrs:{type:"button"},on:{click:function(e){return t.close()}}},[t._v(t._s(t.$t("show-results")))])])])])])}),[],!1,null,null,null).exports},1164:(t,e,i)=>{"use strict";i.d(e,{Z:()=>c});const n={props:["game","baseUrl"],mixins:[i(6786).Z],computed:{totalQuestionsCount:function(){return this.game.activity.questions.length},correctQuestionsCount:function(){var t=this;return _.filter(this.game.activity.questions,(function(e){if(t.isCorrect(e))return e})).length},getResultQuestions:function(){if(!0===this.game.activity.complete)return this.game.activity.questions;var t=this.game.answers;return this.game.activity.questions.filter((function(e){return void 0!==t[e.id]}))}},methods:{open:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("show"),setTimeout((function(){!1===$(document).find("body").hasClass("modal-open")&&$(document).find("body").addClass("modal-open")}),500)}))},exit:function(){this.$parent.exit()},isInformation:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.INFORMATION},isOneCorrectAnswer:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.ONE_CORRECT_ANSWER},isMultipleCorrectAnswers:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.MULTIPLE_CORRECT_ANSWERS},isFreeformAnswer:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.FREEFORM_ANSWER},isMatchPairs:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.MATCH_PAIRS},isEmbeddedContent:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.EMBEDDED_CONTENT},isPhoto:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.PHOTO},isMissingWord:function(t){return!!t&&t.type==window.Laravel.questionTypeConstants.MISSING_WORD},hasAnswer:function(t){return!(!this.game.answers||!this.game.answers[t.id])},isCorrect:function(t){return!!this.hasAnswer(t)&&this.game.answers[t.id].correct},hasGrade:function(t){return!!this.hasAnswer(t)&&null!==this.game.answers[t.id].grade},hasOptions:function(t){return!!this.hasAnswer(t)&&!!this.game.answers[t.id].answer.options},choseOption:function(t,e){return!!this.hasOptions(t)&&-1!==this.game.answers[t.id].answer.options.indexOf(e.id)},isCorrectOption:function(t){return!!t.correct},hasText:function(t){return!!this.hasAnswer(t)&&!!this.game.answers[t.id].answer.text},getText:function(t){return this.game.answers[t.id].answer.text},getMissingWordText:function(t){for(var e=this.getText(t),i=t.missing_word,n=this.missingWordsToArray(e),s=this.missingWordsToArray(i),a=s.length,r="",o=0;o<a;o++){var c=s[o],l=n[o];"text"===c.type?r+=c.text:"input"===c.type&&(l.text===c.text?(r+='<span class="correct">',r+=l.text,r+="</span>"):(r+='<span class="incorrect">',r+=l.text,r+='<span class="correct">( ',r+=c.text,r+=" )</span>",r+="</span>"))}return r},hasImage:function(t){return!!this.hasAnswer(t)&&!!this.game.answers[t.id].image},getImage:function(t){return this.game.answers[t.id].image},optionIconClass:function(t,e){var i=[],n=this.isCorrectOption(e);return this.choseOption(t,e)&&(n?i.push("correct"):i.push("incorrect")),this.isOneCorrectAnswer(t)?n?i.push("mdi-checkbox-marked-circle-outline"):i.push("mdi-close-circle-outline"):this.isMultipleCorrectAnswers(t)&&(n?i.push("mdi-checkbox-marked-outline"):i.push("mdi-close-box-outline")),i},showResults:function(){this.resultsShown=!this.resultsShown}}};var s=i(3379),a=i.n(s),r=i(4195),o={insert:"head",singleton:!1};a()(r.Z,o);r.Z.locals;const c=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog","data-backdrop":"static","data-keyboard":"false"}},[i("div",{staticClass:"modal-dialog modal-lg sz-game-results",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("h4",{staticClass:"modal-title"},[t._v(t._s(t.game.activity.title))])]),t._v(" "),i("div",{staticClass:"modal-body"},[i("div",{staticClass:"text-center sz-quick-results"},[i("div",{staticClass:"sz-results-count"},[t._v("\n                        "+t._s(t.correctQuestionsCount)+"/"+t._s(t.totalQuestionsCount)+"\n                    ")]),t._v(" "),i("div",{staticClass:"sz-complete-text"},[t._v("\n                        "+t._s(t.$t("complete"))+"\n                    ")])]),t._v(" "),i("h2",{staticClass:"text-center"},[t._v(t._s(t.$t("results-heading")))]),t._v(" "),t._l(t.getResultQuestions,(function(e,n){return i("div",[i("h3",[t._v(t._s(n+1)+". "+t._s(e.title))]),t._v(" "),i("p",{staticClass:"sz-display-new-lines"},[t._v(t._s(e.description))]),t._v(" "),!1===t.hasGrade(e)?i("p",{staticClass:"alert alert-info"},[t._v(t._s(t.$t("task-is-pending-an-evaluation")))]):t._e(),t._v(" "),t.isOneCorrectAnswer(e)||t.isMultipleCorrectAnswers(e)?i("div",t._l(e.options,(function(n){return i("ul",{staticClass:"media-list sz-options-list"},[i("li",{staticClass:"media sz-option"},[n.image_url?i("div",{staticClass:"media-left"},[i("img",{staticClass:"media-object",attrs:{src:n.image_url,alt:"option-image"}})]):t._e(),t._v(" "),i("div",{staticClass:"media-body"},[i("h4",{staticClass:"media-heading",class:{selected:t.choseOption(e,n)}},[t._v(t._s(n.option))])]),t._v(" "),i("div",{staticClass:"media-right media-middle"},[i("i",{staticClass:"mdi",class:t.optionIconClass(e,n),attrs:{"aria-hidden":"true"}})])])])})),0):t._e(),t._v(" "),t.isEmbeddedContent(e)?i("div",[i("div",{staticClass:"embed-responsive embed-responsive-16by9",domProps:{innerHTML:t._s(e.embedded_content)}})]):t._e(),t._v(" "),t.isFreeformAnswer(e)||t.isEmbeddedContent(e)?i("div",[t.hasText(e)?i("div",{staticClass:"well well-sm sz-display-new-lines"},[t._v(t._s(t.getText(e)))]):t._e()]):t._e(),t._v(" "),t.isMissingWord(e)?i("div",[t.hasText(e)?i("div",{staticClass:"well well-sm sz-display-new-lines missing-word-container",domProps:{innerHTML:t._s(t.getMissingWordText(e))}}):t._e()]):t._e(),t._v(" "),t.isMatchPairs(e)?i("div",{staticClass:"sz-pairs-list"},t._l(e.pairs,(function(e){return i("div",{staticClass:"row"},[i("div",{staticClass:"col-xs-6"},[i("div",{staticClass:"media sz-pair"},[i("div",{staticClass:"media-left"},[e.image_url?i("img",{staticClass:"media-object",attrs:{src:e.image_url,alt:"pair-image"}}):t._e()]),t._v(" "),i("div",{staticClass:"media-body"},[i("h4",{staticClass:"media-heading"},[t._v(t._s(e.option))])])])]),t._v(" "),i("div",{staticClass:"col-xs-6"},[i("div",{staticClass:"media sz-pair"},[i("div",{staticClass:"media-left"},[e.image_match_url?i("img",{staticClass:"media-object",attrs:{src:e.image_match_url,alt:"pair-image"}}):t._e()]),t._v(" "),i("div",{staticClass:"media-body"},[i("h4",{staticClass:"media-heading"},[t._v(t._s(e.option_match))])])])])])})),0):t._e(),t._v(" "),t.isPhoto(e)?i("div",{staticClass:"sz-photo"},[t.hasImage(e)?i("div",{staticClass:"well well-sm"},[i("img",{staticClass:"img-responsive center-block",attrs:{alt:"uploaded-image",src:t.getImage(e)}})]):t._e()]):t._e(),t._v(" "),i("div",[e.read_more?i("a",{staticClass:"btn btn-default btn-sm",attrs:{href:"",href:e.read_more,target:"_blank"}},[i("i",{staticClass:"mdi mdi-open-in-new",attrs:{"aria-hidden":"true"}}),t._v("\n                            "+t._s(t.$t("read-more-about"))+"\n                        ")]):t._e()])])}))],2),t._v(" "),i("div",{staticClass:"modal-footer"},[i("button",{staticClass:"btn btn-default",attrs:{type:"button"},on:{click:function(e){return t.exit()}}},[i("i",{staticClass:"mdi mdi-exit-to-app",attrs:{"aria-hidden":"true"}})])])])])])}),[],!1,null,null,null).exports},5352:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["activity"],mounted:function(){this.baseUrl=window.RADA.config.base_url;var t=this;this.hammertime=new Hammer.Manager(this.$refs.tips,{recognizers:[[Hammer.Swipe,{direction:Hammer.DIRECTION_HORIZONTAL}]]}),this.hammertime.on("swipeleft",(function(){t.nextItem(),t.isLastItem()&&t.close()})),this.hammertime.on("swiperight",(function(){t.previousItem()}))},data:function(){return{baseUrl:"",currentItem:"gameplay_instructions",items:["gameplay_instructions","look_closely","look_out","do_not_disturb","help_others"],enterActiveClass:"animated slideInRight",leaveActiveClass:"animated slideOutLeft"}},methods:{open:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("show")}))},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide"),t.$root.$emit("dialog:tutorial:close")}))},getItemImageUrl:function(t,e){return e||(e="jpg"),this.baseUrl+"/img/guidelines/"+t+"."+e},isFirstItem:function(){return 0===this.items.indexOf(this.currentItem)},isLastItem:function(){return this.items.indexOf(this.currentItem)===this.items.length-1},nextItem:function(){var t=this;if(!this.isLastItem()&&this.currentItem){var e=this;this.enterActiveClass="animated slideInRight",this.leaveActiveClass="animated slideOutLeft",$(this.$refs.tips).css("min-height",$(this.$refs.tips).height()),this.$nextTick((function(){e.currentItem=e.items[e.items.indexOf(e.currentItem)+1],setTimeout((function(){$(t.$refs.tips).css("min-height","")}),2e3)}))}},previousItem:function(){var t=this;if(!this.isFirstItem()&&this.currentItem){var e=this;this.enterActiveClass="animated slideInLeft",this.leaveActiveClass="animated slideOutRight",$(this.$refs.tips).css("min-height",$(this.$refs.tips).height()),this.$nextTick((function(){e.currentItem=e.items[e.items.indexOf(e.currentItem)-1],setTimeout((function(){$(t.$refs.tips).css("min-height","")}),2e3)}))}}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-lg sz-game-tips-dialog",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close"},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title text-center"},[t._v(t._s(t.$t("tips-text")))])]),t._v(" "),i("div",{staticClass:"modal-body"},[i("div",{ref:"tips",staticClass:"tips"},[i("transition",{attrs:{name:"tip-side",mode:"out-in","enter-active-class":t.enterActiveClass,"leave-active-class":t.leaveActiveClass}},["gameplay_instructions"===t.currentItem?i("div",{key:"gameplay_instructions",staticClass:"tip"},[i("div",{staticClass:"tip-image"},[i("img",{staticClass:"img-responsive center-block",attrs:{alt:"image",src:t.getItemImageUrl("gameplay_instructions","png")}})]),t._v(" "),i("h4",{staticClass:"text-center"},[t._v(t._s(t.$t("items.gameplay_instructions.title")))]),t._v(" "),i("div",{staticClass:"text-center"},[t._v(t._s(t.$t("items.gameplay_instructions.description")))])]):t._e(),t._v(" "),"look_closely"===t.currentItem?i("div",{key:"look_closely",staticClass:"tip"},[i("div",{staticClass:"tip-image"},[i("img",{staticClass:"img-responsive center-block",attrs:{alt:"image",src:t.getItemImageUrl("look_closely")}})]),t._v(" "),i("h4",{staticClass:"text-center"},[t._v(t._s(t.$t("items.look_closely.title")))]),t._v(" "),i("div",{staticClass:"text-center"},[t._v(t._s(t.$t("items.look_closely.description")))])]):t._e(),t._v(" "),"look_out"===t.currentItem?i("div",{key:"look_out",staticClass:"tip"},[i("div",{staticClass:"tip-image"},[i("img",{staticClass:"img-responsive center-block",attrs:{alt:"image",src:t.getItemImageUrl("look_out")}})]),t._v(" "),i("h4",{staticClass:"text-center"},[t._v(t._s(t.$t("items.look_out.title")))]),t._v(" "),i("div",{staticClass:"text-center"},[t._v(t._s(t.$t("items.look_out.description")))])]):t._e(),t._v(" "),"do_not_disturb"===t.currentItem?i("div",{key:"do_not_disturb",staticClass:"tip"},[i("div",{staticClass:"tip-image"},[i("img",{staticClass:"img-responsive center-block",attrs:{alt:"image",src:t.getItemImageUrl("do_not_disturb")}})]),t._v(" "),i("h4",{staticClass:"text-center"},[t._v(t._s(t.$t("items.do_not_disturb.title")))]),t._v(" "),i("div",{staticClass:"text-center"},[t._v(t._s(t.$t("items.do_not_disturb.description")))])]):t._e(),t._v(" "),"help_others"===t.currentItem?i("div",{key:"help_others",staticClass:"tip"},[i("div",{staticClass:"tip-image"},[i("img",{staticClass:"img-responsive center-block",attrs:{alt:"image",src:t.getItemImageUrl("help_others")}})]),t._v(" "),i("h4",{staticClass:"text-center"},[t._v(t._s(t.$t("items.help_others.title")))]),t._v(" "),i("div",{staticClass:"text-center"},[t._v(t._s(t.$t("items.help_others.description")))])]):t._e()])],1),t._v(" "),i("ul",{staticClass:"text-center slides"},t._l(t.items,(function(e){return i("li",[i("span",{class:{badge:!0,current:e===t.currentItem}},[t._v(" ")])])})),0)]),t._v(" "),i("div",{staticClass:"modal-footer"},[t.isFirstItem()?t._e():i("button",{staticClass:"btn btn-default btn-lg pull-left",attrs:{type:"button",disabled:!t.currentItem},on:{click:function(e){return t.previousItem()}}},[t._v(t._s(t.$t("back")))]),t._v(" "),t.isLastItem()?t._e():i("button",{staticClass:"btn btn-success btn-lg pull-right",attrs:{type:"button",disabled:!t.currentItem},on:{click:function(e){return t.nextItem()}}},[t._v(t._s(t.$t("next")))]),t._v(" "),t.isLastItem()?i("button",{staticClass:"btn btn-success btn-lg pull-right",attrs:{type:"button",disabled:!t.currentItem},on:{click:function(e){return t.close()}}},[t._v(t._s(t.$t("got-it")))]):t._e()])])])])}),[],!1,null,null,null).exports},3702:(t,e,i)=>{"use strict";i.d(e,{Z:()=>s});const n={props:["title","message"],data:function(){return{inAjaxCall:!1}},methods:{open:function(){var t=this;return this.$nextTick((function(){$(t.$refs.modal).modal("show")})),$(this.$refs.modal)},close:function(){var t=this;this.$nextTick((function(){$(t.$refs.modal).modal("hide")}))}}};const s=(0,i(1900).Z)(n,(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("div",{ref:"modal",staticClass:"modal fade",attrs:{tabindex:"-1",role:"dialog"},on:{click:function(e){return e.target!==e.currentTarget?null:t.close()},keyup:function(e){return!e.type.indexOf("key")&&t._k(e.keyCode,"esc",27,e.key,["Esc","Escape"])?null:t.close()}}},[i("div",{staticClass:"modal-dialog modal-sm",attrs:{role:"document"}},[i("div",{staticClass:"modal-content"},[i("div",{staticClass:"modal-header"},[i("button",{staticClass:"close",attrs:{type:"button","aria-label":"Close",diabled:t.inAjaxCall},on:{click:function(e){return t.close()}}},[i("span",{attrs:{"aria-hidden":"true"}},[t._v("×")])]),t._v(" "),i("h4",{staticClass:"modal-title"},[t._v(t._s(t.title))])]),t._v(" "),i("div",{staticClass:"modal-body",domProps:{innerHTML:t._s(t.message)}}),t._v(" "),i("div",{staticClass:"modal-footer"},[i("button",{staticClass:"btn btn-sm btn-success center-block",attrs:{type:"button"},on:{click:function(e){return t.close()}}},[t._v("\n                    OK\n                ")])])])])])}),[],!1,null,"4c897ca7",null).exports},1900:(t,e,i)=>{"use strict";function n(t,e,i,n,s,a,r,o){var c,l="function"==typeof t?t.options:t;if(e&&(l.render=e,l.staticRenderFns=i,l._compiled=!0),n&&(l.functional=!0),a&&(l._scopeId="data-v-"+a),r?(c=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),s&&s.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(r)},l._ssrRegister=c):s&&(c=o?function(){s.call(this,(l.functional?this.parent:this).$root.$options.shadowRoot)}:s),c)if(l.functional){l._injectStyles=c;var u=l.render;l.render=function(t,e){return c.call(e),u(t,e)}}else{var d=l.beforeCreate;l.beforeCreate=d?[].concat(d,c):[c]}return{exports:t,options:l}}i.d(e,{Z:()=>n})}},e={};function i(n){if(e[n])return e[n].exports;var s=e[n]={id:n,exports:{}};return t[n](s,s.exports,i),s.exports}i.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return i.d(e,{a:e}),e},i.d=(t,e)=>{for(var n in e)i.o(e,n)&&!i.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},i.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),i.r=t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},(()=>{"use strict";i(840);var t=i(7152);Vue.use(t),Vue.config.lang=window.RADA.config.locale,Vue.locale(window.RADA.config.locale,_.cloneDeep(window.RADA.data.translations)),Vue.component("game-map",i(6277).Z),Vue.component("game-tutorial-modal",i(5352).Z),Vue.component("game-information-modal",i(5039).Z),Vue.component("game-results-modal",i(1164).Z),Vue.component("game-rating-modal",i(6126).Z),Vue.component("game-image-dialog",i(4644).Z);new Vue({el:"#sz-play-app",created:function(){var t=this;if(t.baseUrl=window.RADA.config.base_url,t.exitUrl=window.RADA.config.exit_url,t.isLoggedIn=window.Laravel.isLoggedIn,t.userName=window.Laravel.userName,t.game=window.RADA.data.game,window.addEventListener("beforeunload",t.leaving),t.$on("dialog:tutorial:close",(function(){t.setHasSeenTotorial()})),!t.isGameComplete()){window.initMap=function(){t.mapInitialised=!0},t.getGeoLocation((function(e){t.latitude=e.coords.latitude,t.longitude=e.coords.longitude}),!1,(function(e){t.geoLocationErrorMessage=e.message}));var e=document.createElement("script");e.type="text/javascript",e.src="//maps.googleapis.com/maps/api/js?key="+window.RADA.config.map.key+"&callback=initMap&libraries=geometry",document.body.appendChild(e)}},mounted:function(){var t=this;this.isGameComplete()?null===this.game.rating?this.$refs.ratingModal.open((function(){t.$refs.resultsModal.open()})):this.$refs.resultsModal.open():(this.hasSeenTutorial()?this.$refs.informationModal.open():this.$refs.tutorialModal.open(),this.$watch("game.complete",(function(){t.isGameComplete()&&(t.$refs.imageDialog.open(),t.$refs.imageDialog.$once("hidden:image:dialog",(function(){null===t.game.rating?t.$refs.ratingModal.open((function(){t.$refs.resultsModal.open()})):t.$refs.resultsModal.open()})))})))},data:function(){return{baseUrl:"",exitUrl:"",mapInitialised:!1,latitude:void 0,longitude:void 0,geoLocationErrorMessage:null,checkUnload:!0,game:null,isLoggedIn:!1,userName:""}},methods:{isLoading:function(){return!(this.mapInitialised&&this.latitude&&this.longitude)},isGameComplete:function(){return this.game&&this.game.complete},getGeoLocation:function(t,e,i){if("function"!=typeof i&&(i=function(t){window.console&&window.console.error&&"function"==typeof window.console.error&&window.console.error("Geolocation error",t)}),!window.navigator.geolocation)throw"Geolocation is unavailable!";var n={enableHighAccuracy:!0};!0===e?window.navigator.geolocation.watchPosition(t,i,n):window.navigator.geolocation.getCurrentPosition(t,i,n)},hasGeoLocationError:function(){return!!this.geoLocationErrorMessage},leaving:function(t){if(!this.checkUnload)return!1;var e=this.$t("exit-confirmation");return t.returnValue=e,e},exit:function(){confirm(this.$t("exit-confirmation"))&&(this.checkUnload=!1,window.location=this.exitUrl)},hasSeenTutorial:function(){return!!window.sessionStorage&&"true"===window.sessionStorage.getItem("seen:game:tutorial")},setHasSeenTotorial:function(){if(window.sessionStorage)try{window.sessionStorage.setItem("seen:game:tutorial","true")}catch(t){}}}})})()})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['question'],
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$nextTick(function () {
+      var vm = _this;
+      $(_this.$refs.modal).on('hidden.bs.modal', function (e) {
+        if (vm.correctCode === true) {
+          vm.$nextTick(function () {
+            vm.$parent.$refs.questionModal.open();
+          });
+        } else {
+          vm.$parent.question = null;
+        }
+
+        vm.accessCode = null;
+        vm.correctCode = false;
+        vm.animated = false;
+      });
+      $(_this.$refs.modal).on('shown.bs.modal', function (e) {
+        vm.$nextTick(function () {
+          $(_this.$refs.input).focus();
+        });
+      });
+    });
+  },
+  data: function data() {
+    return {
+      accessCode: null,
+      correctCode: false,
+      animated: false
+    };
+  },
+  methods: {
+    open: function open() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        $(_this2.$refs.modal).modal('show');
+      });
+    },
+    close: function close() {
+      var _this3 = this;
+
+      this.$nextTick(function () {
+        $(_this3.$refs.modal).modal('hide');
+      });
+    },
+    title: function title() {
+      return this.question && this.question.title ? this.question.title : '';
+    },
+    hasAccessCodeClues: function hasAccessCodeClues() {
+      var accessCodeClues = this.accessCodeClues();
+      return !!(accessCodeClues && accessCodeClues.trim());
+    },
+    accessCodeClues: function accessCodeClues() {
+      return this.question && this.question.access_code_clues ? this.question.access_code_clues : '';
+    },
+    canCheck: function canCheck() {
+      return !!this.accessCode;
+    },
+    check: function check() {
+      if (!this.canCheck()) return;
+      var vm = this;
+      vm.animated = false;
+      vm.$nextTick(function () {
+        if (vm.accessCode.toLowerCase().trim() === vm.question.access_code.toLowerCase().trim()) {
+          vm.correctCode = true;
+          vm.close();
+        } else {
+          vm.correctCode = false;
+        }
+
+        vm.animated = true;
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['question'],
+  mixins: [],
+  mounted: function mounted() {},
+  data: function data() {
+    return {
+      inAjaxCall: false,
+      message: this.$t('items.answering_time.time_is_up')
+    };
+  },
+  methods: {
+    title: function title() {
+      return this.question ? this.question.title : '';
+    },
+    open: function open(message) {
+      var _this = this;
+
+      this.$nextTick(function () {
+        $(_this.$refs.modal).modal('show');
+      });
+
+      if (typeof message !== 'undefined') {
+        this.message = message;
+      }
+
+      return $(this.$refs.modal);
+    },
+    close: function close() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        $(_this2.$refs.modal).modal('hide');
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['question', 'gameId', 'baseUrl'],
+  mixins: [],
+  mounted: function mounted() {},
+  data: function data() {
+    return {
+      inAjaxCall: false
+    };
+  },
+  methods: {
+    startTimer: function startTimer() {
+      var vm = this;
+      var data = {
+        game_id: this.gameId,
+        question_id: this.question.id
+      };
+      this.inAjaxCall = true;
+      this.$http.post(vm.baseUrl + '/api/games/start-answering-timer', data).then(function (response) {
+        vm.inAjaxCall = false;
+        vm.$parent.markAnswered(vm.question.id, response.body);
+        vm.$parent.openQuestionModal(vm.question, vm.$parent.getAnswer(vm.question.id));
+        vm.close();
+      }, function (response) {
+        vm.inAjaxCall = false;
+        setTimeout(function () {
+          vm.startTimer();
+        }, 200);
+      });
+    },
+    title: function title() {
+      return this.question ? this.question.title : '';
+    },
+    open: function open() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        $(_this.$refs.modal).modal('show');
+      });
+      return $(this.$refs.modal);
+    },
+    close: function close() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        $(_this2.$refs.modal).modal('hide');
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameImageDialog.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameImageDialog.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['baseUrl', 'image', 'inAnimationClass', 'outAnimationClass'],
+  methods: {
+    open: function open() {
+      var vm = this;
+      vm.$emit('show:image:dialog');
+      vm.$nextTick(function () {
+        $(vm.$refs.image).removeClass(vm.outAnimationClass).addClass(vm.inAnimationClass);
+        $(vm.$refs.dialog).show(0, function () {
+          vm.$emit('shown:image:dialog');
+          vm.timeoutId = setTimeout(function () {
+            vm.close();
+          }, 5000);
+        });
+      });
+    },
+    close: function close() {
+      var vm = this;
+
+      if (vm.timeoutId) {
+        clearTimeout(vm.timeoutId);
+        vm.timeoutId = null;
+      }
+
+      vm.$emit('hide:image:dialog');
+      vm.$nextTick(function () {
+        $(vm.$refs.image).removeClass(vm.inAnimationClass).addClass(vm.outAnimationClass);
+        setTimeout(function () {
+          $(vm.$refs.dialog).hide(0, function () {
+            vm.$emit('hidden:image:dialog');
+          });
+        }, 1000);
+      });
+    },
+    imageUrl: function imageUrl() {
+      return this.baseUrl + '/img/dialogs/' + this.image;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameInformationModal.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameInformationModal.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mixins_MarkerIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../mixins/MarkerIcon.js */ "./resources/assets/js/mixins/MarkerIcon.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['activity'],
+  mixins: [_mixins_MarkerIcon_js__WEBPACK_IMPORTED_MODULE_0__.default],
+  mounted: function mounted() {
+    this.baseUrl = window.RADA.config.base_url;
+  },
+  data: function data() {
+    return {
+      icons: ['active', 'inactive', 'correct', 'incorrect'],
+      baseUrl: ''
+    };
+  },
+  methods: {
+    open: function open() {
+      this.$nextTick(function () {
+        $(this.$refs.modal).modal('show');
+      });
+    },
+    close: function close() {
+      this.$nextTick(function () {
+        $(this.$refs.modal).modal('hide');
+      });
+    },
+    getIconText: function getIconText(type) {
+      return this.$t('icons.' + type);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mixins_MarkerIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../mixins/MarkerIcon.js */ "./resources/assets/js/mixins/MarkerIcon.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+function GameControls(controlDiv, map, playerMarker, vm) {
+  var mapTypeIds = _.values(google.maps.MapTypeId);
+
+  var controlUI = document.createElement('div');
+  controlUI.id = 'sz-map-controls';
+  controlUI.className = 'map-controls';
+  controlDiv.appendChild(controlUI);
+  var completionControlItem = document.createElement('i');
+  completionControlItem.className = 'label label-success';
+  completionControlItem.style.fontSize = '20px';
+  completionControlItem.style.position = 'relative';
+  completionControlItem.style.top = '-7px';
+  completionControlItem.style.marginLeft = '5px';
+  completionControlItem.style.marginRight = '5px';
+  completionControlItem.textContent = vm.getAnsweredQuestionsCount() + '/' + _.size(vm.game.activity.questions);
+  controlUI.appendChild(completionControlItem);
+  vm.$watch('game.answers', function () {
+    completionControlItem.textContent = vm.getAnsweredQuestionsCount() + '/' + _.size(vm.game.activity.questions);
+  }); // ------------- MESSAGING --------------------------
+
+  var messagingControlItem = document.createElement('i');
+  messagingControlItem.className = 'mdi mdi-email-outline';
+  controlUI.appendChild(messagingControlItem);
+  messagingControlItem.addEventListener('click', function () {
+    vm.$refs.gameMessagesListModal.open();
+  });
+  var flashExerciseControlItem = document.createElement('i');
+  flashExerciseControlItem.className = 'mdi mdi-flash';
+
+  if (vm.activeFlashExerciseId === null) {
+    flashExerciseControlItem.className += ' hidden';
+  }
+
+  flashExerciseControlItem.id = 'user-flash-exercise-control-item';
+  controlUI.appendChild(flashExerciseControlItem);
+
+  function toggleFlashColor() {
+    setTimeout(function () {
+      flashExerciseControlItem.style = 'color: #ff9800';
+      setTimeout(function () {
+        flashExerciseControlItem.style = 'color: #000000';
+        toggleFlashColor();
+      }, 2000);
+    }, 1000);
+  }
+
+  toggleFlashColor();
+  flashExerciseControlItem.addEventListener('click', function () {
+    var questions = vm.game.activity.questions.filter(function (question) {
+      return question.id === vm.activeFlashExerciseId;
+    });
+
+    if (questions.length > 0) {
+      var question = questions[0];
+      var answer = vm.getAnswer(question.id);
+      vm.openQuestionModal(question, answer);
+    }
+  });
+  var userControlItem = document.createElement('i');
+  userControlItem.className = 'mdi';
+
+  if (vm.$parent.isLoggedIn) {
+    userControlItem.className += ' mdi-account';
+  } else {
+    userControlItem.className += ' mdi-account-off';
+  }
+
+  userControlItem.title = vm.$parent.userName;
+  controlUI.appendChild(userControlItem);
+  var userControlTooltipVisible = false;
+  userControlItem.addEventListener('click', function () {
+    $(userControlItem).tooltip('toggle');
+    userControlTooltipVisible = userControlTooltipVisible ? false : true;
+  });
+  $(userControlItem).tooltip({
+    'container': 'body',
+    'placement': 'bottom',
+    'title': $(userControlItem).attr('title'),
+    'trigger': 'manual'
+  });
+  $(window).on('resize', function () {
+    if (userControlTooltipVisible) {
+      $(userControlItem).tooltip('show');
+    }
+  });
+  var informationControlItem = document.createElement('i');
+  informationControlItem.className = 'mdi mdi-information-outline';
+  informationControlItem.title = vm.$t('info');
+  controlUI.appendChild(informationControlItem);
+  informationControlItem.addEventListener('click', function () {
+    vm.$parent.$refs.informationModal.open();
+  });
+  var navigationControlItem = document.createElement('i');
+  navigationControlItem.className = 'mdi mdi-crosshairs';
+  navigationControlItem.title = vm.$t('position-tracking');
+  controlUI.appendChild(navigationControlItem);
+  navigationControlItem.addEventListener('click', function () {
+    if (map.szTrackingEnabled) {
+      map.szTrackingEnabled = false;
+      navigationControlItem.className = 'mdi mdi-crosshairs';
+    } else {
+      map.panTo(playerMarker.getPosition());
+      google.maps.event.trigger(playerMarker, 'click');
+      map.szTrackingEnabled = true;
+      navigationControlItem.className = 'mdi mdi-crosshairs-gps active';
+    }
+  });
+  var boundsControlItem = document.createElement('i');
+  boundsControlItem.className = 'mdi mdi-map-marker-multiple';
+  boundsControlItem.title = vm.$t('apply-item-bounds');
+  controlUI.appendChild(boundsControlItem);
+  boundsControlItem.addEventListener('click', function () {
+    var bounds = vm.getMarkerBounds();
+
+    if (!bounds.isEmpty()) {
+      map.fitBounds(bounds);
+    }
+  });
+  var exitControlIcon = document.createElement('i');
+  exitControlIcon.className = 'mdi mdi-exit-to-app';
+  exitControlIcon.title = vm.$t('exit');
+  controlUI.appendChild(exitControlIcon);
+  exitControlIcon.addEventListener('click', function () {
+    vm.$parent.exit();
+  });
+  var mapTypeControlItem = document.createElement('i');
+  mapTypeControlItem.className = 'mdi mdi-layers';
+  mapTypeControlItem.title = vm.$t('change-map-type');
+  controlUI.appendChild(mapTypeControlItem);
+  mapTypeControlItem.addEventListener('click', function () {
+    var nextIndex = _.indexOf(mapTypeIds, map.mapTypeId) + 1;
+
+    if (nextIndex === mapTypeIds.length) {
+      nextIndex = 0;
+    }
+
+    map.setMapTypeId(mapTypeIds[nextIndex]);
+  });
+}
+
+var connectMarkers = window.RADA.config.connect_markers || false;
+var enableStreetView = window.RADA.config.map.enableStreetView || false;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    'game-question-modal': __webpack_require__(/*! ./GameQuestionModal.vue */ "./resources/assets/js/components/GameQuestionModal.vue").default,
+    'game-answering-time-modal': __webpack_require__(/*! ./GameAnsweringTimeModal.vue */ "./resources/assets/js/components/GameAnsweringTimeModal.vue").default,
+    'game-answering-time-is-up-modal': __webpack_require__(/*! ./GameAnsweringTimeIsUpModal.vue */ "./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue").default,
+    'game-access-code-modal': __webpack_require__(/*! ./GameAccessCodeModal.vue */ "./resources/assets/js/components/GameAccessCodeModal.vue").default,
+    'game-image-dialog': __webpack_require__(/*! ./GameImageDialog.vue */ "./resources/assets/js/components/GameImageDialog.vue").default,
+    'game-messages-list-modal': __webpack_require__(/*! ./GameMessagesListModal.vue */ "./resources/assets/js/components/GameMessagesListModal.vue").default,
+    'notification-modal': __webpack_require__(/*! ./NotificationModal.vue */ "./resources/assets/js/components/NotificationModal.vue").default
+  },
+  props: ['latitude', 'longitude', 'game', 'baseUrl'],
+  mixins: [_mixins_MarkerIcon_js__WEBPACK_IMPORTED_MODULE_0__.default],
+  mounted: function mounted() {
+    var _this2 = this;
+
+    this.mapData = {};
+    this.mapData.markers = [];
+    this.mapData.mapOptions = {
+      center: {
+        lat: this.latitude,
+        lng: this.longitude
+      },
+      zoom: 18,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true,
+      zoomControl: true,
+      streetViewControl: enableStreetView,
+      styles: [{
+        featureType: 'poi',
+        stylers: [{
+          visibility: 'off'
+        }]
+      }, {
+        featureType: 'transit.station',
+        stylers: [{
+          visibility: 'off'
+        }]
+      }]
+    };
+    this.mapData.iconAnchor = new google.maps.Point(20, 20);
+    this.mapData.iconSize = new google.maps.Size(60, 60);
+    this.mapData.iconScaledSize = new google.maps.Size(40, 40);
+    this.$nextTick(function () {
+      _this2.initMap();
+
+      _this2.getGameData();
+    });
+  },
+  data: function data() {
+    return {
+      question: null,
+      answer: null,
+      gpsError: false,
+      position: null,
+      flashExercises: [],
+      activeFlashExerciseId: null,
+      notificationTitle: null,
+      notificationMessage: null,
+      gameIsStopped: false
+    };
+  },
+  watch: {
+    gpsError: function gpsError(value) {
+      var mapControlsElement = document.getElementById('sz-map-controls'); // Ignore any attempts to show GPS error until UI is ready
+
+      if (!mapControlsElement) return;
+      var elementId = 'sz-gps-error',
+          element = document.getElementById('sz-gps-error');
+
+      if (value === true) {
+        if (!element) {
+          this.initGpsErrorControl(elementId);
+        } else {
+          element.style.display = 'initial';
+        }
+      } else {
+        if (element) {
+          element.style.display = 'none';
+        }
+      }
+    }
+  },
+  methods: {
+    initMap: function initMap() {
+      var _this = this;
+
+      this.mapData.map = new google.maps.Map(document.getElementById('map'), this.mapData.mapOptions);
+      this.mapData.infoWindow = new google.maps.InfoWindow({
+        disableAutoPan: true
+      });
+      this.initGroundOverlays();
+      this.initPlayerMarker();
+      this.initGameControls();
+
+      if (_this.game.activity.questions) {
+        var map = _this.mapData.map,
+            markers = _this.mapData.markers,
+            infoWindow = _this.mapData.infoWindow,
+            playerMarker = _this.mapData.playerMarker;
+
+        _.each(_this.game.activity.questions, function (question) {
+          if (question.is_flash) {
+            _this.flashExercises.push(question);
+
+            setTimeout(function () {
+              $('#admin-flash-exercises-control-item').removeClass('hidden');
+            }, 2500);
+            return true;
+          }
+
+          var marker = new google.maps.Marker({
+            title: question.title,
+            position: {
+              lat: Number(question.latitude),
+              lng: Number(question.longitude)
+            },
+            map: map,
+            animation: google.maps.Animation.DROP,
+            questionId: question.id,
+            questionType: question.type,
+            hasAccessCode: _this.hasAccessCode(question),
+            optimized: false
+          });
+
+          _this.$nextTick(function () {
+            _this.detectAndSetMarkerIcon(marker);
+          });
+
+          markers.push(marker);
+          marker.addListener('click', function () {
+            var answer = _this.getAnswer(question.id);
+
+            if (_this.isAnswered(question.id)) {
+              _this.openQuestionModal(question, answer);
+
+              return;
+            }
+
+            if (_this.getEnforceItemsOrder() > 0) {
+              var nextMarkers = _this.getNextUnansweredMarkers();
+
+              if (nextMarkers.length > 0) {
+                var nextMarker = nextMarkers.find(function (thisMarker) {
+                  return marker.questionId === thisMarker.questionId;
+                });
+
+                if (typeof nextMarker === 'undefined') {
+                  return _this.openNewInfoWindow(infoWindow, marker, map);
+                }
+              } else {
+                return _this.openNewInfoWindow(infoWindow, marker, map);
+              }
+            }
+
+            if (_this.hasProximityCheck()) {
+              var distance = google.maps.geometry.spherical.computeDistanceBetween(playerMarker.getPosition(), marker.getPosition());
+
+              if (distance <= _this.getProximityRadius()) {
+                _this.openQuestionModal(question, answer);
+              } else if (_this.hasAccessCode(question)) {
+                _this.openAccessCodeModal(question);
+              } else {
+                _this.openNewInfoWindow(infoWindow, marker, map);
+              }
+            } else {
+              _this.openQuestionModal(question, answer);
+            }
+          });
+        });
+
+        if (connectMarkers) {
+          _this.connectMarkers();
+        }
+
+        _this.initUpdateClosestUnansweredMarkerArrow();
+      }
+
+      this.$parent.getGeoLocation(function (position) {
+        var map = _this.mapData.map,
+            playerMarker = _this.mapData.playerMarker;
+        _this.gpsError = false;
+        playerMarker.setPosition({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        });
+
+        if (map.szTrackingEnabled === true) {
+          map.panTo(playerMarker.getPosition());
+        }
+
+        _this.initUpdateClosestUnansweredMarkerArrow();
+
+        if (_this.hasProximityCheck()) {
+          // TODO Might make sense to cancel in case location
+          // does change rpidly
+          // Giving it half a second or so should be good enough
+          _.each(_this.mapData.markers, function (marker) {
+            if (!_this.isAnswered(marker.questionId)) {
+              _this.detectAndSetMarkerIcon(marker);
+            }
+          });
+        }
+
+        _this.setPosition(position);
+
+        _this.logPlayerPosition(_this.getPosition());
+
+        _this.initPlayerPositionLogging();
+      }, true, function (error) {
+        _this.gpsError = true;
+      });
+    },
+    initActiveFlashExercise: function initActiveFlashExercise() {
+      this.getActiveFlashExercise();
+    },
+    getActiveFlashExercise: function getActiveFlashExercise() {
+      var _this3 = this;
+
+      this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/get-active-flash-exercise').then(function (response) {
+        if (typeof response.body.id !== 'undefined') {
+          $('#user-flash-exercise-control-item').removeClass('hidden');
+
+          if (_this3.activeFlashExerciseId === null) {
+            _this3.activeFlashExerciseId = parseInt(response.body.id);
+
+            _this3.showNotification(_this3.$t('new-flash-exercise-title'), _this3.$t('new-flash-exercise-message'));
+          }
+        } else {
+          if (_this3.activeFlashExerciseId !== null) {
+            _this3.activeFlashExerciseId = null;
+            $('#user-flash-exercise-control-item').addClass('hidden');
+
+            _this3.$refs.questionModal.closeQuestion(_this3.$t('flash-exercise-has-been-deactivated'));
+          }
+        }
+
+        setTimeout(function () {
+          _this3.getActiveFlashExercise();
+        }, 5000);
+      }, function (error) {});
+    },
+    getGameData: function getGameData() {
+      var _this4 = this;
+
+      this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/get-game-data').then(function (response) {
+        if (typeof response.body !== 'undefined') {
+          var data = response.body;
+
+          _this4.showHideFlashExercises(data.flash_exercise);
+
+          _this4.showHideGameIsStopped(data.start_stop);
+
+          _this4.showNewMessages(data.messages);
+        }
+      });
+      setTimeout(function () {
+        _this4.getGameData();
+      }, 5000);
+    },
+    showNewMessages: function showNewMessages(messages) {
+      this.showNextMessage(messages, 0);
+    },
+    showNextMessage: function showNextMessage(messages, index) {
+      var _this5 = this;
+
+      var length = messages.length;
+
+      if (index < length) {
+        setTimeout(function () {
+          var message = messages[index];
+
+          _this5.openNewMessageModal(message);
+
+          if (index + 1 < length) {
+            setTimeout(function () {
+              _this5.showNextMessage(messages, index + 1);
+            }, 5000);
+          }
+        }, 5000);
+      }
+    },
+    openNewMessageModal: function openNewMessageModal(message) {
+      this.notificationTitle = this.$t('new-message');
+      this.notificationMessage = message.message;
+      this.$refs.notificationModal.open();
+    },
+    showHideFlashExercises: function showHideFlashExercises(data) {
+      if (typeof data.id !== 'undefined') {
+        $('#user-flash-exercise-control-item').removeClass('hidden');
+
+        if (this.activeFlashExerciseId === null) {
+          this.activeFlashExerciseId = parseInt(data.id);
+          this.showNotification(this.$t('new-flash-exercise-title'), this.$t('new-flash-exercise-message'));
+        }
+      } else {
+        if (this.activeFlashExerciseId !== null) {
+          this.activeFlashExerciseId = null;
+          this.$refs.notificationModal.close();
+          $('#user-flash-exercise-control-item').addClass('hidden');
+          this.$refs.questionModal.closeQuestion(this.$t('flash-exercise-has-been-deactivated'));
+        }
+      }
+    },
+    showHideGameIsStopped: function showHideGameIsStopped(data) {
+      if ((typeof data.started !== 'undefined' && data.started === 1) === false) {
+        this.$parent.checkUnload = false;
+        window.location.href = this.baseUrl + '/games/' + this.game.id + '/stopped';
+      }
+    },
+    showNotification: function showNotification(title, message) {
+      var _this6 = this;
+
+      this.$refs.notificationModal.close();
+      this.$nextTick(function () {
+        _this6.notificationTitle = title;
+        _this6.notificationMessage = message;
+
+        _this6.$refs.notificationModal.open();
+      });
+    },
+    initGroundOverlays: function initGroundOverlays() {
+      this.mapData.skansenGroundOverlay = new google.maps.GroundOverlay(this.baseUrl + '/img/map/overlays/skansen.png', {
+        north: 59.329167,
+        south: 59.324011,
+        east: 18.111242,
+        west: 18.099022
+      }, {
+        clickable: false,
+        map: this.mapData.map
+      });
+    },
+    initGameControls: function initGameControls() {
+      var map = this.mapData.map,
+          playerMarker = this.mapData.playerMarker,
+          gameControlsDiv = document.createElement('div'),
+          gameControls = new GameControls(gameControlsDiv, map, playerMarker, this); // XXX This is a strange code pience that sends index without a reason
+
+      gameControls.index = 1;
+      map.controls[google.maps.ControlPosition.TOP_RIGHT].push(gameControlsDiv);
+    },
+    initGpsErrorControl: function initGpsErrorControl(elementId) {
+      var element = document.createElement('div');
+      element.id = elementId;
+      element.innerHTML = '<span>' + this.$t('gps-error') + '</span>';
+      element.style['margin-top'] = document.getElementById('sz-map-controls').offsetHeight + 'px';
+      this.mapData.map.controls[google.maps.ControlPosition.TOP_LEFT].push(element);
+    },
+    closeInfoWindow: function closeInfoWindow() {
+      var infoWindow = this.mapData.infoWindow;
+
+      if (infoWindow && infoWindow.getMap()) {
+        infoWindow.close();
+      }
+    },
+    openNewInfoWindow: function openNewInfoWindow(infoWindow, marker, map) {
+      this.closeInfoWindow();
+      infoWindow.setContent(marker.title);
+      infoWindow.open(map, marker);
+      return true;
+    },
+    initPlayerMarker: function initPlayerMarker() {
+      var circle,
+          playerMarker,
+          activeDistanceCircle,
+          _this = this,
+          map = this.mapData.map,
+          infoWindow = this.mapData.infoWindow;
+
+      circle = {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'red',
+        fillOpacity: 1.0,
+        scale: 4.5,
+        strokeColor: 'white',
+        strokeWeight: 1
+      };
+      var playerMarker = new google.maps.Marker({
+        title: this.$t('its-you'),
+        position: {
+          lat: this.latitude,
+          lng: this.longitude
+        },
+        map: map,
+        icon: circle
+      });
+      playerMarker.addListener('click', function () {
+        _this.closeInfoWindow();
+
+        infoWindow.setContent(this.title);
+        infoWindow.open(map, this);
+      });
+
+      if (this.hasProximityCheck()) {
+        var activeDistanceCircle = new google.maps.Circle({
+          map: map,
+          radius: this.getProximityRadius(),
+          fillColor: 'blue',
+          fillOpacity: 0.25,
+          strokeColor: 'blue',
+          strokeWeight: 1,
+          strokeOpacity: 0.5
+        });
+        activeDistanceCircle.bindTo('center', playerMarker, 'position');
+      }
+
+      google.maps.event.trigger(playerMarker, 'click');
+      this.mapData.playerMarker = playerMarker;
+    },
+    findQuestionById: function findQuestionById(id) {
+      return _.find(this.game.activity.questions, ['id', id]);
+    },
+    isAnswered: function isAnswered(questionId) {
+      var answer = this.getAnswer(questionId);
+
+      if (answer === null) {
+        return false;
+      }
+
+      return answer.is_answered > 0;
+    },
+    isCorrect: function isCorrect(questionId) {
+      var answer = this.getAnswer(questionId);
+      return answer && answer.correct === true;
+    },
+    hasAccessCode: function hasAccessCode(question) {
+      return !!(question && question.access_code);
+    },
+    markAnswered: function markAnswered(id, answer) {
+      this.$set(this.game.answers, id, answer); // TODO Might make sense to raise an error if marker can not be found
+
+      var marker = _.find(this.mapData.markers, function (marker) {
+        return marker.questionId === id;
+      });
+
+      if (marker) {
+        this.detectAndSetMarkerIcon(marker);
+      }
+
+      var answerIds = _.keys(this.game.answers).map(function (id) {
+        return _.toNumber(id);
+      });
+
+      var questionIds = _.map(this.game.activity.questions, function (question) {
+        return question.id;
+      });
+
+      this.initUpdateClosestUnansweredMarkerArrow();
+
+      if (_.intersection(questionIds, answerIds).length === questionIds.length && answer.is_answered) {
+        this.game.complete = true;
+      }
+    },
+    connectMarkers: function connectMarkers() {
+      var map = this.mapData.map,
+          markers = this.mapData.markers;
+
+      if (markers.length > 1) {
+        _.each(markers, function (marker, index) {
+          if (index === 0) {
+            return;
+          }
+
+          var line = new google.maps.Polyline({
+            path: [markers[index - 1].getPosition(), markers[index].getPosition()],
+            strokeWeight: 2,
+            strokeOpacity: 0.5,
+            icons: [{
+              icon: {
+                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+              },
+              offset: '100%'
+            }],
+            geodesic: true,
+            map: map
+          });
+        });
+      }
+    },
+    hasProximityCheck: function hasProximityCheck() {
+      return this.game.activity.proximity_check;
+    },
+    getProximityRadius: function getProximityRadius() {
+      return this.game.activity.proximity_radius || 25;
+    },
+    getEnforceItemsOrder: function getEnforceItemsOrder() {
+      return parseInt(this.game.activity.enforce_items_order) || 0;
+    },
+    openAnsweringTimeModal: function openAnsweringTimeModal(question) {
+      var _this7 = this;
+
+      this.question = question;
+      this.$nextTick(function () {
+        _this7.$refs.answeringTimeModal.open();
+      });
+    },
+    getAnswer: function getAnswer(questionId, defaultValue) {
+      if (typeof defaultValue === 'undefined') {
+        defaultValue = null;
+      }
+
+      return _.get(this.game.answers, questionId, defaultValue);
+    },
+    isAnswering: function isAnswering(questionId) {
+      var answer = this.getAnswer(questionId);
+
+      if (answer === null || answer.is_answered > 0) {
+        return false;
+      } else if (answer.answering_start_time != null) {
+        return true;
+      }
+
+      return false;
+    },
+    openAnsweringTimeIsUpModal: function openAnsweringTimeIsUpModal(message) {
+      var _this8 = this;
+
+      this.$nextTick(function () {
+        _this8.$refs.answeringTimeIsUpModal.open(message);
+      });
+    },
+    openQuestionModal: function openQuestionModal(question, answer) {
+      var _this9 = this;
+
+      if (!!question.answering_time_check && this.isAnswering(question.id) === false && this.isAnswered(question.id) === false) {
+        this.openAnsweringTimeModal(question);
+      } else {
+        this.question = question;
+        this.answer = answer ? answer : null;
+        this.$nextTick(function () {
+          _this9.$refs.questionModal.open();
+        });
+      }
+    },
+    openAccessCodeModal: function openAccessCodeModal(question) {
+      var _this10 = this;
+
+      this.question = question;
+      this.answer = null;
+      this.$nextTick(function () {
+        _this10.$refs.accessCodeModal.open();
+      });
+    },
+    detectMarkerIconState: function detectMarkerIconState(marker) {
+      // TODO Check if we should fail in case question could not be found
+      var question = this.findQuestionById(marker.questionId);
+      var distance = google.maps.geometry.spherical.computeDistanceBetween(this.mapData.playerMarker.getPosition(), marker.getPosition());
+
+      if (question && this.isAnswered(question.id)) {
+        return this.isCorrect(question.id) ? 'correct' : 'incorrect';
+      } else if (this.getEnforceItemsOrder() > 0) {
+        var nextMarkers = this.getNextUnansweredMarkers();
+
+        if (nextMarkers.length > 0) {
+          for (var nextMarkerIndex in nextMarkers) {
+            var nextMarker = nextMarkers[nextMarkerIndex];
+
+            if (marker.questionId === nextMarker.questionId) {
+              return 'active';
+            }
+          }
+
+          return 'inactive';
+        } else {
+          return 'inactive';
+        }
+      } else if (this.hasProximityCheck() && distance > this.getProximityRadius()) {
+        return 'inactive';
+      }
+
+      return 'active';
+    },
+    detectAndSetMarkerIcon: function detectAndSetMarkerIcon(marker) {
+      if (typeof marker.isUser !== 'undefined') {
+        return false;
+      }
+
+      var state = this.detectMarkerIconState(marker);
+      var hasAccessCode = marker.hasAccessCode;
+
+      if (this.getEnforceItemsOrder() > 0) {
+        hasAccessCode = false;
+      }
+
+      marker.setIcon({
+        anchor: this.mapData.iconAnchor,
+        size: this.mapData.iconSize,
+        scaledSize: this.mapData.iconScaledSize,
+        url: this.getIconUrl(state, marker.questionType, hasAccessCode)
+      });
+    },
+    getMarkerBounds: function getMarkerBounds() {
+      if (this.mapData.markerBounds) return this.mapData.markerBounds;
+      this.mapData.markerBounds = new google.maps.LatLngBounds();
+
+      if (this.mapData.markers.length > 0) {
+        var vm = this;
+
+        _.each(this.mapData.markers, function (marker) {
+          vm.mapData.markerBounds.extend(marker.getPosition());
+        });
+      }
+
+      return this.mapData.markerBounds;
+    },
+    getAnsweredQuestionsCount: function getAnsweredQuestionsCount() {
+      if (_.size(this.game.activity.questions) === 0 || _.size(this.game.answers) === 0) return 0;
+
+      var questionIds = _.map(this.game.activity.questions, function (question) {
+        return question.id;
+      });
+
+      var answered = _.filter(this.game.answers, function (answer) {
+        return questionIds.indexOf(answer.question) !== -1;
+      });
+
+      return _.size(answered);
+    },
+    getUnansweredMarkers: function getUnansweredMarkers() {
+      var vm = this;
+      return _.filter(this.mapData.markers, function (marker) {
+        return typeof marker.isUser === 'undefined' && !vm.isAnswered(marker.questionId);
+      });
+    },
+    getClosestUnansweredMarker: function getClosestUnansweredMarker() {
+      var vm = this,
+          unansweredMarkers = vm.getUnansweredMarkers(),
+          playerMarker = this.mapData.playerMarker;
+
+      if (unansweredMarkers.length > 0) {
+        return _.minBy(unansweredMarkers, function (marker) {
+          return google.maps.geometry.spherical.computeDistanceBetween(playerMarker.getPosition(), marker.getPosition());
+        });
+      }
+
+      return null;
+    },
+    getNextUnansweredMarker: function getNextUnansweredMarker() {
+      var vm = this,
+          unansweredMarkers = vm.getUnansweredMarkers(),
+          playerMarker = this.mapData.playerMarker;
+
+      if (unansweredMarkers.length > 0) {
+        return _.minBy(unansweredMarkers, function (marker) {
+          var question = vm.findQuestionById(marker.questionId);
+
+          if (question) {
+            var position = parseInt(question.position);
+            var distance = google.maps.geometry.spherical.computeDistanceBetween(playerMarker.getPosition(), marker.getPosition());
+            return parseFloat(position + '.' + distance);
+          }
+
+          return 10000;
+        });
+      }
+
+      return null;
+    },
+    getNextUnansweredMarkers: function getNextUnansweredMarkers() {
+      var vm = this,
+          unansweredMarkers = vm.getUnansweredMarkers(),
+          markers = [];
+
+      if (unansweredMarkers.length > 0) {
+        var nextMarker = this.getNextUnansweredMarker();
+
+        if (nextMarker && nextMarker.questionId) {
+          var nextQuestionId = nextMarker.questionId;
+          var nextQuestion = this.findQuestionById(nextQuestionId);
+
+          if (typeof nextQuestion !== 'undefined') {
+            var nextPosition = nextQuestion.position;
+
+            _.each(unansweredMarkers, function (marker) {
+              var question = vm.findQuestionById(marker.questionId);
+
+              if (question && question.position === nextPosition) {
+                markers.push(marker);
+              }
+            });
+          }
+        }
+      }
+
+      return markers;
+    },
+    initUpdateClosestUnansweredMarkerArrow: function initUpdateClosestUnansweredMarkerArrow() {
+      var vm = this;
+      var marker = null;
+
+      if (vm.getEnforceItemsOrder() > 0) {
+        marker = vm.getNextUnansweredMarker();
+      } else {
+        marker = vm.getClosestUnansweredMarker();
+      }
+
+      if (!marker) {
+        if (vm.mapData.closestUnansweredMarkerArrow) {
+          vm.mapData.closestUnansweredMarkerArrow.setMap(null);
+        }
+
+        return;
+      }
+
+      if (!vm.mapData.closestUnansweredMarkerArrow) {
+        vm.mapData.closestUnansweredMarkerArrow = new google.maps.Polyline({
+          path: [vm.mapData.playerMarker.getPosition(), marker.getPosition()],
+          strokeColor: 'red',
+          strokeWeight: 2,
+          strokeOpacity: 0.4,
+          icons: [{
+            icon: {
+              path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+              fillColor: 'red',
+              strokeColor: 'red',
+              fillOpacity: 0.8,
+              strokeOpacity: 0.8,
+              scale: 4
+            },
+            offset: '50px'
+          }],
+          geodesic: true,
+          map: vm.mapData.map,
+          zIndex: 2
+        });
+      } else {
+        vm.mapData.closestUnansweredMarkerArrow.setPath([vm.mapData.playerMarker.getPosition(), marker.getPosition()]);
+      }
+
+      this.detectAndSetMarkerIcon(marker);
+    },
+    initPlayerPositionLogging: function initPlayerPositionLogging() {
+      if (this.game.complete) return;
+      var vm = this;
+      var playerPositionIntervalId = setInterval(function () {
+        vm.logPlayerPosition(vm.getPosition());
+      }, 60000);
+      vm.$watch('game.complete', function (newVal, oldVal) {
+        if (newVal === true) {
+          clearInterval(playerPositionIntervalId);
+        }
+      });
+    },
+    setPosition: function setPosition(position) {
+      this.position = position;
+    },
+    getPosition: function getPosition() {
+      return this.position;
+    },
+    logPlayerPosition: function logPlayerPosition(position) {
+      if (!position) return;
+      var data = {
+        game_id: this.game.id,
+        position: {
+          coords: {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            altitude: position.coords.altitude,
+            accuracy: position.coords.accuracy,
+            altitudeAccuracy: position.coords.altitudeAccuracy,
+            heading: position.coords.heading,
+            speed: position.coords.speed
+          },
+          timestamp: position.timestamp
+        }
+      };
+      this.$http.post(this.baseUrl + '/api/games/position', data).then(function (response) {// Succeed silently
+      }, function (response) {// Fail silently
+      });
+    },
+    openImageDialog: function openImageDialog(id, answer) {
+      var _this11 = this;
+
+      var question = this.findQuestionById(id);
+      var dialog; // TODO Consider creating a mixin that would have methods to
+      // determine question types
+
+      if (question.type === 2 || question.type === 3 || question.type === 8) {
+        if (answer.correct === true) {
+          dialog = this.$refs.correctImageDialog;
+        } else {
+          dialog = this.$refs.incorrectImageDialog;
+        }
+      } else {
+        dialog = this.$refs.submittedImageDialog;
+      }
+
+      dialog.open();
+      dialog.$once('hidden:image:dialog', function () {
+        _this11.markAnswered(id, answer);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['game_id', 'type'],
+  mixins: [],
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$nextTick(function () {
+      _this.getMessages();
+    });
+  },
+  data: function data() {
+    return {
+      messages: [],
+      newMessage: '',
+      inAjaxCall: false,
+      event: null
+    };
+  },
+  methods: {
+    isManager: function isManager() {
+      return this.type === 'monitoring';
+    },
+    deleteMessage: function deleteMessage(e, id) {
+      var _this2 = this;
+
+      this.$http.get(window.RADA.config.base_url + '/api/games/' + this.game_id + '/delete-message/' + id).then(function (response) {
+        _this2.getMessages();
+      });
+    },
+    addNewMessage: function addNewMessage(e) {
+      var _this3 = this;
+
+      if (this.newMessage.length > 0) {
+        this.$http.post(window.RADA.config.base_url + '/api/games/' + this.game_id + '/add-new-message', {
+          message: this.newMessage
+        }).then(function (response) {
+          _this3.newMessage = '';
+
+          _this3.getMessages();
+        });
+      }
+    },
+    getMessages: function getMessages() {
+      var _this4 = this;
+
+      this.$http.get(window.RADA.config.base_url + '/api/games/' + this.game_id + '/get-all-messages').then(function (response) {
+        _this4.messages = response.body || [];
+      });
+    },
+    open: function open() {
+      var _this5 = this;
+
+      this.$nextTick(function () {
+        $(_this5.$refs.modal).modal('show');
+
+        _this5.getMessages();
+      });
+      return $(this.$refs.modal);
+    },
+    close: function close() {
+      var _this6 = this;
+
+      this.$nextTick(function () {
+        $(_this6.$refs.modal).modal('hide');
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mixins_Image_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../mixins/Image.js */ "./resources/assets/js/mixins/Image.js");
+/* harmony import */ var _mixins_MissingWord_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../mixins/MissingWord.js */ "./resources/assets/js/mixins/MissingWord.js");
+/* harmony import */ var _debounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../debounce */ "./resources/assets/js/debounce.js");
+/* harmony import */ var _debounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_debounce__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['question', 'answer', 'gameId', 'baseUrl', 'isPreview'],
+  mixins: [_mixins_Image_js__WEBPACK_IMPORTED_MODULE_0__.default, _mixins_MissingWord_js__WEBPACK_IMPORTED_MODULE_1__.default],
+  mounted: function mounted() {
+    var _this = this;
+
+    var vm = this;
+    this.$nextTick(function () {
+      $(_this.$refs.modal).on('hide.bs.modal', function (e) {
+        if (vm.inAjaxCall) {
+          e.preventDefault();
+        }
+      });
+    });
+  },
+  data: function data() {
+    return {
+      isOpen: false,
+      selectedOptions: [],
+      textualAnswer: '',
+      hasImageSelected: false,
+      imageSrc: null,
+      chosenPair: {
+        option: null,
+        match: null
+      },
+      matchedPairs: [],
+      shuffledPairs: [],
+      matchableStyles: {
+        'min-height': '100px'
+      },
+      inAjaxCall: false,
+      incorrectImageFormat: false,
+      answeringTime: null,
+      missingWords: [],
+      isMissingWordFilled: false
+    };
+  },
+  methods: {
+    calculateRemainingAnsweringTime: function calculateRemainingAnsweringTime() {
+      var _this2 = this;
+
+      if (this.answer && this.answer.answering_start_time !== null && this.$parent.isAnswered(this.question.id) === false) {
+        var startTimeString = this.answer.answering_start_time;
+        var startTimeDate = new Date(startTimeString);
+        var nowDate = new Date();
+        var totalTimeInMilliseconds = 1000 * this.question.answering_time;
+        var usedTime = nowDate.getTime() - startTimeDate.getTime();
+        var usedTimeInMilliseconds = 1000 * Math.round(usedTime / 1000);
+        var remainingTimeInMilliseconds = totalTimeInMilliseconds - usedTimeInMilliseconds;
+
+        if (remainingTimeInMilliseconds < 0) {
+          this.$nextTick(function () {
+            _this2.closeQuestion();
+          });
+          return false;
+        }
+
+        var remainingTimeDate = new Date(remainingTimeInMilliseconds);
+        this.answeringTime = '';
+
+        if (remainingTimeDate.getUTCHours() > 0) {
+          this.answeringTime += ('0' + remainingTimeDate.getUTCHours()).slice(-2);
+          this.answeringTime += ':';
+        }
+
+        if (remainingTimeDate.getUTCMinutes() > 0) {
+          this.answeringTime += ('0' + remainingTimeDate.getUTCMinutes()).slice(-2);
+          this.answeringTime += ':';
+        } else {
+          this.answeringTime += '00:';
+        }
+
+        this.answeringTime += ('0' + remainingTimeDate.getUTCSeconds()).slice(-2);
+        setTimeout(function () {
+          _this2.calculateRemainingAnsweringTime();
+        }, 1000);
+      } else {
+        this.answeringTime = null;
+      }
+    },
+    closeQuestion: function closeQuestion(closeMessage) {
+      var vm = this;
+      var data = {
+        game_id: this.gameId,
+        question_id: this.question.id
+      };
+      this.inAjaxCall = true;
+      this.$http.post(vm.baseUrl + '/api/games/close-question', data).then(function (response) {
+        var isOpen = vm.isOpen;
+        vm.inAjaxCall = false;
+        vm.$parent.markAnswered(vm.question.id, response.body);
+        vm.close();
+        $('.modal-backdrop').remove();
+        vm.$parent.answer = null;
+
+        if (isOpen === true) {
+          vm.$nextTick(function () {
+            vm.$parent.openAnsweringTimeIsUpModal(closeMessage);
+          });
+        }
+      }, function (response) {
+        vm.inAjaxCall = false;
+        setTimeout(function () {
+          vm.closeQuestion();
+        }, 2000);
+      });
+    },
+    open: function open() {
+      var _this3 = this;
+
+      var url = this.baseUrl + '/api/games/' + this.gameId + '/start-question/' + this.question.id;
+      this.$http.get(url).then(function (response) {
+        _this3.isOpen = true;
+
+        _this3.generateMissingWords();
+
+        _this3.calculateRemainingAnsweringTime();
+
+        if (_this3.isMatchPairs()) {
+          if (_this3.pairs().length > 0) {
+            if (!_this3.isAnswered()) {
+              _this3.question.pairs = _.shuffle(_this3.pairs());
+            } // TODO This produces a small visible size change,
+            // might make sense to display things as invisible (not hidden)
+            // do the resize and only then show
+
+
+            $(_this3.$refs.modal).one('shown.bs.modal', function (e) {
+              var vm = _this3;
+
+              var heights = _.map(_this3.$refs.matchable, function (matchable) {
+                return $(matchable).outerHeight(true);
+              });
+
+              var highest = _.max(heights);
+
+              if (highest) {
+                vm.matchableStyles['min-height'] = highest + 'px';
+              }
+            });
+          }
+
+          if (!_this3.isAnswered()) {
+            _this3.shuffledPairs = _.shuffle(_this3.pairs());
+          } else {
+            _this3.shuffledPairs = _this3.pairs();
+          }
+        } else if (_this3.isOneCorrectAnswer() || _this3.isMultipleCorrectAnswers()) {
+          if (_this3.options().length > 0) {
+            _this3.question.options = _.shuffle(_this3.options());
+          }
+        }
+
+        $(_this3.$refs.modal).modal('show');
+      });
+      return $(this.$refs.modal);
+    },
+    close: function close() {
+      var _this4 = this;
+
+      this.$nextTick(function () {
+        $(_this4.$refs.modal).modal('hide');
+        _this4.isOpen = false;
+        _this4.selectedOptions = [];
+        _this4.textualAnswer = '';
+        _this4.hasImageSelected = false;
+        _this4.imageSrc = null;
+        _this4.chosenPair.option = null;
+        _this4.chosenPair.mathc = null;
+        _this4.matchedPairs = [];
+        _this4.shuffledPairs = [];
+        _this4.matchableStyles['min-height'] = '100px';
+        _this4.inAjaxCall = false;
+        $(_this4.$refs.image).val('');
+        _this4.incorrectImageFormat = false;
+        _this4.answeringTime = null;
+        _this4.missingWords = [];
+        _this4.isMissingWordFilled = false;
+      });
+    },
+    submit: function submit() {
+      if (this.inAjaxCall) return;
+      var vm = this;
+      this.inAjaxCall = true;
+      var data = {
+        'game_id': this.gameId,
+        'question_id': this.question.id
+      };
+
+      if (this.isOneCorrectAnswer() || this.isMultipleCorrectAnswers()) {
+        data.options = this.selectedOptions;
+      } else if (this.isFreeformAnswer() || this.isEmbeddedContent()) {
+        data.text = this.textualAnswer;
+      }
+
+      if (this.isPhoto()) {
+        var formData = new FormData();
+
+        _.each(data, function (item, key) {
+          formData.append(key, item);
+        });
+
+        formData.append('image', this.$refs.image.files[0]);
+        data = formData;
+      }
+
+      if (this.isMissingWord()) {
+        data.text = this.missingWordsToString(this.missingWords);
+      }
+
+      this.$http.post(vm.baseUrl + '/api/games/answer', data).then(function (response) {
+        vm.inAjaxCall = false; // const url = vm.baseUrl + '/api/games/' + vm.gameId + '/send-question-answer-to-lrs/' + vm.question.id;
+        // vm.$http.get(url).then(respone => {});
+
+        vm.$parent.openImageDialog(vm.question.id, response.body);
+        vm.close();
+      }, function (response) {
+        vm.inAjaxCall = false;
+        console.error('Error', response); // TODO Might need to notify user abut the error
+      });
+    },
+    title: function title() {
+      return this.question ? this.question.title : '';
+    },
+    description: function description() {
+      return this.question ? this.question.description : '';
+    },
+    hasImage: function hasImage() {
+      return this.question && this.question.image_url;
+    },
+    image: function image() {
+      return this.question ? this.question.image_url : '';
+    },
+    embeddedContent: function embeddedContent() {
+      return this.question ? this.question.embedded_content : '';
+    },
+    hasReadMore: function hasReadMore() {
+      return this.question && this.question.read_more;
+    },
+    readMore: function readMore() {
+      return this.question ? this.question.read_more : '';
+    },
+    options: function options() {
+      return this.question && this.question.options ? this.question.options : [];
+    },
+    pairs: function pairs(shuffled) {
+      if (shuffled === true) {
+        return this.shuffledPairs;
+      }
+
+      return this.question && this.question.pairs ? this.question.pairs : [];
+    },
+    isInformation: function isInformation() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.INFORMATION : false;
+    },
+    isOneCorrectAnswer: function isOneCorrectAnswer() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.ONE_CORRECT_ANSWER : false;
+    },
+    isMultipleCorrectAnswers: function isMultipleCorrectAnswers() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.MULTIPLE_CORRECT_ANSWERS : false;
+    },
+    isFreeformAnswer: function isFreeformAnswer() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.FREEFORM_ANSWER : false;
+    },
+    isMatchPairs: function isMatchPairs() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.MATCH_PAIRS : false;
+    },
+    isEmbeddedContent: function isEmbeddedContent() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.EMBEDDED_CONTENT : false;
+    },
+    isPhoto: function isPhoto() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.PHOTO : false;
+    },
+    isMissingWord: function isMissingWord() {
+      return this.question ? this.question.type == window.Laravel.questionTypeConstants.MISSING_WORD : false;
+    },
+    onMissingWordChange: _debounce__WEBPACK_IMPORTED_MODULE_2___default()(function (e) {
+      var input = e.target;
+      var index = input.getAttribute('data-index');
+      this.$set(this.missingWords[index], 'answer', input.value);
+      this.$set(this.missingWords[index], 'isCorrect', input.value.trim().toLowerCase() === this.missingWords[index].text.trim().toLowerCase());
+      var words = this.missingWords.filter(function (word) {
+        return word.type === 'input' && word.answer.trim().length === 0;
+      });
+      this.isMissingWordFilled = words.length === 0;
+    }, 100),
+    generateMissingWords: function generateMissingWords() {
+      if (!this.isMissingWord()) {
+        return false;
+      }
+
+      var question = this.question.missing_word;
+      var answer = '';
+      var questionArray = this.missingWordsToArray(question);
+      var answerArray = [];
+
+      if (this.isAnswered()) {
+        answer = this.answer.answer.text;
+        answerArray = this.missingWordsToArray(answer);
+        var questionArrayLength = questionArray.length;
+        var answerArrayLength = answerArray.length;
+
+        if (questionArrayLength === answerArrayLength) {
+          for (var i = 0; i < questionArrayLength; i++) {
+            questionArray[i].answer = answerArray[i].text;
+            questionArray[i].isCorrect = questionArray[i].text.trim().toLowerCase() === answerArray[i].text.trim().toLowerCase();
+          }
+        }
+      }
+
+      this.missingWords = questionArray;
+    },
+    isSelectedOption: function isSelectedOption(id) {
+      var options;
+
+      if (!this.isAnswered()) {
+        options = this.selectedOptions;
+      } else {
+        options = this.answer.answer.options;
+      }
+
+      if (options && _typeof(options) === 'object') {
+        return options.indexOf(id) !== -1;
+      }
+
+      return options === id;
+    },
+    triggerOptionClick: function triggerOptionClick(index) {
+      if (!this.isAnswered()) {
+        $(this.$refs['option'][index]).trigger('click');
+      }
+    },
+    triggerImageClick: function triggerImageClick() {
+      $(this.$refs.image).trigger('click');
+    },
+    imageSelected: function imageSelected(event) {
+      if (event.target.files.length > 0) {
+        var file = event.target.files[0];
+
+        if (!this.isValidImageFormat(file)) {
+          $(event.target).val('');
+          this.hasImageSelected = false;
+          this.incorrectImageFormat = true;
+          return;
+        }
+
+        if (window.FileReader) {
+          var reader = new FileReader(),
+              vm = this;
+
+          reader.onload = function (e) {
+            vm.imageSrc = e.target.result;
+          };
+
+          reader.readAsDataURL(file);
+        }
+
+        this.hasImageSelected = true;
+        this.incorrectImageFormat = false;
+      }
+    },
+    canSubmit: function canSubmit() {
+      if (this.isInformation()) {
+        return true;
+      } else if (this.isOneCorrectAnswer() || this.isMultipleCorrectAnswers()) {
+        if (_typeof(this.selectedOptions) === 'object') {
+          return this.selectedOptions.length > 0;
+        } else {
+          return !!this.selectedOptions;
+        }
+
+        return !!this.selectedOptions;
+      } else if (this.isFreeformAnswer() || this.isEmbeddedContent()) {
+        return !!this.textualAnswer.trim();
+      } else if (this.isMatchPairs()) {
+        return this.matchedPairs.length === this.pairs().length;
+      } else if (this.isPhoto()) {
+        return this.hasImageSelected;
+      } else if (this.isMissingWord()) {
+        return this.isMissingWordFilled;
+      }
+
+      return false;
+    },
+    resetChosenPair: function resetChosenPair() {
+      var _this5 = this;
+
+      this.$nextTick(function () {
+        var vm = _this5;
+        setTimeout(function () {
+          vm.chosenPair.option = null;
+          vm.chosenPair.match = null;
+        }, 250);
+      });
+    },
+    choose: function choose(type, pair) {
+      if (this.isMatchedPair(pair)) {
+        return;
+      }
+
+      this.chosenPair[type] = pair.id;
+
+      if (this.chosenPair.option === this.chosenPair.match) {
+        this.matchedPairs.push(pair.id);
+        this.resetChosenPair();
+      } else if (this.chosenPair.option !== null && this.chosenPair.match !== null) {
+        this.resetChosenPair();
+      }
+    },
+    choosePair: function choosePair(pair) {
+      this.choose('option', pair);
+    },
+    choosePairMatch: function choosePairMatch(pair) {
+      this.choose('match', pair);
+    },
+    isOptionChosen: function isOptionChosen(pair) {
+      return this.chosenPair.option === pair.id;
+    },
+    isOptionMatchChosen: function isOptionMatchChosen(pair) {
+      return this.chosenPair.match === pair.id;
+    },
+    isMatchedPair: function isMatchedPair(pair) {
+      if (this.isAnswered()) {
+        return true;
+      }
+
+      return this.matchedPairs.indexOf(pair.id) !== -1;
+    },
+    isAnswered: function isAnswered() {
+      return !!this.answer && this.answer.is_answered;
+    },
+    isCorrectOption: function isCorrectOption(option) {
+      return !!option.correct;
+    },
+    optionIconClass: function optionIconClass(option) {
+      var classes = [];
+      var isCorrect = this.isCorrectOption(option);
+      var isChosen = this.isSelectedOption(option.id);
+
+      if (isChosen) {
+        if (isCorrect) {
+          classes.push('correct');
+        } else {
+          classes.push('incorrect');
+        }
+      }
+
+      if (this.isOneCorrectAnswer()) {
+        if (isCorrect) {
+          classes.push('mdi-checkbox-marked-circle-outline');
+        } else {
+          classes.push('mdi-close-circle-outline');
+        }
+      } else if (this.isMultipleCorrectAnswers()) {
+        if (isCorrect) {
+          classes.push('mdi-checkbox-marked-outline');
+        } else {
+          classes.push('mdi-close-box-outline');
+        }
+      }
+
+      return classes;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['game', 'baseUrl'],
+  data: function data() {
+    return {
+      stars: [1, 2, 3, 4, 5],
+      callback: null,
+      event: null
+    };
+  },
+  methods: {
+    addRating: function addRating(e, star) {
+      var _this = this;
+
+      this.$http.get(this.baseUrl + '/api/games/' + this.game.id + '/add-rating/' + star).then(function (response) {
+        _this.close();
+      });
+    },
+    mouseOverStar: function mouseOverStar(e) {
+      var this_value = e.target.dataset.value;
+      var stars = document.getElementsByClassName('star');
+      var starsLength = stars.length;
+
+      for (var i = 0; i < starsLength; i++) {
+        var star = stars[i];
+        var star_value = star.dataset.value;
+
+        if (star_value <= this_value) {
+          star.classList.remove('mdi-star-outline');
+          star.classList.add('mdi-star');
+        } else {
+          star.classList.remove('mdi-star');
+          star.classList.add('mdi-star-outline');
+        }
+      }
+    },
+    open: function open(callback) {
+      var _this2 = this;
+
+      this.callback = callback;
+      this.$nextTick(function () {
+        $(_this2.$refs.modal).modal('show');
+      });
+    },
+    close: function close() {
+      var _this3 = this;
+
+      this.$nextTick(function () {
+        $(_this3.$refs.modal).modal('hide');
+
+        _this3.callback();
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mixins_MissingWord_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../mixins/MissingWord.js */ "./resources/assets/js/mixins/MissingWord.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['game', 'baseUrl'],
+  mixins: [_mixins_MissingWord_js__WEBPACK_IMPORTED_MODULE_0__.default],
+  computed: {
+    totalQuestionsCount: function totalQuestionsCount() {
+      return this.game.activity.questions.length;
+    },
+    correctQuestionsCount: function correctQuestionsCount() {
+      var vm = this;
+      return _.filter(this.game.activity.questions, function (question) {
+        if (vm.isCorrect(question)) {
+          return question;
+        }
+      }).length;
+    },
+    getResultQuestions: function getResultQuestions() {
+      if (this.game.activity.complete === true) {
+        return this.game.activity.questions;
+      }
+
+      var answers = this.game.answers;
+      return this.game.activity.questions.filter(function (question) {
+        return typeof answers[question.id] !== 'undefined';
+      });
+    }
+  },
+  methods: {
+    open: function open() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        $(_this.$refs.modal).modal('show');
+        setTimeout(function () {
+          if ($(document).find('body').hasClass('modal-open') === false) {
+            $(document).find('body').addClass('modal-open');
+          }
+        }, 500);
+      });
+    },
+    exit: function exit() {
+      this.$parent.exit();
+    },
+    isInformation: function isInformation(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.INFORMATION : false;
+    },
+    isOneCorrectAnswer: function isOneCorrectAnswer(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.ONE_CORRECT_ANSWER : false;
+    },
+    isMultipleCorrectAnswers: function isMultipleCorrectAnswers(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.MULTIPLE_CORRECT_ANSWERS : false;
+    },
+    isFreeformAnswer: function isFreeformAnswer(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.FREEFORM_ANSWER : false;
+    },
+    isMatchPairs: function isMatchPairs(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.MATCH_PAIRS : false;
+    },
+    isEmbeddedContent: function isEmbeddedContent(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.EMBEDDED_CONTENT : false;
+    },
+    isPhoto: function isPhoto(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.PHOTO : false;
+    },
+    isMissingWord: function isMissingWord(question) {
+      return question ? question.type == window.Laravel.questionTypeConstants.MISSING_WORD : false;
+    },
+    hasAnswer: function hasAnswer(question) {
+      return !!(this.game.answers && this.game.answers[question.id]);
+    },
+    isCorrect: function isCorrect(question) {
+      if (!this.hasAnswer(question)) {
+        return false;
+      }
+
+      return this.game.answers[question.id].correct;
+    },
+    hasGrade: function hasGrade(question) {
+      if (!this.hasAnswer(question)) {
+        return false;
+      }
+
+      return this.game.answers[question.id].grade !== null;
+    },
+    hasOptions: function hasOptions(question) {
+      if (!this.hasAnswer(question)) {
+        return false;
+      }
+
+      return !!this.game.answers[question.id].answer.options;
+    },
+    choseOption: function choseOption(question, option) {
+      if (!this.hasOptions(question)) {
+        return false;
+      }
+
+      return this.game.answers[question.id].answer.options.indexOf(option.id) !== -1;
+    },
+    isCorrectOption: function isCorrectOption(option) {
+      return !!option.correct;
+    },
+    hasText: function hasText(question) {
+      if (!this.hasAnswer(question)) {
+        return false;
+      }
+
+      return !!this.game.answers[question.id].answer.text;
+    },
+    getText: function getText(question) {
+      return this.game.answers[question.id].answer.text;
+    },
+    getMissingWordText: function getMissingWordText(question) {
+      var answerText = this.getText(question);
+      var questionText = question.missing_word;
+      var answerArray = this.missingWordsToArray(answerText);
+      var questionArray = this.missingWordsToArray(questionText);
+      var questionArrayLength = questionArray.length;
+      var text = '';
+
+      for (var i = 0; i < questionArrayLength; i++) {
+        /** @type {MissingWord} questionWord **/
+        var questionWord = questionArray[i];
+        /** @type {MissingWord} answerWord **/
+
+        var answerWord = answerArray[i];
+
+        if (questionWord.type === 'text') {
+          text += questionWord.text;
+        } else if (questionWord.type === 'input') {
+          if (answerWord.text === questionWord.text) {
+            text += '<span class="correct">';
+            text += answerWord.text;
+            text += '</span>';
+          } else {
+            text += '<span class="incorrect">';
+            text += answerWord.text;
+            text += '<span class="correct">( ';
+            text += questionWord.text;
+            text += ' )</span>';
+            text += '</span>';
+          }
+        }
+      }
+
+      return text;
+    },
+    hasImage: function hasImage(question) {
+      if (!this.hasAnswer(question)) {
+        return false;
+      }
+
+      return !!this.game.answers[question.id].image;
+    },
+    getImage: function getImage(question) {
+      return this.game.answers[question.id].image;
+    },
+    optionIconClass: function optionIconClass(question, option) {
+      var classes = [];
+      var isCorrect = this.isCorrectOption(option);
+      var isChosen = this.choseOption(question, option);
+
+      if (isChosen) {
+        if (isCorrect) {
+          classes.push('correct');
+        } else {
+          classes.push('incorrect');
+        }
+      }
+
+      if (this.isOneCorrectAnswer(question)) {
+        if (isCorrect) {
+          classes.push('mdi-checkbox-marked-circle-outline');
+        } else {
+          classes.push('mdi-close-circle-outline');
+        }
+      } else if (this.isMultipleCorrectAnswers(question)) {
+        if (isCorrect) {
+          classes.push('mdi-checkbox-marked-outline');
+        } else {
+          classes.push('mdi-close-box-outline');
+        }
+      }
+
+      return classes;
+    },
+    showResults: function showResults() {
+      this.resultsShown = !this.resultsShown;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameTutorialModal.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameTutorialModal.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['activity'],
+  mounted: function mounted() {
+    this.baseUrl = window.RADA.config.base_url;
+    var vm = this;
+    this.hammertime = new Hammer.Manager(this.$refs.tips, {
+      recognizers: [[Hammer.Swipe, {
+        direction: Hammer.DIRECTION_HORIZONTAL
+      }]]
+    });
+    this.hammertime.on('swipeleft', function () {
+      vm.nextItem();
+
+      if (vm.isLastItem()) {
+        vm.close();
+      }
+    });
+    this.hammertime.on('swiperight', function () {
+      vm.previousItem();
+    });
+  },
+  data: function data() {
+    return {
+      baseUrl: '',
+      currentItem: 'gameplay_instructions',
+      items: ['gameplay_instructions', 'look_closely', 'look_out', 'do_not_disturb', 'help_others'],
+      enterActiveClass: 'animated slideInRight',
+      leaveActiveClass: 'animated slideOutLeft'
+    };
+  },
+  methods: {
+    open: function open() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        $(_this.$refs.modal).modal('show');
+      });
+    },
+    close: function close() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        $(_this2.$refs.modal).modal('hide');
+
+        _this2.$root.$emit('dialog:tutorial:close');
+      });
+    },
+    getItemImageUrl: function getItemImageUrl(key, format) {
+      if (!format) {
+        format = 'jpg';
+      }
+
+      return this.baseUrl + '/img/guidelines/' + key + '.' + format;
+    },
+    isFirstItem: function isFirstItem() {
+      return this.items.indexOf(this.currentItem) === 0;
+    },
+    isLastItem: function isLastItem() {
+      return this.items.indexOf(this.currentItem) === this.items.length - 1;
+    },
+    nextItem: function nextItem() {
+      var _this3 = this;
+
+      if (!this.isLastItem() && this.currentItem) {
+        var vm = this;
+        this.enterActiveClass = 'animated slideInRight';
+        this.leaveActiveClass = 'animated slideOutLeft';
+        $(this.$refs.tips).css('min-height', $(this.$refs.tips).height());
+        this.$nextTick(function () {
+          vm.currentItem = vm.items[vm.items.indexOf(vm.currentItem) + 1];
+          setTimeout(function () {
+            $(_this3.$refs.tips).css('min-height', '');
+          }, 2000);
+        });
+      }
+    },
+    previousItem: function previousItem() {
+      var _this4 = this;
+
+      if (!this.isFirstItem() && this.currentItem) {
+        var vm = this;
+        this.enterActiveClass = 'animated slideInLeft';
+        this.leaveActiveClass = 'animated slideOutRight';
+        $(this.$refs.tips).css('min-height', $(this.$refs.tips).height());
+        this.$nextTick(function () {
+          vm.currentItem = vm.items[vm.items.indexOf(vm.currentItem) - 1];
+          setTimeout(function () {
+            $(_this4.$refs.tips).css('min-height', '');
+          }, 2000);
+        });
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/NotificationModal.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/NotificationModal.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['title', 'message'],
+  data: function data() {
+    return {
+      inAjaxCall: false
+    };
+  },
+  methods: {
+    open: function open() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        $(_this.$refs.modal).modal('show');
+      });
+      return $(this.$refs.modal);
+    },
+    close: function close() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        $(_this2.$refs.modal).modal('hide');
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/classes/MissingWord.js":
+/*!***************************************************************!*\
+  !*** ./resources/assets/js/components/classes/MissingWord.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+module.exports = function MissingWord(data) {
+  _classCallCheck(this, MissingWord);
+
+  this.type = data.type;
+  this.text = data.text;
+  this.answer = data.answer;
+  this.isCorrect = data.isCorrect;
+};
+
+/***/ }),
+
+/***/ "./resources/assets/js/debounce.js":
+/*!*****************************************!*\
+  !*** ./resources/assets/js/debounce.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+module.exports = function debounce(fn, delay) {
+  var timeoutID = null;
+  return function () {
+    clearTimeout(timeoutID);
+    var args = arguments;
+    var that = this;
+    timeoutID = setTimeout(function () {
+      fn.apply(that, args);
+    }, delay);
+  };
+};
+
+/***/ }),
+
+/***/ "./resources/assets/js/mixins/Image.js":
+/*!*********************************************!*\
+  !*** ./resources/assets/js/mixins/Image.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    isValidImageFormat: function isValidImageFormat(file) {
+      return file.type === 'image/jpg' || file.type === 'image/jpeg' || file.type == 'image/png';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/mixins/MarkerIcon.js":
+/*!**************************************************!*\
+  !*** ./resources/assets/js/mixins/MarkerIcon.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    getIconsBaseUrl: function getIconsBaseUrl() {
+      return this.baseUrl + '/img/map/icons/';
+    },
+    getIconUrl: function getIconUrl(state, type, hasAccessCode) {
+      return this.getIconsBaseUrl() + (type && type === 1 ? 'info_' : '') + (state !== 'active' ? state : 'default') + (hasAccessCode === true && state === 'inactive' ? '_access' : '') + '.svg';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/mixins/MissingWord.js":
+/*!***************************************************!*\
+  !*** ./resources/assets/js/mixins/MissingWord.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_classes_MissingWord_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/classes/MissingWord.js */ "./resources/assets/js/components/classes/MissingWord.js");
+/* harmony import */ var _components_classes_MissingWord_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_classes_MissingWord_js__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    missingWordsToArray: function missingWordsToArray(words) {
+      var wordsArray = [];
+
+      if (typeof words === 'undefined' || words.length <= 0) {
+        return wordsArray;
+      }
+
+      var startParts = words.split('{');
+      wordsArray.push(new (_components_classes_MissingWord_js__WEBPACK_IMPORTED_MODULE_0___default())({
+        type: 'text',
+        text: startParts.shift(),
+        answer: '',
+        isCorrect: false
+      }));
+      var startPartsLength = startParts.length;
+
+      for (var i = 0; i < startPartsLength; i++) {
+        var str = startParts[i];
+        var endParts = str.split('}');
+
+        if (endParts.length === 2) {
+          wordsArray.push(new (_components_classes_MissingWord_js__WEBPACK_IMPORTED_MODULE_0___default())({
+            type: 'input',
+            text: endParts.shift(),
+            answer: '',
+            isCorrect: false
+          }));
+          wordsArray.push(new (_components_classes_MissingWord_js__WEBPACK_IMPORTED_MODULE_0___default())({
+            type: 'text',
+            text: endParts.shift(),
+            answer: '',
+            isCorrect: false
+          }));
+        }
+      }
+
+      return wordsArray;
+    },
+    missingWordsToString: function missingWordsToString(wordsArray) {
+      var length = wordsArray.length;
+      var text = '';
+
+      for (var i = 0; i < length; i++) {
+        var word = wordsArray[i];
+
+        if (word.type === 'input') {
+          text += '{' + word.answer + '}';
+        } else {
+          text += word.text;
+        }
+      }
+
+      return text;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/play.js":
+/*!*************************************!*\
+  !*** ./resources/assets/js/play.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
+//"use strict";
+
+
+var messages = {};
+messages[window.RADA.config.locale] = _.cloneDeep(window.RADA.data.translations);
+var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_1__.default({
+  locale: window.RADA.config.locale,
+  messages: messages
+});
+Vue.component('game-map', __webpack_require__(/*! ./components/GameMap.vue */ "./resources/assets/js/components/GameMap.vue").default);
+Vue.component('game-tutorial-modal', __webpack_require__(/*! ./components/GameTutorialModal.vue */ "./resources/assets/js/components/GameTutorialModal.vue").default);
+Vue.component('game-information-modal', __webpack_require__(/*! ./components/GameInformationModal.vue */ "./resources/assets/js/components/GameInformationModal.vue").default);
+Vue.component('game-results-modal', __webpack_require__(/*! ./components/GameResultsModal.vue */ "./resources/assets/js/components/GameResultsModal.vue").default);
+Vue.component('game-rating-modal', __webpack_require__(/*! ./components/GameRatingModal.vue */ "./resources/assets/js/components/GameRatingModal.vue").default);
+Vue.component('game-image-dialog', __webpack_require__(/*! ./components/GameImageDialog.vue */ "./resources/assets/js/components/GameImageDialog.vue").default);
+var playGameApp = new Vue({
+  i18n: i18n,
+  el: '#sz-play-app',
+  created: function created() {
+    var vm = this;
+    vm.baseUrl = window.RADA.config.base_url;
+    vm.exitUrl = window.RADA.config.exit_url;
+    vm.isLoggedIn = window.Laravel.isLoggedIn;
+    vm.userName = window.Laravel.userName;
+    vm.game = window.RADA.data.game;
+    window.addEventListener('beforeunload', vm.leaving);
+    vm.$on('dialog:tutorial:close', function () {
+      vm.setHasSeenTotorial();
+    });
+
+    if (!vm.isGameComplete()) {
+      window.initMap = function () {
+        vm.mapInitialised = true;
+      };
+
+      vm.getGeoLocation(function (position) {
+        vm.latitude = position.coords.latitude;
+        vm.longitude = position.coords.longitude;
+      }, false, function (error) {
+        vm.geoLocationErrorMessage = error.message;
+      });
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '//maps.googleapis.com/maps/api/js?key=' + window.RADA.config.map.key + '&callback=initMap&libraries=geometry';
+      document.body.appendChild(script);
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    if (!this.isGameComplete()) {
+      if (!this.hasSeenTutorial()) {
+        this.$refs.tutorialModal.open();
+      } else {
+        this.$refs.informationModal.open();
+      }
+
+      this.$watch('game.complete', function () {
+        if (_this.isGameComplete()) {
+          _this.$refs.imageDialog.open();
+
+          _this.$refs.imageDialog.$once('hidden:image:dialog', function () {
+            if (_this.game.rating === null) {
+              _this.$refs.ratingModal.open(function () {
+                _this.$refs.resultsModal.open();
+              });
+            } else {
+              _this.$refs.resultsModal.open();
+            }
+          });
+        }
+      });
+    } else {
+      if (this.game.rating === null) {
+        this.$refs.ratingModal.open(function () {
+          _this.$refs.resultsModal.open();
+        });
+      } else {
+        this.$refs.resultsModal.open();
+      }
+    }
+  },
+  data: function data() {
+    return {
+      baseUrl: '',
+      exitUrl: '',
+      mapInitialised: false,
+      latitude: undefined,
+      longitude: undefined,
+      geoLocationErrorMessage: null,
+      checkUnload: true,
+      game: null,
+      isLoggedIn: false,
+      userName: ''
+    };
+  },
+  methods: {
+    isLoading: function isLoading() {
+      return !(this.mapInitialised && this.latitude && this.longitude);
+    },
+    isGameComplete: function isGameComplete() {
+      return this.game && this.game.complete;
+    },
+    getGeoLocation: function getGeoLocation(callback, watch, handleError) {
+      if (typeof handleError !== 'function') {
+        handleError = function handleError(error) {
+          if (window.console && window.console.error && typeof window.console.error === 'function') {
+            window.console.error('Geolocation error', error); // TODO Consider making traslatable
+          }
+        };
+      }
+
+      if (window.navigator.geolocation) {
+        var geolocationOptions = {
+          enableHighAccuracy: true
+        };
+
+        if (watch === true) {
+          window.navigator.geolocation.watchPosition(callback, handleError, geolocationOptions);
+        } else {
+          window.navigator.geolocation.getCurrentPosition(callback, handleError, geolocationOptions);
+        }
+      } else {
+        throw 'Geolocation is unavailable!'; // TODO Consider making translatable
+      }
+    },
+    hasGeoLocationError: function hasGeoLocationError() {
+      return !!this.geoLocationErrorMessage;
+    },
+    leaving: function leaving(event) {
+      if (!this.checkUnload) return false;
+      var message = this.$t('exit-confirmation');
+      event.returnValue = message;
+      return message;
+    },
+    exit: function exit() {
+      var confirmation = confirm(this.$t('exit-confirmation'));
+
+      if (confirmation) {
+        // Prevent unload check from being applied
+        this.checkUnload = false;
+        window.location = this.exitUrl;
+      }
+    },
+    hasSeenTutorial: function hasSeenTutorial() {
+      if (!window.sessionStorage) return false;
+      return window.sessionStorage.getItem('seen:game:tutorial') === 'true';
+    },
+    setHasSeenTotorial: function setHasSeenTotorial() {
+      if (window.sessionStorage) {
+        try {
+          window.sessionStorage.setItem('seen:game:tutorial', 'true');
+        } catch (err) {// Handles the QuotaExceededError in some versions of Safari on iOS
+        }
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.grading-control-item {\n    position: relative;\n}\n.grading-control-item .badge {\n    position: absolute;\n    top: 0;\n    right: -5px;\n    background: #3097d1;\n}\n.btn.mdi-flash {\n    color: #000;\n}\n.btn.mdi-flash:hover {\n    color: #FF9800;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.flash-exercise[data-v-5266066c] {\n    margin-bottom: 15px;\n    height: 36px;\n    line-height: 36px;\n}\n.flash-exercise .name[data-v-5266066c] {\n    padding-left: 15px;\n}\ntextarea[data-v-5266066c] {\n    margin-bottom: 10px;\n}\n.message[data-v-5266066c] {\n    border-bottom: 1px dotted #ccc;\n}\n.message td[data-v-5266066c] {\n    padding: 10px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.missing-word-container span[data-v-673a7024] {\n    line-height: 24px;\n    height: 34px;\n    display: inline;\n    white-space: pre-line;\n}\n.missing-word-container input[data-v-673a7024] {\n    margin: 0 10px;\n    padding: 0 10px;\n}\n.missing-word-container .incorrect[data-v-673a7024] {\n    color: red;\n    font-weight: bold;\n    padding: 0 5px;\n}\n.missing-word-container .correct[data-v-673a7024] {\n    color: green;\n    font-weight: bold;\n    padding: 0 5px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.modal-body.text-center, .modal-footer.text-center {\n    text-align: center;\n}\n.star {\n    font-size: 80px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.missing-word-container .correct, .missing-word-container .incorrect {\n    color: #2ab27b;\n    font-weight: bold;\n    padding: 0 5px;\n}\n.missing-word-container .incorrect {\n    color: red;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join('');
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === 'string') {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/hammerjs/hammer.js":
+/*!*****************************************!*\
+  !*** ./node_modules/hammerjs/hammer.js ***!
+  \*****************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
+ * http://hammerjs.github.io/
+ *
+ * Copyright (c) 2016 Jorik Tangelder;
+ * Licensed under the MIT license */
+(function(window, document, exportName, undefined) {
+  'use strict';
+
+var VENDOR_PREFIXES = ['', 'webkit', 'Moz', 'MS', 'ms', 'o'];
+var TEST_ELEMENT = document.createElement('div');
+
+var TYPE_FUNCTION = 'function';
+
+var round = Math.round;
+var abs = Math.abs;
+var now = Date.now;
+
+/**
+ * set a timeout with a given scope
+ * @param {Function} fn
+ * @param {Number} timeout
+ * @param {Object} context
+ * @returns {number}
+ */
+function setTimeoutContext(fn, timeout, context) {
+    return setTimeout(bindFn(fn, context), timeout);
+}
+
+/**
+ * if the argument is an array, we want to execute the fn on each entry
+ * if it aint an array we don't want to do a thing.
+ * this is used by all the methods that accept a single and array argument.
+ * @param {*|Array} arg
+ * @param {String} fn
+ * @param {Object} [context]
+ * @returns {Boolean}
+ */
+function invokeArrayArg(arg, fn, context) {
+    if (Array.isArray(arg)) {
+        each(arg, context[fn], context);
+        return true;
+    }
+    return false;
+}
+
+/**
+ * walk objects and arrays
+ * @param {Object} obj
+ * @param {Function} iterator
+ * @param {Object} context
+ */
+function each(obj, iterator, context) {
+    var i;
+
+    if (!obj) {
+        return;
+    }
+
+    if (obj.forEach) {
+        obj.forEach(iterator, context);
+    } else if (obj.length !== undefined) {
+        i = 0;
+        while (i < obj.length) {
+            iterator.call(context, obj[i], i, obj);
+            i++;
+        }
+    } else {
+        for (i in obj) {
+            obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
+        }
+    }
+}
+
+/**
+ * wrap a method with a deprecation warning and stack trace
+ * @param {Function} method
+ * @param {String} name
+ * @param {String} message
+ * @returns {Function} A new function wrapping the supplied method.
+ */
+function deprecate(method, name, message) {
+    var deprecationMessage = 'DEPRECATED METHOD: ' + name + '\n' + message + ' AT \n';
+    return function() {
+        var e = new Error('get-stack-trace');
+        var stack = e && e.stack ? e.stack.replace(/^[^\(]+?[\n$]/gm, '')
+            .replace(/^\s+at\s+/gm, '')
+            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@') : 'Unknown Stack Trace';
+
+        var log = window.console && (window.console.warn || window.console.log);
+        if (log) {
+            log.call(window.console, deprecationMessage, stack);
+        }
+        return method.apply(this, arguments);
+    };
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} target
+ * @param {...Object} objects_to_assign
+ * @returns {Object} target
+ */
+var assign;
+if (typeof Object.assign !== 'function') {
+    assign = function assign(target) {
+        if (target === undefined || target === null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
+
+        var output = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source !== undefined && source !== null) {
+                for (var nextKey in source) {
+                    if (source.hasOwnProperty(nextKey)) {
+                        output[nextKey] = source[nextKey];
+                    }
+                }
+            }
+        }
+        return output;
+    };
+} else {
+    assign = Object.assign;
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} dest
+ * @param {Object} src
+ * @param {Boolean} [merge=false]
+ * @returns {Object} dest
+ */
+var extend = deprecate(function extend(dest, src, merge) {
+    var keys = Object.keys(src);
+    var i = 0;
+    while (i < keys.length) {
+        if (!merge || (merge && dest[keys[i]] === undefined)) {
+            dest[keys[i]] = src[keys[i]];
+        }
+        i++;
+    }
+    return dest;
+}, 'extend', 'Use `assign`.');
+
+/**
+ * merge the values from src in the dest.
+ * means that properties that exist in dest will not be overwritten by src
+ * @param {Object} dest
+ * @param {Object} src
+ * @returns {Object} dest
+ */
+var merge = deprecate(function merge(dest, src) {
+    return extend(dest, src, true);
+}, 'merge', 'Use `assign`.');
+
+/**
+ * simple class inheritance
+ * @param {Function} child
+ * @param {Function} base
+ * @param {Object} [properties]
+ */
+function inherit(child, base, properties) {
+    var baseP = base.prototype,
+        childP;
+
+    childP = child.prototype = Object.create(baseP);
+    childP.constructor = child;
+    childP._super = baseP;
+
+    if (properties) {
+        assign(childP, properties);
+    }
+}
+
+/**
+ * simple function bind
+ * @param {Function} fn
+ * @param {Object} context
+ * @returns {Function}
+ */
+function bindFn(fn, context) {
+    return function boundFn() {
+        return fn.apply(context, arguments);
+    };
+}
+
+/**
+ * let a boolean value also be a function that must return a boolean
+ * this first item in args will be used as the context
+ * @param {Boolean|Function} val
+ * @param {Array} [args]
+ * @returns {Boolean}
+ */
+function boolOrFn(val, args) {
+    if (typeof val == TYPE_FUNCTION) {
+        return val.apply(args ? args[0] || undefined : undefined, args);
+    }
+    return val;
+}
+
+/**
+ * use the val2 when val1 is undefined
+ * @param {*} val1
+ * @param {*} val2
+ * @returns {*}
+ */
+function ifUndefined(val1, val2) {
+    return (val1 === undefined) ? val2 : val1;
+}
+
+/**
+ * addEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function addEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.addEventListener(type, handler, false);
+    });
+}
+
+/**
+ * removeEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function removeEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.removeEventListener(type, handler, false);
+    });
+}
+
+/**
+ * find if a node is in the given parent
+ * @method hasParent
+ * @param {HTMLElement} node
+ * @param {HTMLElement} parent
+ * @return {Boolean} found
+ */
+function hasParent(node, parent) {
+    while (node) {
+        if (node == parent) {
+            return true;
+        }
+        node = node.parentNode;
+    }
+    return false;
+}
+
+/**
+ * small indexOf wrapper
+ * @param {String} str
+ * @param {String} find
+ * @returns {Boolean} found
+ */
+function inStr(str, find) {
+    return str.indexOf(find) > -1;
+}
+
+/**
+ * split string on whitespace
+ * @param {String} str
+ * @returns {Array} words
+ */
+function splitStr(str) {
+    return str.trim().split(/\s+/g);
+}
+
+/**
+ * find if a array contains the object using indexOf or a simple polyFill
+ * @param {Array} src
+ * @param {String} find
+ * @param {String} [findByKey]
+ * @return {Boolean|Number} false when not found, or the index
+ */
+function inArray(src, find, findByKey) {
+    if (src.indexOf && !findByKey) {
+        return src.indexOf(find);
+    } else {
+        var i = 0;
+        while (i < src.length) {
+            if ((findByKey && src[i][findByKey] == find) || (!findByKey && src[i] === find)) {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+    }
+}
+
+/**
+ * convert array-like objects to real arrays
+ * @param {Object} obj
+ * @returns {Array}
+ */
+function toArray(obj) {
+    return Array.prototype.slice.call(obj, 0);
+}
+
+/**
+ * unique array with objects based on a key (like 'id') or just by the array's value
+ * @param {Array} src [{id:1},{id:2},{id:1}]
+ * @param {String} [key]
+ * @param {Boolean} [sort=False]
+ * @returns {Array} [{id:1},{id:2}]
+ */
+function uniqueArray(src, key, sort) {
+    var results = [];
+    var values = [];
+    var i = 0;
+
+    while (i < src.length) {
+        var val = key ? src[i][key] : src[i];
+        if (inArray(values, val) < 0) {
+            results.push(src[i]);
+        }
+        values[i] = val;
+        i++;
+    }
+
+    if (sort) {
+        if (!key) {
+            results = results.sort();
+        } else {
+            results = results.sort(function sortUniqueArray(a, b) {
+                return a[key] > b[key];
+            });
+        }
+    }
+
+    return results;
+}
+
+/**
+ * get the prefixed property
+ * @param {Object} obj
+ * @param {String} property
+ * @returns {String|Undefined} prefixed
+ */
+function prefixed(obj, property) {
+    var prefix, prop;
+    var camelProp = property[0].toUpperCase() + property.slice(1);
+
+    var i = 0;
+    while (i < VENDOR_PREFIXES.length) {
+        prefix = VENDOR_PREFIXES[i];
+        prop = (prefix) ? prefix + camelProp : property;
+
+        if (prop in obj) {
+            return prop;
+        }
+        i++;
+    }
+    return undefined;
+}
+
+/**
+ * get a unique id
+ * @returns {number} uniqueId
+ */
+var _uniqueId = 1;
+function uniqueId() {
+    return _uniqueId++;
+}
+
+/**
+ * get the window object of an element
+ * @param {HTMLElement} element
+ * @returns {DocumentView|Window}
+ */
+function getWindowForElement(element) {
+    var doc = element.ownerDocument || element;
+    return (doc.defaultView || doc.parentWindow || window);
+}
+
+var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
+
+var SUPPORT_TOUCH = ('ontouchstart' in window);
+var SUPPORT_POINTER_EVENTS = prefixed(window, 'PointerEvent') !== undefined;
+var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
+
+var INPUT_TYPE_TOUCH = 'touch';
+var INPUT_TYPE_PEN = 'pen';
+var INPUT_TYPE_MOUSE = 'mouse';
+var INPUT_TYPE_KINECT = 'kinect';
+
+var COMPUTE_INTERVAL = 25;
+
+var INPUT_START = 1;
+var INPUT_MOVE = 2;
+var INPUT_END = 4;
+var INPUT_CANCEL = 8;
+
+var DIRECTION_NONE = 1;
+var DIRECTION_LEFT = 2;
+var DIRECTION_RIGHT = 4;
+var DIRECTION_UP = 8;
+var DIRECTION_DOWN = 16;
+
+var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
+var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
+var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
+
+var PROPS_XY = ['x', 'y'];
+var PROPS_CLIENT_XY = ['clientX', 'clientY'];
+
+/**
+ * create new input type manager
+ * @param {Manager} manager
+ * @param {Function} callback
+ * @returns {Input}
+ * @constructor
+ */
+function Input(manager, callback) {
+    var self = this;
+    this.manager = manager;
+    this.callback = callback;
+    this.element = manager.element;
+    this.target = manager.options.inputTarget;
+
+    // smaller wrapper around the handler, for the scope and the enabled state of the manager,
+    // so when disabled the input events are completely bypassed.
+    this.domHandler = function(ev) {
+        if (boolOrFn(manager.options.enable, [manager])) {
+            self.handler(ev);
+        }
+    };
+
+    this.init();
+
+}
+
+Input.prototype = {
+    /**
+     * should handle the inputEvent data and trigger the callback
+     * @virtual
+     */
+    handler: function() { },
+
+    /**
+     * bind the events
+     */
+    init: function() {
+        this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    },
+
+    /**
+     * unbind the events
+     */
+    destroy: function() {
+        this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    }
+};
+
+/**
+ * create new input type manager
+ * called by the Manager constructor
+ * @param {Hammer} manager
+ * @returns {Input}
+ */
+function createInputInstance(manager) {
+    var Type;
+    var inputClass = manager.options.inputClass;
+
+    if (inputClass) {
+        Type = inputClass;
+    } else if (SUPPORT_POINTER_EVENTS) {
+        Type = PointerEventInput;
+    } else if (SUPPORT_ONLY_TOUCH) {
+        Type = TouchInput;
+    } else if (!SUPPORT_TOUCH) {
+        Type = MouseInput;
+    } else {
+        Type = TouchMouseInput;
+    }
+    return new (Type)(manager, inputHandler);
+}
+
+/**
+ * handle input events
+ * @param {Manager} manager
+ * @param {String} eventType
+ * @param {Object} input
+ */
+function inputHandler(manager, eventType, input) {
+    var pointersLen = input.pointers.length;
+    var changedPointersLen = input.changedPointers.length;
+    var isFirst = (eventType & INPUT_START && (pointersLen - changedPointersLen === 0));
+    var isFinal = (eventType & (INPUT_END | INPUT_CANCEL) && (pointersLen - changedPointersLen === 0));
+
+    input.isFirst = !!isFirst;
+    input.isFinal = !!isFinal;
+
+    if (isFirst) {
+        manager.session = {};
+    }
+
+    // source event is the normalized value of the domEvents
+    // like 'touchstart, mouseup, pointerdown'
+    input.eventType = eventType;
+
+    // compute scale, rotation etc
+    computeInputData(manager, input);
+
+    // emit secret event
+    manager.emit('hammer.input', input);
+
+    manager.recognize(input);
+    manager.session.prevInput = input;
+}
+
+/**
+ * extend the data with some usable properties like scale, rotate, velocity etc
+ * @param {Object} manager
+ * @param {Object} input
+ */
+function computeInputData(manager, input) {
+    var session = manager.session;
+    var pointers = input.pointers;
+    var pointersLength = pointers.length;
+
+    // store the first input to calculate the distance and direction
+    if (!session.firstInput) {
+        session.firstInput = simpleCloneInputData(input);
+    }
+
+    // to compute scale and rotation we need to store the multiple touches
+    if (pointersLength > 1 && !session.firstMultiple) {
+        session.firstMultiple = simpleCloneInputData(input);
+    } else if (pointersLength === 1) {
+        session.firstMultiple = false;
+    }
+
+    var firstInput = session.firstInput;
+    var firstMultiple = session.firstMultiple;
+    var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
+
+    var center = input.center = getCenter(pointers);
+    input.timeStamp = now();
+    input.deltaTime = input.timeStamp - firstInput.timeStamp;
+
+    input.angle = getAngle(offsetCenter, center);
+    input.distance = getDistance(offsetCenter, center);
+
+    computeDeltaXY(session, input);
+    input.offsetDirection = getDirection(input.deltaX, input.deltaY);
+
+    var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
+    input.overallVelocityX = overallVelocity.x;
+    input.overallVelocityY = overallVelocity.y;
+    input.overallVelocity = (abs(overallVelocity.x) > abs(overallVelocity.y)) ? overallVelocity.x : overallVelocity.y;
+
+    input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
+    input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
+
+    input.maxPointers = !session.prevInput ? input.pointers.length : ((input.pointers.length >
+        session.prevInput.maxPointers) ? input.pointers.length : session.prevInput.maxPointers);
+
+    computeIntervalInputData(session, input);
+
+    // find the correct target
+    var target = manager.element;
+    if (hasParent(input.srcEvent.target, target)) {
+        target = input.srcEvent.target;
+    }
+    input.target = target;
+}
+
+function computeDeltaXY(session, input) {
+    var center = input.center;
+    var offset = session.offsetDelta || {};
+    var prevDelta = session.prevDelta || {};
+    var prevInput = session.prevInput || {};
+
+    if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
+        prevDelta = session.prevDelta = {
+            x: prevInput.deltaX || 0,
+            y: prevInput.deltaY || 0
+        };
+
+        offset = session.offsetDelta = {
+            x: center.x,
+            y: center.y
+        };
+    }
+
+    input.deltaX = prevDelta.x + (center.x - offset.x);
+    input.deltaY = prevDelta.y + (center.y - offset.y);
+}
+
+/**
+ * velocity is calculated every x ms
+ * @param {Object} session
+ * @param {Object} input
+ */
+function computeIntervalInputData(session, input) {
+    var last = session.lastInterval || input,
+        deltaTime = input.timeStamp - last.timeStamp,
+        velocity, velocityX, velocityY, direction;
+
+    if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last.velocity === undefined)) {
+        var deltaX = input.deltaX - last.deltaX;
+        var deltaY = input.deltaY - last.deltaY;
+
+        var v = getVelocity(deltaTime, deltaX, deltaY);
+        velocityX = v.x;
+        velocityY = v.y;
+        velocity = (abs(v.x) > abs(v.y)) ? v.x : v.y;
+        direction = getDirection(deltaX, deltaY);
+
+        session.lastInterval = input;
+    } else {
+        // use latest velocity info if it doesn't overtake a minimum period
+        velocity = last.velocity;
+        velocityX = last.velocityX;
+        velocityY = last.velocityY;
+        direction = last.direction;
+    }
+
+    input.velocity = velocity;
+    input.velocityX = velocityX;
+    input.velocityY = velocityY;
+    input.direction = direction;
+}
+
+/**
+ * create a simple clone from the input used for storage of firstInput and firstMultiple
+ * @param {Object} input
+ * @returns {Object} clonedInputData
+ */
+function simpleCloneInputData(input) {
+    // make a simple copy of the pointers because we will get a reference if we don't
+    // we only need clientXY for the calculations
+    var pointers = [];
+    var i = 0;
+    while (i < input.pointers.length) {
+        pointers[i] = {
+            clientX: round(input.pointers[i].clientX),
+            clientY: round(input.pointers[i].clientY)
+        };
+        i++;
+    }
+
+    return {
+        timeStamp: now(),
+        pointers: pointers,
+        center: getCenter(pointers),
+        deltaX: input.deltaX,
+        deltaY: input.deltaY
+    };
+}
+
+/**
+ * get the center of all the pointers
+ * @param {Array} pointers
+ * @return {Object} center contains `x` and `y` properties
+ */
+function getCenter(pointers) {
+    var pointersLength = pointers.length;
+
+    // no need to loop when only one touch
+    if (pointersLength === 1) {
+        return {
+            x: round(pointers[0].clientX),
+            y: round(pointers[0].clientY)
+        };
+    }
+
+    var x = 0, y = 0, i = 0;
+    while (i < pointersLength) {
+        x += pointers[i].clientX;
+        y += pointers[i].clientY;
+        i++;
+    }
+
+    return {
+        x: round(x / pointersLength),
+        y: round(y / pointersLength)
+    };
+}
+
+/**
+ * calculate the velocity between two points. unit is in px per ms.
+ * @param {Number} deltaTime
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Object} velocity `x` and `y`
+ */
+function getVelocity(deltaTime, x, y) {
+    return {
+        x: x / deltaTime || 0,
+        y: y / deltaTime || 0
+    };
+}
+
+/**
+ * get the direction between two points
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Number} direction
+ */
+function getDirection(x, y) {
+    if (x === y) {
+        return DIRECTION_NONE;
+    }
+
+    if (abs(x) >= abs(y)) {
+        return x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
+    }
+    return y < 0 ? DIRECTION_UP : DIRECTION_DOWN;
+}
+
+/**
+ * calculate the absolute distance between two points
+ * @param {Object} p1 {x, y}
+ * @param {Object} p2 {x, y}
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} distance
+ */
+function getDistance(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+
+    return Math.sqrt((x * x) + (y * y));
+}
+
+/**
+ * calculate the angle between two coordinates
+ * @param {Object} p1
+ * @param {Object} p2
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} angle
+ */
+function getAngle(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+    return Math.atan2(y, x) * 180 / Math.PI;
+}
+
+/**
+ * calculate the rotation degrees between two pointersets
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} rotation
+ */
+function getRotation(start, end) {
+    return getAngle(end[1], end[0], PROPS_CLIENT_XY) + getAngle(start[1], start[0], PROPS_CLIENT_XY);
+}
+
+/**
+ * calculate the scale factor between two pointersets
+ * no scale is 1, and goes down to 0 when pinched together, and bigger when pinched out
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} scale
+ */
+function getScale(start, end) {
+    return getDistance(end[0], end[1], PROPS_CLIENT_XY) / getDistance(start[0], start[1], PROPS_CLIENT_XY);
+}
+
+var MOUSE_INPUT_MAP = {
+    mousedown: INPUT_START,
+    mousemove: INPUT_MOVE,
+    mouseup: INPUT_END
+};
+
+var MOUSE_ELEMENT_EVENTS = 'mousedown';
+var MOUSE_WINDOW_EVENTS = 'mousemove mouseup';
+
+/**
+ * Mouse events input
+ * @constructor
+ * @extends Input
+ */
+function MouseInput() {
+    this.evEl = MOUSE_ELEMENT_EVENTS;
+    this.evWin = MOUSE_WINDOW_EVENTS;
+
+    this.pressed = false; // mousedown state
+
+    Input.apply(this, arguments);
+}
+
+inherit(MouseInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function MEhandler(ev) {
+        var eventType = MOUSE_INPUT_MAP[ev.type];
+
+        // on start we want to have the left mouse button down
+        if (eventType & INPUT_START && ev.button === 0) {
+            this.pressed = true;
+        }
+
+        if (eventType & INPUT_MOVE && ev.which !== 1) {
+            eventType = INPUT_END;
+        }
+
+        // mouse must be down
+        if (!this.pressed) {
+            return;
+        }
+
+        if (eventType & INPUT_END) {
+            this.pressed = false;
+        }
+
+        this.callback(this.manager, eventType, {
+            pointers: [ev],
+            changedPointers: [ev],
+            pointerType: INPUT_TYPE_MOUSE,
+            srcEvent: ev
+        });
+    }
+});
+
+var POINTER_INPUT_MAP = {
+    pointerdown: INPUT_START,
+    pointermove: INPUT_MOVE,
+    pointerup: INPUT_END,
+    pointercancel: INPUT_CANCEL,
+    pointerout: INPUT_CANCEL
+};
+
+// in IE10 the pointer types is defined as an enum
+var IE10_POINTER_TYPE_ENUM = {
+    2: INPUT_TYPE_TOUCH,
+    3: INPUT_TYPE_PEN,
+    4: INPUT_TYPE_MOUSE,
+    5: INPUT_TYPE_KINECT // see https://twitter.com/jacobrossi/status/480596438489890816
+};
+
+var POINTER_ELEMENT_EVENTS = 'pointerdown';
+var POINTER_WINDOW_EVENTS = 'pointermove pointerup pointercancel';
+
+// IE10 has prefixed support, and case-sensitive
+if (window.MSPointerEvent && !window.PointerEvent) {
+    POINTER_ELEMENT_EVENTS = 'MSPointerDown';
+    POINTER_WINDOW_EVENTS = 'MSPointerMove MSPointerUp MSPointerCancel';
+}
+
+/**
+ * Pointer events input
+ * @constructor
+ * @extends Input
+ */
+function PointerEventInput() {
+    this.evEl = POINTER_ELEMENT_EVENTS;
+    this.evWin = POINTER_WINDOW_EVENTS;
+
+    Input.apply(this, arguments);
+
+    this.store = (this.manager.session.pointerEvents = []);
+}
+
+inherit(PointerEventInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function PEhandler(ev) {
+        var store = this.store;
+        var removePointer = false;
+
+        var eventTypeNormalized = ev.type.toLowerCase().replace('ms', '');
+        var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
+        var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
+
+        var isTouch = (pointerType == INPUT_TYPE_TOUCH);
+
+        // get index of the event in the store
+        var storeIndex = inArray(store, ev.pointerId, 'pointerId');
+
+        // start and mouse must be down
+        if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
+            if (storeIndex < 0) {
+                store.push(ev);
+                storeIndex = store.length - 1;
+            }
+        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+            removePointer = true;
+        }
+
+        // it not found, so the pointer hasn't been down (so it's probably a hover)
+        if (storeIndex < 0) {
+            return;
+        }
+
+        // update the event in the store
+        store[storeIndex] = ev;
+
+        this.callback(this.manager, eventType, {
+            pointers: store,
+            changedPointers: [ev],
+            pointerType: pointerType,
+            srcEvent: ev
+        });
+
+        if (removePointer) {
+            // remove from the store
+            store.splice(storeIndex, 1);
+        }
+    }
+});
+
+var SINGLE_TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var SINGLE_TOUCH_TARGET_EVENTS = 'touchstart';
+var SINGLE_TOUCH_WINDOW_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Touch events input
+ * @constructor
+ * @extends Input
+ */
+function SingleTouchInput() {
+    this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
+    this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
+    this.started = false;
+
+    Input.apply(this, arguments);
+}
+
+inherit(SingleTouchInput, Input, {
+    handler: function TEhandler(ev) {
+        var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
+
+        // should we handle the touch events?
+        if (type === INPUT_START) {
+            this.started = true;
+        }
+
+        if (!this.started) {
+            return;
+        }
+
+        var touches = normalizeSingleTouches.call(this, ev, type);
+
+        // when done, reset the started state
+        if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
+            this.started = false;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function normalizeSingleTouches(ev, type) {
+    var all = toArray(ev.touches);
+    var changed = toArray(ev.changedTouches);
+
+    if (type & (INPUT_END | INPUT_CANCEL)) {
+        all = uniqueArray(all.concat(changed), 'identifier', true);
+    }
+
+    return [all, changed];
+}
+
+var TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var TOUCH_TARGET_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Multi-user touch events input
+ * @constructor
+ * @extends Input
+ */
+function TouchInput() {
+    this.evTarget = TOUCH_TARGET_EVENTS;
+    this.targetIds = {};
+
+    Input.apply(this, arguments);
+}
+
+inherit(TouchInput, Input, {
+    handler: function MTEhandler(ev) {
+        var type = TOUCH_INPUT_MAP[ev.type];
+        var touches = getTouches.call(this, ev, type);
+        if (!touches) {
+            return;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function getTouches(ev, type) {
+    var allTouches = toArray(ev.touches);
+    var targetIds = this.targetIds;
+
+    // when there is only one touch, the process can be simplified
+    if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
+        targetIds[allTouches[0].identifier] = true;
+        return [allTouches, allTouches];
+    }
+
+    var i,
+        targetTouches,
+        changedTouches = toArray(ev.changedTouches),
+        changedTargetTouches = [],
+        target = this.target;
+
+    // get target touches from touches
+    targetTouches = allTouches.filter(function(touch) {
+        return hasParent(touch.target, target);
+    });
+
+    // collect touches
+    if (type === INPUT_START) {
+        i = 0;
+        while (i < targetTouches.length) {
+            targetIds[targetTouches[i].identifier] = true;
+            i++;
+        }
+    }
+
+    // filter changed touches to only contain touches that exist in the collected target ids
+    i = 0;
+    while (i < changedTouches.length) {
+        if (targetIds[changedTouches[i].identifier]) {
+            changedTargetTouches.push(changedTouches[i]);
+        }
+
+        // cleanup removed touches
+        if (type & (INPUT_END | INPUT_CANCEL)) {
+            delete targetIds[changedTouches[i].identifier];
+        }
+        i++;
+    }
+
+    if (!changedTargetTouches.length) {
+        return;
+    }
+
+    return [
+        // merge targetTouches with changedTargetTouches so it contains ALL touches, including 'end' and 'cancel'
+        uniqueArray(targetTouches.concat(changedTargetTouches), 'identifier', true),
+        changedTargetTouches
+    ];
+}
+
+/**
+ * Combined touch and mouse input
+ *
+ * Touch has a higher priority then mouse, and while touching no mouse events are allowed.
+ * This because touch devices also emit mouse events while doing a touch.
+ *
+ * @constructor
+ * @extends Input
+ */
+
+var DEDUP_TIMEOUT = 2500;
+var DEDUP_DISTANCE = 25;
+
+function TouchMouseInput() {
+    Input.apply(this, arguments);
+
+    var handler = bindFn(this.handler, this);
+    this.touch = new TouchInput(this.manager, handler);
+    this.mouse = new MouseInput(this.manager, handler);
+
+    this.primaryTouch = null;
+    this.lastTouches = [];
+}
+
+inherit(TouchMouseInput, Input, {
+    /**
+     * handle mouse and touch events
+     * @param {Hammer} manager
+     * @param {String} inputEvent
+     * @param {Object} inputData
+     */
+    handler: function TMEhandler(manager, inputEvent, inputData) {
+        var isTouch = (inputData.pointerType == INPUT_TYPE_TOUCH),
+            isMouse = (inputData.pointerType == INPUT_TYPE_MOUSE);
+
+        if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
+            return;
+        }
+
+        // when we're in a touch event, record touches to  de-dupe synthetic mouse event
+        if (isTouch) {
+            recordTouches.call(this, inputEvent, inputData);
+        } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
+            return;
+        }
+
+        this.callback(manager, inputEvent, inputData);
+    },
+
+    /**
+     * remove the event listeners
+     */
+    destroy: function destroy() {
+        this.touch.destroy();
+        this.mouse.destroy();
+    }
+});
+
+function recordTouches(eventType, eventData) {
+    if (eventType & INPUT_START) {
+        this.primaryTouch = eventData.changedPointers[0].identifier;
+        setLastTouch.call(this, eventData);
+    } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+        setLastTouch.call(this, eventData);
+    }
+}
+
+function setLastTouch(eventData) {
+    var touch = eventData.changedPointers[0];
+
+    if (touch.identifier === this.primaryTouch) {
+        var lastTouch = {x: touch.clientX, y: touch.clientY};
+        this.lastTouches.push(lastTouch);
+        var lts = this.lastTouches;
+        var removeLastTouch = function() {
+            var i = lts.indexOf(lastTouch);
+            if (i > -1) {
+                lts.splice(i, 1);
+            }
+        };
+        setTimeout(removeLastTouch, DEDUP_TIMEOUT);
+    }
+}
+
+function isSyntheticEvent(eventData) {
+    var x = eventData.srcEvent.clientX, y = eventData.srcEvent.clientY;
+    for (var i = 0; i < this.lastTouches.length; i++) {
+        var t = this.lastTouches[i];
+        var dx = Math.abs(x - t.x), dy = Math.abs(y - t.y);
+        if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
+            return true;
+        }
+    }
+    return false;
+}
+
+var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, 'touchAction');
+var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined;
+
+// magical touchAction value
+var TOUCH_ACTION_COMPUTE = 'compute';
+var TOUCH_ACTION_AUTO = 'auto';
+var TOUCH_ACTION_MANIPULATION = 'manipulation'; // not implemented
+var TOUCH_ACTION_NONE = 'none';
+var TOUCH_ACTION_PAN_X = 'pan-x';
+var TOUCH_ACTION_PAN_Y = 'pan-y';
+var TOUCH_ACTION_MAP = getTouchActionProps();
+
+/**
+ * Touch Action
+ * sets the touchAction property or uses the js alternative
+ * @param {Manager} manager
+ * @param {String} value
+ * @constructor
+ */
+function TouchAction(manager, value) {
+    this.manager = manager;
+    this.set(value);
+}
+
+TouchAction.prototype = {
+    /**
+     * set the touchAction value on the element or enable the polyfill
+     * @param {String} value
+     */
+    set: function(value) {
+        // find out the touch-action by the event handlers
+        if (value == TOUCH_ACTION_COMPUTE) {
+            value = this.compute();
+        }
+
+        if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
+            this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
+        }
+        this.actions = value.toLowerCase().trim();
+    },
+
+    /**
+     * just re-set the touchAction value
+     */
+    update: function() {
+        this.set(this.manager.options.touchAction);
+    },
+
+    /**
+     * compute the value for the touchAction property based on the recognizer's settings
+     * @returns {String} value
+     */
+    compute: function() {
+        var actions = [];
+        each(this.manager.recognizers, function(recognizer) {
+            if (boolOrFn(recognizer.options.enable, [recognizer])) {
+                actions = actions.concat(recognizer.getTouchAction());
+            }
+        });
+        return cleanTouchActions(actions.join(' '));
+    },
+
+    /**
+     * this method is called on each input cycle and provides the preventing of the browser behavior
+     * @param {Object} input
+     */
+    preventDefaults: function(input) {
+        var srcEvent = input.srcEvent;
+        var direction = input.offsetDirection;
+
+        // if the touch action did prevented once this session
+        if (this.manager.session.prevented) {
+            srcEvent.preventDefault();
+            return;
+        }
+
+        var actions = this.actions;
+        var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
+        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
+        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
+
+        if (hasNone) {
+            //do not prevent defaults if this is a tap gesture
+
+            var isTapPointer = input.pointers.length === 1;
+            var isTapMovement = input.distance < 2;
+            var isTapTouchTime = input.deltaTime < 250;
+
+            if (isTapPointer && isTapMovement && isTapTouchTime) {
+                return;
+            }
+        }
+
+        if (hasPanX && hasPanY) {
+            // `pan-x pan-y` means browser handles all scrolling/panning, do not prevent
+            return;
+        }
+
+        if (hasNone ||
+            (hasPanY && direction & DIRECTION_HORIZONTAL) ||
+            (hasPanX && direction & DIRECTION_VERTICAL)) {
+            return this.preventSrc(srcEvent);
+        }
+    },
+
+    /**
+     * call preventDefault to prevent the browser's default behavior (scrolling in most cases)
+     * @param {Object} srcEvent
+     */
+    preventSrc: function(srcEvent) {
+        this.manager.session.prevented = true;
+        srcEvent.preventDefault();
+    }
+};
+
+/**
+ * when the touchActions are collected they are not a valid value, so we need to clean things up. *
+ * @param {String} actions
+ * @returns {*}
+ */
+function cleanTouchActions(actions) {
+    // none
+    if (inStr(actions, TOUCH_ACTION_NONE)) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
+    var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
+
+    // if both pan-x and pan-y are set (different recognizers
+    // for different directions, e.g. horizontal pan but vertical swipe?)
+    // we need none (as otherwise with pan-x pan-y combined none of these
+    // recognizers will work, since the browser would handle all panning
+    if (hasPanX && hasPanY) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    // pan-x OR pan-y
+    if (hasPanX || hasPanY) {
+        return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
+    }
+
+    // manipulation
+    if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
+        return TOUCH_ACTION_MANIPULATION;
+    }
+
+    return TOUCH_ACTION_AUTO;
+}
+
+function getTouchActionProps() {
+    if (!NATIVE_TOUCH_ACTION) {
+        return false;
+    }
+    var touchMap = {};
+    var cssSupports = window.CSS && window.CSS.supports;
+    ['auto', 'manipulation', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'].forEach(function(val) {
+
+        // If css.supports is not supported but there is native touch-action assume it supports
+        // all values. This is the case for IE 10 and 11.
+        touchMap[val] = cssSupports ? window.CSS.supports('touch-action', val) : true;
+    });
+    return touchMap;
+}
+
+/**
+ * Recognizer flow explained; *
+ * All recognizers have the initial state of POSSIBLE when a input session starts.
+ * The definition of a input session is from the first input until the last input, with all it's movement in it. *
+ * Example session for mouse-input: mousedown -> mousemove -> mouseup
+ *
+ * On each recognizing cycle (see Manager.recognize) the .recognize() method is executed
+ * which determines with state it should be.
+ *
+ * If the recognizer has the state FAILED, CANCELLED or RECOGNIZED (equals ENDED), it is reset to
+ * POSSIBLE to give it another change on the next cycle.
+ *
+ *               Possible
+ *                  |
+ *            +-----+---------------+
+ *            |                     |
+ *      +-----+-----+               |
+ *      |           |               |
+ *   Failed      Cancelled          |
+ *                          +-------+------+
+ *                          |              |
+ *                      Recognized       Began
+ *                                         |
+ *                                      Changed
+ *                                         |
+ *                                  Ended/Recognized
+ */
+var STATE_POSSIBLE = 1;
+var STATE_BEGAN = 2;
+var STATE_CHANGED = 4;
+var STATE_ENDED = 8;
+var STATE_RECOGNIZED = STATE_ENDED;
+var STATE_CANCELLED = 16;
+var STATE_FAILED = 32;
+
+/**
+ * Recognizer
+ * Every recognizer needs to extend from this class.
+ * @constructor
+ * @param {Object} options
+ */
+function Recognizer(options) {
+    this.options = assign({}, this.defaults, options || {});
+
+    this.id = uniqueId();
+
+    this.manager = null;
+
+    // default is enable true
+    this.options.enable = ifUndefined(this.options.enable, true);
+
+    this.state = STATE_POSSIBLE;
+
+    this.simultaneous = {};
+    this.requireFail = [];
+}
+
+Recognizer.prototype = {
+    /**
+     * @virtual
+     * @type {Object}
+     */
+    defaults: {},
+
+    /**
+     * set options
+     * @param {Object} options
+     * @return {Recognizer}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // also update the touchAction, in case something changed about the directions/enabled state
+        this.manager && this.manager.touchAction.update();
+        return this;
+    },
+
+    /**
+     * recognize simultaneous with an other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    recognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'recognizeWith', this)) {
+            return this;
+        }
+
+        var simultaneous = this.simultaneous;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (!simultaneous[otherRecognizer.id]) {
+            simultaneous[otherRecognizer.id] = otherRecognizer;
+            otherRecognizer.recognizeWith(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the simultaneous link. it doesnt remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRecognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRecognizeWith', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        delete this.simultaneous[otherRecognizer.id];
+        return this;
+    },
+
+    /**
+     * recognizer can only run when an other is failing
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    requireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'requireFailure', this)) {
+            return this;
+        }
+
+        var requireFail = this.requireFail;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (inArray(requireFail, otherRecognizer) === -1) {
+            requireFail.push(otherRecognizer);
+            otherRecognizer.requireFailure(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the requireFailure link. it does not remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRequireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRequireFailure', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        var index = inArray(this.requireFail, otherRecognizer);
+        if (index > -1) {
+            this.requireFail.splice(index, 1);
+        }
+        return this;
+    },
+
+    /**
+     * has require failures boolean
+     * @returns {boolean}
+     */
+    hasRequireFailures: function() {
+        return this.requireFail.length > 0;
+    },
+
+    /**
+     * if the recognizer can recognize simultaneous with an other recognizer
+     * @param {Recognizer} otherRecognizer
+     * @returns {Boolean}
+     */
+    canRecognizeWith: function(otherRecognizer) {
+        return !!this.simultaneous[otherRecognizer.id];
+    },
+
+    /**
+     * You should use `tryEmit` instead of `emit` directly to check
+     * that all the needed recognizers has failed before emitting.
+     * @param {Object} input
+     */
+    emit: function(input) {
+        var self = this;
+        var state = this.state;
+
+        function emit(event) {
+            self.manager.emit(event, input);
+        }
+
+        // 'panstart' and 'panmove'
+        if (state < STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+
+        emit(self.options.event); // simple 'eventName' events
+
+        if (input.additionalEvent) { // additional event(panleft, panright, pinchin, pinchout...)
+            emit(input.additionalEvent);
+        }
+
+        // panend and pancancel
+        if (state >= STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+    },
+
+    /**
+     * Check that all the require failure recognizers has failed,
+     * if true, it emits a gesture event,
+     * otherwise, setup the state to FAILED.
+     * @param {Object} input
+     */
+    tryEmit: function(input) {
+        if (this.canEmit()) {
+            return this.emit(input);
+        }
+        // it's failing anyway
+        this.state = STATE_FAILED;
+    },
+
+    /**
+     * can we emit?
+     * @returns {boolean}
+     */
+    canEmit: function() {
+        var i = 0;
+        while (i < this.requireFail.length) {
+            if (!(this.requireFail[i].state & (STATE_FAILED | STATE_POSSIBLE))) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    },
+
+    /**
+     * update the recognizer
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        // make a new copy of the inputData
+        // so we can change the inputData without messing up the other recognizers
+        var inputDataClone = assign({}, inputData);
+
+        // is is enabled and allow recognizing?
+        if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
+            this.reset();
+            this.state = STATE_FAILED;
+            return;
+        }
+
+        // reset when we've reached the end
+        if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
+            this.state = STATE_POSSIBLE;
+        }
+
+        this.state = this.process(inputDataClone);
+
+        // the recognizer has recognized a gesture
+        // so trigger an event
+        if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
+            this.tryEmit(inputDataClone);
+        }
+    },
+
+    /**
+     * return the state of the recognizer
+     * the actual recognizing happens in this method
+     * @virtual
+     * @param {Object} inputData
+     * @returns {Const} STATE
+     */
+    process: function(inputData) { }, // jshint ignore:line
+
+    /**
+     * return the preferred touch-action
+     * @virtual
+     * @returns {Array}
+     */
+    getTouchAction: function() { },
+
+    /**
+     * called when the gesture isn't allowed to recognize
+     * like when another is being recognized or it is disabled
+     * @virtual
+     */
+    reset: function() { }
+};
+
+/**
+ * get a usable string, used as event postfix
+ * @param {Const} state
+ * @returns {String} state
+ */
+function stateStr(state) {
+    if (state & STATE_CANCELLED) {
+        return 'cancel';
+    } else if (state & STATE_ENDED) {
+        return 'end';
+    } else if (state & STATE_CHANGED) {
+        return 'move';
+    } else if (state & STATE_BEGAN) {
+        return 'start';
+    }
+    return '';
+}
+
+/**
+ * direction cons to string
+ * @param {Const} direction
+ * @returns {String}
+ */
+function directionStr(direction) {
+    if (direction == DIRECTION_DOWN) {
+        return 'down';
+    } else if (direction == DIRECTION_UP) {
+        return 'up';
+    } else if (direction == DIRECTION_LEFT) {
+        return 'left';
+    } else if (direction == DIRECTION_RIGHT) {
+        return 'right';
+    }
+    return '';
+}
+
+/**
+ * get a recognizer by name if it is bound to a manager
+ * @param {Recognizer|String} otherRecognizer
+ * @param {Recognizer} recognizer
+ * @returns {Recognizer}
+ */
+function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
+    var manager = recognizer.manager;
+    if (manager) {
+        return manager.get(otherRecognizer);
+    }
+    return otherRecognizer;
+}
+
+/**
+ * This recognizer is just used as a base for the simple attribute recognizers.
+ * @constructor
+ * @extends Recognizer
+ */
+function AttrRecognizer() {
+    Recognizer.apply(this, arguments);
+}
+
+inherit(AttrRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof AttrRecognizer
+     */
+    defaults: {
+        /**
+         * @type {Number}
+         * @default 1
+         */
+        pointers: 1
+    },
+
+    /**
+     * Used to check if it the recognizer receives valid input, like input.distance > 10.
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {Boolean} recognized
+     */
+    attrTest: function(input) {
+        var optionPointers = this.options.pointers;
+        return optionPointers === 0 || input.pointers.length === optionPointers;
+    },
+
+    /**
+     * Process the input and return the state for the recognizer
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {*} State
+     */
+    process: function(input) {
+        var state = this.state;
+        var eventType = input.eventType;
+
+        var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
+        var isValid = this.attrTest(input);
+
+        // on cancel input and we've recognized before, return STATE_CANCELLED
+        if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
+            return state | STATE_CANCELLED;
+        } else if (isRecognized || isValid) {
+            if (eventType & INPUT_END) {
+                return state | STATE_ENDED;
+            } else if (!(state & STATE_BEGAN)) {
+                return STATE_BEGAN;
+            }
+            return state | STATE_CHANGED;
+        }
+        return STATE_FAILED;
+    }
+});
+
+/**
+ * Pan
+ * Recognized when the pointer is down and moved in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PanRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+
+    this.pX = null;
+    this.pY = null;
+}
+
+inherit(PanRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PanRecognizer
+     */
+    defaults: {
+        event: 'pan',
+        threshold: 10,
+        pointers: 1,
+        direction: DIRECTION_ALL
+    },
+
+    getTouchAction: function() {
+        var direction = this.options.direction;
+        var actions = [];
+        if (direction & DIRECTION_HORIZONTAL) {
+            actions.push(TOUCH_ACTION_PAN_Y);
+        }
+        if (direction & DIRECTION_VERTICAL) {
+            actions.push(TOUCH_ACTION_PAN_X);
+        }
+        return actions;
+    },
+
+    directionTest: function(input) {
+        var options = this.options;
+        var hasMoved = true;
+        var distance = input.distance;
+        var direction = input.direction;
+        var x = input.deltaX;
+        var y = input.deltaY;
+
+        // lock to axis?
+        if (!(direction & options.direction)) {
+            if (options.direction & DIRECTION_HORIZONTAL) {
+                direction = (x === 0) ? DIRECTION_NONE : (x < 0) ? DIRECTION_LEFT : DIRECTION_RIGHT;
+                hasMoved = x != this.pX;
+                distance = Math.abs(input.deltaX);
+            } else {
+                direction = (y === 0) ? DIRECTION_NONE : (y < 0) ? DIRECTION_UP : DIRECTION_DOWN;
+                hasMoved = y != this.pY;
+                distance = Math.abs(input.deltaY);
+            }
+        }
+        input.direction = direction;
+        return hasMoved && distance > options.threshold && direction & options.direction;
+    },
+
+    attrTest: function(input) {
+        return AttrRecognizer.prototype.attrTest.call(this, input) &&
+            (this.state & STATE_BEGAN || (!(this.state & STATE_BEGAN) && this.directionTest(input)));
+    },
+
+    emit: function(input) {
+
+        this.pX = input.deltaX;
+        this.pY = input.deltaY;
+
+        var direction = directionStr(input.direction);
+
+        if (direction) {
+            input.additionalEvent = this.options.event + direction;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Pinch
+ * Recognized when two or more pointers are moving toward (zoom-in) or away from each other (zoom-out).
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PinchRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(PinchRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'pinch',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
+    },
+
+    emit: function(input) {
+        if (input.scale !== 1) {
+            var inOut = input.scale < 1 ? 'in' : 'out';
+            input.additionalEvent = this.options.event + inOut;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Press
+ * Recognized when the pointer is down for x ms without any movement.
+ * @constructor
+ * @extends Recognizer
+ */
+function PressRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    this._timer = null;
+    this._input = null;
+}
+
+inherit(PressRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PressRecognizer
+     */
+    defaults: {
+        event: 'press',
+        pointers: 1,
+        time: 251, // minimal time of the pointer to be pressed
+        threshold: 9 // a minimal movement is ok, but keep it low
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_AUTO];
+    },
+
+    process: function(input) {
+        var options = this.options;
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTime = input.deltaTime > options.time;
+
+        this._input = input;
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (!validMovement || !validPointers || (input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime)) {
+            this.reset();
+        } else if (input.eventType & INPUT_START) {
+            this.reset();
+            this._timer = setTimeoutContext(function() {
+                this.state = STATE_RECOGNIZED;
+                this.tryEmit();
+            }, options.time, this);
+        } else if (input.eventType & INPUT_END) {
+            return STATE_RECOGNIZED;
+        }
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function(input) {
+        if (this.state !== STATE_RECOGNIZED) {
+            return;
+        }
+
+        if (input && (input.eventType & INPUT_END)) {
+            this.manager.emit(this.options.event + 'up', input);
+        } else {
+            this._input.timeStamp = now();
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Rotate
+ * Recognized when two or more pointer are moving in a circular motion.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function RotateRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(RotateRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof RotateRecognizer
+     */
+    defaults: {
+        event: 'rotate',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
+    }
+});
+
+/**
+ * Swipe
+ * Recognized when the pointer is moving fast (velocity), with enough distance in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function SwipeRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(SwipeRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof SwipeRecognizer
+     */
+    defaults: {
+        event: 'swipe',
+        threshold: 10,
+        velocity: 0.3,
+        direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
+        pointers: 1
+    },
+
+    getTouchAction: function() {
+        return PanRecognizer.prototype.getTouchAction.call(this);
+    },
+
+    attrTest: function(input) {
+        var direction = this.options.direction;
+        var velocity;
+
+        if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
+            velocity = input.overallVelocity;
+        } else if (direction & DIRECTION_HORIZONTAL) {
+            velocity = input.overallVelocityX;
+        } else if (direction & DIRECTION_VERTICAL) {
+            velocity = input.overallVelocityY;
+        }
+
+        return this._super.attrTest.call(this, input) &&
+            direction & input.offsetDirection &&
+            input.distance > this.options.threshold &&
+            input.maxPointers == this.options.pointers &&
+            abs(velocity) > this.options.velocity && input.eventType & INPUT_END;
+    },
+
+    emit: function(input) {
+        var direction = directionStr(input.offsetDirection);
+        if (direction) {
+            this.manager.emit(this.options.event + direction, input);
+        }
+
+        this.manager.emit(this.options.event, input);
+    }
+});
+
+/**
+ * A tap is ecognized when the pointer is doing a small tap/click. Multiple taps are recognized if they occur
+ * between the given interval and position. The delay option can be used to recognize multi-taps without firing
+ * a single tap.
+ *
+ * The eventData from the emitted event contains the property `tapCount`, which contains the amount of
+ * multi-taps being recognized.
+ * @constructor
+ * @extends Recognizer
+ */
+function TapRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    // previous time and center,
+    // used for tap counting
+    this.pTime = false;
+    this.pCenter = false;
+
+    this._timer = null;
+    this._input = null;
+    this.count = 0;
+}
+
+inherit(TapRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'tap',
+        pointers: 1,
+        taps: 1,
+        interval: 300, // max time between the multi-tap taps
+        time: 250, // max time of the pointer to be down (like finger on the screen)
+        threshold: 9, // a minimal movement is ok, but keep it low
+        posThreshold: 10 // a multi-tap can be a bit off the initial position
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_MANIPULATION];
+    },
+
+    process: function(input) {
+        var options = this.options;
+
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTouchTime = input.deltaTime < options.time;
+
+        this.reset();
+
+        if ((input.eventType & INPUT_START) && (this.count === 0)) {
+            return this.failTimeout();
+        }
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (validMovement && validTouchTime && validPointers) {
+            if (input.eventType != INPUT_END) {
+                return this.failTimeout();
+            }
+
+            var validInterval = this.pTime ? (input.timeStamp - this.pTime < options.interval) : true;
+            var validMultiTap = !this.pCenter || getDistance(this.pCenter, input.center) < options.posThreshold;
+
+            this.pTime = input.timeStamp;
+            this.pCenter = input.center;
+
+            if (!validMultiTap || !validInterval) {
+                this.count = 1;
+            } else {
+                this.count += 1;
+            }
+
+            this._input = input;
+
+            // if tap count matches we have recognized it,
+            // else it has began recognizing...
+            var tapCount = this.count % options.taps;
+            if (tapCount === 0) {
+                // no failing requirements, immediately trigger the tap event
+                // or wait as long as the multitap interval to trigger
+                if (!this.hasRequireFailures()) {
+                    return STATE_RECOGNIZED;
+                } else {
+                    this._timer = setTimeoutContext(function() {
+                        this.state = STATE_RECOGNIZED;
+                        this.tryEmit();
+                    }, options.interval, this);
+                    return STATE_BEGAN;
+                }
+            }
+        }
+        return STATE_FAILED;
+    },
+
+    failTimeout: function() {
+        this._timer = setTimeoutContext(function() {
+            this.state = STATE_FAILED;
+        }, this.options.interval, this);
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function() {
+        if (this.state == STATE_RECOGNIZED) {
+            this._input.tapCount = this.count;
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Simple way to create a manager with a default set of recognizers.
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Hammer(element, options) {
+    options = options || {};
+    options.recognizers = ifUndefined(options.recognizers, Hammer.defaults.preset);
+    return new Manager(element, options);
+}
+
+/**
+ * @const {string}
+ */
+Hammer.VERSION = '2.0.7';
+
+/**
+ * default settings
+ * @namespace
+ */
+Hammer.defaults = {
+    /**
+     * set if DOM events are being triggered.
+     * But this is slower and unused by simple implementations, so disabled by default.
+     * @type {Boolean}
+     * @default false
+     */
+    domEvents: false,
+
+    /**
+     * The value for the touchAction property/fallback.
+     * When set to `compute` it will magically set the correct value based on the added recognizers.
+     * @type {String}
+     * @default compute
+     */
+    touchAction: TOUCH_ACTION_COMPUTE,
+
+    /**
+     * @type {Boolean}
+     * @default true
+     */
+    enable: true,
+
+    /**
+     * EXPERIMENTAL FEATURE -- can be removed/changed
+     * Change the parent input target element.
+     * If Null, then it is being set the to main element.
+     * @type {Null|EventTarget}
+     * @default null
+     */
+    inputTarget: null,
+
+    /**
+     * force an input class
+     * @type {Null|Function}
+     * @default null
+     */
+    inputClass: null,
+
+    /**
+     * Default recognizer setup when calling `Hammer()`
+     * When creating a new Manager these will be skipped.
+     * @type {Array}
+     */
+    preset: [
+        // RecognizerClass, options, [recognizeWith, ...], [requireFailure, ...]
+        [RotateRecognizer, {enable: false}],
+        [PinchRecognizer, {enable: false}, ['rotate']],
+        [SwipeRecognizer, {direction: DIRECTION_HORIZONTAL}],
+        [PanRecognizer, {direction: DIRECTION_HORIZONTAL}, ['swipe']],
+        [TapRecognizer],
+        [TapRecognizer, {event: 'doubletap', taps: 2}, ['tap']],
+        [PressRecognizer]
+    ],
+
+    /**
+     * Some CSS properties can be used to improve the working of Hammer.
+     * Add them to this method and they will be set when creating a new Manager.
+     * @namespace
+     */
+    cssProps: {
+        /**
+         * Disables text selection to improve the dragging gesture. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userSelect: 'none',
+
+        /**
+         * Disable the Windows Phone grippers when pressing an element.
+         * @type {String}
+         * @default 'none'
+         */
+        touchSelect: 'none',
+
+        /**
+         * Disables the default callout shown when you touch and hold a touch target.
+         * On iOS, when you touch and hold a touch target such as a link, Safari displays
+         * a callout containing information about the link. This property allows you to disable that callout.
+         * @type {String}
+         * @default 'none'
+         */
+        touchCallout: 'none',
+
+        /**
+         * Specifies whether zooming is enabled. Used by IE10>
+         * @type {String}
+         * @default 'none'
+         */
+        contentZooming: 'none',
+
+        /**
+         * Specifies that an entire element should be draggable instead of its contents. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userDrag: 'none',
+
+        /**
+         * Overrides the highlight color shown when the user taps a link or a JavaScript
+         * clickable element in iOS. This property obeys the alpha value, if specified.
+         * @type {String}
+         * @default 'rgba(0,0,0,0)'
+         */
+        tapHighlightColor: 'rgba(0,0,0,0)'
+    }
+};
+
+var STOP = 1;
+var FORCED_STOP = 2;
+
+/**
+ * Manager
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Manager(element, options) {
+    this.options = assign({}, Hammer.defaults, options || {});
+
+    this.options.inputTarget = this.options.inputTarget || element;
+
+    this.handlers = {};
+    this.session = {};
+    this.recognizers = [];
+    this.oldCssProps = {};
+
+    this.element = element;
+    this.input = createInputInstance(this);
+    this.touchAction = new TouchAction(this, this.options.touchAction);
+
+    toggleCssProps(this, true);
+
+    each(this.options.recognizers, function(item) {
+        var recognizer = this.add(new (item[0])(item[1]));
+        item[2] && recognizer.recognizeWith(item[2]);
+        item[3] && recognizer.requireFailure(item[3]);
+    }, this);
+}
+
+Manager.prototype = {
+    /**
+     * set options
+     * @param {Object} options
+     * @returns {Manager}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // Options that need a little more setup
+        if (options.touchAction) {
+            this.touchAction.update();
+        }
+        if (options.inputTarget) {
+            // Clean up existing event listeners and reinitialize
+            this.input.destroy();
+            this.input.target = options.inputTarget;
+            this.input.init();
+        }
+        return this;
+    },
+
+    /**
+     * stop recognizing for this session.
+     * This session will be discarded, when a new [input]start event is fired.
+     * When forced, the recognizer cycle is stopped immediately.
+     * @param {Boolean} [force]
+     */
+    stop: function(force) {
+        this.session.stopped = force ? FORCED_STOP : STOP;
+    },
+
+    /**
+     * run the recognizers!
+     * called by the inputHandler function on every movement of the pointers (touches)
+     * it walks through all the recognizers and tries to detect the gesture that is being made
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        var session = this.session;
+        if (session.stopped) {
+            return;
+        }
+
+        // run the touch-action polyfill
+        this.touchAction.preventDefaults(inputData);
+
+        var recognizer;
+        var recognizers = this.recognizers;
+
+        // this holds the recognizer that is being recognized.
+        // so the recognizer's state needs to be BEGAN, CHANGED, ENDED or RECOGNIZED
+        // if no recognizer is detecting a thing, it is set to `null`
+        var curRecognizer = session.curRecognizer;
+
+        // reset when the last recognizer is recognized
+        // or when we're in a new session
+        if (!curRecognizer || (curRecognizer && curRecognizer.state & STATE_RECOGNIZED)) {
+            curRecognizer = session.curRecognizer = null;
+        }
+
+        var i = 0;
+        while (i < recognizers.length) {
+            recognizer = recognizers[i];
+
+            // find out if we are allowed try to recognize the input for this one.
+            // 1.   allow if the session is NOT forced stopped (see the .stop() method)
+            // 2.   allow if we still haven't recognized a gesture in this session, or the this recognizer is the one
+            //      that is being recognized.
+            // 3.   allow if the recognizer is allowed to run simultaneous with the current recognized recognizer.
+            //      this can be setup with the `recognizeWith()` method on the recognizer.
+            if (session.stopped !== FORCED_STOP && ( // 1
+                    !curRecognizer || recognizer == curRecognizer || // 2
+                    recognizer.canRecognizeWith(curRecognizer))) { // 3
+                recognizer.recognize(inputData);
+            } else {
+                recognizer.reset();
+            }
+
+            // if the recognizer has been recognizing the input as a valid gesture, we want to store this one as the
+            // current active recognizer. but only if we don't already have an active recognizer
+            if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
+                curRecognizer = session.curRecognizer = recognizer;
+            }
+            i++;
+        }
+    },
+
+    /**
+     * get a recognizer by its event name.
+     * @param {Recognizer|String} recognizer
+     * @returns {Recognizer|Null}
+     */
+    get: function(recognizer) {
+        if (recognizer instanceof Recognizer) {
+            return recognizer;
+        }
+
+        var recognizers = this.recognizers;
+        for (var i = 0; i < recognizers.length; i++) {
+            if (recognizers[i].options.event == recognizer) {
+                return recognizers[i];
+            }
+        }
+        return null;
+    },
+
+    /**
+     * add a recognizer to the manager
+     * existing recognizers with the same event name will be removed
+     * @param {Recognizer} recognizer
+     * @returns {Recognizer|Manager}
+     */
+    add: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'add', this)) {
+            return this;
+        }
+
+        // remove existing
+        var existing = this.get(recognizer.options.event);
+        if (existing) {
+            this.remove(existing);
+        }
+
+        this.recognizers.push(recognizer);
+        recognizer.manager = this;
+
+        this.touchAction.update();
+        return recognizer;
+    },
+
+    /**
+     * remove a recognizer by name or instance
+     * @param {Recognizer|String} recognizer
+     * @returns {Manager}
+     */
+    remove: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'remove', this)) {
+            return this;
+        }
+
+        recognizer = this.get(recognizer);
+
+        // let's make sure this recognizer exists
+        if (recognizer) {
+            var recognizers = this.recognizers;
+            var index = inArray(recognizers, recognizer);
+
+            if (index !== -1) {
+                recognizers.splice(index, 1);
+                this.touchAction.update();
+            }
+        }
+
+        return this;
+    },
+
+    /**
+     * bind event
+     * @param {String} events
+     * @param {Function} handler
+     * @returns {EventEmitter} this
+     */
+    on: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+        if (handler === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            handlers[event] = handlers[event] || [];
+            handlers[event].push(handler);
+        });
+        return this;
+    },
+
+    /**
+     * unbind event, leave emit blank to remove all handlers
+     * @param {String} events
+     * @param {Function} [handler]
+     * @returns {EventEmitter} this
+     */
+    off: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            if (!handler) {
+                delete handlers[event];
+            } else {
+                handlers[event] && handlers[event].splice(inArray(handlers[event], handler), 1);
+            }
+        });
+        return this;
+    },
+
+    /**
+     * emit event to the listeners
+     * @param {String} event
+     * @param {Object} data
+     */
+    emit: function(event, data) {
+        // we also want to trigger dom events
+        if (this.options.domEvents) {
+            triggerDomEvent(event, data);
+        }
+
+        // no handlers, so skip it all
+        var handlers = this.handlers[event] && this.handlers[event].slice();
+        if (!handlers || !handlers.length) {
+            return;
+        }
+
+        data.type = event;
+        data.preventDefault = function() {
+            data.srcEvent.preventDefault();
+        };
+
+        var i = 0;
+        while (i < handlers.length) {
+            handlers[i](data);
+            i++;
+        }
+    },
+
+    /**
+     * destroy the manager and unbinds all events
+     * it doesn't unbind dom events, that is the user own responsibility
+     */
+    destroy: function() {
+        this.element && toggleCssProps(this, false);
+
+        this.handlers = {};
+        this.session = {};
+        this.input.destroy();
+        this.element = null;
+    }
+};
+
+/**
+ * add/remove the css properties as defined in manager.options.cssProps
+ * @param {Manager} manager
+ * @param {Boolean} add
+ */
+function toggleCssProps(manager, add) {
+    var element = manager.element;
+    if (!element.style) {
+        return;
+    }
+    var prop;
+    each(manager.options.cssProps, function(value, name) {
+        prop = prefixed(element.style, name);
+        if (add) {
+            manager.oldCssProps[prop] = element.style[prop];
+            element.style[prop] = value;
+        } else {
+            element.style[prop] = manager.oldCssProps[prop] || '';
+        }
+    });
+    if (!add) {
+        manager.oldCssProps = {};
+    }
+}
+
+/**
+ * trigger dom event
+ * @param {String} event
+ * @param {Object} data
+ */
+function triggerDomEvent(event, data) {
+    var gestureEvent = document.createEvent('Event');
+    gestureEvent.initEvent(event, true, true);
+    gestureEvent.gesture = data;
+    data.target.dispatchEvent(gestureEvent);
+}
+
+assign(Hammer, {
+    INPUT_START: INPUT_START,
+    INPUT_MOVE: INPUT_MOVE,
+    INPUT_END: INPUT_END,
+    INPUT_CANCEL: INPUT_CANCEL,
+
+    STATE_POSSIBLE: STATE_POSSIBLE,
+    STATE_BEGAN: STATE_BEGAN,
+    STATE_CHANGED: STATE_CHANGED,
+    STATE_ENDED: STATE_ENDED,
+    STATE_RECOGNIZED: STATE_RECOGNIZED,
+    STATE_CANCELLED: STATE_CANCELLED,
+    STATE_FAILED: STATE_FAILED,
+
+    DIRECTION_NONE: DIRECTION_NONE,
+    DIRECTION_LEFT: DIRECTION_LEFT,
+    DIRECTION_RIGHT: DIRECTION_RIGHT,
+    DIRECTION_UP: DIRECTION_UP,
+    DIRECTION_DOWN: DIRECTION_DOWN,
+    DIRECTION_HORIZONTAL: DIRECTION_HORIZONTAL,
+    DIRECTION_VERTICAL: DIRECTION_VERTICAL,
+    DIRECTION_ALL: DIRECTION_ALL,
+
+    Manager: Manager,
+    Input: Input,
+    TouchAction: TouchAction,
+
+    TouchInput: TouchInput,
+    MouseInput: MouseInput,
+    PointerEventInput: PointerEventInput,
+    TouchMouseInput: TouchMouseInput,
+    SingleTouchInput: SingleTouchInput,
+
+    Recognizer: Recognizer,
+    AttrRecognizer: AttrRecognizer,
+    Tap: TapRecognizer,
+    Pan: PanRecognizer,
+    Swipe: SwipeRecognizer,
+    Pinch: PinchRecognizer,
+    Rotate: RotateRecognizer,
+    Press: PressRecognizer,
+
+    on: addEventListeners,
+    off: removeEventListeners,
+    each: each,
+    merge: merge,
+    extend: extend,
+    assign: assign,
+    inherit: inherit,
+    bindFn: bindFn,
+    prefixed: prefixed
+});
+
+// this prevents errors when Hammer is loaded in the presence of an AMD
+//  style loader but by script tag, not by the loader.
+var freeGlobal = (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {})); // jshint ignore:line
+freeGlobal.Hammer = Hammer;
+
+if (true) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+        return Hammer;
+    }).call(exports, __webpack_require__, exports, module),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+} else {}
+
+})(window, document, 'Hammer');
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMap.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_style_index_0_id_5266066c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_style_index_0_id_5266066c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_style_index_0_id_5266066c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_style_index_0_id_673a7024_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_style_index_0_id_673a7024_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_style_index_0_id_673a7024_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameRatingModal.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameResultsModal.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ "./node_modules/vue-i18n/dist/vue-i18n.esm.js":
+/*!****************************************************!*\
+  !*** ./node_modules/vue-i18n/dist/vue-i18n.esm.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/*!
+ * vue-i18n v8.22.4 
+ * (c) 2021 kazuya kawaguchi
+ * Released under the MIT License.
+ */
+/*  */
+
+/**
+ * constants
+ */
+
+var numberFormatKeys = [
+  'compactDisplay',
+  'currency',
+  'currencyDisplay',
+  'currencySign',
+  'localeMatcher',
+  'notation',
+  'numberingSystem',
+  'signDisplay',
+  'style',
+  'unit',
+  'unitDisplay',
+  'useGrouping',
+  'minimumIntegerDigits',
+  'minimumFractionDigits',
+  'maximumFractionDigits',
+  'minimumSignificantDigits',
+  'maximumSignificantDigits'
+];
+
+/**
+ * utilities
+ */
+
+function warn (msg, err) {
+  if (typeof console !== 'undefined') {
+    console.warn('[vue-i18n] ' + msg);
+    /* istanbul ignore if */
+    if (err) {
+      console.warn(err.stack);
+    }
+  }
+}
+
+function error (msg, err) {
+  if (typeof console !== 'undefined') {
+    console.error('[vue-i18n] ' + msg);
+    /* istanbul ignore if */
+    if (err) {
+      console.error(err.stack);
+    }
+  }
+}
+
+var isArray = Array.isArray;
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isBoolean (val) {
+  return typeof val === 'boolean'
+}
+
+function isString (val) {
+  return typeof val === 'string'
+}
+
+var toString = Object.prototype.toString;
+var OBJECT_STRING = '[object Object]';
+function isPlainObject (obj) {
+  return toString.call(obj) === OBJECT_STRING
+}
+
+function isNull (val) {
+  return val === null || val === undefined
+}
+
+function isFunction (val) {
+  return typeof val === 'function'
+}
+
+function parseArgs () {
+  var args = [], len = arguments.length;
+  while ( len-- ) args[ len ] = arguments[ len ];
+
+  var locale = null;
+  var params = null;
+  if (args.length === 1) {
+    if (isObject(args[0]) || isArray(args[0])) {
+      params = args[0];
+    } else if (typeof args[0] === 'string') {
+      locale = args[0];
+    }
+  } else if (args.length === 2) {
+    if (typeof args[0] === 'string') {
+      locale = args[0];
+    }
+    /* istanbul ignore if */
+    if (isObject(args[1]) || isArray(args[1])) {
+      params = args[1];
+    }
+  }
+
+  return { locale: locale, params: params }
+}
+
+function looseClone (obj) {
+  return JSON.parse(JSON.stringify(obj))
+}
+
+function remove (arr, item) {
+  if (arr.length) {
+    var index = arr.indexOf(item);
+    if (index > -1) {
+      return arr.splice(index, 1)
+    }
+  }
+}
+
+function includes (arr, item) {
+  return !!~arr.indexOf(item)
+}
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+function hasOwn (obj, key) {
+  return hasOwnProperty.call(obj, key)
+}
+
+function merge (target) {
+  var arguments$1 = arguments;
+
+  var output = Object(target);
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments$1[i];
+    if (source !== undefined && source !== null) {
+      var key = (void 0);
+      for (key in source) {
+        if (hasOwn(source, key)) {
+          if (isObject(source[key])) {
+            output[key] = merge(output[key], source[key]);
+          } else {
+            output[key] = source[key];
+          }
+        }
+      }
+    }
+  }
+  return output
+}
+
+function looseEqual (a, b) {
+  if (a === b) { return true }
+  var isObjectA = isObject(a);
+  var isObjectB = isObject(b);
+  if (isObjectA && isObjectB) {
+    try {
+      var isArrayA = isArray(a);
+      var isArrayB = isArray(b);
+      if (isArrayA && isArrayB) {
+        return a.length === b.length && a.every(function (e, i) {
+          return looseEqual(e, b[i])
+        })
+      } else if (!isArrayA && !isArrayB) {
+        var keysA = Object.keys(a);
+        var keysB = Object.keys(b);
+        return keysA.length === keysB.length && keysA.every(function (key) {
+          return looseEqual(a[key], b[key])
+        })
+      } else {
+        /* istanbul ignore next */
+        return false
+      }
+    } catch (e) {
+      /* istanbul ignore next */
+      return false
+    }
+  } else if (!isObjectA && !isObjectB) {
+    return String(a) === String(b)
+  } else {
+    return false
+  }
+}
+
+/**
+ * Sanitizes html special characters from input strings. For mitigating risk of XSS attacks.
+ * @param rawText The raw input from the user that should be escaped.
+ */
+function escapeHtml(rawText) {
+  return rawText
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
+/**
+ * Escapes html tags and special symbols from all provided params which were returned from parseArgs().params.
+ * This method performs an in-place operation on the params object.
+ *
+ * @param {any} params Parameters as provided from `parseArgs().params`.
+ *                     May be either an array of strings or a string->any map.
+ *
+ * @returns The manipulated `params` object.
+ */
+function escapeParams(params) {
+  if(params != null) {
+    Object.keys(params).forEach(function (key) {
+      if(typeof(params[key]) == 'string') {
+        params[key] = escapeHtml(params[key]);
+      }
+    });
+  }
+  return params
+}
+
+/*  */
+
+function extend (Vue) {
+  if (!Vue.prototype.hasOwnProperty('$i18n')) {
+    // $FlowFixMe
+    Object.defineProperty(Vue.prototype, '$i18n', {
+      get: function get () { return this._i18n }
+    });
+  }
+
+  Vue.prototype.$t = function (key) {
+    var values = [], len = arguments.length - 1;
+    while ( len-- > 0 ) values[ len ] = arguments[ len + 1 ];
+
+    var i18n = this.$i18n;
+    return i18n._t.apply(i18n, [ key, i18n.locale, i18n._getMessages(), this ].concat( values ))
+  };
+
+  Vue.prototype.$tc = function (key, choice) {
+    var values = [], len = arguments.length - 2;
+    while ( len-- > 0 ) values[ len ] = arguments[ len + 2 ];
+
+    var i18n = this.$i18n;
+    return i18n._tc.apply(i18n, [ key, i18n.locale, i18n._getMessages(), this, choice ].concat( values ))
+  };
+
+  Vue.prototype.$te = function (key, locale) {
+    var i18n = this.$i18n;
+    return i18n._te(key, i18n.locale, i18n._getMessages(), locale)
+  };
+
+  Vue.prototype.$d = function (value) {
+    var ref;
+
+    var args = [], len = arguments.length - 1;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+    return (ref = this.$i18n).d.apply(ref, [ value ].concat( args ))
+  };
+
+  Vue.prototype.$n = function (value) {
+    var ref;
+
+    var args = [], len = arguments.length - 1;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+    return (ref = this.$i18n).n.apply(ref, [ value ].concat( args ))
+  };
+}
+
+/*  */
+
+var mixin = {
+  beforeCreate: function beforeCreate () {
+    var options = this.$options;
+    options.i18n = options.i18n || (options.__i18n ? {} : null);
+
+    if (options.i18n) {
+      if (options.i18n instanceof VueI18n) {
+        // init locale messages via custom blocks
+        if (options.__i18n) {
+          try {
+            var localeMessages = options.i18n && options.i18n.messages ? options.i18n.messages : {};
+            options.__i18n.forEach(function (resource) {
+              localeMessages = merge(localeMessages, JSON.parse(resource));
+            });
+            Object.keys(localeMessages).forEach(function (locale) {
+              options.i18n.mergeLocaleMessage(locale, localeMessages[locale]);
+            });
+          } catch (e) {
+            if (true) {
+              error("Cannot parse locale messages via custom blocks.", e);
+            }
+          }
+        }
+        this._i18n = options.i18n;
+        this._i18nWatcher = this._i18n.watchI18nData();
+      } else if (isPlainObject(options.i18n)) {
+        var rootI18n = this.$root && this.$root.$i18n && this.$root.$i18n instanceof VueI18n
+          ? this.$root.$i18n
+          : null;
+        // component local i18n
+        if (rootI18n) {
+          options.i18n.root = this.$root;
+          options.i18n.formatter = rootI18n.formatter;
+          options.i18n.fallbackLocale = rootI18n.fallbackLocale;
+          options.i18n.formatFallbackMessages = rootI18n.formatFallbackMessages;
+          options.i18n.silentTranslationWarn = rootI18n.silentTranslationWarn;
+          options.i18n.silentFallbackWarn = rootI18n.silentFallbackWarn;
+          options.i18n.pluralizationRules = rootI18n.pluralizationRules;
+          options.i18n.preserveDirectiveContent = rootI18n.preserveDirectiveContent;
+        }
+
+        // init locale messages via custom blocks
+        if (options.__i18n) {
+          try {
+            var localeMessages$1 = options.i18n && options.i18n.messages ? options.i18n.messages : {};
+            options.__i18n.forEach(function (resource) {
+              localeMessages$1 = merge(localeMessages$1, JSON.parse(resource));
+            });
+            options.i18n.messages = localeMessages$1;
+          } catch (e) {
+            if (true) {
+              warn("Cannot parse locale messages via custom blocks.", e);
+            }
+          }
+        }
+
+        var ref = options.i18n;
+        var sharedMessages = ref.sharedMessages;
+        if (sharedMessages && isPlainObject(sharedMessages)) {
+          options.i18n.messages = merge(options.i18n.messages, sharedMessages);
+        }
+
+        this._i18n = new VueI18n(options.i18n);
+        this._i18nWatcher = this._i18n.watchI18nData();
+
+        if (options.i18n.sync === undefined || !!options.i18n.sync) {
+          this._localeWatcher = this.$i18n.watchLocale();
+        }
+
+        if (rootI18n) {
+          rootI18n.onComponentInstanceCreated(this._i18n);
+        }
+      } else {
+        if (true) {
+          warn("Cannot be interpreted 'i18n' option.");
+        }
+      }
+    } else if (this.$root && this.$root.$i18n && this.$root.$i18n instanceof VueI18n) {
+      // root i18n
+      this._i18n = this.$root.$i18n;
+    } else if (options.parent && options.parent.$i18n && options.parent.$i18n instanceof VueI18n) {
+      // parent i18n
+      this._i18n = options.parent.$i18n;
+    }
+  },
+
+  beforeMount: function beforeMount () {
+    var options = this.$options;
+    options.i18n = options.i18n || (options.__i18n ? {} : null);
+
+    if (options.i18n) {
+      if (options.i18n instanceof VueI18n) {
+        // init locale messages via custom blocks
+        this._i18n.subscribeDataChanging(this);
+        this._subscribing = true;
+      } else if (isPlainObject(options.i18n)) {
+        this._i18n.subscribeDataChanging(this);
+        this._subscribing = true;
+      } else {
+        if (true) {
+          warn("Cannot be interpreted 'i18n' option.");
+        }
+      }
+    } else if (this.$root && this.$root.$i18n && this.$root.$i18n instanceof VueI18n) {
+      this._i18n.subscribeDataChanging(this);
+      this._subscribing = true;
+    } else if (options.parent && options.parent.$i18n && options.parent.$i18n instanceof VueI18n) {
+      this._i18n.subscribeDataChanging(this);
+      this._subscribing = true;
+    }
+  },
+
+  beforeDestroy: function beforeDestroy () {
+    if (!this._i18n) { return }
+
+    var self = this;
+    this.$nextTick(function () {
+      if (self._subscribing) {
+        self._i18n.unsubscribeDataChanging(self);
+        delete self._subscribing;
+      }
+
+      if (self._i18nWatcher) {
+        self._i18nWatcher();
+        self._i18n.destroyVM();
+        delete self._i18nWatcher;
+      }
+
+      if (self._localeWatcher) {
+        self._localeWatcher();
+        delete self._localeWatcher;
+      }
+    });
+  }
+};
+
+/*  */
+
+var interpolationComponent = {
+  name: 'i18n',
+  functional: true,
+  props: {
+    tag: {
+      type: [String, Boolean, Object],
+      default: 'span'
+    },
+    path: {
+      type: String,
+      required: true
+    },
+    locale: {
+      type: String
+    },
+    places: {
+      type: [Array, Object]
+    }
+  },
+  render: function render (h, ref) {
+    var data = ref.data;
+    var parent = ref.parent;
+    var props = ref.props;
+    var slots = ref.slots;
+
+    var $i18n = parent.$i18n;
+    if (!$i18n) {
+      if (true) {
+        warn('Cannot find VueI18n instance!');
+      }
+      return
+    }
+
+    var path = props.path;
+    var locale = props.locale;
+    var places = props.places;
+    var params = slots();
+    var children = $i18n.i(
+      path,
+      locale,
+      onlyHasDefaultPlace(params) || places
+        ? useLegacyPlaces(params.default, places)
+        : params
+    );
+
+    var tag = (!!props.tag && props.tag !== true) || props.tag === false ? props.tag : 'span';
+    return tag ? h(tag, data, children) : children
+  }
+};
+
+function onlyHasDefaultPlace (params) {
+  var prop;
+  for (prop in params) {
+    if (prop !== 'default') { return false }
+  }
+  return Boolean(prop)
+}
+
+function useLegacyPlaces (children, places) {
+  var params = places ? createParamsFromPlaces(places) : {};
+
+  if (!children) { return params }
+
+  // Filter empty text nodes
+  children = children.filter(function (child) {
+    return child.tag || child.text.trim() !== ''
+  });
+
+  var everyPlace = children.every(vnodeHasPlaceAttribute);
+  if ( true && everyPlace) {
+    warn('`place` attribute is deprecated in next major version. Please switch to Vue slots.');
+  }
+
+  return children.reduce(
+    everyPlace ? assignChildPlace : assignChildIndex,
+    params
+  )
+}
+
+function createParamsFromPlaces (places) {
+  if (true) {
+    warn('`places` prop is deprecated in next major version. Please switch to Vue slots.');
+  }
+
+  return Array.isArray(places)
+    ? places.reduce(assignChildIndex, {})
+    : Object.assign({}, places)
+}
+
+function assignChildPlace (params, child) {
+  if (child.data && child.data.attrs && child.data.attrs.place) {
+    params[child.data.attrs.place] = child;
+  }
+  return params
+}
+
+function assignChildIndex (params, child, index) {
+  params[index] = child;
+  return params
+}
+
+function vnodeHasPlaceAttribute (vnode) {
+  return Boolean(vnode.data && vnode.data.attrs && vnode.data.attrs.place)
+}
+
+/*  */
+
+var numberComponent = {
+  name: 'i18n-n',
+  functional: true,
+  props: {
+    tag: {
+      type: [String, Boolean, Object],
+      default: 'span'
+    },
+    value: {
+      type: Number,
+      required: true
+    },
+    format: {
+      type: [String, Object]
+    },
+    locale: {
+      type: String
+    }
+  },
+  render: function render (h, ref) {
+    var props = ref.props;
+    var parent = ref.parent;
+    var data = ref.data;
+
+    var i18n = parent.$i18n;
+
+    if (!i18n) {
+      if (true) {
+        warn('Cannot find VueI18n instance!');
+      }
+      return null
+    }
+
+    var key = null;
+    var options = null;
+
+    if (isString(props.format)) {
+      key = props.format;
+    } else if (isObject(props.format)) {
+      if (props.format.key) {
+        key = props.format.key;
+      }
+
+      // Filter out number format options only
+      options = Object.keys(props.format).reduce(function (acc, prop) {
+        var obj;
+
+        if (includes(numberFormatKeys, prop)) {
+          return Object.assign({}, acc, ( obj = {}, obj[prop] = props.format[prop], obj ))
+        }
+        return acc
+      }, null);
+    }
+
+    var locale = props.locale || i18n.locale;
+    var parts = i18n._ntp(props.value, locale, key, options);
+
+    var values = parts.map(function (part, index) {
+      var obj;
+
+      var slot = data.scopedSlots && data.scopedSlots[part.type];
+      return slot ? slot(( obj = {}, obj[part.type] = part.value, obj.index = index, obj.parts = parts, obj )) : part.value
+    });
+
+    var tag = (!!props.tag && props.tag !== true) || props.tag === false ? props.tag : 'span';
+    return tag
+      ? h(tag, {
+        attrs: data.attrs,
+        'class': data['class'],
+        staticClass: data.staticClass
+      }, values)
+      : values
+  }
+};
+
+/*  */
+
+function bind (el, binding, vnode) {
+  if (!assert(el, vnode)) { return }
+
+  t(el, binding, vnode);
+}
+
+function update (el, binding, vnode, oldVNode) {
+  if (!assert(el, vnode)) { return }
+
+  var i18n = vnode.context.$i18n;
+  if (localeEqual(el, vnode) &&
+    (looseEqual(binding.value, binding.oldValue) &&
+     looseEqual(el._localeMessage, i18n.getLocaleMessage(i18n.locale)))) { return }
+
+  t(el, binding, vnode);
+}
+
+function unbind (el, binding, vnode, oldVNode) {
+  var vm = vnode.context;
+  if (!vm) {
+    warn('Vue instance does not exists in VNode context');
+    return
+  }
+
+  var i18n = vnode.context.$i18n || {};
+  if (!binding.modifiers.preserve && !i18n.preserveDirectiveContent) {
+    el.textContent = '';
+  }
+  el._vt = undefined;
+  delete el['_vt'];
+  el._locale = undefined;
+  delete el['_locale'];
+  el._localeMessage = undefined;
+  delete el['_localeMessage'];
+}
+
+function assert (el, vnode) {
+  var vm = vnode.context;
+  if (!vm) {
+    warn('Vue instance does not exists in VNode context');
+    return false
+  }
+
+  if (!vm.$i18n) {
+    warn('VueI18n instance does not exists in Vue instance');
+    return false
+  }
+
+  return true
+}
+
+function localeEqual (el, vnode) {
+  var vm = vnode.context;
+  return el._locale === vm.$i18n.locale
+}
+
+function t (el, binding, vnode) {
+  var ref$1, ref$2;
+
+  var value = binding.value;
+
+  var ref = parseValue(value);
+  var path = ref.path;
+  var locale = ref.locale;
+  var args = ref.args;
+  var choice = ref.choice;
+  if (!path && !locale && !args) {
+    warn('value type not supported');
+    return
+  }
+
+  if (!path) {
+    warn('`path` is required in v-t directive');
+    return
+  }
+
+  var vm = vnode.context;
+  if (choice != null) {
+    el._vt = el.textContent = (ref$1 = vm.$i18n).tc.apply(ref$1, [ path, choice ].concat( makeParams(locale, args) ));
+  } else {
+    el._vt = el.textContent = (ref$2 = vm.$i18n).t.apply(ref$2, [ path ].concat( makeParams(locale, args) ));
+  }
+  el._locale = vm.$i18n.locale;
+  el._localeMessage = vm.$i18n.getLocaleMessage(vm.$i18n.locale);
+}
+
+function parseValue (value) {
+  var path;
+  var locale;
+  var args;
+  var choice;
+
+  if (isString(value)) {
+    path = value;
+  } else if (isPlainObject(value)) {
+    path = value.path;
+    locale = value.locale;
+    args = value.args;
+    choice = value.choice;
+  }
+
+  return { path: path, locale: locale, args: args, choice: choice }
+}
+
+function makeParams (locale, args) {
+  var params = [];
+
+  locale && params.push(locale);
+  if (args && (Array.isArray(args) || isPlainObject(args))) {
+    params.push(args);
+  }
+
+  return params
+}
+
+var Vue;
+
+function install (_Vue) {
+  /* istanbul ignore if */
+  if ( true && install.installed && _Vue === Vue) {
+    warn('already installed.');
+    return
+  }
+  install.installed = true;
+
+  Vue = _Vue;
+
+  var version = (Vue.version && Number(Vue.version.split('.')[0])) || -1;
+  /* istanbul ignore if */
+  if ( true && version < 2) {
+    warn(("vue-i18n (" + (install.version) + ") need to use Vue 2.0 or later (Vue: " + (Vue.version) + ")."));
+    return
+  }
+
+  extend(Vue);
+  Vue.mixin(mixin);
+  Vue.directive('t', { bind: bind, update: update, unbind: unbind });
+  Vue.component(interpolationComponent.name, interpolationComponent);
+  Vue.component(numberComponent.name, numberComponent);
+
+  // use simple mergeStrategies to prevent i18n instance lose '__proto__'
+  var strats = Vue.config.optionMergeStrategies;
+  strats.i18n = function (parentVal, childVal) {
+    return childVal === undefined
+      ? parentVal
+      : childVal
+  };
+}
+
+/*  */
+
+var BaseFormatter = function BaseFormatter () {
+  this._caches = Object.create(null);
+};
+
+BaseFormatter.prototype.interpolate = function interpolate (message, values) {
+  if (!values) {
+    return [message]
+  }
+  var tokens = this._caches[message];
+  if (!tokens) {
+    tokens = parse(message);
+    this._caches[message] = tokens;
+  }
+  return compile(tokens, values)
+};
+
+
+
+var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+
+function parse (format) {
+  var tokens = [];
+  var position = 0;
+
+  var text = '';
+  while (position < format.length) {
+    var char = format[position++];
+    if (char === '{') {
+      if (text) {
+        tokens.push({ type: 'text', value: text });
+      }
+
+      text = '';
+      var sub = '';
+      char = format[position++];
+      while (char !== undefined && char !== '}') {
+        sub += char;
+        char = format[position++];
+      }
+      var isClosed = char === '}';
+
+      var type = RE_TOKEN_LIST_VALUE.test(sub)
+        ? 'list'
+        : isClosed && RE_TOKEN_NAMED_VALUE.test(sub)
+          ? 'named'
+          : 'unknown';
+      tokens.push({ value: sub, type: type });
+    } else if (char === '%') {
+      // when found rails i18n syntax, skip text capture
+      if (format[(position)] !== '{') {
+        text += char;
+      }
+    } else {
+      text += char;
+    }
+  }
+
+  text && tokens.push({ type: 'text', value: text });
+
+  return tokens
+}
+
+function compile (tokens, values) {
+  var compiled = [];
+  var index = 0;
+
+  var mode = Array.isArray(values)
+    ? 'list'
+    : isObject(values)
+      ? 'named'
+      : 'unknown';
+  if (mode === 'unknown') { return compiled }
+
+  while (index < tokens.length) {
+    var token = tokens[index];
+    switch (token.type) {
+      case 'text':
+        compiled.push(token.value);
+        break
+      case 'list':
+        compiled.push(values[parseInt(token.value, 10)]);
+        break
+      case 'named':
+        if (mode === 'named') {
+          compiled.push((values)[token.value]);
+        } else {
+          if (true) {
+            warn(("Type of token '" + (token.type) + "' and format of value '" + mode + "' don't match!"));
+          }
+        }
+        break
+      case 'unknown':
+        if (true) {
+          warn("Detect 'unknown' type of token!");
+        }
+        break
+    }
+    index++;
+  }
+
+  return compiled
+}
+
+/*  */
+
+/**
+ *  Path parser
+ *  - Inspired:
+ *    Vue.js Path parser
+ */
+
+// actions
+var APPEND = 0;
+var PUSH = 1;
+var INC_SUB_PATH_DEPTH = 2;
+var PUSH_SUB_PATH = 3;
+
+// states
+var BEFORE_PATH = 0;
+var IN_PATH = 1;
+var BEFORE_IDENT = 2;
+var IN_IDENT = 3;
+var IN_SUB_PATH = 4;
+var IN_SINGLE_QUOTE = 5;
+var IN_DOUBLE_QUOTE = 6;
+var AFTER_PATH = 7;
+var ERROR = 8;
+
+var pathStateMachine = [];
+
+pathStateMachine[BEFORE_PATH] = {
+  'ws': [BEFORE_PATH],
+  'ident': [IN_IDENT, APPEND],
+  '[': [IN_SUB_PATH],
+  'eof': [AFTER_PATH]
+};
+
+pathStateMachine[IN_PATH] = {
+  'ws': [IN_PATH],
+  '.': [BEFORE_IDENT],
+  '[': [IN_SUB_PATH],
+  'eof': [AFTER_PATH]
+};
+
+pathStateMachine[BEFORE_IDENT] = {
+  'ws': [BEFORE_IDENT],
+  'ident': [IN_IDENT, APPEND],
+  '0': [IN_IDENT, APPEND],
+  'number': [IN_IDENT, APPEND]
+};
+
+pathStateMachine[IN_IDENT] = {
+  'ident': [IN_IDENT, APPEND],
+  '0': [IN_IDENT, APPEND],
+  'number': [IN_IDENT, APPEND],
+  'ws': [IN_PATH, PUSH],
+  '.': [BEFORE_IDENT, PUSH],
+  '[': [IN_SUB_PATH, PUSH],
+  'eof': [AFTER_PATH, PUSH]
+};
+
+pathStateMachine[IN_SUB_PATH] = {
+  "'": [IN_SINGLE_QUOTE, APPEND],
+  '"': [IN_DOUBLE_QUOTE, APPEND],
+  '[': [IN_SUB_PATH, INC_SUB_PATH_DEPTH],
+  ']': [IN_PATH, PUSH_SUB_PATH],
+  'eof': ERROR,
+  'else': [IN_SUB_PATH, APPEND]
+};
+
+pathStateMachine[IN_SINGLE_QUOTE] = {
+  "'": [IN_SUB_PATH, APPEND],
+  'eof': ERROR,
+  'else': [IN_SINGLE_QUOTE, APPEND]
+};
+
+pathStateMachine[IN_DOUBLE_QUOTE] = {
+  '"': [IN_SUB_PATH, APPEND],
+  'eof': ERROR,
+  'else': [IN_DOUBLE_QUOTE, APPEND]
+};
+
+/**
+ * Check if an expression is a literal value.
+ */
+
+var literalValueRE = /^\s?(?:true|false|-?[\d.]+|'[^']*'|"[^"]*")\s?$/;
+function isLiteral (exp) {
+  return literalValueRE.test(exp)
+}
+
+/**
+ * Strip quotes from a string
+ */
+
+function stripQuotes (str) {
+  var a = str.charCodeAt(0);
+  var b = str.charCodeAt(str.length - 1);
+  return a === b && (a === 0x22 || a === 0x27)
+    ? str.slice(1, -1)
+    : str
+}
+
+/**
+ * Determine the type of a character in a keypath.
+ */
+
+function getPathCharType (ch) {
+  if (ch === undefined || ch === null) { return 'eof' }
+
+  var code = ch.charCodeAt(0);
+
+  switch (code) {
+    case 0x5B: // [
+    case 0x5D: // ]
+    case 0x2E: // .
+    case 0x22: // "
+    case 0x27: // '
+      return ch
+
+    case 0x5F: // _
+    case 0x24: // $
+    case 0x2D: // -
+      return 'ident'
+
+    case 0x09: // Tab
+    case 0x0A: // Newline
+    case 0x0D: // Return
+    case 0xA0:  // No-break space
+    case 0xFEFF:  // Byte Order Mark
+    case 0x2028:  // Line Separator
+    case 0x2029:  // Paragraph Separator
+      return 'ws'
+  }
+
+  return 'ident'
+}
+
+/**
+ * Format a subPath, return its plain form if it is
+ * a literal string or number. Otherwise prepend the
+ * dynamic indicator (*).
+ */
+
+function formatSubPath (path) {
+  var trimmed = path.trim();
+  // invalid leading 0
+  if (path.charAt(0) === '0' && isNaN(path)) { return false }
+
+  return isLiteral(trimmed) ? stripQuotes(trimmed) : '*' + trimmed
+}
+
+/**
+ * Parse a string path into an array of segments
+ */
+
+function parse$1 (path) {
+  var keys = [];
+  var index = -1;
+  var mode = BEFORE_PATH;
+  var subPathDepth = 0;
+  var c;
+  var key;
+  var newChar;
+  var type;
+  var transition;
+  var action;
+  var typeMap;
+  var actions = [];
+
+  actions[PUSH] = function () {
+    if (key !== undefined) {
+      keys.push(key);
+      key = undefined;
+    }
+  };
+
+  actions[APPEND] = function () {
+    if (key === undefined) {
+      key = newChar;
+    } else {
+      key += newChar;
+    }
+  };
+
+  actions[INC_SUB_PATH_DEPTH] = function () {
+    actions[APPEND]();
+    subPathDepth++;
+  };
+
+  actions[PUSH_SUB_PATH] = function () {
+    if (subPathDepth > 0) {
+      subPathDepth--;
+      mode = IN_SUB_PATH;
+      actions[APPEND]();
+    } else {
+      subPathDepth = 0;
+      if (key === undefined) { return false }
+      key = formatSubPath(key);
+      if (key === false) {
+        return false
+      } else {
+        actions[PUSH]();
+      }
+    }
+  };
+
+  function maybeUnescapeQuote () {
+    var nextChar = path[index + 1];
+    if ((mode === IN_SINGLE_QUOTE && nextChar === "'") ||
+      (mode === IN_DOUBLE_QUOTE && nextChar === '"')) {
+      index++;
+      newChar = '\\' + nextChar;
+      actions[APPEND]();
+      return true
+    }
+  }
+
+  while (mode !== null) {
+    index++;
+    c = path[index];
+
+    if (c === '\\' && maybeUnescapeQuote()) {
+      continue
+    }
+
+    type = getPathCharType(c);
+    typeMap = pathStateMachine[mode];
+    transition = typeMap[type] || typeMap['else'] || ERROR;
+
+    if (transition === ERROR) {
+      return // parse error
+    }
+
+    mode = transition[0];
+    action = actions[transition[1]];
+    if (action) {
+      newChar = transition[2];
+      newChar = newChar === undefined
+        ? c
+        : newChar;
+      if (action() === false) {
+        return
+      }
+    }
+
+    if (mode === AFTER_PATH) {
+      return keys
+    }
+  }
+}
+
+
+
+
+
+var I18nPath = function I18nPath () {
+  this._cache = Object.create(null);
+};
+
+/**
+ * External parse that check for a cache hit first
+ */
+I18nPath.prototype.parsePath = function parsePath (path) {
+  var hit = this._cache[path];
+  if (!hit) {
+    hit = parse$1(path);
+    if (hit) {
+      this._cache[path] = hit;
+    }
+  }
+  return hit || []
+};
+
+/**
+ * Get path value from path string
+ */
+I18nPath.prototype.getPathValue = function getPathValue (obj, path) {
+  if (!isObject(obj)) { return null }
+
+  var paths = this.parsePath(path);
+  if (paths.length === 0) {
+    return null
+  } else {
+    var length = paths.length;
+    var last = obj;
+    var i = 0;
+    while (i < length) {
+      var value = last[paths[i]];
+      if (value === undefined) {
+        return null
+      }
+      last = value;
+      i++;
+    }
+
+    return last
+  }
+};
+
+/*  */
+
+
+
+var htmlTagMatcher = /<\/?[\w\s="/.':;#-\/]+>/;
+var linkKeyMatcher = /(?:@(?:\.[a-z]+)?:(?:[\w\-_|.]+|\([\w\-_|.]+\)))/g;
+var linkKeyPrefixMatcher = /^@(?:\.([a-z]+))?:/;
+var bracketsMatcher = /[()]/g;
+var defaultModifiers = {
+  'upper': function (str) { return str.toLocaleUpperCase(); },
+  'lower': function (str) { return str.toLocaleLowerCase(); },
+  'capitalize': function (str) { return ("" + (str.charAt(0).toLocaleUpperCase()) + (str.substr(1))); }
+};
+
+var defaultFormatter = new BaseFormatter();
+
+var VueI18n = function VueI18n (options) {
+  var this$1 = this;
+  if ( options === void 0 ) options = {};
+
+  // Auto install if it is not done yet and `window` has `Vue`.
+  // To allow users to avoid auto-installation in some cases,
+  // this code should be placed here. See #290
+  /* istanbul ignore if */
+  if (!Vue && typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+  }
+
+  var locale = options.locale || 'en-US';
+  var fallbackLocale = options.fallbackLocale === false
+    ? false
+    : options.fallbackLocale || 'en-US';
+  var messages = options.messages || {};
+  var dateTimeFormats = options.dateTimeFormats || {};
+  var numberFormats = options.numberFormats || {};
+
+  this._vm = null;
+  this._formatter = options.formatter || defaultFormatter;
+  this._modifiers = options.modifiers || {};
+  this._missing = options.missing || null;
+  this._root = options.root || null;
+  this._sync = options.sync === undefined ? true : !!options.sync;
+  this._fallbackRoot = options.fallbackRoot === undefined
+    ? true
+    : !!options.fallbackRoot;
+  this._formatFallbackMessages = options.formatFallbackMessages === undefined
+    ? false
+    : !!options.formatFallbackMessages;
+  this._silentTranslationWarn = options.silentTranslationWarn === undefined
+    ? false
+    : options.silentTranslationWarn;
+  this._silentFallbackWarn = options.silentFallbackWarn === undefined
+    ? false
+    : !!options.silentFallbackWarn;
+  this._dateTimeFormatters = {};
+  this._numberFormatters = {};
+  this._path = new I18nPath();
+  this._dataListeners = [];
+  this._componentInstanceCreatedListener = options.componentInstanceCreatedListener || null;
+  this._preserveDirectiveContent = options.preserveDirectiveContent === undefined
+    ? false
+    : !!options.preserveDirectiveContent;
+  this.pluralizationRules = options.pluralizationRules || {};
+  this._warnHtmlInMessage = options.warnHtmlInMessage || 'off';
+  this._postTranslation = options.postTranslation || null;
+  this._escapeParameterHtml = options.escapeParameterHtml || false;
+
+  /**
+   * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+   * @param choicesLength {number} an overall amount of available choices
+   * @returns a final choice index
+  */
+  this.getChoiceIndex = function (choice, choicesLength) {
+    var thisPrototype = Object.getPrototypeOf(this$1);
+    if (thisPrototype && thisPrototype.getChoiceIndex) {
+      var prototypeGetChoiceIndex = (thisPrototype.getChoiceIndex);
+      return (prototypeGetChoiceIndex).call(this$1, choice, choicesLength)
+    }
+
+    // Default (old) getChoiceIndex implementation - english-compatible
+    var defaultImpl = function (_choice, _choicesLength) {
+      _choice = Math.abs(_choice);
+
+      if (_choicesLength === 2) {
+        return _choice
+          ? _choice > 1
+            ? 1
+            : 0
+          : 1
+      }
+
+      return _choice ? Math.min(_choice, 2) : 0
+    };
+
+    if (this$1.locale in this$1.pluralizationRules) {
+      return this$1.pluralizationRules[this$1.locale].apply(this$1, [choice, choicesLength])
+    } else {
+      return defaultImpl(choice, choicesLength)
+    }
+  };
+
+
+  this._exist = function (message, key) {
+    if (!message || !key) { return false }
+    if (!isNull(this$1._path.getPathValue(message, key))) { return true }
+    // fallback for flat key
+    if (message[key]) { return true }
+    return false
+  };
+
+  if (this._warnHtmlInMessage === 'warn' || this._warnHtmlInMessage === 'error') {
+    Object.keys(messages).forEach(function (locale) {
+      this$1._checkLocaleMessage(locale, this$1._warnHtmlInMessage, messages[locale]);
+    });
+  }
+
+  this._initVM({
+    locale: locale,
+    fallbackLocale: fallbackLocale,
+    messages: messages,
+    dateTimeFormats: dateTimeFormats,
+    numberFormats: numberFormats
+  });
+};
+
+var prototypeAccessors = { vm: { configurable: true },messages: { configurable: true },dateTimeFormats: { configurable: true },numberFormats: { configurable: true },availableLocales: { configurable: true },locale: { configurable: true },fallbackLocale: { configurable: true },formatFallbackMessages: { configurable: true },missing: { configurable: true },formatter: { configurable: true },silentTranslationWarn: { configurable: true },silentFallbackWarn: { configurable: true },preserveDirectiveContent: { configurable: true },warnHtmlInMessage: { configurable: true },postTranslation: { configurable: true } };
+
+VueI18n.prototype._checkLocaleMessage = function _checkLocaleMessage (locale, level, message) {
+  var paths = [];
+
+  var fn = function (level, locale, message, paths) {
+    if (isPlainObject(message)) {
+      Object.keys(message).forEach(function (key) {
+        var val = message[key];
+        if (isPlainObject(val)) {
+          paths.push(key);
+          paths.push('.');
+          fn(level, locale, val, paths);
+          paths.pop();
+          paths.pop();
+        } else {
+          paths.push(key);
+          fn(level, locale, val, paths);
+          paths.pop();
+        }
+      });
+    } else if (isArray(message)) {
+      message.forEach(function (item, index) {
+        if (isPlainObject(item)) {
+          paths.push(("[" + index + "]"));
+          paths.push('.');
+          fn(level, locale, item, paths);
+          paths.pop();
+          paths.pop();
+        } else {
+          paths.push(("[" + index + "]"));
+          fn(level, locale, item, paths);
+          paths.pop();
+        }
+      });
+    } else if (isString(message)) {
+      var ret = htmlTagMatcher.test(message);
+      if (ret) {
+        var msg = "Detected HTML in message '" + message + "' of keypath '" + (paths.join('')) + "' at '" + locale + "'. Consider component interpolation with '<i18n>' to avoid XSS. See https://bit.ly/2ZqJzkp";
+        if (level === 'warn') {
+          warn(msg);
+        } else if (level === 'error') {
+          error(msg);
+        }
+      }
+    }
+  };
+
+  fn(level, locale, message, paths);
+};
+
+VueI18n.prototype._initVM = function _initVM (data) {
+  var silent = Vue.config.silent;
+  Vue.config.silent = true;
+  this._vm = new Vue({ data: data });
+  Vue.config.silent = silent;
+};
+
+VueI18n.prototype.destroyVM = function destroyVM () {
+  this._vm.$destroy();
+};
+
+VueI18n.prototype.subscribeDataChanging = function subscribeDataChanging (vm) {
+  this._dataListeners.push(vm);
+};
+
+VueI18n.prototype.unsubscribeDataChanging = function unsubscribeDataChanging (vm) {
+  remove(this._dataListeners, vm);
+};
+
+VueI18n.prototype.watchI18nData = function watchI18nData () {
+  var self = this;
+  return this._vm.$watch('$data', function () {
+    var i = self._dataListeners.length;
+    while (i--) {
+      Vue.nextTick(function () {
+        self._dataListeners[i] && self._dataListeners[i].$forceUpdate();
+      });
+    }
+  }, { deep: true })
+};
+
+VueI18n.prototype.watchLocale = function watchLocale () {
+  /* istanbul ignore if */
+  if (!this._sync || !this._root) { return null }
+  var target = this._vm;
+  return this._root.$i18n.vm.$watch('locale', function (val) {
+    target.$set(target, 'locale', val);
+    target.$forceUpdate();
+  }, { immediate: true })
+};
+
+VueI18n.prototype.onComponentInstanceCreated = function onComponentInstanceCreated (newI18n) {
+  if (this._componentInstanceCreatedListener) {
+    this._componentInstanceCreatedListener(newI18n, this);
+  }
+};
+
+prototypeAccessors.vm.get = function () { return this._vm };
+
+prototypeAccessors.messages.get = function () { return looseClone(this._getMessages()) };
+prototypeAccessors.dateTimeFormats.get = function () { return looseClone(this._getDateTimeFormats()) };
+prototypeAccessors.numberFormats.get = function () { return looseClone(this._getNumberFormats()) };
+prototypeAccessors.availableLocales.get = function () { return Object.keys(this.messages).sort() };
+
+prototypeAccessors.locale.get = function () { return this._vm.locale };
+prototypeAccessors.locale.set = function (locale) {
+  this._vm.$set(this._vm, 'locale', locale);
+};
+
+prototypeAccessors.fallbackLocale.get = function () { return this._vm.fallbackLocale };
+prototypeAccessors.fallbackLocale.set = function (locale) {
+  this._localeChainCache = {};
+  this._vm.$set(this._vm, 'fallbackLocale', locale);
+};
+
+prototypeAccessors.formatFallbackMessages.get = function () { return this._formatFallbackMessages };
+prototypeAccessors.formatFallbackMessages.set = function (fallback) { this._formatFallbackMessages = fallback; };
+
+prototypeAccessors.missing.get = function () { return this._missing };
+prototypeAccessors.missing.set = function (handler) { this._missing = handler; };
+
+prototypeAccessors.formatter.get = function () { return this._formatter };
+prototypeAccessors.formatter.set = function (formatter) { this._formatter = formatter; };
+
+prototypeAccessors.silentTranslationWarn.get = function () { return this._silentTranslationWarn };
+prototypeAccessors.silentTranslationWarn.set = function (silent) { this._silentTranslationWarn = silent; };
+
+prototypeAccessors.silentFallbackWarn.get = function () { return this._silentFallbackWarn };
+prototypeAccessors.silentFallbackWarn.set = function (silent) { this._silentFallbackWarn = silent; };
+
+prototypeAccessors.preserveDirectiveContent.get = function () { return this._preserveDirectiveContent };
+prototypeAccessors.preserveDirectiveContent.set = function (preserve) { this._preserveDirectiveContent = preserve; };
+
+prototypeAccessors.warnHtmlInMessage.get = function () { return this._warnHtmlInMessage };
+prototypeAccessors.warnHtmlInMessage.set = function (level) {
+    var this$1 = this;
+
+  var orgLevel = this._warnHtmlInMessage;
+  this._warnHtmlInMessage = level;
+  if (orgLevel !== level && (level === 'warn' || level === 'error')) {
+    var messages = this._getMessages();
+    Object.keys(messages).forEach(function (locale) {
+      this$1._checkLocaleMessage(locale, this$1._warnHtmlInMessage, messages[locale]);
+    });
+  }
+};
+
+prototypeAccessors.postTranslation.get = function () { return this._postTranslation };
+prototypeAccessors.postTranslation.set = function (handler) { this._postTranslation = handler; };
+
+VueI18n.prototype._getMessages = function _getMessages () { return this._vm.messages };
+VueI18n.prototype._getDateTimeFormats = function _getDateTimeFormats () { return this._vm.dateTimeFormats };
+VueI18n.prototype._getNumberFormats = function _getNumberFormats () { return this._vm.numberFormats };
+
+VueI18n.prototype._warnDefault = function _warnDefault (locale, key, result, vm, values, interpolateMode) {
+  if (!isNull(result)) { return result }
+  if (this._missing) {
+    var missingRet = this._missing.apply(null, [locale, key, vm, values]);
+    if (isString(missingRet)) {
+      return missingRet
+    }
+  } else {
+    if ( true && !this._isSilentTranslationWarn(key)) {
+      warn(
+        "Cannot translate the value of keypath '" + key + "'. " +
+        'Use the value of keypath as default.'
+      );
+    }
+  }
+
+  if (this._formatFallbackMessages) {
+    var parsedArgs = parseArgs.apply(void 0, values);
+    return this._render(key, interpolateMode, parsedArgs.params, key)
+  } else {
+    return key
+  }
+};
+
+VueI18n.prototype._isFallbackRoot = function _isFallbackRoot (val) {
+  return !val && !isNull(this._root) && this._fallbackRoot
+};
+
+VueI18n.prototype._isSilentFallbackWarn = function _isSilentFallbackWarn (key) {
+  return this._silentFallbackWarn instanceof RegExp
+    ? this._silentFallbackWarn.test(key)
+    : this._silentFallbackWarn
+};
+
+VueI18n.prototype._isSilentFallback = function _isSilentFallback (locale, key) {
+  return this._isSilentFallbackWarn(key) && (this._isFallbackRoot() || locale !== this.fallbackLocale)
+};
+
+VueI18n.prototype._isSilentTranslationWarn = function _isSilentTranslationWarn (key) {
+  return this._silentTranslationWarn instanceof RegExp
+    ? this._silentTranslationWarn.test(key)
+    : this._silentTranslationWarn
+};
+
+VueI18n.prototype._interpolate = function _interpolate (
+  locale,
+  message,
+  key,
+  host,
+  interpolateMode,
+  values,
+  visitedLinkStack
+) {
+  if (!message) { return null }
+
+  var pathRet = this._path.getPathValue(message, key);
+  if (isArray(pathRet) || isPlainObject(pathRet)) { return pathRet }
+
+  var ret;
+  if (isNull(pathRet)) {
+    /* istanbul ignore else */
+    if (isPlainObject(message)) {
+      ret = message[key];
+      if (!(isString(ret) || isFunction(ret))) {
+        if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallback(locale, key)) {
+          warn(("Value of key '" + key + "' is not a string or function !"));
+        }
+        return null
+      }
+    } else {
+      return null
+    }
+  } else {
+    /* istanbul ignore else */
+    if (isString(pathRet) || isFunction(pathRet)) {
+      ret = pathRet;
+    } else {
+      if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallback(locale, key)) {
+        warn(("Value of key '" + key + "' is not a string or function!"));
+      }
+      return null
+    }
+  }
+
+  // Check for the existence of links within the translated string
+  if (isString(ret) && (ret.indexOf('@:') >= 0 || ret.indexOf('@.') >= 0)) {
+    ret = this._link(locale, message, ret, host, 'raw', values, visitedLinkStack);
+  }
+
+  return this._render(ret, interpolateMode, values, key)
+};
+
+VueI18n.prototype._link = function _link (
+  locale,
+  message,
+  str,
+  host,
+  interpolateMode,
+  values,
+  visitedLinkStack
+) {
+  var ret = str;
+
+  // Match all the links within the local
+  // We are going to replace each of
+  // them with its translation
+  var matches = ret.match(linkKeyMatcher);
+  for (var idx in matches) {
+    // ie compatible: filter custom array
+    // prototype method
+    if (!matches.hasOwnProperty(idx)) {
+      continue
+    }
+    var link = matches[idx];
+    var linkKeyPrefixMatches = link.match(linkKeyPrefixMatcher);
+    var linkPrefix = linkKeyPrefixMatches[0];
+      var formatterName = linkKeyPrefixMatches[1];
+
+    // Remove the leading @:, @.case: and the brackets
+    var linkPlaceholder = link.replace(linkPrefix, '').replace(bracketsMatcher, '');
+
+    if (includes(visitedLinkStack, linkPlaceholder)) {
+      if (true) {
+        warn(("Circular reference found. \"" + link + "\" is already visited in the chain of " + (visitedLinkStack.reverse().join(' <- '))));
+      }
+      return ret
+    }
+    visitedLinkStack.push(linkPlaceholder);
+
+    // Translate the link
+    var translated = this._interpolate(
+      locale, message, linkPlaceholder, host,
+      interpolateMode === 'raw' ? 'string' : interpolateMode,
+      interpolateMode === 'raw' ? undefined : values,
+      visitedLinkStack
+    );
+
+    if (this._isFallbackRoot(translated)) {
+      if ( true && !this._isSilentTranslationWarn(linkPlaceholder)) {
+        warn(("Fall back to translate the link placeholder '" + linkPlaceholder + "' with root locale."));
+      }
+      /* istanbul ignore if */
+      if (!this._root) { throw Error('unexpected error') }
+      var root = this._root.$i18n;
+      translated = root._translate(
+        root._getMessages(), root.locale, root.fallbackLocale,
+        linkPlaceholder, host, interpolateMode, values
+      );
+    }
+    translated = this._warnDefault(
+      locale, linkPlaceholder, translated, host,
+      isArray(values) ? values : [values],
+      interpolateMode
+    );
+
+    if (this._modifiers.hasOwnProperty(formatterName)) {
+      translated = this._modifiers[formatterName](translated);
+    } else if (defaultModifiers.hasOwnProperty(formatterName)) {
+      translated = defaultModifiers[formatterName](translated);
+    }
+
+    visitedLinkStack.pop();
+
+    // Replace the link with the translated
+    ret = !translated ? ret : ret.replace(link, translated);
+  }
+
+  return ret
+};
+
+VueI18n.prototype._createMessageContext = function _createMessageContext (values) {
+  var _list = isArray(values) ? values : [];
+  var _named = isObject(values) ? values : {};
+  var list = function (index) { return _list[index]; };
+  var named = function (key) { return _named[key]; };
+  return {
+    list: list,
+    named: named
+  }
+};
+
+VueI18n.prototype._render = function _render (message, interpolateMode, values, path) {
+  if (isFunction(message)) {
+    return message(this._createMessageContext(values))
+  }
+
+  var ret = this._formatter.interpolate(message, values, path);
+
+  // If the custom formatter refuses to work - apply the default one
+  if (!ret) {
+    ret = defaultFormatter.interpolate(message, values, path);
+  }
+
+  // if interpolateMode is **not** 'string' ('row'),
+  // return the compiled data (e.g. ['foo', VNode, 'bar']) with formatter
+  return interpolateMode === 'string' && !isString(ret) ? ret.join('') : ret
+};
+
+VueI18n.prototype._appendItemToChain = function _appendItemToChain (chain, item, blocks) {
+  var follow = false;
+  if (!includes(chain, item)) {
+    follow = true;
+    if (item) {
+      follow = item[item.length - 1] !== '!';
+      item = item.replace(/!/g, '');
+      chain.push(item);
+      if (blocks && blocks[item]) {
+        follow = blocks[item];
+      }
+    }
+  }
+  return follow
+};
+
+VueI18n.prototype._appendLocaleToChain = function _appendLocaleToChain (chain, locale, blocks) {
+  var follow;
+  var tokens = locale.split('-');
+  do {
+    var item = tokens.join('-');
+    follow = this._appendItemToChain(chain, item, blocks);
+    tokens.splice(-1, 1);
+  } while (tokens.length && (follow === true))
+  return follow
+};
+
+VueI18n.prototype._appendBlockToChain = function _appendBlockToChain (chain, block, blocks) {
+  var follow = true;
+  for (var i = 0; (i < block.length) && (isBoolean(follow)); i++) {
+    var locale = block[i];
+    if (isString(locale)) {
+      follow = this._appendLocaleToChain(chain, locale, blocks);
+    }
+  }
+  return follow
+};
+
+VueI18n.prototype._getLocaleChain = function _getLocaleChain (start, fallbackLocale) {
+  if (start === '') { return [] }
+
+  if (!this._localeChainCache) {
+    this._localeChainCache = {};
+  }
+
+  var chain = this._localeChainCache[start];
+  if (!chain) {
+    if (!fallbackLocale) {
+      fallbackLocale = this.fallbackLocale;
+    }
+    chain = [];
+
+    // first block defined by start
+    var block = [start];
+
+    // while any intervening block found
+    while (isArray(block)) {
+      block = this._appendBlockToChain(
+        chain,
+        block,
+        fallbackLocale
+      );
+    }
+
+    // last block defined by default
+    var defaults;
+    if (isArray(fallbackLocale)) {
+      defaults = fallbackLocale;
+    } else if (isObject(fallbackLocale)) {
+      /* $FlowFixMe */
+      if (fallbackLocale['default']) {
+        defaults = fallbackLocale['default'];
+      } else {
+        defaults = null;
+      }
+    } else {
+      defaults = fallbackLocale;
+    }
+
+    // convert defaults to array
+    if (isString(defaults)) {
+      block = [defaults];
+    } else {
+      block = defaults;
+    }
+    if (block) {
+      this._appendBlockToChain(
+        chain,
+        block,
+        null
+      );
+    }
+    this._localeChainCache[start] = chain;
+  }
+  return chain
+};
+
+VueI18n.prototype._translate = function _translate (
+  messages,
+  locale,
+  fallback,
+  key,
+  host,
+  interpolateMode,
+  args
+) {
+  var chain = this._getLocaleChain(locale, fallback);
+  var res;
+  for (var i = 0; i < chain.length; i++) {
+    var step = chain[i];
+    res =
+      this._interpolate(step, messages[step], key, host, interpolateMode, args, [key]);
+    if (!isNull(res)) {
+      if (step !== locale && "development" !== 'production' && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+        warn(("Fall back to translate the keypath '" + key + "' with '" + step + "' locale."));
+      }
+      return res
+    }
+  }
+  return null
+};
+
+VueI18n.prototype._t = function _t (key, _locale, messages, host) {
+    var ref;
+
+    var values = [], len = arguments.length - 4;
+    while ( len-- > 0 ) values[ len ] = arguments[ len + 4 ];
+  if (!key) { return '' }
+
+  var parsedArgs = parseArgs.apply(void 0, values);
+  if(this._escapeParameterHtml) {
+    parsedArgs.params = escapeParams(parsedArgs.params);
+  }
+
+  var locale = parsedArgs.locale || _locale;
+
+  var ret = this._translate(
+    messages, locale, this.fallbackLocale, key,
+    host, 'string', parsedArgs.params
+  );
+  if (this._isFallbackRoot(ret)) {
+    if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+      warn(("Fall back to translate the keypath '" + key + "' with root locale."));
+    }
+    /* istanbul ignore if */
+    if (!this._root) { throw Error('unexpected error') }
+    return (ref = this._root).$t.apply(ref, [ key ].concat( values ))
+  } else {
+    ret = this._warnDefault(locale, key, ret, host, values, 'string');
+    if (this._postTranslation && ret !== null && ret !== undefined) {
+      ret = this._postTranslation(ret, key);
+    }
+    return ret
+  }
+};
+
+VueI18n.prototype.t = function t (key) {
+    var ref;
+
+    var values = [], len = arguments.length - 1;
+    while ( len-- > 0 ) values[ len ] = arguments[ len + 1 ];
+  return (ref = this)._t.apply(ref, [ key, this.locale, this._getMessages(), null ].concat( values ))
+};
+
+VueI18n.prototype._i = function _i (key, locale, messages, host, values) {
+  var ret =
+    this._translate(messages, locale, this.fallbackLocale, key, host, 'raw', values);
+  if (this._isFallbackRoot(ret)) {
+    if ( true && !this._isSilentTranslationWarn(key)) {
+      warn(("Fall back to interpolate the keypath '" + key + "' with root locale."));
+    }
+    if (!this._root) { throw Error('unexpected error') }
+    return this._root.$i18n.i(key, locale, values)
+  } else {
+    return this._warnDefault(locale, key, ret, host, [values], 'raw')
+  }
+};
+
+VueI18n.prototype.i = function i (key, locale, values) {
+  /* istanbul ignore if */
+  if (!key) { return '' }
+
+  if (!isString(locale)) {
+    locale = this.locale;
+  }
+
+  return this._i(key, locale, this._getMessages(), null, values)
+};
+
+VueI18n.prototype._tc = function _tc (
+  key,
+  _locale,
+  messages,
+  host,
+  choice
+) {
+    var ref;
+
+    var values = [], len = arguments.length - 5;
+    while ( len-- > 0 ) values[ len ] = arguments[ len + 5 ];
+  if (!key) { return '' }
+  if (choice === undefined) {
+    choice = 1;
+  }
+
+  var predefined = { 'count': choice, 'n': choice };
+  var parsedArgs = parseArgs.apply(void 0, values);
+  parsedArgs.params = Object.assign(predefined, parsedArgs.params);
+  values = parsedArgs.locale === null ? [parsedArgs.params] : [parsedArgs.locale, parsedArgs.params];
+  return this.fetchChoice((ref = this)._t.apply(ref, [ key, _locale, messages, host ].concat( values )), choice)
+};
+
+VueI18n.prototype.fetchChoice = function fetchChoice (message, choice) {
+  /* istanbul ignore if */
+  if (!message || !isString(message)) { return null }
+  var choices = message.split('|');
+
+  choice = this.getChoiceIndex(choice, choices.length);
+  if (!choices[choice]) { return message }
+  return choices[choice].trim()
+};
+
+VueI18n.prototype.tc = function tc (key, choice) {
+    var ref;
+
+    var values = [], len = arguments.length - 2;
+    while ( len-- > 0 ) values[ len ] = arguments[ len + 2 ];
+  return (ref = this)._tc.apply(ref, [ key, this.locale, this._getMessages(), null, choice ].concat( values ))
+};
+
+VueI18n.prototype._te = function _te (key, locale, messages) {
+    var args = [], len = arguments.length - 3;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 3 ];
+
+  var _locale = parseArgs.apply(void 0, args).locale || locale;
+  return this._exist(messages[_locale], key)
+};
+
+VueI18n.prototype.te = function te (key, locale) {
+  return this._te(key, this.locale, this._getMessages(), locale)
+};
+
+VueI18n.prototype.getLocaleMessage = function getLocaleMessage (locale) {
+  return looseClone(this._vm.messages[locale] || {})
+};
+
+VueI18n.prototype.setLocaleMessage = function setLocaleMessage (locale, message) {
+  if (this._warnHtmlInMessage === 'warn' || this._warnHtmlInMessage === 'error') {
+    this._checkLocaleMessage(locale, this._warnHtmlInMessage, message);
+  }
+  this._vm.$set(this._vm.messages, locale, message);
+};
+
+VueI18n.prototype.mergeLocaleMessage = function mergeLocaleMessage (locale, message) {
+  if (this._warnHtmlInMessage === 'warn' || this._warnHtmlInMessage === 'error') {
+    this._checkLocaleMessage(locale, this._warnHtmlInMessage, message);
+  }
+  this._vm.$set(this._vm.messages, locale, merge(
+    typeof this._vm.messages[locale] !== 'undefined' && Object.keys(this._vm.messages[locale]).length
+      ? this._vm.messages[locale]
+      : {},
+    message
+  ));
+};
+
+VueI18n.prototype.getDateTimeFormat = function getDateTimeFormat (locale) {
+  return looseClone(this._vm.dateTimeFormats[locale] || {})
+};
+
+VueI18n.prototype.setDateTimeFormat = function setDateTimeFormat (locale, format) {
+  this._vm.$set(this._vm.dateTimeFormats, locale, format);
+  this._clearDateTimeFormat(locale, format);
+};
+
+VueI18n.prototype.mergeDateTimeFormat = function mergeDateTimeFormat (locale, format) {
+  this._vm.$set(this._vm.dateTimeFormats, locale, merge(this._vm.dateTimeFormats[locale] || {}, format));
+  this._clearDateTimeFormat(locale, format);
+};
+
+VueI18n.prototype._clearDateTimeFormat = function _clearDateTimeFormat (locale, format) {
+  for (var key in format) {
+    var id = locale + "__" + key;
+
+    if (!this._dateTimeFormatters.hasOwnProperty(id)) {
+      continue
+    }
+
+    delete this._dateTimeFormatters[id];
+  }
+};
+
+VueI18n.prototype._localizeDateTime = function _localizeDateTime (
+  value,
+  locale,
+  fallback,
+  dateTimeFormats,
+  key
+) {
+  var _locale = locale;
+  var formats = dateTimeFormats[_locale];
+
+  var chain = this._getLocaleChain(locale, fallback);
+  for (var i = 0; i < chain.length; i++) {
+    var current = _locale;
+    var step = chain[i];
+    formats = dateTimeFormats[step];
+    _locale = step;
+    // fallback locale
+    if (isNull(formats) || isNull(formats[key])) {
+      if (step !== locale && "development" !== 'production' && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+        warn(("Fall back to '" + step + "' datetime formats from '" + current + "' datetime formats."));
+      }
+    } else {
+      break
+    }
+  }
+
+  if (isNull(formats) || isNull(formats[key])) {
+    return null
+  } else {
+    var format = formats[key];
+    var id = _locale + "__" + key;
+    var formatter = this._dateTimeFormatters[id];
+    if (!formatter) {
+      formatter = this._dateTimeFormatters[id] = new Intl.DateTimeFormat(_locale, format);
+    }
+    return formatter.format(value)
+  }
+};
+
+VueI18n.prototype._d = function _d (value, locale, key) {
+  /* istanbul ignore if */
+  if ( true && !VueI18n.availabilities.dateTimeFormat) {
+    warn('Cannot format a Date value due to not supported Intl.DateTimeFormat.');
+    return ''
+  }
+
+  if (!key) {
+    return new Intl.DateTimeFormat(locale).format(value)
+  }
+
+  var ret =
+    this._localizeDateTime(value, locale, this.fallbackLocale, this._getDateTimeFormats(), key);
+  if (this._isFallbackRoot(ret)) {
+    if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+      warn(("Fall back to datetime localization of root: key '" + key + "'."));
+    }
+    /* istanbul ignore if */
+    if (!this._root) { throw Error('unexpected error') }
+    return this._root.$i18n.d(value, key, locale)
+  } else {
+    return ret || ''
+  }
+};
+
+VueI18n.prototype.d = function d (value) {
+    var args = [], len = arguments.length - 1;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+
+  var locale = this.locale;
+  var key = null;
+
+  if (args.length === 1) {
+    if (isString(args[0])) {
+      key = args[0];
+    } else if (isObject(args[0])) {
+      if (args[0].locale) {
+        locale = args[0].locale;
+      }
+      if (args[0].key) {
+        key = args[0].key;
+      }
+    }
+  } else if (args.length === 2) {
+    if (isString(args[0])) {
+      key = args[0];
+    }
+    if (isString(args[1])) {
+      locale = args[1];
+    }
+  }
+
+  return this._d(value, locale, key)
+};
+
+VueI18n.prototype.getNumberFormat = function getNumberFormat (locale) {
+  return looseClone(this._vm.numberFormats[locale] || {})
+};
+
+VueI18n.prototype.setNumberFormat = function setNumberFormat (locale, format) {
+  this._vm.$set(this._vm.numberFormats, locale, format);
+  this._clearNumberFormat(locale, format);
+};
+
+VueI18n.prototype.mergeNumberFormat = function mergeNumberFormat (locale, format) {
+  this._vm.$set(this._vm.numberFormats, locale, merge(this._vm.numberFormats[locale] || {}, format));
+  this._clearNumberFormat(locale, format);
+};
+
+VueI18n.prototype._clearNumberFormat = function _clearNumberFormat (locale, format) {
+  for (var key in format) {
+    var id = locale + "__" + key;
+
+    if (!this._numberFormatters.hasOwnProperty(id)) {
+      continue
+    }
+
+    delete this._numberFormatters[id];
+  }
+};
+
+VueI18n.prototype._getNumberFormatter = function _getNumberFormatter (
+  value,
+  locale,
+  fallback,
+  numberFormats,
+  key,
+  options
+) {
+  var _locale = locale;
+  var formats = numberFormats[_locale];
+
+  var chain = this._getLocaleChain(locale, fallback);
+  for (var i = 0; i < chain.length; i++) {
+    var current = _locale;
+    var step = chain[i];
+    formats = numberFormats[step];
+    _locale = step;
+    // fallback locale
+    if (isNull(formats) || isNull(formats[key])) {
+      if (step !== locale && "development" !== 'production' && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+        warn(("Fall back to '" + step + "' number formats from '" + current + "' number formats."));
+      }
+    } else {
+      break
+    }
+  }
+
+  if (isNull(formats) || isNull(formats[key])) {
+    return null
+  } else {
+    var format = formats[key];
+
+    var formatter;
+    if (options) {
+      // If options specified - create one time number formatter
+      formatter = new Intl.NumberFormat(_locale, Object.assign({}, format, options));
+    } else {
+      var id = _locale + "__" + key;
+      formatter = this._numberFormatters[id];
+      if (!formatter) {
+        formatter = this._numberFormatters[id] = new Intl.NumberFormat(_locale, format);
+      }
+    }
+    return formatter
+  }
+};
+
+VueI18n.prototype._n = function _n (value, locale, key, options) {
+  /* istanbul ignore if */
+  if (!VueI18n.availabilities.numberFormat) {
+    if (true) {
+      warn('Cannot format a Number value due to not supported Intl.NumberFormat.');
+    }
+    return ''
+  }
+
+  if (!key) {
+    var nf = !options ? new Intl.NumberFormat(locale) : new Intl.NumberFormat(locale, options);
+    return nf.format(value)
+  }
+
+  var formatter = this._getNumberFormatter(value, locale, this.fallbackLocale, this._getNumberFormats(), key, options);
+  var ret = formatter && formatter.format(value);
+  if (this._isFallbackRoot(ret)) {
+    if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+      warn(("Fall back to number localization of root: key '" + key + "'."));
+    }
+    /* istanbul ignore if */
+    if (!this._root) { throw Error('unexpected error') }
+    return this._root.$i18n.n(value, Object.assign({}, { key: key, locale: locale }, options))
+  } else {
+    return ret || ''
+  }
+};
+
+VueI18n.prototype.n = function n (value) {
+    var args = [], len = arguments.length - 1;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+
+  var locale = this.locale;
+  var key = null;
+  var options = null;
+
+  if (args.length === 1) {
+    if (isString(args[0])) {
+      key = args[0];
+    } else if (isObject(args[0])) {
+      if (args[0].locale) {
+        locale = args[0].locale;
+      }
+      if (args[0].key) {
+        key = args[0].key;
+      }
+
+      // Filter out number format options only
+      options = Object.keys(args[0]).reduce(function (acc, key) {
+          var obj;
+
+        if (includes(numberFormatKeys, key)) {
+          return Object.assign({}, acc, ( obj = {}, obj[key] = args[0][key], obj ))
+        }
+        return acc
+      }, null);
+    }
+  } else if (args.length === 2) {
+    if (isString(args[0])) {
+      key = args[0];
+    }
+    if (isString(args[1])) {
+      locale = args[1];
+    }
+  }
+
+  return this._n(value, locale, key, options)
+};
+
+VueI18n.prototype._ntp = function _ntp (value, locale, key, options) {
+  /* istanbul ignore if */
+  if (!VueI18n.availabilities.numberFormat) {
+    if (true) {
+      warn('Cannot format to parts a Number value due to not supported Intl.NumberFormat.');
+    }
+    return []
+  }
+
+  if (!key) {
+    var nf = !options ? new Intl.NumberFormat(locale) : new Intl.NumberFormat(locale, options);
+    return nf.formatToParts(value)
+  }
+
+  var formatter = this._getNumberFormatter(value, locale, this.fallbackLocale, this._getNumberFormats(), key, options);
+  var ret = formatter && formatter.formatToParts(value);
+  if (this._isFallbackRoot(ret)) {
+    if ( true && !this._isSilentTranslationWarn(key)) {
+      warn(("Fall back to format number to parts of root: key '" + key + "' ."));
+    }
+    /* istanbul ignore if */
+    if (!this._root) { throw Error('unexpected error') }
+    return this._root.$i18n._ntp(value, locale, key, options)
+  } else {
+    return ret || []
+  }
+};
+
+Object.defineProperties( VueI18n.prototype, prototypeAccessors );
+
+var availabilities;
+// $FlowFixMe
+Object.defineProperty(VueI18n, 'availabilities', {
+  get: function get () {
+    if (!availabilities) {
+      var intlDefined = typeof Intl !== 'undefined';
+      availabilities = {
+        dateTimeFormat: intlDefined && typeof Intl.DateTimeFormat !== 'undefined',
+        numberFormat: intlDefined && typeof Intl.NumberFormat !== 'undefined'
+      };
+    }
+
+    return availabilities
+  }
+});
+
+VueI18n.install = install;
+VueI18n.version = '8.22.4';
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VueI18n);
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAccessCodeModal.vue":
+/*!****************************************************************!*\
+  !*** ./resources/assets/js/components/GameAccessCodeModal.vue ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameAccessCodeModal_vue_vue_type_template_id_04d3a9fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa& */ "./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa&");
+/* harmony import */ var _GameAccessCodeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameAccessCodeModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _GameAccessCodeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameAccessCodeModal_vue_vue_type_template_id_04d3a9fa___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameAccessCodeModal_vue_vue_type_template_id_04d3a9fa___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameAccessCodeModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameAnsweringTimeIsUpModal_vue_vue_type_template_id_5ec52480___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480& */ "./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480&");
+/* harmony import */ var _GameAnsweringTimeIsUpModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _GameAnsweringTimeIsUpModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameAnsweringTimeIsUpModal_vue_vue_type_template_id_5ec52480___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameAnsweringTimeIsUpModal_vue_vue_type_template_id_5ec52480___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameAnsweringTimeIsUpModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAnsweringTimeModal.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/assets/js/components/GameAnsweringTimeModal.vue ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameAnsweringTimeModal_vue_vue_type_template_id_6d65ef36___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36& */ "./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36&");
+/* harmony import */ var _GameAnsweringTimeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameAnsweringTimeModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _GameAnsweringTimeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameAnsweringTimeModal_vue_vue_type_template_id_6d65ef36___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameAnsweringTimeModal_vue_vue_type_template_id_6d65ef36___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameAnsweringTimeModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameImageDialog.vue":
+/*!************************************************************!*\
+  !*** ./resources/assets/js/components/GameImageDialog.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameImageDialog_vue_vue_type_template_id_799abdca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameImageDialog.vue?vue&type=template&id=799abdca& */ "./resources/assets/js/components/GameImageDialog.vue?vue&type=template&id=799abdca&");
+/* harmony import */ var _GameImageDialog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameImageDialog.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameImageDialog.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _GameImageDialog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameImageDialog_vue_vue_type_template_id_799abdca___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameImageDialog_vue_vue_type_template_id_799abdca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameImageDialog.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameInformationModal.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/assets/js/components/GameInformationModal.vue ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameInformationModal_vue_vue_type_template_id_2a6a2e2a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameInformationModal.vue?vue&type=template&id=2a6a2e2a& */ "./resources/assets/js/components/GameInformationModal.vue?vue&type=template&id=2a6a2e2a&");
+/* harmony import */ var _GameInformationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameInformationModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameInformationModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _GameInformationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameInformationModal_vue_vue_type_template_id_2a6a2e2a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameInformationModal_vue_vue_type_template_id_2a6a2e2a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameInformationModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMap.vue":
+/*!****************************************************!*\
+  !*** ./resources/assets/js/components/GameMap.vue ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameMap_vue_vue_type_template_id_6b300b23___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameMap.vue?vue&type=template&id=6b300b23& */ "./resources/assets/js/components/GameMap.vue?vue&type=template&id=6b300b23&");
+/* harmony import */ var _GameMap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameMap.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameMap.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GameMap_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GameMap.vue?vue&type=style&index=0&lang=css& */ "./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _GameMap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameMap_vue_vue_type_template_id_6b300b23___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameMap_vue_vue_type_template_id_6b300b23___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameMap.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMessagesListModal.vue":
+/*!******************************************************************!*\
+  !*** ./resources/assets/js/components/GameMessagesListModal.vue ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameMessagesListModal_vue_vue_type_template_id_5266066c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true& */ "./resources/assets/js/components/GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true&");
+/* harmony import */ var _GameMessagesListModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameMessagesListModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameMessagesListModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GameMessagesListModal_vue_vue_type_style_index_0_id_5266066c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css& */ "./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _GameMessagesListModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameMessagesListModal_vue_vue_type_template_id_5266066c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameMessagesListModal_vue_vue_type_template_id_5266066c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "5266066c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameMessagesListModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameQuestionModal.vue":
+/*!**************************************************************!*\
+  !*** ./resources/assets/js/components/GameQuestionModal.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameQuestionModal_vue_vue_type_template_id_673a7024_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true& */ "./resources/assets/js/components/GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true&");
+/* harmony import */ var _GameQuestionModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameQuestionModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameQuestionModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GameQuestionModal_vue_vue_type_style_index_0_id_673a7024_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css& */ "./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _GameQuestionModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameQuestionModal_vue_vue_type_template_id_673a7024_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameQuestionModal_vue_vue_type_template_id_673a7024_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "673a7024",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameQuestionModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameRatingModal.vue":
+/*!************************************************************!*\
+  !*** ./resources/assets/js/components/GameRatingModal.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameRatingModal_vue_vue_type_template_id_29229fd7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameRatingModal.vue?vue&type=template&id=29229fd7& */ "./resources/assets/js/components/GameRatingModal.vue?vue&type=template&id=29229fd7&");
+/* harmony import */ var _GameRatingModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameRatingModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameRatingModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GameRatingModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GameRatingModal.vue?vue&type=style&index=0&lang=css& */ "./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _GameRatingModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameRatingModal_vue_vue_type_template_id_29229fd7___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameRatingModal_vue_vue_type_template_id_29229fd7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameRatingModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameResultsModal.vue":
+/*!*************************************************************!*\
+  !*** ./resources/assets/js/components/GameResultsModal.vue ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameResultsModal_vue_vue_type_template_id_725aa9c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameResultsModal.vue?vue&type=template&id=725aa9c0& */ "./resources/assets/js/components/GameResultsModal.vue?vue&type=template&id=725aa9c0&");
+/* harmony import */ var _GameResultsModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameResultsModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameResultsModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GameResultsModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GameResultsModal.vue?vue&type=style&index=0&lang=css& */ "./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _GameResultsModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameResultsModal_vue_vue_type_template_id_725aa9c0___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameResultsModal_vue_vue_type_template_id_725aa9c0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameResultsModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameTutorialModal.vue":
+/*!**************************************************************!*\
+  !*** ./resources/assets/js/components/GameTutorialModal.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GameTutorialModal_vue_vue_type_template_id_deac8114___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameTutorialModal.vue?vue&type=template&id=deac8114& */ "./resources/assets/js/components/GameTutorialModal.vue?vue&type=template&id=deac8114&");
+/* harmony import */ var _GameTutorialModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameTutorialModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/GameTutorialModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _GameTutorialModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GameTutorialModal_vue_vue_type_template_id_deac8114___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GameTutorialModal_vue_vue_type_template_id_deac8114___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/GameTutorialModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/NotificationModal.vue":
+/*!**************************************************************!*\
+  !*** ./resources/assets/js/components/NotificationModal.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _NotificationModal_vue_vue_type_template_id_11b58b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true& */ "./resources/assets/js/components/NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true&");
+/* harmony import */ var _NotificationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NotificationModal.vue?vue&type=script&lang=js& */ "./resources/assets/js/components/NotificationModal.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _NotificationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _NotificationModal_vue_vue_type_template_id_11b58b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _NotificationModal_vue_vue_type_template_id_11b58b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "11b58b4a",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/components/NotificationModal.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAccessCodeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameAccessCodeModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAccessCodeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeIsUpModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeIsUpModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameAnsweringTimeModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameImageDialog.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameImageDialog.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameImageDialog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameImageDialog.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameImageDialog.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameImageDialog_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameInformationModal.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameInformationModal.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameInformationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameInformationModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameInformationModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameInformationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMap.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/assets/js/components/GameMap.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMap.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMessagesListModal.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameMessagesListModal.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMessagesListModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameQuestionModal.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameQuestionModal.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameQuestionModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameRatingModal.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameRatingModal.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameRatingModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameResultsModal.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameResultsModal.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameResultsModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameTutorialModal.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameTutorialModal.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameTutorialModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameTutorialModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameTutorialModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GameTutorialModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/NotificationModal.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/assets/js/components/NotificationModal.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NotificationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NotificationModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/NotificationModal.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NotificationModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMap.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_style_index_0_id_5266066c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=style&index=0&id=5266066c&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_style_index_0_id_673a7024_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=style&index=0&id=673a7024&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameRatingModal.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameResultsModal.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAccessCodeModal_vue_vue_type_template_id_04d3a9fa___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAccessCodeModal_vue_vue_type_template_id_04d3a9fa___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAccessCodeModal_vue_vue_type_template_id_04d3a9fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480& ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeIsUpModal_vue_vue_type_template_id_5ec52480___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeIsUpModal_vue_vue_type_template_id_5ec52480___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeIsUpModal_vue_vue_type_template_id_5ec52480___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeModal_vue_vue_type_template_id_6d65ef36___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeModal_vue_vue_type_template_id_6d65ef36___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameAnsweringTimeModal_vue_vue_type_template_id_6d65ef36___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameImageDialog.vue?vue&type=template&id=799abdca&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameImageDialog.vue?vue&type=template&id=799abdca& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameImageDialog_vue_vue_type_template_id_799abdca___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameImageDialog_vue_vue_type_template_id_799abdca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameImageDialog_vue_vue_type_template_id_799abdca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameImageDialog.vue?vue&type=template&id=799abdca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameImageDialog.vue?vue&type=template&id=799abdca&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameInformationModal.vue?vue&type=template&id=2a6a2e2a&":
+/*!************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameInformationModal.vue?vue&type=template&id=2a6a2e2a& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameInformationModal_vue_vue_type_template_id_2a6a2e2a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameInformationModal_vue_vue_type_template_id_2a6a2e2a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameInformationModal_vue_vue_type_template_id_2a6a2e2a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameInformationModal.vue?vue&type=template&id=2a6a2e2a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameInformationModal.vue?vue&type=template&id=2a6a2e2a&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMap.vue?vue&type=template&id=6b300b23&":
+/*!***********************************************************************************!*\
+  !*** ./resources/assets/js/components/GameMap.vue?vue&type=template&id=6b300b23& ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_template_id_6b300b23___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_template_id_6b300b23___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMap_vue_vue_type_template_id_6b300b23___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMap.vue?vue&type=template&id=6b300b23& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=template&id=6b300b23&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true& ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_template_id_5266066c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_template_id_5266066c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameMessagesListModal_vue_vue_type_template_id_5266066c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_template_id_673a7024_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_template_id_673a7024_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameQuestionModal_vue_vue_type_template_id_673a7024_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameRatingModal.vue?vue&type=template&id=29229fd7&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameRatingModal.vue?vue&type=template&id=29229fd7& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_template_id_29229fd7___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_template_id_29229fd7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameRatingModal_vue_vue_type_template_id_29229fd7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameRatingModal.vue?vue&type=template&id=29229fd7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=template&id=29229fd7&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameResultsModal.vue?vue&type=template&id=725aa9c0&":
+/*!********************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameResultsModal.vue?vue&type=template&id=725aa9c0& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_template_id_725aa9c0___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_template_id_725aa9c0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameResultsModal_vue_vue_type_template_id_725aa9c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameResultsModal.vue?vue&type=template&id=725aa9c0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=template&id=725aa9c0&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/GameTutorialModal.vue?vue&type=template&id=deac8114&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/assets/js/components/GameTutorialModal.vue?vue&type=template&id=deac8114& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameTutorialModal_vue_vue_type_template_id_deac8114___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameTutorialModal_vue_vue_type_template_id_deac8114___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GameTutorialModal_vue_vue_type_template_id_deac8114___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GameTutorialModal.vue?vue&type=template&id=deac8114& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameTutorialModal.vue?vue&type=template&id=deac8114&");
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/assets/js/components/NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotificationModal_vue_vue_type_template_id_11b58b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotificationModal_vue_vue_type_template_id_11b58b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotificationModal_vue_vue_type_template_id_11b58b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAccessCodeModal.vue?vue&type=template&id=04d3a9fa& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "modal-dialog modal-lg", attrs: { role: "document" } },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: { type: "button", "aria-label": "Close" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.title()))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _vm.hasAccessCodeClues()
+                ? _c("p", [
+                    _c("i", { staticClass: "mdi mdi-information-outline" }),
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(_vm.accessCodeClues()) +
+                        "\n                "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.accessCode,
+                    expression: "accessCode"
+                  }
+                ],
+                ref: "input",
+                staticClass: "form-control",
+                class: {
+                  animated: _vm.animated,
+                  shake: !_vm.correctCode && _vm.animated
+                },
+                attrs: {
+                  type: "text",
+                  placeholder: _vm.$t("access-code-placeholder")
+                },
+                domProps: { value: _vm.accessCode },
+                on: {
+                  keyup: function($event) {
+                    if (
+                      !$event.type.indexOf("key") &&
+                      _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                    ) {
+                      return null
+                    }
+                    return _vm.check()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.accessCode = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-default",
+                  attrs: { type: "button", title: _vm.$t("close") },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "mdi mdi-close" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: {
+                    type: "button",
+                    disabled: !_vm.canCheck(),
+                    title: _vm.$t("submit")
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.check()
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "mdi mdi-compare" })]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeIsUpModal.vue?vue&type=template&id=5ec52480& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-lg sz-game-question",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "aria-label": "Close",
+                    diabled: _vm.inAjaxCall
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.title()))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _vm._v(
+                "\n                " + _vm._s(_vm.message) + "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-default",
+                  attrs: { type: "button", title: _vm.$t("close") },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "mdi mdi-close" })]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameAnsweringTimeModal.vue?vue&type=template&id=6d65ef36& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-lg sz-game-question",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "aria-label": "Close",
+                    diabled: _vm.inAjaxCall
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.title()))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.$t("items.answering_time.description")) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: {
+                    type: "button",
+                    title: _vm.$t("items.answering_time.start_timer")
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.startTimer()
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.$t("items.answering_time.start_timer")) +
+                      " "
+                  ),
+                  _c("i", { staticClass: "mdi mdi-play-circle-outline" })
+                ]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameImageDialog.vue?vue&type=template&id=799abdca&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameImageDialog.vue?vue&type=template&id=799abdca& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "dialog",
+      staticClass: "sz-image-dialog",
+      on: {
+        click: function($event) {
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c("div", { staticClass: "sz-image-dialog-backdrop" }),
+      _vm._v(" "),
+      _c("img", {
+        ref: "image",
+        staticClass: "animated",
+        attrs: { alt: "image", src: _vm.imageUrl() }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameInformationModal.vue?vue&type=template&id=2a6a2e2a&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameInformationModal.vue?vue&type=template&id=2a6a2e2a& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "modal-dialog modal-lg", attrs: { role: "document" } },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: { type: "button", "aria-label": "Close" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title text-center" }, [
+                _vm._v(_vm._s(_vm.activity.title))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "collapse", attrs: { id: "iconCodes" } },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "well well-sm" },
+                    [
+                      _c("p", { staticClass: "help-block" }, [
+                        _vm._v(_vm._s(_vm.$t("icons.help")))
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.icons, function(icon) {
+                        return _c("div", { staticClass: "media" }, [
+                          _c(
+                            "div",
+                            { staticClass: "media-left media-middle" },
+                            [
+                              _c("img", {
+                                staticClass: "media-object",
+                                staticStyle: { width: "30px", height: "30px" },
+                                attrs: {
+                                  alt: "icon",
+                                  src: _vm.getIconUrl(icon)
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "media-body" }, [
+                            _c("p", [_vm._v(_vm._s(_vm.getIconText(icon)))])
+                          ])
+                        ])
+                      })
+                    ],
+                    2
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm.activity.description
+                ? _c("p", { staticClass: "sz-display-new-lines text-center" }, [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(_vm.activity.description) +
+                        "\n                "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("h4", [_vm._v(_vm._s(_vm.$t("number-of-questions")))]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.activity.questions.length))]),
+              _vm._v(" "),
+              _c("h4", [_vm._v(_vm._s(_vm.$t("playing-time")))]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.activity.playing_time) +
+                    " " +
+                    _vm._s(_vm.$t("minutes")) +
+                    "\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("img", {
+                  staticClass: "img-responsive center-block",
+                  attrs: {
+                    src: _vm.activity.featured_image,
+                    alt: "featured-image"
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-lg center-block sz-go-btn",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.$t("go")))]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-default btn-sm pull-right",
+        attrs: {
+          role: "button",
+          "data-toggle": "collapse",
+          "data-target": "#iconCodes",
+          "aria-expanded": "false",
+          "aria-controls": "iconCodes"
+        }
+      },
+      [_c("i", { staticClass: "mdi mdi-information-outline" })]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=template&id=6b300b23&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMap.vue?vue&type=template&id=6b300b23& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticStyle: { height: "100%", width: "100%" } },
+    [
+      _c("game-image-dialog", {
+        ref: "correctImageDialog",
+        attrs: {
+          "base-url": _vm.baseUrl,
+          image: "answer_correct.png",
+          "in-animation-class": "bounceInUp",
+          "out-animation-class": "bounceOut"
+        }
+      }),
+      _vm._v(" "),
+      _c("game-image-dialog", {
+        ref: "incorrectImageDialog",
+        attrs: {
+          "base-url": _vm.baseUrl,
+          image: "answer_incorrect.png",
+          "in-animation-class": "bounceInDown",
+          "out-animation-class": "bounceOutDown"
+        }
+      }),
+      _vm._v(" "),
+      _c("game-image-dialog", {
+        ref: "submittedImageDialog",
+        attrs: {
+          "base-url": _vm.baseUrl,
+          image: "answer_submitted.png",
+          "in-animation-class": "bounceInRight",
+          "out-animation-class": "bounceOutLeft"
+        }
+      }),
+      _vm._v(" "),
+      _vm.question
+        ? _c("game-question-modal", {
+            ref: "questionModal",
+            attrs: {
+              question: _vm.question,
+              answer: _vm.answer,
+              "game-id": _vm.game.id,
+              "base-url": _vm.baseUrl
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.question
+        ? _c("game-answering-time-modal", {
+            ref: "answeringTimeModal",
+            attrs: {
+              question: _vm.question,
+              "game-id": _vm.game.id,
+              "base-url": _vm.baseUrl
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _c("game-answering-time-is-up-modal", {
+        ref: "answeringTimeIsUpModal",
+        attrs: { question: _vm.question }
+      }),
+      _vm._v(" "),
+      _c("game-access-code-modal", {
+        ref: "accessCodeModal",
+        attrs: { question: _vm.question }
+      }),
+      _vm._v(" "),
+      _c("notification-modal", {
+        ref: "notificationModal",
+        attrs: {
+          title: _vm.notificationTitle,
+          message: _vm.notificationMessage
+        }
+      }),
+      _vm._v(" "),
+      _c("game-messages-list-modal", {
+        ref: "gameMessagesListModal",
+        attrs: { game_id: _vm.game.id, type: "play" }
+      }),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "map" } }),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "messages-container" } })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameMessagesListModal.vue?vue&type=template&id=5266066c&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "modal-dialog modal-lg", attrs: { role: "document" } },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "aria-label": "Close",
+                    diabled: _vm.inAjaxCall
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.$t("game-messages")))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c(
+                "table",
+                { staticClass: "messages-container table" },
+                _vm._l(_vm.messages, function(message) {
+                  return _c(
+                    "tr",
+                    { class: { message: _vm.isManager() === true } },
+                    [
+                      _vm.isManager() === false
+                        ? _c("td", [
+                            _c("div", { staticClass: "panel panel-default" }, [
+                              _c("div", { staticClass: "panel-body" }, [
+                                _c(
+                                  "p",
+                                  {
+                                    staticStyle: { "white-space": "pre-line" }
+                                  },
+                                  [_vm._v(_vm._s(message.message))]
+                                ),
+                                _vm._v(" "),
+                                _c("small", [
+                                  _vm._v(_vm._s(message.created_at))
+                                ])
+                              ])
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.isManager() === true
+                        ? _c(
+                            "td",
+                            { staticStyle: { "white-space": "pre-line" } },
+                            [_vm._v(_vm._s(message.message))]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.isManager() === true
+                        ? _c("td", [_vm._v(_vm._s(message.created_at))])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.isManager() === true
+                        ? _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "pull-right btn btn-danger",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.deleteMessage(
+                                      _vm.event,
+                                      message.id
+                                    )
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                " +
+                                    _vm._s(_vm.$t("delete-message")) +
+                                    "\n                            "
+                                )
+                              ]
+                            )
+                          ])
+                        : _vm._e()
+                    ]
+                  )
+                }),
+                0
+              ),
+              _vm._v(" "),
+              _vm.isManager() === true
+                ? _c("div", { staticClass: "add-message-container" }, [
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.newMessage,
+                          expression: "newMessage"
+                        }
+                      ],
+                      ref: "newMessageInput",
+                      staticClass: "form-control",
+                      domProps: { value: _vm.newMessage },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.newMessage = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success",
+                        attrs: { type: "button" },
+                        on: { click: _vm.addNewMessage }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(_vm.$t("add-new-message")) +
+                            "\n                    "
+                        )
+                      ]
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameQuestionModal.vue?vue&type=template&id=673a7024&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-lg sz-game-question",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "aria-label": "Close",
+                    diabled: _vm.inAjaxCall
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.title()) +
+                    "\n                    "
+                ),
+                _vm.answeringTime != null
+                  ? _c(
+                      "span",
+                      {
+                        staticClass: "pull-right",
+                        staticStyle: { "padding-right": "15px" }
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.$t("remaining_time")) +
+                            ": " +
+                            _vm._s(_vm.answeringTime)
+                        )
+                      ]
+                    )
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _vm.hasImage()
+                ? _c("div", [
+                    _c("img", {
+                      staticClass: "img-responsive",
+                      attrs: { src: "", alt: "image", src: _vm.image() }
+                    })
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("p", { staticClass: "sz-display-new-lines" }, [
+                _vm._v(_vm._s(_vm.description()))
+              ]),
+              _vm._v(" "),
+              _vm.isOneCorrectAnswer()
+                ? _c("div", [
+                    _c(
+                      "ul",
+                      { staticClass: "media-list sz-one-correct-answer" },
+                      _vm._l(_vm.options(), function(option, index) {
+                        return _c(
+                          "li",
+                          {
+                            staticClass: "media",
+                            on: {
+                              click: function($event) {
+                                return _vm.triggerOptionClick(index)
+                              }
+                            }
+                          },
+                          [
+                            option.image_url
+                              ? _c("div", { staticClass: "media-left" }, [
+                                  _c("img", {
+                                    staticClass: "media-object",
+                                    attrs: {
+                                      src: option.image_url,
+                                      alt: "option-image"
+                                    }
+                                  })
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "media-body media-middle" },
+                              [
+                                _c(
+                                  "h4",
+                                  {
+                                    staticClass: "media-heading",
+                                    class: {
+                                      selected:
+                                        _vm.isAnswered() &&
+                                        _vm.isSelectedOption(option.id)
+                                    }
+                                  },
+                                  [_vm._v(_vm._s(option.option))]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "media-right media-middle" },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.selectedOptions,
+                                      expression: "selectedOptions"
+                                    }
+                                  ],
+                                  ref: "option",
+                                  refInFor: true,
+                                  staticClass: "form-control",
+                                  attrs: { type: "radio", name: "option" },
+                                  domProps: {
+                                    value: option.id,
+                                    checked: _vm._q(
+                                      _vm.selectedOptions,
+                                      option.id
+                                    )
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      _vm.selectedOptions = option.id
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                !_vm.isSelectedOption(option.id) &&
+                                !_vm.isAnswered()
+                                  ? _c("i", {
+                                      staticClass: "mdi mdi-radiobox-blank"
+                                    })
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.isSelectedOption(option.id) &&
+                                !_vm.isAnswered()
+                                  ? _c("i", {
+                                      staticClass: "mdi mdi-radiobox-marked"
+                                    })
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.isAnswered()
+                                  ? _c("i", {
+                                      staticClass: "mdi",
+                                      class: _vm.optionIconClass(option),
+                                      attrs: { "aria-hidden": "true" }
+                                    })
+                                  : _vm._e()
+                              ]
+                            )
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isMultipleCorrectAnswers()
+                ? _c("div", [
+                    _c(
+                      "ul",
+                      { staticClass: "media-list sz-multiple-correct-answers" },
+                      _vm._l(_vm.options(), function(option, index) {
+                        return _c(
+                          "li",
+                          {
+                            staticClass: "media",
+                            on: {
+                              click: function($event) {
+                                return _vm.triggerOptionClick(index)
+                              }
+                            }
+                          },
+                          [
+                            option.image_url
+                              ? _c("div", { staticClass: "media-left" }, [
+                                  _c("img", {
+                                    staticClass: "media-object",
+                                    attrs: {
+                                      src: option.image_url,
+                                      alt: "option-image"
+                                    }
+                                  })
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "media-body media-middle" },
+                              [
+                                _c(
+                                  "h4",
+                                  {
+                                    staticClass: "media-heading",
+                                    class: {
+                                      selected:
+                                        _vm.isAnswered() &&
+                                        _vm.isSelectedOption(option.id)
+                                    }
+                                  },
+                                  [_vm._v(_vm._s(option.option))]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "media-right media-middle" },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.selectedOptions,
+                                      expression: "selectedOptions"
+                                    }
+                                  ],
+                                  ref: "option",
+                                  refInFor: true,
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "checkbox",
+                                    name: "options[]"
+                                  },
+                                  domProps: {
+                                    value: option.id,
+                                    checked: Array.isArray(_vm.selectedOptions)
+                                      ? _vm._i(_vm.selectedOptions, option.id) >
+                                        -1
+                                      : _vm.selectedOptions
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$a = _vm.selectedOptions,
+                                        $$el = $event.target,
+                                        $$c = $$el.checked ? true : false
+                                      if (Array.isArray($$a)) {
+                                        var $$v = option.id,
+                                          $$i = _vm._i($$a, $$v)
+                                        if ($$el.checked) {
+                                          $$i < 0 &&
+                                            (_vm.selectedOptions = $$a.concat([
+                                              $$v
+                                            ]))
+                                        } else {
+                                          $$i > -1 &&
+                                            (_vm.selectedOptions = $$a
+                                              .slice(0, $$i)
+                                              .concat($$a.slice($$i + 1)))
+                                        }
+                                      } else {
+                                        _vm.selectedOptions = $$c
+                                      }
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                !_vm.isSelectedOption(option.id) &&
+                                !_vm.isAnswered()
+                                  ? _c("i", {
+                                      staticClass:
+                                        "mdi mdi-checkbox-blank-outline"
+                                    })
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.isSelectedOption(option.id) &&
+                                !_vm.isAnswered()
+                                  ? _c("i", {
+                                      staticClass:
+                                        "mdi mdi-checkbox-marked-outline"
+                                    })
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.isAnswered()
+                                  ? _c("i", {
+                                      staticClass: "mdi",
+                                      class: _vm.optionIconClass(option),
+                                      attrs: { "aria-hidden": "true" }
+                                    })
+                                  : _vm._e()
+                              ]
+                            )
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isFreeformAnswer()
+                ? _c("div", [
+                    _c("div", { staticClass: "form-group" }, [
+                      !_vm.isAnswered()
+                        ? _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.textualAnswer,
+                                expression: "textualAnswer"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              placeholder: _vm.$t("textual-answer-placeholder")
+                            },
+                            domProps: { value: _vm.textualAnswer },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.textualAnswer = $event.target.value
+                              }
+                            }
+                          })
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.isAnswered()
+                        ? _c("textarea", {
+                            staticClass: "form-control",
+                            attrs: {
+                              placeholder: _vm.$t("textual-answer-placeholder"),
+                              readonly: "readonly"
+                            },
+                            domProps: { value: _vm.answer.answer.text }
+                          })
+                        : _vm._e()
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isMatchPairs()
+                ? _c("div", [
+                    _c("div", { staticClass: "row sz-match-pairs" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-6" },
+                        _vm._l(_vm.pairs(), function(pair) {
+                          return _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "col-xs-12" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "matchable",
+                                  refInFor: true,
+                                  staticClass: "sz-matchable",
+                                  class: {
+                                    chosen: _vm.isOptionChosen(pair),
+                                    matched: _vm.isMatchedPair(pair)
+                                  },
+                                  style: _vm.matchableStyles,
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.choosePair(pair)
+                                    }
+                                  }
+                                },
+                                [
+                                  pair.image_url
+                                    ? _c("img", {
+                                        staticClass: "media-object",
+                                        attrs: {
+                                          src: pair.image_url,
+                                          alt: "pair-image"
+                                        }
+                                      })
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _c("div", [_vm._v(_vm._s(pair.option))])
+                                ]
+                              )
+                            ])
+                          ])
+                        }),
+                        0
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-6" },
+                        _vm._l(_vm.pairs(true), function(pair) {
+                          return _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "col-xs-12" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "matchable",
+                                  refInFor: true,
+                                  staticClass: "sz-matchable",
+                                  class: {
+                                    chosen: _vm.isOptionMatchChosen(pair),
+                                    matched: _vm.isMatchedPair(pair)
+                                  },
+                                  style: _vm.matchableStyles,
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.choosePairMatch(pair)
+                                    }
+                                  }
+                                },
+                                [
+                                  pair.image_match_url
+                                    ? _c("img", {
+                                        staticClass: "media-object",
+                                        attrs: {
+                                          src: pair.image_match_url,
+                                          alt: "pair-image"
+                                        }
+                                      })
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _c("div", [_vm._v(_vm._s(pair.option_match))])
+                                ]
+                              )
+                            ])
+                          ])
+                        }),
+                        0
+                      )
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isEmbeddedContent()
+                ? _c("div", [
+                    _c("div", {
+                      staticClass: "embed-responsive embed-responsive-16by9",
+                      domProps: { innerHTML: _vm._s(_vm.embeddedContent()) }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      !_vm.isAnswered()
+                        ? _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.textualAnswer,
+                                expression: "textualAnswer"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              placeholder: _vm.$t("textual-answer-placeholder")
+                            },
+                            domProps: { value: _vm.textualAnswer },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.textualAnswer = $event.target.value
+                              }
+                            }
+                          })
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.isAnswered()
+                        ? _c("textarea", {
+                            staticClass: "form-control",
+                            attrs: {
+                              placeholder: _vm.$t("textual-answer-placeholder"),
+                              readonly: "readonly"
+                            },
+                            domProps: { value: _vm.answer.answer.text }
+                          })
+                        : _vm._e()
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isPhoto() && !_vm.isAnswered()
+                ? _c(
+                    "div",
+                    { staticClass: "sz-photo" },
+                    [
+                      _c(
+                        "transition",
+                        {
+                          attrs: {
+                            name: "fade-in-down-out-up",
+                            "enter-active-class": "animated fadeInDown",
+                            "leave-active-class": "animated fadeOutUp"
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              directives: [
+                                {
+                                  name: "show",
+                                  rawName: "v-show",
+                                  value: _vm.incorrectImageFormat,
+                                  expression: "incorrectImageFormat"
+                                }
+                              ],
+                              staticClass: "alert alert-danger text-center",
+                              attrs: { role: "alert" }
+                            },
+                            [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(_vm.$t("image-format-hint")) +
+                                  "\n                        "
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row text-center" }, [
+                        _c(
+                          "a",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: !_vm.hasImageSelected,
+                                expression: "!hasImageSelected"
+                              }
+                            ],
+                            staticClass: "btn sz-take-image",
+                            attrs: { href: "#", tabindex: "-1" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.triggerImageClick()
+                              }
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "mdi mdi-camera",
+                              attrs: { "aria-hidden": "true" }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.hasImageSelected,
+                              expression: "hasImageSelected"
+                            }
+                          ],
+                          staticClass: "row"
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "col-xs-10 col-xs-offset-1" },
+                            [
+                              _c("img", {
+                                staticClass:
+                                  "img-responsive center-block sz-image-taken",
+                                attrs: {
+                                  src: _vm.imageSrc,
+                                  alt: "uploadable-image"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.triggerImageClick()
+                                  }
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        ref: "image",
+                        attrs: {
+                          type: "file",
+                          accept: "image/jpeg, image/png",
+                          capture: "camera",
+                          name: "image"
+                        },
+                        on: { change: _vm.imageSelected }
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isPhoto() && _vm.isAnswered()
+                ? _c("div", { staticClass: "sz-photo" }, [
+                    _vm.isAnswered()
+                      ? _c("img", {
+                          staticClass:
+                            "img-responsive center-block sz-image-taken",
+                          attrs: {
+                            src: _vm.answer.image,
+                            alt: "uploaded-image"
+                          }
+                        })
+                      : _vm._e()
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isMissingWord()
+                ? _c("div", { staticClass: "missing-word-container" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      _vm._l(_vm.missingWords, function(word, index) {
+                        return _c("span", [
+                          word.type === "text"
+                            ? _c("span", [_vm._v(_vm._s(word.text))])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          word.type === "input" && !_vm.isAnswered()
+                            ? _c("input", {
+                                attrs: { type: "text", "data-index": index },
+                                on: { keyup: _vm.onMissingWordChange }
+                              })
+                            : _vm._e(),
+                          _vm._v(" "),
+                          word.type === "input" && _vm.isAnswered()
+                            ? _c("span", [
+                                word.isCorrect === false
+                                  ? _c("span", { staticClass: "incorrect" }, [
+                                      _vm._v(_vm._s(word.answer) + " "),
+                                      _c("span", { staticClass: "correct" }, [
+                                        _vm._v("(" + _vm._s(word.text) + ")")
+                                      ])
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                word.isCorrect === true
+                                  ? _c("span", { staticClass: "correct" }, [
+                                      _vm._v(_vm._s(word.answer))
+                                    ])
+                                  : _vm._e()
+                              ])
+                            : _vm._e()
+                        ])
+                      }),
+                      0
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _vm.hasReadMore()
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-default",
+                      attrs: {
+                        href: "",
+                        href: _vm.readMore(),
+                        target: "_blank"
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "mdi mdi-open-in-new",
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(_vm.$t("read-more-about")) +
+                          "\n                "
+                      )
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-default",
+                  attrs: {
+                    type: "button",
+                    disabled: _vm.inAjaxCall,
+                    title: _vm.$t("close")
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "mdi mdi-close" })]
+              ),
+              _vm._v(" "),
+              !(_vm.isPreview || _vm.isAnswered())
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: {
+                        type: "button",
+                        disabled: !_vm.canSubmit() || _vm.inAjaxCall,
+                        title: _vm.$t("submit")
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.submit()
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "mdi mdi-send" })]
+                  )
+                : _vm._e()
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=template&id=29229fd7&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameRatingModal.vue?vue&type=template&id=29229fd7& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: {
+        tabindex: "-1",
+        role: "dialog",
+        "data-backdrop": "static",
+        "data-keyboard": "false"
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-lg sz-game-results",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: { type: "button", "aria-label": "Close" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.$t("rating-heading")))
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "modal-body text-center" },
+              _vm._l(_vm.stars, function(star) {
+                return _c("a", {
+                  staticClass: "mdi mdi-star-outline star",
+                  attrs: { href: "#", "data-value": star },
+                  on: {
+                    click: function($event) {
+                      return _vm.addRating(_vm.event, star)
+                    },
+                    mouseover: _vm.mouseOverStar
+                  }
+                })
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer text-center" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.$t("show-results")))]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=template&id=725aa9c0&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameResultsModal.vue?vue&type=template&id=725aa9c0& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: {
+        tabindex: "-1",
+        role: "dialog",
+        "data-backdrop": "static",
+        "data-keyboard": "false"
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-lg sz-game-results",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.game.activity.title))
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "modal-body" },
+              [
+                _c("div", { staticClass: "text-center sz-quick-results" }, [
+                  _c("div", { staticClass: "sz-results-count" }, [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(_vm.correctQuestionsCount) +
+                        "/" +
+                        _vm._s(_vm.totalQuestionsCount) +
+                        "\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sz-complete-text" }, [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(_vm.$t("complete")) +
+                        "\n                    "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-center" }, [
+                  _vm._v(_vm._s(_vm.$t("results-heading")))
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.getResultQuestions, function(question, index) {
+                  return _c("div", [
+                    _c("h3", [
+                      _vm._v(_vm._s(index + 1) + ". " + _vm._s(question.title))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "sz-display-new-lines" }, [
+                      _vm._v(_vm._s(question.description))
+                    ]),
+                    _vm._v(" "),
+                    _vm.hasGrade(question) === false
+                      ? _c("p", { staticClass: "alert alert-info" }, [
+                          _vm._v(
+                            _vm._s(_vm.$t("task-is-pending-an-evaluation"))
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isOneCorrectAnswer(question) ||
+                    _vm.isMultipleCorrectAnswers(question)
+                      ? _c(
+                          "div",
+                          _vm._l(question.options, function(option) {
+                            return _c(
+                              "ul",
+                              { staticClass: "media-list sz-options-list" },
+                              [
+                                _c("li", { staticClass: "media sz-option" }, [
+                                  option.image_url
+                                    ? _c("div", { staticClass: "media-left" }, [
+                                        _c("img", {
+                                          staticClass: "media-object",
+                                          attrs: {
+                                            src: option.image_url,
+                                            alt: "option-image"
+                                          }
+                                        })
+                                      ])
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "media-body" }, [
+                                    _c(
+                                      "h4",
+                                      {
+                                        staticClass: "media-heading",
+                                        class: {
+                                          selected: _vm.choseOption(
+                                            question,
+                                            option
+                                          )
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(option.option))]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "media-right media-middle" },
+                                    [
+                                      _c("i", {
+                                        staticClass: "mdi",
+                                        class: _vm.optionIconClass(
+                                          question,
+                                          option
+                                        ),
+                                        attrs: { "aria-hidden": "true" }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]
+                            )
+                          }),
+                          0
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isEmbeddedContent(question)
+                      ? _c("div", [
+                          _c("div", {
+                            staticClass:
+                              "embed-responsive embed-responsive-16by9",
+                            domProps: {
+                              innerHTML: _vm._s(question.embedded_content)
+                            }
+                          })
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isFreeformAnswer(question) ||
+                    _vm.isEmbeddedContent(question)
+                      ? _c("div", [
+                          _vm.hasText(question)
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "well well-sm sz-display-new-lines"
+                                },
+                                [_vm._v(_vm._s(_vm.getText(question)))]
+                              )
+                            : _vm._e()
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isMissingWord(question)
+                      ? _c("div", [
+                          _vm.hasText(question)
+                            ? _c("div", {
+                                staticClass:
+                                  "well well-sm sz-display-new-lines missing-word-container",
+                                domProps: {
+                                  innerHTML: _vm._s(
+                                    _vm.getMissingWordText(question)
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isMatchPairs(question)
+                      ? _c(
+                          "div",
+                          { staticClass: "sz-pairs-list" },
+                          _vm._l(question.pairs, function(pair) {
+                            return _c("div", { staticClass: "row" }, [
+                              _c("div", { staticClass: "col-xs-6" }, [
+                                _c("div", { staticClass: "media sz-pair" }, [
+                                  _c("div", { staticClass: "media-left" }, [
+                                    pair.image_url
+                                      ? _c("img", {
+                                          staticClass: "media-object",
+                                          attrs: {
+                                            src: pair.image_url,
+                                            alt: "pair-image"
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "media-body" }, [
+                                    _c("h4", { staticClass: "media-heading" }, [
+                                      _vm._v(_vm._s(pair.option))
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-xs-6" }, [
+                                _c("div", { staticClass: "media sz-pair" }, [
+                                  _c("div", { staticClass: "media-left" }, [
+                                    pair.image_match_url
+                                      ? _c("img", {
+                                          staticClass: "media-object",
+                                          attrs: {
+                                            src: pair.image_match_url,
+                                            alt: "pair-image"
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "media-body" }, [
+                                    _c("h4", { staticClass: "media-heading" }, [
+                                      _vm._v(_vm._s(pair.option_match))
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          }),
+                          0
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isPhoto(question)
+                      ? _c("div", { staticClass: "sz-photo" }, [
+                          _vm.hasImage(question)
+                            ? _c("div", { staticClass: "well well-sm" }, [
+                                _c("img", {
+                                  staticClass: "img-responsive center-block",
+                                  attrs: {
+                                    alt: "uploaded-image",
+                                    src: _vm.getImage(question)
+                                  }
+                                })
+                              ])
+                            : _vm._e()
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("div", [
+                      question.read_more
+                        ? _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-default btn-sm",
+                              attrs: {
+                                href: "",
+                                href: question.read_more,
+                                target: "_blank"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "mdi mdi-open-in-new",
+                                attrs: { "aria-hidden": "true" }
+                              }),
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(_vm.$t("read-more-about")) +
+                                  "\n                        "
+                              )
+                            ]
+                          )
+                        : _vm._e()
+                    ])
+                  ])
+                })
+              ],
+              2
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-default",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.exit()
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "mdi mdi-exit-to-app",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameTutorialModal.vue?vue&type=template&id=deac8114&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/GameTutorialModal.vue?vue&type=template&id=deac8114& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-lg sz-game-tips-dialog",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: { type: "button", "aria-label": "Close" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title text-center" }, [
+                _vm._v(_vm._s(_vm.$t("tips-text")))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c(
+                "div",
+                { ref: "tips", staticClass: "tips" },
+                [
+                  _c(
+                    "transition",
+                    {
+                      attrs: {
+                        name: "tip-side",
+                        mode: "out-in",
+                        "enter-active-class": _vm.enterActiveClass,
+                        "leave-active-class": _vm.leaveActiveClass
+                      }
+                    },
+                    [
+                      _vm.currentItem === "gameplay_instructions"
+                        ? _c(
+                            "div",
+                            {
+                              key: "gameplay_instructions",
+                              staticClass: "tip"
+                            },
+                            [
+                              _c("div", { staticClass: "tip-image" }, [
+                                _c("img", {
+                                  staticClass: "img-responsive center-block",
+                                  attrs: {
+                                    alt: "image",
+                                    src: _vm.getItemImageUrl(
+                                      "gameplay_instructions",
+                                      "png"
+                                    )
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("h4", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t("items.gameplay_instructions.title")
+                                  )
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "items.gameplay_instructions.description"
+                                    )
+                                  )
+                                )
+                              ])
+                            ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.currentItem === "look_closely"
+                        ? _c(
+                            "div",
+                            { key: "look_closely", staticClass: "tip" },
+                            [
+                              _c("div", { staticClass: "tip-image" }, [
+                                _c("img", {
+                                  staticClass: "img-responsive center-block",
+                                  attrs: {
+                                    alt: "image",
+                                    src: _vm.getItemImageUrl("look_closely")
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("h4", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(_vm.$t("items.look_closely.title"))
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t("items.look_closely.description")
+                                  )
+                                )
+                              ])
+                            ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.currentItem === "look_out"
+                        ? _c("div", { key: "look_out", staticClass: "tip" }, [
+                            _c("div", { staticClass: "tip-image" }, [
+                              _c("img", {
+                                staticClass: "img-responsive center-block",
+                                attrs: {
+                                  alt: "image",
+                                  src: _vm.getItemImageUrl("look_out")
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("h4", { staticClass: "text-center" }, [
+                              _vm._v(_vm._s(_vm.$t("items.look_out.title")))
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "text-center" }, [
+                              _vm._v(
+                                _vm._s(_vm.$t("items.look_out.description"))
+                              )
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.currentItem === "do_not_disturb"
+                        ? _c(
+                            "div",
+                            { key: "do_not_disturb", staticClass: "tip" },
+                            [
+                              _c("div", { staticClass: "tip-image" }, [
+                                _c("img", {
+                                  staticClass: "img-responsive center-block",
+                                  attrs: {
+                                    alt: "image",
+                                    src: _vm.getItemImageUrl("do_not_disturb")
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("h4", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(_vm.$t("items.do_not_disturb.title"))
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t("items.do_not_disturb.description")
+                                  )
+                                )
+                              ])
+                            ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.currentItem === "help_others"
+                        ? _c(
+                            "div",
+                            { key: "help_others", staticClass: "tip" },
+                            [
+                              _c("div", { staticClass: "tip-image" }, [
+                                _c("img", {
+                                  staticClass: "img-responsive center-block",
+                                  attrs: {
+                                    alt: "image",
+                                    src: _vm.getItemImageUrl("help_others")
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("h4", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(_vm.$t("items.help_others.title"))
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-center" }, [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t("items.help_others.description")
+                                  )
+                                )
+                              ])
+                            ]
+                          )
+                        : _vm._e()
+                    ]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "text-center slides" },
+                _vm._l(_vm.items, function(item) {
+                  return _c("li", [
+                    _c(
+                      "span",
+                      {
+                        class: {
+                          badge: true,
+                          current: item === _vm.currentItem
+                        }
+                      },
+                      [_vm._v(" ")]
+                    )
+                  ])
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              !_vm.isFirstItem()
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-default btn-lg pull-left",
+                      attrs: { type: "button", disabled: !_vm.currentItem },
+                      on: {
+                        click: function($event) {
+                          return _vm.previousItem()
+                        }
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.$t("back")))]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.isLastItem()
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-success btn-lg pull-right",
+                      attrs: { type: "button", disabled: !_vm.currentItem },
+                      on: {
+                        click: function($event) {
+                          return _vm.nextItem()
+                        }
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.$t("next")))]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isLastItem()
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-success btn-lg pull-right",
+                      attrs: { type: "button", disabled: !_vm.currentItem },
+                      on: {
+                        click: function($event) {
+                          return _vm.close()
+                        }
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.$t("got-it")))]
+                  )
+                : _vm._e()
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/assets/js/components/NotificationModal.vue?vue&type=template&id=11b58b4a&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      ref: "modal",
+      staticClass: "modal fade",
+      attrs: { tabindex: "-1", role: "dialog" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close()
+        },
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])
+          ) {
+            return null
+          }
+          return _vm.close()
+        }
+      }
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "modal-dialog modal-sm", attrs: { role: "document" } },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "aria-label": "Close",
+                    diabled: _vm.inAjaxCall
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("h4", { staticClass: "modal-title" }, [
+                _vm._v(_vm._s(_vm.title))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "modal-body",
+              domProps: { innerHTML: _vm._s(_vm.message) }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-sm btn-success center-block",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.close()
+                    }
+                  }
+                },
+                [_vm._v("\n                    OK\n                ")]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ normalizeComponent)
+/* harmony export */ });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functional component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	// startup
+/******/ 	// Load entry module
+/******/ 	__webpack_require__("./resources/assets/js/play.js");
+/******/ 	// This entry module used 'exports' so it can't be inlined
+/******/ })()
+;
