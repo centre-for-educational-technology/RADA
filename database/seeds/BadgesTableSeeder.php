@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Database\Seeder;
+namespace Database\Seeders;
 
+use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 use Webpatser\Uuid\Uuid;
+use Illuminate\Support\Facades\DB;
 
 class BadgesTableSeeder extends Seeder
 {

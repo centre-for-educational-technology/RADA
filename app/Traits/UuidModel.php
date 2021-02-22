@@ -13,7 +13,7 @@ trait UuidModel
         });
 
         static::saving(function($model) {
-            $original = $model->getOriginal($model->getKeyName());
+            $original = $model->getRawOriginal($model->getKeyName());
 
             if ( $original !== $model->id ) {
                 $model->id = $original;

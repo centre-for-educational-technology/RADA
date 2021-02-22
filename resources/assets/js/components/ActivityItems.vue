@@ -118,7 +118,7 @@
                                @change="itemOrderChange"
                                class="draggable-order-number"
                         />
-                        <button type="button" class="btn btn-primary btn-sm" v-on:click="editItem(item)"><i class="mdi mdi-pencil"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm" v-on:click="editItem(item)" v-bind:disabled="!item.current_user_can_edit"><i class="mdi mdi-pencil"></i></button>
                         <button type="button" class="btn btn-primary btn-sm" v-on:click="showQuestionPreview(item)"><i class="mdi mdi-open-in-app"></i></button>
                         <button type="button" class="btn btn-danger btn-sm" v-on:click="removeItem(item)"><i class="mdi mdi-minus"></i></button>
                     </span>

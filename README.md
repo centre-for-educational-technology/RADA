@@ -15,8 +15,8 @@ This tool set includes:
 
 ## Requirements
 
-- Requirements are best determined using [Server Requirements page](https://laravel.com/docs/6.x/installation#server-requirements) of corresponding Laravel 6 version
-  - Currently used version is 6.x
+- Requirements are best determined using [Server Requirements page](https://laravel.com/docs/8.x/installation#server-requirements) of corresponding Laravel 8 version
+  - Currently used version is 8.x
 - PHP version 7.3 (some of the additional modules have strict requirements)
 - SSH access to the server (terminal access)
 - [Composer](https://getcomposer.org/) being installed
@@ -51,7 +51,7 @@ This tool set includes:
 - For xAPI integration (step 2)
   - Run `php artisan queue:work --tries=0 &` from terminal to start the queue worker
 - Add private and public keys to the `storage/app/keys` directory (key length might be different)
-- Make sure to deploy Passport as described in the [documentation](https://laravel.com/docs/6.x/passport#deploying-passport)
+- Make sure to deploy Passport as described in the [documentation](https://laravel.com/docs/8.x/passport#deploying-passport)
   - Only keys would be needed by default
   - Make sure to define API access in the `.env` file by specifying user identifiers
 ```
@@ -60,7 +60,7 @@ openssl rsa -in private-key.pem -out public-key.pem -outform PEM -pubout
 ```
 - Setup scheduled jobs (Cron)
   - Those jobs should be run from Command-line interface (CLI) as those might require a longer period of time to run
-  - Please check the [documentation](https://laravel.com/docs/6.x/scheduling#introduction) for detailed instructions
+  - Please check the [documentation](https://laravel.com/docs/8.x/scheduling#introduction) for detailed instructions
 
 ## Set up Google Analytics integration for active users graph on statistics page
 - Create API Service account which can access desired Google Analytics project. [Documentation](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
@@ -94,9 +94,9 @@ The common septs for the process are as follows:
 ### Working with compiled assets
 
 Working with JS and SASS requires [Node.js](https://nodejs.org) and [Webpack](https://webpack.js.org/) for compilation, generation and management purposes.
-More information could be found on [Laravel Mix](https://laravel.com/docs/6.x/mix) documentation pages.
+More information could be found on [Laravel Mix](https://laravel.com/docs/8.x/mix) documentation pages.
 
-Tasks should run well enough with Node.js versions 10 and 12 (tested to run well enough with both versions). Other versions might be having certain compatibility issues.
+Tasks should run well enough with Node.js versions 12 and 14 (tested to run well enough with both versions). Other versions might be having certain compatibility issues.
 
 If all the dependencies are installed (`npm install`), then one would only need to run one of the tasks:
 
@@ -132,44 +132,6 @@ Also check any additional translations within the `vendor` subdirectory. That wo
 ## Production
 
 If you need to be running in production mode, then please use the branch named `production` instead of `master`. That branch might not have all the latest changes, but it should have the JS and CSS assets built for running in production (minified and more).
-
-## Vagrant + Homestead
-
-**TODO: consider removing laravel/homestead dev dependency and adding some simple instructions of using [Laradock](https://laradock.io/) instead.**
-
-This is an example `Homestead.yaml` configuration file for running with `Vagrant` on `VirtualBox`. Please modify it to comply with your local system. Read [documentation](https://laravel.com/docs/6.x/homestead) for more information on how to use `Laravel Homestead`.
-
-```
-ip: 192.168.10.10
-memory: 2048
-cpus: 2
-provider: virtualbox
-authorize: ~/.ssh/id_rsa.pub
-keys:
-    - ~/.ssh/id_rsa
-folders:
-    -
-        map: <PATH-TO-REPO>
-        to: /home/vagrant/code
-sites:
-    -
-        map: homestead.test
-        to: /home/vagrant/code/public
-        php: "7.3"
-        type: "apache"
-        schedule: true
-databases:
-    - homestead
-features:
-    -
-        mariadb: false
-    -
-        ohmyzsh: false
-    -
-        webdriver: false
-name: rada
-hostname: rada
-```
 
 ## Laradock
 
@@ -241,6 +203,10 @@ esac
 
 exit 0
 ```
+
+## Laravel Sail
+
+You can easily use [Sail](https://laravel.com/docs/8.x/sail) instad of [Laradock](https://laradock.io/) with simplified configuration and time to get it up and running.
 
 ## License
 

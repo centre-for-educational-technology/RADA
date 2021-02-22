@@ -264,8 +264,7 @@
                 });
             },
             open() {
-                let url = this.baseUrl + '/api/games/' + this.gameId + '/start-question/' + this.question.id;
-                this.$http.get(url).then(response => {
+                const cb = response => {
                     this.isOpen = true;
                     this.generateMissingWords();
                     this.calculateRemainingAnsweringTime();
@@ -303,7 +302,15 @@
                     }
 
                     $(this.$refs.modal).modal('show');
-                });
+                };
+
+                // Only call the startQuestion endpoint if running within a game context
+                if (!!this.gameId) {
+                    let url = this.baseUrl + '/api/games/' + this.gameId + '/start-question/' + this.question.id;
+                    this.$http.get(url).then(cb);
+                } else {
+                    cb(null);
+                }
 
                 return $(this.$refs.modal);
             },

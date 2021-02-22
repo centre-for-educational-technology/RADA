@@ -11,6 +11,7 @@ use App\Options\QuestionTypeOptions;
 use App\Options\LanguageOptions;
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 class ActivityItem extends Model
 {
@@ -33,6 +34,7 @@ class ActivityItem extends Model
     protected $appends = [
         'icon_url',
         'image_url',
+        'current_user_can_edit',
     ];
 
     /**
@@ -87,6 +89,16 @@ class ActivityItem extends Model
     public function getImageUrlAttribute()
     {
         return $this->attributes['image_url'] = $this->getImageUrl();
+    }
+
+    /**
+     * Determines if current user can edit ActivityItem.
+     *
+     * @return boolean
+     */
+    public function getCurrentUserCanEditAttribute()
+    {
+        return Auth::check() ? Auth::user()->can('update', $this) : false;
     }
 
     /**
