@@ -1,9 +1,5 @@
-@extends('layouts.error')
+@extends('errors::minimal')
 
-@section('title')
-Be right back.
-@endsection
-
-@section('content')
-Be right back.
-@endsection
+@section('title', __('Service Unavailable'))
+@section('code', '503')
+@section('message', __('Service Unavailable'))

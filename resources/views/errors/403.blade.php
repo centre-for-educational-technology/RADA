@@ -1,9 +1,5 @@
-@extends('layouts.error')
+@extends('errors::minimal')
 
-@section('title')
-Forbidden.
-@endsection
-
-@section('content')
-Forbidden.
-@endsection
+@section('title', __('Forbidden'))
+@section('code', '403')
+@section('message', __($exception->getMessage() ?: 'Forbidden'))
